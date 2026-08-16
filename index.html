@@ -377,7 +377,7 @@
       flex-shrink: 0;
     }
 
-    /* ─── Hero Text Overlay ─── */
+    /* ─── Hero Text Overlay (Animación Mágica y Transparencia 50%) ─── */
     .scroll-content {
       position: relative;
       z-index: 10;
@@ -396,8 +396,37 @@
       align-items: center;
       text-align: center;
       padding: 0 24px;
-      pointer-events: none;
+      pointer-events: auto;
       z-index: 20;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out, filter 0.8s ease;
+    }
+
+    .hero-text-overlay.start-anim {
+      animation: hero-enter-glow 4.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @keyframes hero-enter-glow {
+      0% {
+        opacity: 0;
+        transform: translateY(40px) scale(1.05);
+        filter: drop-shadow(0 0 45px rgba(52, 211, 153, 0.95));
+      }
+      35% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 65px rgba(110, 231, 183, 0.95)) drop-shadow(0 0 35px rgba(251, 191, 36, 0.65));
+      }
+      100% {
+        opacity: 0.50; /* Termina al 50% de transparencia */
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.6));
+      }
+    }
+
+    .hero-text-overlay:hover {
+      opacity: 0.90;
+      filter: drop-shadow(0 0 35px rgba(52, 211, 153, 0.8)) drop-shadow(0 0 20px rgba(251, 191, 36, 0.5));
     }
 
     .hero-badge {
@@ -415,26 +444,67 @@
       text-transform: uppercase;
       padding: 8px 24px;
       border-radius: 100px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+    }
+
+    .hero-eyebrow {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(0.95rem, 2vw, 1.2rem);
+      font-weight: 600;
+      font-style: italic;
+      color: var(--mint);
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
     }
 
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+      font-size: clamp(2.5rem, 6.5vw, 4.8rem);
       font-weight: 900;
-      color: var(--white);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
-    }
-
-    .hero-title .accent {
-      background: linear-gradient(135deg, #6ee7b7 0%, #34d399 50%, #facc15 100%);
+      background: linear-gradient(to bottom, #ffffff 45%, #e2f5ec 70%, #34d399 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      opacity: 0;
+      transform: translateY(0);
+      filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.9));
+      position: relative;
+    }
+
+    .hero-text-overlay.start-anim .hero-title {
+      background: 
+        linear-gradient(110deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%),
+        linear-gradient(to bottom, #ffffff 45%, #e2f5ec 70%, #34d399 100%);
+      background-size: 300% 100%, 100% 100%;
+      background-position: 100% 0, 0 0;
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: title-in 1s 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards, title-sweep-bg 2.5s 0.9s ease-in-out forwards;
+    }
+
+    @keyframes title-sweep-bg {
+      0%   { background-position: 100% 0, 0 0; }
+      100% { background-position: 0% 0, 0 0; }
+    }
+
+    @keyframes title-in {
+      from { opacity: 0; transform: translateY(15px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-title .accent {
+      background: linear-gradient(135deg, #a7f3d0 0%, #34d399 45%, #fbbf24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
     }
 
     .hero-desc {
@@ -1225,9 +1295,10 @@
 <!-- ── Main Scrolling Content ── -->
 <div class="scroll-content">
 
-  <!-- Hero Text -->
-  <div class="hero-text-overlay">
+  <!-- Hero Text (Con animación luminosa y elegancia visual) -->
+  <div class="hero-text-overlay" id="hero-text-overlay">
     <div class="hero-badge">✦ Marco Regulatorio Oficial · Vigente 2026 ✦</div>
+    <p class="hero-eyebrow">— Umas Community · Normativa Oficial —</p>
     <h1 class="hero-title">
       Estatutos de la <span class="accent">Comunidad</span><br>
       y Seguridad Digital
@@ -1968,6 +2039,11 @@
         bgAudio.volume = 0.25;
         bgAudio.play().catch(() => {});
       }
+      // Iniciar animación luminosa y barrido del título
+      setTimeout(() => {
+        const heroOverlay = document.getElementById('hero-text-overlay');
+        if (heroOverlay) heroOverlay.classList.add('start-anim');
+      }, 350);
       setTimeout(() => {
         enterScreen.style.display = 'none';
       }, 850);
