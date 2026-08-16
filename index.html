@@ -3,64 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reglamento Oficial · Servidor de Alero</title>
+  <title>Reglamento Oficial · Umas Community 🌿</title>
 
-  <!-- Fonts: Playfair para títulos elegantes, Nunito para cuerpo legible -->
+  <!-- Fuentes tipográficas optimizadas -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Nunito:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --dynamic-dur: 0.9s;
-      --dynamic-delay: 0.06s;
-      /* Paleta oscura Umamusume: púrpura profundo + oro + rosa suave */
-      --bg: #150926; /* Even darker for the cave */
-      --surface:  #110a1c;
-      --surface2: #181028;
-      --surface3: #221638;
-      --border:   rgba(220, 180, 255, 0.08);
-      --border-hi: rgba(200, 140, 240, 0.3);
+      --dynamic-dur: 0.85s;
+      --dynamic-delay: 0.05s;
 
-      --rose:     #d97cbf;
-      --rose-lt:  #f0a8d8;
-      --gold:     #d4a040;
-      --gold-lt:  #f0c870;
-      --violet:   #9060d0;
-      --violet-lt:#c090f0;
-      --teal:     #50c8b0;
-      --red:      #e06070;
-      --orange:   #e08850;
-      --yellow:   #d0b030;
+      /* Paleta Esmeralda / Forest Discord Umas Community */
+      --bg: #06110b;
+      --bg-gradient: radial-gradient(circle at 50% 0%, #0d281a 0%, #06110b 75%);
+      --surface: #0a1b12;
+      --surface2: #10281b;
+      --surface3: #183b28;
+      --surface-glass: rgba(14, 38, 26, 0.75);
 
-      --text:     #d8c8e8;
-      --subtext:  #8a7baf;
-      --white:    #f4eeff;
+      --border: rgba(52, 211, 153, 0.14);
+      --border-hi: rgba(52, 211, 153, 0.4);
+      --border-glow: rgba(16, 185, 129, 0.25);
 
-      --radius-lg: 20px;
-      --radius:    14px;
-      --radius-sm: 9px;
+      --emerald: #10b981;
+      --emerald-lt: #34d399;
+      --emerald-dark: #064e3b;
+      --mint: #6ee7b7;
+      --leaf: #22c55e;
+      --forest: #0d3822;
 
-      --shadow: 0 0 0 1px rgba(180,130,240,0.1), 0 24px 64px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.5);
+      --gold: #f59e0b;
+      --gold-lt: #fbbf24;
+      --red: #ef4444;
+      --red-lt: #f87171;
+      --orange: #f97316;
+      --yellow: #eab308;
+      --cyan: #06b6d4;
+
+      --text: #dcfce7;
+      --text-muted: #86aa98;
+      --white: #f8fafc;
+
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius: 12px;
+      --radius-sm: 8px;
+
+      --shadow: 0 0 0 1px rgba(52, 211, 153, 0.12), 0 20px 50px rgba(0, 0, 0, 0.8), 0 4px 16px rgba(0, 0, 0, 0.4);
+      --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.2);
     }
 
     html { scroll-behavior: smooth; }
 
-    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--violet); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb { background: var(--emerald-dark); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--emerald); }
 
     body {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.75;
       overflow-x: hidden;
     }
 
-    /* ─── Hero Section (Fixed Background) ─── */
-        .hero-wrapper {
+    /* ─── Hero Fixed Video Background ─── */
+    .hero-wrapper {
       position: fixed;
       top: 0;
       left: 0;
@@ -69,24 +82,36 @@
       z-index: 0;
       pointer-events: none;
       background: var(--bg);
+      overflow: hidden;
     }
 
-    
+    #hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      filter: saturate(0.8) brightness(0.4) contrast(1.1);
+      opacity: 0.65;
+    }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(0,0,0,0.0) 0%,
-        rgba(0,0,0,0.1) 60%,
-        rgba(0,0,0,0.45) 100%
+        rgba(6, 17, 11, 0.5) 0%,
+        rgba(6, 17, 11, 0.75) 60%,
+        rgba(6, 17, 11, 0.98) 100%
       );
-      pointer-events: none;
     }
 
-    /* ─── Floating petal particles falling from the left tree ─── */
-    .petals, .fireflies, .live-effects {
+    /* Partículas botánicas dinámicas (Hojas y Luciérnagas) */
+    .particles-layer {
       position: absolute;
       inset: 0;
       pointer-events: none;
@@ -94,2277 +119,1910 @@
       overflow: hidden;
     }
 
-    /* ─── LIVE EFFECTS ─── */
-    
-      100% { transform: translateX(10%) scaleY(1.2); opacity: 0.9; }
+    .leaf-particle {
+      position: absolute;
+      opacity: 0;
+      animation: leaf-fall linear infinite;
+      user-select: none;
+    }
+
+    @keyframes leaf-fall {
+      0%   { transform: translate(0, -20px) rotate(0deg); opacity: 0; }
+      15%  { opacity: 0.75; }
+      80%  { opacity: 0.6; }
+      100% { transform: translate(250px, 105vh) rotate(540deg); opacity: 0; }
     }
 
     .firefly {
       position: absolute;
-      width: 4px; height: 4px;
-      background: #fff;
+      width: 4px;
+      height: 4px;
+      background: var(--mint);
       border-radius: 50%;
-      box-shadow: 0 0 12px 3px var(--rose-lt);
-      animation: float-up var(--d) ease-in-out infinite alternate;
+      box-shadow: 0 0 10px 2px var(--emerald-lt);
+      animation: firefly-glow 4s ease-in-out infinite alternate;
       opacity: 0;
     }
-    @keyframes float-up {
-      0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0; }
-      20% { opacity: 0.8; }
-      80% { opacity: 1; }
-      100% { transform: translateY(-120px) translateX(30px) scale(1.5); opacity: 0; }
-    }
-
-    .petal {
-      position: absolute;
-      border-radius: 50% 0 50% 0;
-      opacity: 0;
-      animation: petal-fall linear infinite;
-    }
-
-    @keyframes petal-fall {
-      0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
-      10%  { opacity: 0.8; }
-      80%  { opacity: 0.6; }
-      100% { transform: translate(400px, 100vh) rotate(720deg); opacity: 0; }
-    }
-
-    /* Position petals starting from top-left (where the tree is) */
-    .petal:nth-child(1)  { top: 10%; left: 5%;  background: rgba(217,124,191,0.7); width: 8px; height: 10px; animation-duration: 10s; animation-delay: 0s; }
-    .petal:nth-child(2)  { top: 25%; left: 12%; background: rgba(240,168,216,0.6); width: 10px; height: 13px; animation-duration: 12s; animation-delay: 2s; }
-    .petal:nth-child(3)  { top: 5%;  left: 20%; background: rgba(217,124,191,0.8); width: 7px; height: 9px;  animation-duration: 9s;  animation-delay: 4s; }
-    .petal:nth-child(4)  { top: 35%; left: 8%;  background: rgba(240,168,216,0.7); width: 11px; height: 14px; animation-duration: 14s; animation-delay: 1s; }
-    .petal:nth-child(5)  { top: 15%; left: 25%; background: rgba(217,124,191,0.6); width: 9px; height: 11px; animation-duration: 11s; animation-delay: 6s; }
-    .petal:nth-child(6)  { top: 40%; left: 15%; background: rgba(240,168,216,0.8); width: 8px; height: 10px; animation-duration: 13s; animation-delay: 3s; }
-    .petal:nth-child(7)  { top: 20%; left: 30%; background: rgba(217,124,191,0.7); width: 12px; height: 15px; animation-duration: 15s; animation-delay: 7s; }
-    .petal:nth-child(8)  { top: 50%; left: 5%;  background: rgba(240,168,216,0.6); width: 9px; height: 11px; animation-duration: 10s; animation-delay: 5s; }
-    .petal:nth-child(9)  { top: 10%; left: 35%; background: rgba(217,124,191,0.8); width: 7px; height: 9px;  animation-duration: 12s; animation-delay: 8s; }
-    .petal:nth-child(10) { top: 30%; left: 28%; background: rgba(240,168,216,0.7); width: 10px; height: 12px; animation-duration: 11s; animation-delay: 1.5s; }
-
-    /* ─── Navigation ─── */
-    .nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 500;
-      background: rgba(8,5,14,0.6);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      display: flex;
-      align-items: center;
-      padding: 0 28px;
-      gap: 2px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      animation: nav-slide-in 0.6s 0.2s cubic-bezier(0.22,1,0.36,1) both;
-    }
-
-    .nav::-webkit-scrollbar { display: none; }
-
-    @keyframes nav-slide-in {
-      from { transform: translateY(-100%); opacity: 0; }
-      to   { transform: translateY(0); opacity: 1; }
-    }
-
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      font-style: italic;
-      color: var(--rose-lt);
-      padding: 14px 22px 14px 0;
-      border-right: 1px solid var(--border);
-      margin-right: 10px;
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-live {
-      display: inline-block;
-      width: 8px; height: 8px;
-      background: var(--teal);
-      border-radius: 50%;
-      box-shadow: 0 0 8px var(--teal);
-      animation: live-pulse 2s infinite;
-    }
-
-    @keyframes live-pulse {
-      0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--teal); }
-      50%       { opacity: 0.3; box-shadow: 0 0 2px var(--teal); }
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: rgba(255,255,255,0.7);
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 14px 11px;
-      border-bottom: 2px solid transparent;
-      white-space: nowrap;
-      transition: color 0.3s ease, border-color 0.3s ease;
-      letter-spacing: 0.01em;
-    }
-    .nav a:hover, .nav a.active { color: var(--rose-lt); border-bottom-color: var(--rose); }
-
-    /* ─── Scroll Content Layer ─── */
-    .scroll-content {
-      position: relative;
-      z-index: 10;
-      /* Height exactly 100svh so the hero is visible, then content follows */
-      margin-top: 100svh;
-    }
-
-    .hero-text-overlay {
-      position: absolute;
-      top: -100svh; /* Starts at the top of the viewport */
-      right: 5%; /* Alineado a la derecha debajo de la luna */
-      height: 100svh; /* Ocupa la altura de la pantalla para centrar contenido */
-      width: 45%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* Lo centra verticalmente bajo la luna */
-      align-items: flex-end;
-      text-align: right;
-      padding-top: 10vh; /* Ajuste sutil para bajarlo un poco */
-      pointer-events: none;
-      opacity: 0; /* Empieza invisible hasta presionar Entrar */
-      transition: opacity 0.8s ease-in-out, filter 0.8s ease;
-      z-index: 20;
-    }
-
-    .hero-text-overlay.start-anim {
-      animation: hero-enter-glow 4.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    }
-
-    @keyframes hero-enter-glow {
-      0% {
-        opacity: 0;
-        transform: translateY(40px) scale(1.05);
-        filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.9));
-      }
-      35% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: drop-shadow(0 0 60px rgba(255, 220, 100, 0.95)); /* Brillo intenso */
-      }
-      100% {
-        opacity: 0.50; /* Termina en 50% de transparencia */
-        transform: translateY(0) scale(1);
-        filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5)); /* Sombra normal */
-      }
-    }
-
-    .hero-text-overlay:hover {
-      opacity: 0.85; /* Se aclara un poco al pasar el mouse cerca */
-      filter: drop-shadow(0 0 20px rgba(255, 215, 100, 0.6));
-    }
-
-    /* Badge */
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(8,5,14,0.4);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(192,144,240,0.3);
-      color: var(--violet-lt);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 8px 20px;
-      border-radius: 100px;
-      margin-bottom: 24px;
-      animation: fade-up 0.8s 0.4s cubic-bezier(0.22,1,0.36,1) both;
-    }
-
-    @keyframes fade-up {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-eyebrow {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
-      font-weight: 500;
-      font-style: italic;
-      color: var(--rose-lt);
-      letter-spacing: 0.06em;
-      margin-bottom: 8px;
-      animation: fade-up 0.8s 0.55s cubic-bezier(0.22,1,0.36,1) both;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-    }
-
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 900;
-      background: linear-gradient(to bottom, #ffffff 50%, #ffffff 75%, #a872e8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      margin-bottom: 12px;
-      opacity: 0;
-      transform: translateY(0);
-      filter: drop-shadow(0 4px 20px rgba(0,0,0,0.9));
-      position: relative;
-    }
-
-    .hero-text-overlay.start-anim .hero-title {
-      background: 
-        linear-gradient(110deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%),
-        linear-gradient(to bottom, #ffffff 50%, #ffffff 75%, #a872e8 100%);
-      background-size: 300% 100%, 100% 100%;
-      background-position: 100% 0, 0 0;
-      background-repeat: no-repeat;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: title-in 1s 0.7s cubic-bezier(0.22,1,0.36,1) forwards, title-sweep-bg 2.5s 1s ease-in-out forwards;
-    }
-
-    @keyframes title-sweep-bg {
-      0% { background-position: 100% 0, 0 0; }
-      100% { background-position: 0% 0, 0 0; }
-    }
-
-    @keyframes title-in {
-      from { opacity: 0; transform: translateY(0); }
-      to   { opacity: 0.55; transform: translateY(0); }
-    }
-
-    .hero-title .accent {
-      background: linear-gradient(135deg, #fff2a8 0%, #ffcc4d 45%, #ff85a2 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-    }
-    .hero-title .italic { font-style: italic; }
-
-    /* Scroll cue */
-    .scroll-hint {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 8px;
-      font-family: 'Nunito', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.8);
-      margin-top: 30px;
-      animation: fade-up 0.8s 1.6s ease both;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-      margin-right: 10px;
-    }
-
-    .scroll-hint-line {
-      width: 2px; height: 42px;
-      background: linear-gradient(to bottom, var(--rose-lt), transparent);
-      animation: scroll-drip 1.8s 2s ease-in-out infinite;
-      transform-origin: top;
-      margin-right: 35px;
-    }
-
-    @keyframes scroll-drip {
-      0%   { transform: scaleY(0); opacity: 0; }
-      40%  { transform: scaleY(1); opacity: 1; }
-      100% { transform: scaleY(1); opacity: 0; transform-origin: bottom; }
-    }
-
-    /* ─── Mountain Cave Wrapper ─── */
-    .mountain-cave {
-      background: rgba(21, 9, 38, 0.4);
-      position: relative;
-      padding-top: 80px;
-    }
-
-    /* Borde difuminado de la entrada de la cueva */
-    .mountain-cave::before {
-      content: '';
-      position: absolute;
-      top: -60px; left: 0; right: 0; height: 60px;
-      background: linear-gradient(to bottom, transparent, rgba(21, 9, 38, 0.4));
-      pointer-events: none;
-    }
-
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 0 28px 140px;
-      position: relative;
-    }
-
-    /* ─── Reveal animations ─── */
-    .reveal {
-      opacity: 0;
-    }
-    .reveal.in {
-      animation: reveal-in var(--dynamic-dur) cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-    }
-    @keyframes reveal-in {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .stagger > * {
-      opacity: 0;
-    }
-    .stagger.in > * {
-      animation: stagger-in var(--dynamic-dur) cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-    }
-    @keyframes stagger-in {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .stagger.in > *:nth-child(1) { animation-delay: calc(0 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(2) { animation-delay: calc(1 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(3) { animation-delay: calc(2 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(4) { animation-delay: calc(3 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(5) { animation-delay: calc(4 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(6) { animation-delay: calc(5 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(7) { animation-delay: calc(6 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(8) { animation-delay: calc(7 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(9) { animation-delay: calc(8 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(10) { animation-delay: calc(9 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(11) { animation-delay: calc(10 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(12) { animation-delay: calc(11 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(13) { animation-delay: calc(12 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(14) { animation-delay: calc(13 * var(--dynamic-delay)); }
-    .stagger.in > *:nth-child(15) { animation-delay: calc(14 * var(--dynamic-delay)); }
-
-
-
-    /* ─── Section title ─── */
-    .stitle {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .stitle-badge {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
-      font-weight: 500;
-      color: var(--rose);
-      background: rgba(217,124,191,0.12);
-      border: 1px solid rgba(217,124,191,0.25);
-      padding: 4px 12px;
-      border-radius: 6px;
-      flex-shrink: 0;
-      letter-spacing: 0.1em;
-    }
-
-    .stitle h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--theme-c1, #fff), var(--theme-c2, #a872e8));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -0.01em;
-    }
-
-    .stitle::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, var(--theme-c1, rgba(217,124,191,0.5)), transparent);
-      transform-origin: left;
-      transform: scaleX(0);
-      transition: transform var(--dynamic-dur) cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
-    }
-    
-    .stitle.reveal.in::after {
-      transform: scaleX(1);
-    }
-
-    /* ─── Cards ─── */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.4s ease;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 20%; right: 20%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--rose), var(--gold), var(--rose), transparent);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-    .card:hover::before { opacity: 1; }
-    .card:hover { border-color: rgba(217,124,191,0.2); }
-
-    .card::after {
-      content: '✦';
-      position: absolute;
-      top: 16px; right: 20px;
-      font-size: 0.7rem; color: var(--gold);
-      opacity: 0.2; animation: twinkle 3s infinite;
-    }
-    @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.6; } }
-
-    .card-header { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 28px; }
 
-    .card-icon {
-      width: 52px; height: 52px;
-      border-radius: 14px;
-      display: grid; place-items: center;
-      font-size: 1.4rem; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--surface2), var(--surface3));
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-    }
-
-    .card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem; font-weight: 700; color: var(--white);
-      margin-bottom: 5px;
-    }
-    .card-sub { font-size: 0.86rem; color: var(--subtext); line-height: 1.5; }
-
-    /* ─── Rule list ─── */
-    .rule-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-
-    .rule-item {
-      display: flex; gap: 16px; align-items: flex-start;
-      padding: 16px 20px;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .rule-item:hover {
-      background: var(--surface3);
-      border-color: rgba(217,124,191,0.2);
-      transform: translateX(5px);
-    }
-
-    .rnum {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem; font-weight: 500; color: var(--violet-lt);
-      background: rgba(144,96,208,0.12); border: 1px solid rgba(144,96,208,0.22);
-      padding: 4px 9px; border-radius: var(--radius-sm);
-      flex-shrink: 0; margin-top: 2px; letter-spacing: 0.06em;
-    }
-    .rnum.gold { color: var(--gold-lt); background: rgba(212,160,64,0.1); border-color: rgba(212,160,64,0.22); }
-    .rnum.red  { color: #f49090; background: rgba(224,96,112,0.1); border-color: rgba(224,96,112,0.22); }
-
-    .rtxt strong { font-family: 'Nunito', sans-serif; color: var(--white); display: block; margin-bottom: 4px; font-size: 0.94rem; font-weight: 700; }
-    .rtxt span { font-size: 0.87rem; color: var(--subtext); line-height: 1.65; }
-    .rtxt a { color: var(--rose-lt); text-decoration: none; border-bottom: 1px dashed rgba(240,168,216,0.4); }
-    .rtxt a:hover { border-bottom-color: var(--rose-lt); }
-    .rtxt code { background: var(--surface3); padding: 2px 7px; border-radius: 5px; font-size: 0.8em; font-family: 'JetBrains Mono', monospace; }
-
-    /* ─── Infraction grid ─── */
-    .inf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
-
-    .inf-card {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-bottom: 3px solid var(--c, var(--border));
-      border-radius: var(--radius);
-      padding: 22px 14px 18px;
-      text-align: center;
-      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-      cursor: default;
-    }
-    .inf-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.7), 0 0 20px var(--c, rgba(0,0,0,0.3));
-      border-color: var(--c, var(--border));
-    }
-
-    .inf-pts {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem; font-weight: 900; display: block; line-height: 1;
-      color: var(--c, var(--white)); text-shadow: 0 0 24px var(--c, transparent);
-    }
-
-    .inf-unit { font-size: 0.68rem; color: var(--subtext); text-transform: uppercase; letter-spacing: 0.08em; }
-    .inf-name { font-size: 0.88rem; font-weight: 700; color: var(--white); display: block; margin: 12px 0 6px; font-family: 'Nunito', sans-serif; }
-    .inf-badge {
-      display: inline-block; font-size: 0.62rem; font-weight: 700; padding: 2px 9px;
-      border-radius: 5px; color: var(--c, var(--subtext));
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); letter-spacing: 0.07em;
-    }
-    .inf-desc { font-size: 0.76rem; color: var(--subtext); margin-top: 10px; line-height: 1.5; }
-
-    /* Progress bars */
-    .pts-bars { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; position: relative; }
-    .pts-row { display: flex; align-items: center; gap: 14px; }
-    .pts-lbl {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--subtext);
-      width: 54px;
-      flex-shrink: 0;
-      text-align: right;
-      font-weight: 600;
-    }
-    .pts-track {
-      flex: 1;
-      height: 8px;
-      background: linear-gradient(90deg, rgba(80,200,176,0.1), rgba(255,0,0,0.1));
-      border-radius: 100px;
-      overflow: visible;
-      position: relative;
-      border: 1px solid rgba(255,255,255,0.05);
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
-    }
-    .pts-fill {
-      height: 100%;
-      border-radius: 100px;
-      width: 0%;
-      transition: width 1.8s cubic-bezier(0.22,1,0.36,1);
-      position: relative;
-      box-shadow: inset 0 1px 1px rgba(255,255,255,0.15);
-    }
-    .pts-fill::after {
-      content: '';
-      position: absolute;
-      right: -7px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: inherit;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 6px currentColor;
-      border: 2.5px solid #0f0d19;
-      transition: transform 0.2s ease;
-    }
-    .pts-fill[style*="width: 0%"]::after,
-    .pts-fill[data-w="0"]::after {
-      left: 0 !important;
-      right: auto !important;
-      transform: translate(-50%, -50%) !important;
-    }
-    .pts-action {
-      font-size: 0.76rem;
-      font-weight: 700;
-      width: 120px;
-      flex-shrink: 0;
-      text-align: right;
-      letter-spacing: 0.03em;
-    }
-
-    /* Threshold legend chips */
-    .pts-legend {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 12px;
-      padding: 12px 0;
-      border: 1px solid rgba(255,255,255,0.04);
-      border-radius: var(--radius);
-      padding: 14px 16px;
-      background: rgba(255,255,255,0.01);
-    }
-    .pts-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.74rem;
-      font-weight: 700;
-      padding: 7px 14px;
-      border-radius: 100px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--c, rgba(255,255,255,0.12));
-      color: var(--c, var(--text));
-      transition: all 0.3s ease;
-      letter-spacing: 0.02em;
-    }
-    .pts-chip:hover {
-      background: rgba(255,255,255,0.12);
-      border-color: var(--c, rgba(255,255,255,0.3));
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .pts-chip .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--c, currentColor);
-      box-shadow: 0 0 6px var(--c, currentColor);
-      animation: pulse-dot 2.5s ease-in-out infinite;
-    }
-    @keyframes pulse-dot {
-      0%, 100% { box-shadow: 0 0 6px var(--c, currentColor), 0 0 0 0 rgba(255,255,255,0.3); }
-      50% { box-shadow: 0 0 12px var(--c, currentColor), 0 0 8px 2px rgba(255,255,255,0.15); }
-    }
-
-    /* Risk Level Gauge */
-    .risk-meter {
-      margin-top: 32px;
-      padding: 18px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: var(--radius);
-    }
-    .risk-label {
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 16px;
-      letter-spacing: 0.05em;
-    }
-    .risk-gauge {
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .risk-track {
-      display: flex;
-      gap: 0;
-      height: 18px;
-      background: var(--surface3);
-      border-radius: 100px;
-      overflow: hidden;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
-    }
-    .risk-zone {
-      flex: 0 1 auto;
-      transition: opacity 0.3s ease;
-      position: relative;
-    }
-    .risk-zone::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.2), rgba(255,255,255,0.1));
-      border-radius: inherit;
-    }
-    .risk-safe   { background: linear-gradient(90deg, #50d9a8, #50c8b0); }
-    .risk-caution { background: linear-gradient(90deg, #f0c870, #d4a040); }
-    .risk-warn   { background: linear-gradient(90deg, #ff8844, #e08850); }
-    .risk-danger  { background: linear-gradient(90deg, #ff4466, #ff0000); box-shadow: 0 0 16px rgba(255,68,102,0.6); }
-
-    .risk-ticks {
-      position: absolute;
-      width: 100%;
-      top: -20px;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 2px;
-      pointer-events: none;
-    }
-    .tick {
-      font-size: 0.62rem;
-      color: var(--subtext);
-      font-weight: 600;
-      transform: translateX(-50%);
-      margin-left: -2px;
-    }
-
-    .risk-legend {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 14px;
-    }
-    .risk-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.84rem;
-      color: var(--subtext);
-    }
-    .risk-item strong { color: var(--text); }
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      box-shadow: 0 0 8px currentColor;
-    }
-    .dot.safe { background: #50d9a8; }
-    .dot.caution { background: #f0c870; }
-    .dot.warn { background: #ff8844; }
-    .dot.danger { background: #ff0000; }
-
-    /* ─── Timeline ─── */
-    .timeline { display: flex; flex-direction: column; position: relative; padding-left: 6px; }
-    .timeline::before {
-      content: ''; position: absolute; left: 28px; top: 28px; bottom: 28px; width: 2px;
-      background: linear-gradient(to bottom, var(--yellow), var(--orange), var(--red)); border-radius: 10px;
-    }
-    .tl-item { display: flex; gap: 20px; padding: 12px 0; align-items: flex-start; }
-    .tl-dot {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      z-index: 1;
-      border: 3px solid var(--bg);
-      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .tl-item:hover .tl-dot { transform: scale(1.25) drop-shadow(0 0 12px currentColor); }
-    .tl-warn { background: rgba(208,176,48,0.2); box-shadow: 0 0 18px rgba(208,176,48,0.25); }
-    .tl-mute { background: rgba(144,96,208,0.2); box-shadow: 0 0 18px rgba(144,96,208,0.25); }
-    .tl-kick { background: rgba(224,136,80,0.2); box-shadow: 0 0 18px rgba(224,136,80,0.25); }
-    .tl-ban  { background: rgba(224,96,112,0.2); box-shadow: 0 0 18px rgba(224,96,112,0.25); }
-    .tl-body {
-      flex: 1;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px 22px;
-      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .tl-item:hover .tl-body {
-      border-color: rgba(217,124,191,0.4);
-      transform: translateX(8px);
-      background: rgba(217,124,191,0.05);
-      box-shadow: 0 8px 20px rgba(217,124,191,0.15);
-    }
-    .tl-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1rem; color: var(--white); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
-    .tl-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; font-weight: 500; padding: 2px 9px; border-radius: 5px; letter-spacing: 0.06em; }
-    .tag-w { color: var(--yellow);    background: rgba(208,176,48,0.1);  border: 1px solid rgba(208,176,48,0.22); }
-    .tag-m { color: var(--violet-lt); background: rgba(144,96,208,0.1);  border: 1px solid rgba(144,96,208,0.22); }
-    .tag-k { color: var(--orange);    background: rgba(224,136,80,0.1);  border: 1px solid rgba(224,136,80,0.22); }
-    .tag-b { color: var(--red);       background: rgba(224,96,112,0.1);  border: 1px solid rgba(224,96,112,0.22); }
-    .tl-desc { font-size: 0.87rem; color: var(--subtext); line-height: 1.65; }
-    .tl-desc strong { color: var(--text); }
-
-    /* ─── Callout boxes ─── */
-    .callout {
-      display: flex;
-      gap: 16px;
-      padding: 16px 20px;
-      border-radius: var(--radius);
-      margin-top: 20px;
-      font-size: 0.88rem;
-      border-left: 3px solid;
-      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-      background-position: -100% 0;
-      position: relative;
-    }
-    .callout:hover {
-      transform: translateX(6px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-      border-left-width: 4px;
-    }
-    .callout .ci { font-size: 1.2rem; flex-shrink: 0; transition: transform 0.3s ease; }
-    .callout:hover .ci { transform: scale(1.15) rotate(8deg); }
-    .callout p { color: var(--subtext); line-height: 1.6; }
-    .callout strong { color: var(--text); }
-    .cl-purple { background: rgba(144,96,208,0.07); border-color: var(--violet); }
-    .cl-gold   { background: rgba(212,160,64,0.07); border-color: var(--gold); }
-    .cl-teal   { background: rgba(80,200,176,0.07); border-color: var(--teal); }
-    .cl-red    { background: rgba(224,96,112,0.07); border-color: var(--red); }
-
-    /* ─── Legal table ─── */
-    .legal-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin-top: 20px; }
-    .legal-table th { text-align: left; padding: 12px 16px; background: var(--surface2); color: var(--subtext); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border); }
-    .legal-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
-    .legal-table tr { transition: background 0.3s ease; }
-    .legal-table tr:hover td { background: var(--surface2); }
-    .legal-table tr:last-child td { border-bottom: none; }
-    .legal-table a { color: var(--rose-lt); text-decoration: none; border-bottom: 1px dashed rgba(240,168,216,0.4); }
-
-    /* ─── Bot badge ─── */
-    .bot-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(80,200,176,0.08); border: 1px solid rgba(80,200,176,0.22); color: var(--teal); font-size: 0.78rem; font-weight: 700; padding: 8px 14px; border-radius: 10px; margin-top: 14px; }
-    .bot-badge .d { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; box-shadow: 0 0 6px var(--teal); animation: live-pulse 2s infinite; }
-
-    /* ─── Appeal box ─── */
-    .appeal { background: linear-gradient(135deg, rgba(144,96,208,0.08), rgba(217,124,191,0.07)); border: 1px solid rgba(217,124,191,0.22); border-radius: var(--radius-lg); padding: 48px 40px; text-align: center; margin-top: 28px; position: relative; overflow: hidden; }
-    .appeal::before { content: '✦  ✦  ✦'; position: absolute; top: 14px; left: 0; right: 0; text-align: center; font-size: 0.7rem; color: var(--gold); opacity: 0.4; letter-spacing: 12px; }
-    .appeal::after { content: '✦  ✦  ✦'; position: absolute; bottom: 14px; left: 0; right: 0; text-align: center; font-size: 0.7rem; color: var(--gold); opacity: 0.4; letter-spacing: 12px; }
-    .appeal h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 800; color: var(--white); margin-bottom: 12px; font-style: italic; }
-    .appeal p { color: var(--subtext); font-size: 0.92rem; max-width: 460px; margin: 0 auto 28px; line-height: 1.7; }
-    .appeal-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, var(--violet), var(--rose));
-      color: var(--white);
-      padding: 13px 28px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      text-decoration: none;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-      box-shadow: 0 8px 28px rgba(144, 96, 208, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-    .appeal-btn::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-      opacity: 0;
-      transition: opacity 0.35s ease;
-      border-radius: 12px;
-    }
-    .appeal-btn:hover {
-      opacity: 1;
-      transform: translateY(-4px) scale(1.06);
-      box-shadow: 0 18px 48px rgba(144, 96, 208, 0.6), 0 0 30px rgba(217, 124, 191, 0.3);
-    }
-    .appeal-btn:hover::before { opacity: 1; }
-    .appeal-btn:active { transform: translateY(-2px) scale(1.03); }
-
-    /* ─── Section spacing ─── */
-    .gap { height: 80px; }
-
-    /* ─── Footer ─── */
-    footer { border-top: 1px solid var(--border); background: var(--surface); padding: 52px 28px; text-align: center; position: relative; }
-    footer::before { content: ''; position: absolute; top: -1px; left: 50%; transform: translateX(-50%); width: 240px; height: 1px; background: linear-gradient(90deg, transparent, var(--rose), transparent); }
-    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; font-style: italic; color: var(--rose-lt); margin-bottom: 14px; }
-    footer p { font-size: 0.82rem; color: var(--subtext); margin-top: 8px; line-height: 1.8; }
-    footer a { color: var(--rose-lt); text-decoration: none; transition: color 0.3s ease; }
-    footer a:hover { color: var(--white); }
-
-    /* ─── Responsive ─── */
-
-    /* Tablets */
-    @media (max-width: 900px) {
-      .hero-text-overlay { width: 62%; right: 6%; }
-      .inf-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    /* Phones (landscape and up to ~680px) */
-    @media (max-width: 680px) {
-      html { scroll-behavior: auto; font-size: 13px; }
-
-      /* Nav */
-      .nav { padding: 0 14px; gap: 0; }
-      .nav-logo { font-size: 0.92rem; padding: 12px 14px 12px 0; margin-right: 6px; }
-      .nav a { font-size: 0.72rem; padding: 12px 8px; }
-
-      /* Hero */
-      .hero-text-overlay {
-        width: 92%;
-        right: 4%;
-        left: 4%;
-        align-items: center;
-        text-align: center;
-        padding-top: 6vh;
-      }
-      .hero-badge { font-size: 0.62rem; padding: 7px 14px; margin-bottom: 16px; }
-      .hero-eyebrow { font-size: 0.85rem; }
-      .hero-title { font-size: clamp(1.9rem, 9vw, 2.6rem); margin-bottom: 8px; }
-      .scroll-hint { align-items: center; margin-right: 0; }
-      .scroll-hint-line { margin-right: 0; }
-
-      /* Enter screen */
-      .enter-logo { font-size: 2.6rem; }
-      .enter-content p { font-size: 0.72rem; letter-spacing: 0.15em; margin-bottom: 32px; }
-      #enter-btn { padding: 13px 36px; font-size: 0.95rem; }
-
-      /* Layout */
-      .container { padding: 48px 14px 90px; }
-      .gap { height: 48px; }
-      .card { padding: 18px 14px; margin-bottom: 16px; }
-      .card-header { gap: 10px; margin-bottom: 16px; }
-      .card-title { font-size: 0.95rem; }
-      .card-sub { font-size: 0.8rem; }
-      .stitle h2 { font-size: 1.2rem; }
-      .stitle-badge { font-size: 0.58rem; padding: 3px 9px; }
-
-      /* Infraction grid: 2 columns on small phones so cards stay readable */
-      .inf-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .inf-card { padding: 16px 10px 14px; }
-      .inf-pts { font-size: 2rem; }
-      .inf-name { font-size: 0.8rem; }
-      .inf-desc { font-size: 0.72rem; }
-
-      /* Points scale: stack action text under the bar instead of hiding it */
-      .pts-legend { gap: 6px; }
-      .pts-chip { font-size: 0.62rem; padding: 5px 9px; }
-      .pts-row { flex-wrap: wrap; row-gap: 4px; }
-      .pts-lbl { width: 40px; font-size: 0.62rem; }
-      .pts-track { flex: 1 1 auto; min-width: 0; }
-      .pts-action {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding-left: 54px;
-        font-size: 0.68rem;
-      }
-
-      /* Risk meter simulator */
-      .risk-meter { padding: 14px; margin-top: 20px; }
-      .risk-label { font-size: 0.84rem; margin-bottom: 12px; }
-      .risk-value-display { font-size: 2.2rem; }
-      .premium-slider { max-width: 100%; }
-      .risk-details-card { padding: 14px; }
-      .details-header { gap: 10px; margin-bottom: 12px; }
-      .details-icon { font-size: 1.8rem; }
-      .details-header h4 { font-size: 1rem; }
-      .details-header p { font-size: 0.72rem; }
-      .details-section h5 { font-size: 0.78rem; }
-      .details-section p, .details-section ul { font-size: 0.78rem; }
-
-      /* Timeline */
-      .timeline::before { left: 22px; }
-      .tl-item { gap: 14px; }
-      .tl-dot { width: 40px; height: 40px; font-size: 0.9rem; }
-      .tl-body { padding: 14px 16px; }
-      .tl-name { font-size: 0.9rem; }
-      .tl-item:hover .tl-body { transform: none; }
-
-      /* Callouts & legal table */
-      .callout { padding: 14px 16px; gap: 12px; }
-      .legal-table { font-size: 0.76rem; }
-      .legal-table th, .legal-table td { padding: 9px 10px; }
-
-      /* Appeal box */
-      .appeal { padding: 30px 18px; }
-      .appeal h3 { font-size: 1.2rem; }
-      .appeal p { font-size: 0.84rem; }
-      .appeal-btn { padding: 12px 22px; font-size: 0.85rem; }
-
-      /* Reduce motion-heavy decorative layers for performance */
-      .petal { display: none; }
-    }
-
-    /* Very small phones */
-    @media (max-width: 480px) {
-      .inf-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 380px) {
-      .hero-title { font-size: 1.7rem; }
-      .nav a { font-size: 0.68rem; padding: 10px 6px; }
-    }
-
-    /* Respect reduced-motion preference */
-    @media (prefers-reduced-motion: reduce) {
-      .twinkle-star, .petal, .firefly, .space-stars { animation: none !important; }
-    }
-        /* ─── Hero Video ─── */
-    #hero-video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: brightness(0.85) saturate(1.1);
-      will-change: transform;
+    @keyframes firefly-glow {
+      0% { transform: translateY(0) scale(0.6); opacity: 0; }
+      50% { opacity: 0.9; transform: translateY(-40px) scale(1.2); }
+      100% { transform: translateY(-80px) scale(0.5); opacity: 0; }
     }
 
-    /* ─── Enter Overlay ─── */
+    /* ─── Pantalla de Bienvenida e Inicio ─── */
     #enter-screen {
       position: fixed;
       inset: 0;
-      background: radial-gradient(circle at center, #1c0e30 0%, #10061e 100%);
-      background-image: radial-gradient(circle at center, #1c0e30 0%, #10061e 100%), url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='0.8' fill='rgba(255,255,255,0.15)'/%3E%3Ccircle cx='10' cy='10' r='0.5' fill='rgba(255,210,120,0.1)'/%3E%3Ccircle cx='50' cy='15' r='1' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='15' cy='50' r='0.6' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E");
-      backdrop-filter: blur(0px);
+      background: radial-gradient(circle at 50% 40%, #0d2a1b 0%, #040a06 90%);
       z-index: 9999;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      transition: opacity 2.5s ease-in-out;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.9s;
     }
-
-    .space-stars {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml;utf8,<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="0.5" fill="%23fff" opacity="0.4"/><circle cx="100" cy="80" r="1.5" fill="%23ff85a2" opacity="0.3"/><circle cx="160" cy="150" r="1" fill="%23ffd369" opacity="0.5"/><circle cx="50" cy="180" r="0.8" fill="%23fff" opacity="0.2"/><circle cx="180" cy="30" r="0.5" fill="%23a872e8" opacity="0.4"/><circle cx="10" cy="120" r="1.2" fill="%23ff85a2" opacity="0.2"/></svg>') repeat;
-      opacity: 0.6;
-      background-size: 200px 200px;
-      pointer-events: none;
-      animation: move-stars 60s linear infinite;
-    }
-    @keyframes move-stars {
-      0% { background-position: 0 0; }
-      100% { background-position: -400px 400px; }
-    }
-
-    /* ─── Twinkling star field (enter-screen + global background) ─── */
-    .star-field {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 0;
-    }
-    .twinkle-star {
-      position: absolute;
-      border-radius: 50%;
-      background: #fff;
-      will-change: opacity, transform;
-      animation: twinkle var(--dur, 3.2s) ease-in-out infinite;
-      animation-delay: var(--delay, 0s);
-    }
-    .twinkle-star.big {
-      box-shadow: 0 0 6px 1px currentColor, 0 0 12px 2px currentColor;
-    }
-    @keyframes twinkle {
-      0%, 100% { opacity: var(--min-o, 0.15); transform: scale(0.7); }
-      50%      { opacity: var(--max-o, 1);    transform: scale(1.35); }
-    }
-    @keyframes star-drift {
-      0%   { transform: translateY(0) translateX(0); }
-      100% { transform: translateY(-30px) translateX(14px); }
-    }
-    .twinkle-star.drift { animation: twinkle var(--dur, 3.2s) ease-in-out infinite, star-drift var(--ddur, 40s) ease-in-out infinite alternate; }
 
     .enter-content {
-      text-align: center;
-      animation: fade-up 1s ease both;
+      max-width: 620px;
       position: relative;
-      z-index: 10;
+      z-index: 2;
+      animation: enter-appear 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes enter-appear {
+      from { opacity: 0; transform: translateY(30px) scale(0.96); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .enter-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--mint);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid var(--border-hi);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
     }
 
     .enter-logo {
       font-family: 'Playfair Display', serif;
-      font-size: 4.5rem;
-      font-weight: 900;
-      background: linear-gradient(135deg, #ffd369 0%, #ff85a2 100%);
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      text-shadow: 0 4px 24px rgba(16, 185, 129, 0.4);
+    }
+
+    .enter-logo span {
+      background: linear-gradient(135deg, var(--mint) 0%, var(--emerald-lt) 50%, var(--gold-lt) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 20px rgba(255,133,162,0.3));
-      margin-bottom: 5px;
-      animation: pulse-glow 4s ease-in-out infinite alternate, logo-float 3s ease-in-out infinite;
+      background-clip: text;
     }
 
-    @keyframes logo-float {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-8px) scale(1.02); }
+    .enter-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      font-style: italic;
     }
 
-    @keyframes pulse-glow {
-      0% { filter: drop-shadow(0 0 15px rgba(255,133,162,0.3)); transform: scale(1); }
-      100% { filter: drop-shadow(0 0 35px rgba(255,211,105,0.6)); transform: scale(1.03); }
-    }
-
-    .enter-content p {
+    .enter-btn {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #041209;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
       font-size: 0.95rem;
-      color: rgba(255,255,255,0.7);
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      margin-bottom: 50px;
-      animation: fade-up 0.8s 0.3s ease both, text-shimmer 3s ease-in-out infinite 0.3s;
-    }
-
-    @keyframes text-shimmer {
-      0%, 100% { color: rgba(255,255,255,0.7); text-shadow: none; }
-      50% { color: rgba(255,255,255,0.95); text-shadow: 0 0 15px rgba(255,211,105,0.4); }
-    }
-
-    #enter-btn {
-      background: rgba(30, 15, 45, 0.7);
-      border: 1px solid rgba(255,133,162,0.4);
-      color: var(--white);
-      padding: 16px 56px;
-      font-size: 1.1rem;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
+      padding: 16px 42px;
+      border: none;
       border-radius: 100px;
       cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-      letter-spacing: 0.1em;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
-      text-transform: uppercase;
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.5), 0 6px 20px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    .enter-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 0 40px rgba(52, 211, 153, 0.7), 0 8px 30px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    }
+
+    .enter-btn:active {
+      transform: translateY(1px) scale(0.98);
+    }
+
+    .enter-footer {
+      margin-top: 28px;
+      font-size: 0.72rem;
+      color: rgba(220, 252, 231, 0.4);
+      line-height: 1.6;
+    }
+
+    /* ─── Navigation Bar ─── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 500;
+      background: rgba(6, 17, 11, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+    }
+
+    .nav::-webkit-scrollbar { display: none; }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px 14px 0;
+      border-right: 1px solid var(--border);
+      margin-right: 8px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--surface2);
+      border: 1px solid var(--border-hi);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+    }
+
+    .nav-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-title span { color: var(--emerald-lt); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex: 1;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 14px 12px;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav a:hover, .nav a.active {
+      color: var(--emerald-lt);
+      border-bottom-color: var(--emerald);
+      background: rgba(16, 185, 129, 0.05);
+    }
+
+    .nav-device-tag {
+      margin-left: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--mint);
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    /* ─── Hero Text Overlay ─── */
+    .scroll-content {
       position: relative;
-      overflow: hidden;
-      animation: btn-pulse 2s ease-in-out infinite;
+      z-index: 10;
+      margin-top: 92vh;
     }
 
-    @keyframes btn-pulse {
-      0%, 100% { box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 0 0 rgba(255,133,162,0.4), inset 0 1px 0 rgba(255,255,255,0.1); }
-      50% { box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 20px 8px rgba(255,133,162,0), inset 0 1px 0 rgba(255,255,255,0.1); }
-    }
-
-    #enter-btn::before {
-      content: '';
+    .hero-text-overlay {
       position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255,133,162,0.3), transparent 70%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
+      top: -92vh;
+      left: 0;
+      right: 0;
+      height: 92vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(6, 17, 11, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-hi);
+      color: var(--mint);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 22px;
       border-radius: 100px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
     }
 
-    #enter-btn::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border: 1px solid rgba(255,133,162,0.5);
-      border-radius: 100px;
-      opacity: 0;
-      animation: border-pulse 2s ease-in-out infinite;
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6.5vw, 4.4rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
     }
 
-    @keyframes border-pulse {
-      0%, 100% { opacity: 0; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
+    .hero-title .accent {
+      background: linear-gradient(135deg, #6ee7b7 0%, #34d399 50%, #facc15 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    #enter-btn:hover {
-      background: rgba(255,133,162,0.3);
-      border-color: rgba(255,133,162,0.9);
-      color: #fff;
-      box-shadow: 0 12px 40px rgba(255,133,162,0.5), 0 0 40px rgba(255,133,162,0.35), inset 0 1px 0 rgba(255,255,255,0.15);
-      transform: translateY(-6px) scale(1.08);
-      animation: none;
+    .hero-desc {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 650px;
+      margin-bottom: 36px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
     }
 
-    #enter-btn:hover::before { opacity: 1; }
-
-    #enter-btn:active {
-      transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 8px 25px rgba(255,133,162,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-
-    /* Section Color Variations */
-    #conducta { --theme-c1: #ffb8c6; --theme-c2: #ff85a2; }
-    #contenido { --theme-c1: #ff85a2; --theme-c2: #d97cbf; }
-    #privacidad { --theme-c1: #d97cbf; --theme-c2: #a872e8; }
-    #moderacion { --theme-c1: #a872e8; --theme-c2: #8c72e8; }
-    #puntos { --theme-c1: #8c72e8; --theme-c2: #728ce8; }
-    #sanciones { --theme-c1: #728ce8; --theme-c2: #72a8e8; }
-    #legal { --theme-c1: #72a8e8; --theme-c2: #72cce8; }
-    #apelacion { --theme-c1: #72cce8; --theme-c2: #72e8d9; }
-
-    /* Interactive Danger Indicator Styles */
-    .risk-control {
+    .scroll-indicator {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 24px;
-      gap: 12px;
+      gap: 8px;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mint);
+      font-weight: 700;
     }
-    .risk-value-display {
-      font-size: 2.8rem;
-      font-weight: 800;
+
+    .scroll-line {
+      width: 2px;
+      height: 36px;
+      background: linear-gradient(to bottom, var(--emerald-lt), transparent);
+      animation: scroll-drip 1.8s ease-in-out infinite;
+    }
+
+    @keyframes scroll-drip {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      100% { transform: scaleY(1); transform-origin: bottom; opacity: 0; }
+    }
+
+    /* ─── Contenedor Principal (Main Mountain Cave) ─── */
+    .main-body {
+      background: rgba(6, 17, 11, 0.92);
+      backdrop-filter: blur(20px);
+      position: relative;
+      padding-top: 60px;
+      border-top: 1px solid var(--border);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px 140px;
+    }
+
+    .section-gap { height: 70px; }
+
+    /* ─── Titulares de Fase ─── */
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .phase-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #041209;
+      background: var(--emerald-lt);
+      padding: 4px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+    }
+
+    .phase-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.65rem;
+      font-weight: 700;
       color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    .phase-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border-hi), transparent);
+    }
+
+    /* ─── Tarjetas de Contenido (Cards) ─── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow), var(--shadow-glow);
+    }
+
+    .card-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 26px;
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--surface2), var(--surface3));
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-size: 1.45rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .card-sub {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ─── Listas de Reglas ─── */
+    .rules-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rule-box {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 18px 20px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.25s ease;
+    }
+
+    .rule-box:hover {
+      background: var(--surface3);
+      border-color: var(--border-hi);
+      transform: translateX(4px);
+    }
+
+    .r-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--mint);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid var(--border-hi);
+      padding: 4px 8px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .r-tag.gold { color: var(--gold-lt); background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3); }
+    .r-tag.red { color: var(--red-lt); background: rgba(239, 68, 68, 0.12); border-color: rgba(239, 68, 68, 0.3); }
+
+    .r-content strong {
+      display: block;
+      color: var(--white);
+      font-size: 0.96rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .r-content p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ─── Callouts y Alertas ─── */
+    .callout {
+      padding: 20px 24px;
+      border-radius: var(--radius);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-top: 20px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .callout.green {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid var(--emerald);
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .callout.yellow {
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 4px solid var(--gold);
+      border-top: 1px solid rgba(245, 158, 11, 0.2);
+      border-right: 1px solid rgba(245, 158, 11, 0.2);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+      color: #fef08a;
+    }
+
+    .callout.red {
+      background: rgba(239, 68, 68, 0.08);
+      border-left: 4px solid var(--red);
+      border-top: 1px solid rgba(239, 68, 68, 0.2);
+      border-right: 1px solid rgba(239, 68, 68, 0.2);
+      border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+      color: #fecaca;
+    }
+
+    .callout-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1; }
+
+    /* ─── MATRIZ & SIMULADOR SANCIONAL INTERACTIVO ─── */
+    .inf-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .inf-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      position: relative;
+      user-select: none;
+    }
+
+    .inf-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hi);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .inf-card.selected {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: var(--emerald-lt);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    }
+
+    .inf-card.selected::after {
+      content: '✓ SELECCIONADO';
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 800;
+      color: var(--emerald-lt);
+      background: rgba(6, 17, 11, 0.8);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .inf-pts {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+      display: block;
+      color: var(--c, var(--emerald-lt));
+    }
+
+    .inf-unit {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+
+    .inf-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--white);
+      margin: 10px 0 6px;
+    }
+
+    .inf-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--c, var(--mint));
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 8px;
+    }
+
+    .inf-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Simulador Interactivo Avanzado */
+    .simulator-box {
+      background: rgba(6, 17, 11, 0.8);
+      border: 1px solid var(--border-hi);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-top: 24px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .sim-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .sim-score-badge {
       display: flex;
       align-items: baseline;
-      gap: 4px;
-      font-family: 'Outfit', sans-serif;
-      text-shadow: 0 0 15px rgba(255,255,255,0.1);
-    }
-    .pts-suffix {
-      font-size: 1rem;
-      color: var(--subtext);
-      font-weight: 600;
-    }
-    .premium-slider {
-      width: 100%;
-      max-width: 500px;
-      -webkit-appearance: none;
-      background: rgba(255,255,255,0.05);
-      height: 10px;
+      gap: 6px;
+      background: var(--surface2);
+      border: 1px solid var(--border-hi);
+      padding: 8px 20px;
       border-radius: 100px;
-      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+    }
+
+    .sim-score-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--mint);
+    }
+
+    .sim-score-unit {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    /* Barra de Progreso y Slider */
+    .sim-slider-container {
+      margin-bottom: 24px;
+    }
+
+    .sim-slider {
+      width: 100%;
+      height: 10px;
+      border-radius: 10px;
+      background: var(--surface3);
       outline: none;
-      transition: background 0.3s;
-    }
-    .premium-slider::-webkit-slider-thumb {
       -webkit-appearance: none;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 3px solid #0f0d19;
       cursor: pointer;
-      box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 3px 6px rgba(0,0,0,0.3);
-      transition: transform 0.2s, background 0.2s;
     }
-    .premium-slider::-webkit-slider-thumb:hover {
-      transform: scale(1.15);
-      background: #ffb8c6;
+
+    .sim-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--emerald-lt);
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--emerald);
+      border: 3px solid #06110b;
+      transition: transform 0.2s ease;
     }
-    .risk-gauge-container {
-      margin-bottom: 28px;
-      position: relative;
+
+    .sim-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
     }
-    .risk-bar-track {
-      height: 14px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.05);
+
+    .sim-bar-track {
+      height: 12px;
+      background: var(--surface2);
       border-radius: 100px;
       overflow: hidden;
       position: relative;
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+      margin-top: 14px;
+      border: 1px solid var(--border);
     }
-    .risk-bar-fill {
+
+    .sim-bar-fill {
       height: 100%;
-      border-radius: 100px;
       width: 0%;
-      transition: width 0.3s ease, background 0.5s ease;
+      border-radius: 100px;
+      transition: width 0.4s ease, background 0.4s ease;
+      background: linear-gradient(90deg, #10b981, #f59e0b, #ef4444);
     }
-    .risk-bar-fill.risk-state-safe { background: linear-gradient(90deg, #50d9a8, #50c8b0); }
-    .risk-bar-fill.risk-state-caution { background: linear-gradient(90deg, #f0c870, #d4a040); }
-    .risk-bar-fill.risk-state-warn { background: linear-gradient(90deg, #ff8844, #e08850); }
-    .risk-bar-fill.risk-state-danger { background: linear-gradient(90deg, #ff4466, #ff0000); box-shadow: 0 0 10px rgba(255,68,102,0.4); }
-    
-    .risk-ticks-flat {
+
+    .sim-ticks {
       display: flex;
       justify-content: space-between;
-      margin-top: 6px;
-      padding: 0 8px;
-      font-size: 0.72rem;
-      color: var(--subtext);
-      font-weight: 600;
+      margin-top: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
     }
-    
-    .risk-details-card {
-      padding: 20px;
-      border-radius: 12px;
-      background: rgba(255,255,255,0.015);
-      border: 1px solid rgba(255,255,255,0.05);
-      transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s;
+
+    /* Tarjeta de Detalles del Estado de Sanción */
+    .sim-status-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
     }
-    .risk-details-card.state-safe { border-color: rgba(80,217,168,0.2); }
-    .risk-details-card.state-caution { border-color: rgba(240,200,112,0.2); }
-    .risk-details-card.state-warn { border-color: rgba(255,136,68,0.2); }
-    .risk-details-card.state-danger { border-color: rgba(255,68,102,0.3); box-shadow: 0 4px 20px rgba(255,68,102,0.05); }
-    
-    .details-header {
+
+    .sim-status-header {
       display: flex;
       align-items: center;
       gap: 16px;
       margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
     }
-    .details-icon {
-      font-size: 2.2rem;
+
+    .sim-status-icon {
+      font-size: 2rem;
+      line-height: 1;
     }
-    .details-header h4 {
-      font-size: 1.15rem;
-      font-weight: 800;
-      margin: 0;
+
+    .sim-status-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
       color: var(--white);
     }
-    .details-header p {
-      font-size: 0.8rem;
-      color: var(--subtext);
-      margin: 2px 0 0 0;
+
+    .sim-status-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
     }
-    .details-body {
+
+    .sim-info-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 18px;
     }
+
     @media (max-width: 768px) {
-      .details-body {
-        grid-template-columns: 1fr;
-      }
+      .sim-info-grid { grid-template-columns: 1fr; }
     }
-    .details-section h5 {
+
+    .sim-info-block h5 {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--mint);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sim-info-block p, .sim-info-block ul {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .sim-info-block ul {
+      padding-left: 18px;
+    }
+
+    /* ─── MARCO JURÍDICO LATAM CON SELECTOR DE PAÍS ─── */
+    .country-selector {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      scrollbar-width: none;
+    }
+
+    .country-selector::-webkit-scrollbar { display: none; }
+
+    .country-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 8px 18px;
       font-size: 0.85rem;
       font-weight: 700;
-      text-transform: uppercase;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .country-btn:hover {
+      background: var(--surface3);
       color: var(--white);
-      margin: 0 0 8px 0;
-      letter-spacing: 0.05em;
-      opacity: 0.9;
+      border-color: var(--border-hi);
     }
-    .details-section p {
+
+    .country-btn.active {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: var(--emerald-lt);
+      color: var(--mint);
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+    }
+
+    .legal-cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .legal-item {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .legal-item:hover {
+      background: var(--surface3);
+      border-color: var(--border-hi);
+      transform: translateX(4px);
+    }
+
+    .legal-item-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .legal-item-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .legal-badge-country {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+    }
+
+    .legal-law-ref {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--mint);
+    }
+
+    .legal-item p {
       font-size: 0.86rem;
-      color: var(--subtext);
-      line-height: 1.5;
-      margin: 0;
+      color: var(--text-muted);
+      line-height: 1.6;
     }
-    .details-section ul {
-      margin: 0;
-      padding-left: 18px;
-      font-size: 0.86rem;
-      color: var(--subtext);
-      line-height: 1.5;
+
+    /* ─── Proceso de Apelación ─── */
+    .appeal-card {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 78, 59, 0.25) 100%);
+      border: 1px solid var(--emerald-lt);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      text-align: center;
+      margin-top: 40px;
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
     }
-    .details-section li {
-      margin-bottom: 6px;
+
+    .appeal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .appeal-p {
+      font-size: 0.95rem;
+      color: var(--text);
+      max-width: 680px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+
+    .appeal-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--emerald-lt);
+      color: #041209;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 14px 34px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
+    }
+
+    .appeal-btn:hover {
+      background: var(--mint);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 0 35px rgba(110, 231, 183, 0.6);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 50px 24px;
+      text-align: center;
+      background: #040c07;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: var(--emerald-lt);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    /* ─── Adaptación Responsiva para Celulares y Tablets ─── */
+    @media (max-width: 768px) {
+      .nav { padding: 0 16px; }
+      .container { padding: 0 16px 100px; }
+      .card { padding: 24px 18px; }
+      .rule-box { padding: 14px 16px; gap: 12px; }
+      .inf-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .simulator-box { padding: 20px 16px; }
+      .appeal-card { padding: 28px 18px; }
+      .hero-title { font-size: 2.3rem; }
+    }
+
+    @media (max-width: 480px) {
+      .inf-grid { grid-template-columns: 1fr; }
+      .nav-brand { margin-right: 4px; padding-right: 10px; }
+      .nav-title { font-size: 0.95rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── Hero Section (Video Background) ── -->
+<!-- ── Fixed Video & Particle Background ── -->
 <div class="hero-wrapper">
   <video id="hero-video" autoplay loop muted playsinline poster="poster.jpg">
     <source src="bg-hq.webm" type="video/webm">
     <source src="bg-hq.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
-  <div class="star-field" id="bg-star-field"></div>
+  <div class="particles-layer" id="particles-layer"></div>
 </div>
 
-<!-- ── Enter Experience Overlay ── -->
+<!-- ── Pantalla de Entrada Interactiva ── -->
 <div id="enter-screen">
-  <!-- CSS stars background to match exactly -->
-  <div class="space-stars"></div>
-  <div class="star-field" id="enter-star-field"></div>
-  
+  <div class="particles-layer" id="enter-particles"></div>
   <div class="enter-content">
-    <div style="font-size:0.65rem; letter-spacing:0.4em; color:rgba(255,255,255,0.5); text-transform:uppercase;">✦ Servidor Oficial ✦</div>
-    
-    <div class="enter-logo">Umas community</div>
-    
-    <div style="font-style:italic; font-family:'Playfair Display', serif; letter-spacing:0.05em; color:rgba(255,255,255,0.7); font-size:1.1rem;">— Bajo la luna y los cerezos —</div>
-    
-    <div class="divider">
-      <span>✦ ✦ ✦</span>
-    </div>
-    
-    <button id="enter-btn">Entrar al Reglamento</button>
-    
-    <div style="margin: 30px auto 0 auto; font-size: 0.65rem; color: rgba(255,255,255,0.45); letter-spacing: 0.05em; max-width: 500px; line-height: 1.7; text-align: center; display: block;">
-      No está afiliado con Cygames, ni como server extra o de soporte a Umamusume.<br>Solo un servidor de comunidad externo sin fines de lucro bajo Uso Legítimo (Fair Use).<br>No afiliado a Discord Inc.
+    <div class="enter-badge">✦ Servidor Oficial de Discord ✦</div>
+    <h1 class="enter-logo">Umas <span>Community</span> 🌿</h1>
+    <div class="enter-sub">— Protocolo de Convivencia, Seguridad y Normativa Oficial —</div>
+    <button class="enter-btn" id="enter-btn">
+      <span>Entrar al Reglamento</span> ➔
+    </button>
+    <div class="enter-footer">
+      Ambiente de comunidad seguro y regulado bajo moderación algorítmica contextual.<br>
+      Conforme a los Términos de Servicio de Discord Inc. y leyes de protección digital de Latinoamérica.
     </div>
   </div>
 </div>
 
-<!-- ── Ambient Audio ── -->
+<!-- ── Audio Ambiental Opcional ── -->
 <audio id="bg-audio" loop preload="auto">
   <source src="ambient.mp3" type="audio/mpeg">
 </audio>
 
-<!-- ── Nav ── -->
+<!-- ── Barra de Navegación ── -->
 <nav class="nav" role="navigation" aria-label="Navegación principal">
-  <div class="nav-logo">
-    <div class="nav-live" aria-hidden="true"></div>
-    Alero
+  <a href="#" class="nav-brand">
+    <div class="nav-logo-icon">🌿</div>
+    <div class="nav-title">Umas <span>Community</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="#fase-1">🌱 Convivencia</a>
+    <a href="#fase-2">🎙️ Canales & Voz</a>
+    <a href="#fase-3">🛡️ Seguridad</a>
+    <a href="#fase-4">🤖 Centinela IA</a>
+    <a href="#fase-5">⚖️ Sanciones & Matriz</a>
+    <a href="#fase-6">📜 Leyes LATAM</a>
+    <a href="#fase-7">💬 Apelaciones</a>
   </div>
-  <a href="#conducta">🛡️ Conducta</a>
-  <a href="#contenido">🚫 Contenido</a>
-  <a href="#privacidad">🔐 Privacidad</a>
-  <a href="#moderacion">🤖 Moderación</a>
-  <a href="#puntos">📊 Puntos</a>
-  <a href="#sanciones">⚖️ Sanciones</a>
-  <a href="#legal">📜 Legal</a>
-  <a href="#apelacion">💬 Apelación</a>
+  <div class="nav-device-tag" id="device-tag">💻 PC Mode</div>
 </nav>
 
 <!-- ── Main Scrolling Content ── -->
 <div class="scroll-content">
 
-  <!-- Hero Text overlays the fixed background right before entering the mountain -->
+  <!-- Hero Text -->
   <div class="hero-text-overlay">
-    <div class="hero-badge" aria-label="Servidor Oficial, vigente desde 2025">
-      ✦ &nbsp;Servidor Oficial · Vigente desde 2025&nbsp; ✦
-    </div>
-    <p class="hero-eyebrow">— Reglamento del Servidor —</p>
+    <div class="hero-badge">✦ Marco Regulatorio Oficial · Vigente 2026 ✦</div>
     <h1 class="hero-title">
-      Normas <span class="accent italic">Oficiales</span><br>
-      de la Comunidad
+      Estatutos de la <span class="accent">Comunidad</span><br>
+      y Seguridad Digital
     </h1>
-    <div class="scroll-hint">
-      <span>Desciende a la montaña</span>
-      <div class="scroll-hint-line"></div>
+    <p class="hero-desc">
+      Normativa integral estructurada en 7 fases con análisis contextual algorítmico, matriz de sanciones dinámica y amparo jurídico latinoamericano.
+    </p>
+    <div class="scroll-indicator">
+      <span>Desliza para explorar</span>
+      <div class="scroll-line"></div>
     </div>
   </div>
 
-  <!-- The "Mountain Cave" wrapper that contains all the rules -->
-  <main class="mountain-cave">
+  <!-- Contenedor Principal de Fases -->
+  <main class="main-body">
     <div class="container">
 
-      <!-- § 01 -->
-      <div class="gap"></div>
-      <div class="stitle reveal" id="conducta">
-        <span class="stitle-badge">§ 01</span>
-        <h2>Normas de Conducta</h2>
+      <!-- ========================================== -->
+      <!-- FASE I: CONVIVENCIA Y ARMONÍA SOCIAL 🌿 -->
+      <!-- ========================================== -->
+      <div class="section-gap" id="fase-1"></div>
+      <div class="phase-header">
+        <span class="phase-badge">FASE I</span>
+        <h2 class="phase-title">Convivencia y Armonía Social 🌿</h2>
+        <div class="phase-line"></div>
       </div>
 
-      <div class="card reveal">
-        <div class="card-header">
-          <div class="card-icon">🛡️</div>
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">🤝</div>
           <div>
-            <div class="card-title">Comportamiento General</div>
-            <div class="card-sub">Aplica en todos los canales del servidor, incluyendo mensajes directos con el bot.</div>
+            <div class="card-title">Código de Conducta y Trato Comunitario</div>
+            <div class="card-sub">Fundamentos obligatorios para todos los miembros, moderadores y administradores.</div>
           </div>
         </div>
-        <ul class="rule-list stagger">
-          <li class="rule-item"><span class="rnum">#01</span><div class="rtxt"><strong>Respeto mutuo</strong><span>Todos los miembros deben ser tratados con dignidad, independientemente de su raza, género, religión, orientación sexual, nacionalidad, condición económica o discapacidad. El irrespeto hacia cualquier persona no será tolerado.</span></div></li>
-          <li class="rule-item"><span class="rnum">#02</span><div class="rtxt"><strong>Prohibición de acoso</strong><span>Cualquier forma de acoso, hostigamiento reiterado, persecución o intimidación —incluyendo DMs no solicitados con contenido agresivo— está terminantemente prohibida.</span></div></li>
-          <li class="rule-item"><span class="rnum">#03</span><div class="rtxt"><strong>Sin spam ni flood</strong><span>No se permite enviar mensajes repetidos, reacciones masivas, menciones innecesarias o cadenas de texto idénticas en uno o varios canales en poco tiempo.</span></div></li>
-          <li class="rule-item"><span class="rnum">#04</span><div class="rtxt"><strong>Sin publicidad no autorizada</strong><span>Está prohibido compartir invitaciones a otros servidores, promover productos, servicios o canales con fines comerciales sin autorización explícita de un administrador.</span></div></li>
-          <li class="rule-item"><span class="rnum">#05</span><div class="rtxt"><strong>Uso correcto de canales</strong><span>Cada canal tiene una temática definida. Los mensajes fuera de contexto pueden ser eliminados sin aviso previo. Usa los canales de forma intencional y organizada.</span></div></li>
-          <li class="rule-item"><span class="rnum">#06</span><div class="rtxt"><strong>Respeto al staff</strong><span>Las instrucciones del equipo de moderación deben ser seguidas. Disputar decisiones agresivamente en el chat público o intentar evadir decisiones de moderación es una falta grave.</span></div></li>
-          <li class="rule-item"><span class="rnum">#07</span><div class="rtxt"><strong>Prohibido suplantar identidades</strong><span>No se permite hacerse pasar por otro usuario, miembro del staff, figura pública, bot del servidor o cualquier entidad oficial usando nombre, foto o mensajes similares.</span></div></li>
-          <li class="rule-item"><span class="rnum">#08</span><div class="rtxt"><strong>Idioma principal</strong><span>El servidor opera principalmente en español. Se permite el uso de otros idiomas en conversaciones informales, pero el staff y el bot operan en español.</span></div></li>
-        </ul>
-      </div>
 
-      <!-- § 02 -->
-      <div class="gap"></div>
-      <div class="stitle reveal" id="contenido">
-        <span class="stitle-badge">§ 02</span>
-        <h2>Contenido Prohibido</h2>
-      </div>
+        <div class="rules-grid">
+          <div class="rule-box">
+            <span class="r-tag">#01</span>
+            <div class="r-content">
+              <strong>Dignidad y Respeto Incondicional</strong>
+              <p>Todo integrante debe ser tratado con absoluto respeto. Queda prohibida toda manifestación de discriminación, mofa o segregación basada en nacionalidad, género, religión, orientación sexual, condición económica o capacidades diferentes.</p>
+            </div>
+          </div>
 
-      <div class="card reveal">
-        <div class="card-header">
-          <div class="card-icon">🚫</div>
-          <div>
-            <div class="card-title">Tipos de Contenido No Permitido</div>
-            <div class="card-sub">El bot detecta y elimina estos contenidos automáticamente en tiempo real.</div>
+          <div class="rule-box">
+            <span class="r-tag">#02</span>
+            <div class="r-content">
+              <strong>Cero Hostigamiento y Anti-Acoso</strong>
+              <p>Está estrictamente prohibido el acoso persistente, la persecución en canales públicos o el envío reiterado de mensajes directos (DMs) hostiles, intimidantes o no solicitados.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag">#03</span>
+            <div class="r-content">
+              <strong>Prevención de Flood, Spam y Raids</strong>
+              <p>No se permite el envío de mensajes repetitivos, muros de texto absurdos, saturación de emoticonos, menciones masivas (@everyone/@here sin rango) o intentos organizados de sabotaje (raiding).</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag">#04</span>
+            <div class="r-content">
+              <strong>Publicidad y Enlaces Externos No Autorizados</strong>
+              <p>Queda vetada la autopromoción de servidores ajenos, servicios comerciales, canales de streaming o recaudaciones monetarias sin la aprobación expresa de la Administración.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag">#05</span>
+            <div class="r-content">
+              <strong>Igualdad Normativa Estricta (Cero Privilegios)</strong>
+              <p>Las reglas aplican de forma idéntica a todos los usuarios, colaboradores, moderadores y personal administrativo. La jerarquía en Discord no otorga inmunidad sancional.</p>
+            </div>
           </div>
         </div>
-        <ul class="rule-list stagger">
-          <li class="rule-item"><span class="rnum red">#09</span><div class="rtxt"><strong>Contenido NSFW fuera de lugar</strong><span>Material sexual explícito, pornografía o nudismo solo puede compartirse en canales habilitados para adultos verificados. Su publicación en otro canal conlleva sanción severa.</span></div></li>
-          <li class="rule-item"><span class="rnum red">#10</span><div class="rtxt"><strong>Violencia explícita o gore</strong><span>Imágenes, videos o descripciones de violencia extrema, mutilación o tortura están prohibidos en todos los canales sin excepción.</span></div></li>
-          <li class="rule-item"><span class="rnum red">#11</span><div class="rtxt"><strong>Discurso de odio</strong><span>Mensajes que inciten al odio, discriminación o violencia basada en raza, etnia, género, religión, orientación sexual, discapacidad u otra característica protegida.</span></div></li>
-          <li class="rule-item"><span class="rnum red">#12</span><div class="rtxt"><strong>Amenazas directas</strong><span>Cualquier mensaje que amenace con daño físico, emocional o económico a un usuario, sea percibido como serio o en broma, será eliminado y sancionado de inmediato.</span></div></li>
-          <li class="rule-item"><span class="rnum red">#13</span><div class="rtxt"><strong>Doxxing</strong><span>Revelar sin consentimiento información personal de terceros —nombre real, dirección, teléfono, correo, documentos de identidad o fotos privadas— resulta en ban permanente inmediato y reporte a Discord.</span></div></li>
-          <li class="rule-item"><span class="rnum red">#14</span><div class="rtxt"><strong>Estafas, phishing y malware</strong><span>Está prohibido distribuir enlaces de phishing, programas maliciosos, solicitar credenciales o datos bancarios, o realizar cualquier forma de estafa. Resulta en ban permanente inmediato.</span></div></li>
-          <li class="rule-item"><span class="rnum">#15</span><div class="rtxt"><strong>Spoilers sin etiqueta</strong><span>Revelar información relevante de series, películas o videojuegos sin usar la etiqueta de spoiler de Discord en los canales designados.</span></div></li>
-          <li class="rule-item"><span class="rnum">#16</span><div class="rtxt"><strong>Desinformación deliberada</strong><span>No se permite compartir información falsa presentada como real con intención de engañar, especialmente en temas médicos, legales o de seguridad.</span></div></li>
-        </ul>
+
+        <div class="callout green">
+          <div class="callout-icon">🌿</div>
+          <div><strong>Criterio de Comunidad:</strong> La diversidad de opiniones enriquece el debate siempre que se mantenga el tono constructivo y la cortesía. El desacuerdo nunca justifica la agresión personal.</div>
+        </div>
       </div>
 
-      <!-- § 03 -->
-      <div class="gap"></div>
-      <div class="stitle reveal" id="privacidad">
-        <span class="stitle-badge">§ 03</span>
-        <h2>Privacidad y Datos</h2>
+      <!-- ========================================== -->
+      <!-- FASE II: CANALES, MULTIMEDIA Y VOZ 🎙️ -->
+      <!-- ========================================== -->
+      <div class="section-gap" id="fase-2"></div>
+      <div class="phase-header">
+        <span class="phase-badge">FASE II</span>
+        <h2 class="phase-title">Canales, Multimedia y Dinámicas de Voz 🎙️</h2>
+        <div class="phase-line"></div>
       </div>
 
-      <div class="card reveal">
-        <div class="card-header">
-          <div class="card-icon">🔐</div>
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">🎧</div>
           <div>
-            <div class="card-title">Protección de Datos de los Usuarios</div>
-            <div class="card-sub">Cómo se tratan los datos dentro de este servidor.</div>
+            <div class="card-title">Uso Adecuado de Salas Temáticas y Canales de Audio</div>
+            <div class="card-sub">Organización del servidor y reglas de etiqueta en llamadas y streaming.</div>
           </div>
         </div>
-        <ul class="rule-list stagger">
-          <li class="rule-item"><span class="rnum gold">#17</span><div class="rtxt"><strong>Datos recopilados por el bot</strong><span>Novarito recopila: ID de usuario, historial de conversaciones con la IA, configuración de memoria y puntos de moderación. Esto es necesario para el funcionamiento del servicio y no se comparte con terceros.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">#18</span><div class="rtxt"><strong>Derecho al olvido</strong><span>Puedes solicitar la eliminación de tu historial usando <code>/ai memoria limpiar</code> o contactando a un administrador. Los datos se eliminan en 48 horas.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">#19</span><div class="rtxt"><strong>Logs de moderación</strong><span>Las sanciones aplicadas quedan en base de datos privada, accesibles solo para administradores con fines de moderación y apelación.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">#20</span><div class="rtxt"><strong>Grabación de voz</strong><span>Está prohibido grabar las conversaciones de voz de otros usuarios sin su consentimiento explícito. Los administradores tampoco graban sin notificación previa.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">#21</span><div class="rtxt"><strong>Capturas de conversaciones privadas</strong><span>Publicar capturas de mensajes directos o conversaciones privadas sin consentimiento de todos los involucrados está prohibido y puede constituir una violación de privacidad.</span></div></li>
-        </ul>
-      </div>
 
-      <!-- § 04 -->
-      <div class="gap"></div>
-      <div class="stitle reveal" id="moderacion">
-        <span class="stitle-badge">§ 04</span>
-        <h2>Sistema de Moderación IA</h2>
-      </div>
+        <div class="rules-grid">
+          <div class="rule-box">
+            <span class="r-tag">#06</span>
+            <div class="r-content">
+              <strong>Uso Coherente de Canales Temáticos</strong>
+              <p>Cada canal (#general, #media, #arte, #comandos, #música) tiene un propósito definido. Mantener el contenido en el canal correcto evita la desorganización y la eliminación de mensajes.</p>
+            </div>
+          </div>
 
-      <div class="card reveal">
-        <div class="card-header">
-          <div class="card-icon">🤖</div>
-          <div>
-            <div class="card-title">Novarito · Motor de Moderación</div>
-            <div class="card-sub">Análisis contextual de mensajes en tiempo real con Inteligencia Artificial.</div>
+          <div class="rule-box">
+            <span class="r-tag">#07</span>
+            <div class="r-content">
+              <strong>Etiqueta y Salud Auditiva en Salas de Voz</strong>
+              <p>Prohibido el uso de moduladores de voz saturados, reproductores de ruidos ensordecedores (ear-rape), screamers o la interrupción constante del diálogo ajeno.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag">#08</span>
+            <div class="r-content">
+              <strong>Grabaciones y Transmisiones sin Consentimiento</strong>
+              <p>No se permite grabar audio o capturar video de salas de voz sin el consentimiento explícito de todos los participantes presentes en la llamada.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag">#09</span>
+            <div class="r-content">
+              <strong>Uso Responsable de Bots e Integraciones</strong>
+              <p>Los comandos de música, economía o minijuegos deben ejecutarse exclusivamente en el canal <code>#comandos</code> para no saturar las salas de conversación general.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag">#10</span>
+            <div class="r-content">
+              <strong>Spoilers y Contenido de Estreno</strong>
+              <p>Cualquier revelación importante de series, películas, manga o videojuegos recientes debe utilizar obligatoriamente las etiquetas de spoiler de Discord: <code>||texto||</code>.</p>
+            </div>
           </div>
         </div>
-        <div class="bot-badge"><div class="d"></div> Módulo activo · Análisis en tiempo real</div>
-        <ul class="rule-list stagger" style="margin-top:20px;">
-          <li class="rule-item"><span class="rnum">#A</span><div class="rtxt"><strong>Detección contextual</strong><span>El bot analiza el contexto completo —incluyendo las últimas interacciones— antes de clasificar una infracción. Considera sarcasmo, juego entre amigos y provocaciones previas. Solo actúa con confianza superior al 85%.</span></div></li>
-          <li class="rule-item"><span class="rnum">#B</span><div class="rtxt"><strong>Eliminación automática</strong><span>Todo mensaje que supere el umbral de confianza es eliminado automáticamente. El canal recibe una notificación formal con el motivo, puntos acumulados y el umbral siguiente.</span></div></li>
-          <li class="rule-item"><span class="rnum">#C</span><div class="rtxt"><strong>Conducta del bot</strong><span>Novarito aplica sanciones siempre con respeto y profesionalismo. Sus notificaciones no contienen insultos ni sarcasmo. Se limita a informar la infracción de manera neutral y clara.</span></div></li>
-          <li class="rule-item"><span class="rnum">#D</span><div class="rtxt"><strong>Escalada automática</strong><span>Las sanciones escalan según los puntos acumulados. El bot no puede reducir sanciones por sí solo; eso requiere intervención humana de un administrador mediante el proceso de apelación.</span></div></li>
-        </ul>
-        <div class="callout cl-purple">
-          <div class="ci">🔍</div>
-          <p><strong>Anti falsos positivos e Igualdad:</strong> El sistema analiza el historial reciente del usuario para evitar penalizar conversaciones amistosas. Si crees que el bot se equivocó, el proceso de apelación siempre está disponible. <strong>El Staff y los Usuarios son medidos con la misma vara (0 privilegios).</strong></p>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- FASE III: CERO TOLERANCIA Y SEGURIDAD 🛡️ -->
+      <!-- ========================================== -->
+      <div class="section-gap" id="fase-3"></div>
+      <div class="phase-header">
+        <span class="phase-badge">FASE III</span>
+        <h2 class="phase-title">Cero Tolerancia y Seguridad Integral 🛡️</h2>
+        <div class="phase-line"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">🚨</div>
+          <div>
+            <div class="card-title">Infracciones Críticas y Expulsión Inmediata</div>
+            <div class="card-sub">Conductas penadas con bloqueo permanente, reporte a Discord Trust & Safety y acciones legales.</div>
+          </div>
+        </div>
+
+        <div class="rules-grid">
+          <div class="rule-box">
+            <span class="r-tag red">#11</span>
+            <div class="r-content">
+              <strong>Doxxing y Difusión de Información Privada</strong>
+              <p>Publicar o amenazar con publicar datos personales ajenos (nombres reales, domicilios, teléfonos, documentos de identidad, colegios o lugares de trabajo) sin autorización causa ban permanente instantáneo e irrevocable.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag red">#12</span>
+            <div class="r-content">
+              <strong>Estafas, Phishing y Distribución de Malware</strong>
+              <p>Está penada la difusión de enlaces fraudulentos (falsos Nitro, generadores de claves, páginas de inicio de sesión engañosas) o archivos ejecutables maliciosos.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag red">#13</span>
+            <div class="r-content">
+              <strong>Protección Estricta de Menores y Material Ilícito</strong>
+              <p>Cualquier contenido sexual que involucre o simule involucrar menores de edad está prohibido con tolerancia cero absoluta y derivará en denuncia inmediata ante las autoridades pertinentes (NCMEC / Policías Cibernéticas).</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag red">#14</span>
+            <div class="r-content">
+              <strong>Amenazas Graves de Daño Físico o Cibernético</strong>
+              <p>Amenazar con ataques de denegación de servicio (DDoS), swatting, violencia física directa o extorsión conllevará expulsión definitiva y preservación de registros forenses.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag red">#15</span>
+            <div class="r-content">
+              <strong>Evasión de Sanciones Mediante Cuentas Secundarias (Alts)</strong>
+              <p>Crear o emplear cuentas alternativas para sortear silencias, expulsiones o bloqueos resultará en el baneo automático de todas las cuentas vinculadas por huella digital o IP.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout red">
+          <div class="callout-icon">⚠️</div>
+          <div><strong>Alerta de Seguridad:</strong> Las violaciones de la Fase III no pasan por el sistema acumulativo de puntos: provocan la ejecución directa de la sanción máxima de 100 PTS y reporte a la plataforma.</div>
         </div>
       </div>
 
-      <div class="card reveal">
-        <div class="card-header">
+      <!-- ========================================== -->
+      <!-- FASE IV: PROTOCOLO CENTINELA IA 🤖 -->
+      <!-- ========================================== -->
+      <div class="section-gap" id="fase-4"></div>
+      <div class="phase-header">
+        <span class="phase-badge">FASE IV</span>
+        <h2 class="phase-title">Protocolo Centinela — Moderación Algorítmica 🤖</h2>
+        <div class="phase-line"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
           <div class="card-icon">🧠</div>
           <div>
-            <div class="card-title">Reglas de Inteligencia Artificial (Novarito V2)</div>
-            <div class="card-sub">Normativas para el uso e interacción con las funciones avanzadas de IA.</div>
+            <div class="card-title">Arquitectura de Análisis Contextual en Tiempo Real</div>
+            <div class="card-sub">Cómo opera la red neuronal de filtrado e imparcialidad comunitaria.</div>
           </div>
         </div>
-        <ul class="rule-list stagger">
-          <li class="rule-item"><span class="rnum">#1</span><div class="rtxt"><strong>No sobreexplotar al bot</strong><span>Está prohibido saturar al bot con solicitudes excesivas o complejas diseñadas para agotar sus recursos. El uso abusivo afectará tu límite de interacciones y la experiencia del resto de los usuarios.</span></div></li>
-          <li class="rule-item"><span class="rnum">#2</span><div class="rtxt"><strong>Sistema de Karma</strong><span>Novarito cuenta con un sistema de Karma. Hacer spam de comandos o menciones sin sentido reducirá tu Karma y te penalizará limitando o bloqueando tus interacciones con la IA de forma automática.</span></div></li>
-          <li class="rule-item"><span class="rnum">#3</span><div class="rtxt"><strong>Uso ético</strong><span>Está estrictamente prohibido intentar manipular a la IA, forzarla a saltar sus filtros de moderación o pedirle contenido inapropiado o que rompa las reglas del servidor.</span></div></li>
-        </ul>
+
+        <div class="rules-grid">
+          <div class="rule-box">
+            <span class="r-tag">#A</span>
+            <div class="r-content">
+              <strong>Análisis Semántico Contextual Multicapa</strong>
+              <p>El núcleo algorítmico evalúa la conversación completa (tono, reciprocidad, historial reciente) para diferenciar chistes sanos entre amistades de agresiones reales. Solo ejecuta sanciones cuando el índice de certeza supera el 88%.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag">#B</span>
+            <div class="r-content">
+              <strong>Borrado Preventivo y Trazabilidad Inmutable</strong>
+              <p>Los mensajes que vulneren la normativa son eliminados de forma inmediata. Paralelamente, se almacena un registro encriptado del mensaje y su contexto durante 30 días para garantizar una auditoría humana transparente en caso de apelación.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag">#C</span>
+            <div class="r-content">
+              <strong>Sistema de Desgravación y Rehabilitación Continua</strong>
+              <p>A diferencia de sistemas punitivos estáticos, el Protocolo Centinela descuenta <strong>20 puntos automáticamente cada 30 días continuos sin incidentes</strong>, premiando la corrección de conducta.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag">#D</span>
+            <div class="r-content">
+              <strong>Neutralidad Algorítmica Absoluta</strong>
+              <p>Los algoritmos no admiten listas blancas ni excepciones manuales no justificadas. Cualquier intento de forzar vulnerabilidades en el sistema de seguridad será computado como infracción grave.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- § 05 -->
-      <div class="gap"></div>
-      <div class="stitle reveal" id="puntos">
-        <span class="stitle-badge">§ 05</span>
-        <h2>Sistema de Puntos</h2>
+      <!-- ========================================== -->
+      <!-- FASE V: SISTEMA SANCIONAL Y MATRIZ INTERACTIVA ⚖️ -->
+      <!-- ========================================== -->
+      <div class="section-gap" id="fase-5"></div>
+      <div class="phase-header">
+        <span class="phase-badge">FASE V</span>
+        <h2 class="phase-title">Matriz Sancional y Simulador de Puntos ⚖️</h2>
+        <div class="phase-line"></div>
       </div>
 
-      <div class="card reveal">
-        <div class="card-header">
+      <div class="card">
+        <div class="card-head">
           <div class="card-icon">📊</div>
           <div>
-            <div class="card-title">Tabla de Infracciones</div>
-            <div class="card-sub">Cada infracción detectada acumula puntos en tu historial.</div>
+            <div class="card-title">Calculadora y Simulador Dinámico de Infracciones</div>
+            <div class="card-sub">Haz clic en las infracciones para simular acumulación de puntos, o mueve la barra de riesgo para evaluar consecuencias y guías de prevención.</div>
           </div>
         </div>
 
-        <div class="inf-grid stagger">
-          <div class="inf-card" style="--c:var(--teal)">
-            <span class="inf-pts">10</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">🔁 Spam / Repetición</strong>
+        <!-- Matriz de Infracciones Seleccionables -->
+        <div class="inf-grid" id="infractions-matrix">
+          <div class="inf-card" data-pts="10" style="--c:#34d399">
+            <span class="inf-pts">10</span><span class="inf-unit">Puntos</span>
+            <div class="inf-title">🔁 Spam / Repetición</div>
             <span class="inf-badge">LEVE</span>
-            <p class="inf-desc">Links sin contexto o saturación de mensajes repetitivos en canales públicos.</p>
+            <p class="inf-desc">Mensajes repetitivos, cadenas o enlaces sin contexto.</p>
           </div>
-          <div class="inf-card" style="--c:var(--teal)">
-            <span class="inf-pts">20</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">🤬 Lenguaje Vulgar</strong>
+
+          <div class="inf-card" data-pts="20" style="--c:#34d399">
+            <span class="inf-pts">20</span><span class="inf-unit">Puntos</span>
+            <div class="inf-title">🤬 Lenguaje Hostil</div>
             <span class="inf-badge">LEVE</span>
-            <p class="inf-desc">Uso de abreviaturas groseras (ej: ptm) o groserías de forma continuada.</p>
+            <p class="inf-desc">Vocabulario ofensivo o groserías continuadas fuera de tono.</p>
           </div>
-          <div class="inf-card" style="--c:var(--yellow)">
-            <span class="inf-pts">30</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">💢 Insulto Directo</strong>
+
+          <div class="inf-card" data-pts="30" style="--c:#eab308">
+            <span class="inf-pts">30</span><span class="inf-unit">Puntos</span>
+            <div class="inf-title">💢 Insulto Directo</div>
             <span class="inf-badge">MODERADO</span>
-            <p class="inf-desc">Ofensas, menosprecios o faltas de respeto directas a otro miembro o al staff.</p>
+            <p class="inf-desc">Ataques verbales o menosprecio a miembros del servidor.</p>
           </div>
-          <div class="inf-card" style="--c:var(--gold)">
-            <span class="inf-pts">40</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">😤 Acoso Directo</strong>
+
+          <div class="inf-card" data-pts="40" style="--c:#f59e0b">
+            <span class="inf-pts">40</span><span class="inf-unit">Puntos</span>
+            <div class="inf-title">😤 Acoso Continuado</div>
             <span class="inf-badge">MODERADO</span>
-            <p class="inf-desc">Hostigamiento reiterado, intimidación o persecución de usuarios.</p>
+            <p class="inf-desc">Hostigamiento reiterado pese a la negativa de la víctima.</p>
           </div>
-          <div class="inf-card" style="--c:var(--orange)">
-            <span class="inf-pts">50</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">😠 Amenaza de Daño</strong>
+
+          <div class="inf-card" data-pts="50" style="--c:#f97316">
+            <span class="inf-pts">50</span><span class="inf-unit">Puntos</span>
+            <div class="inf-title">😠 Amenaza Verbal</div>
             <span class="inf-badge">GRAVE</span>
-            <p class="inf-desc">Amenazas verbales de agresión física, doxxing o repercusiones externas.</p>
+            <p class="inf-desc">Intimidaciones de agresión física o sabotaje digital.</p>
           </div>
-          <div class="inf-card" style="--c:#ff8844">
-            <span class="inf-pts">60</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">🔗 Links Sospechosos</strong>
+
+          <div class="inf-card" data-pts="60" style="--c:#f97316">
+            <span class="inf-pts">60</span><span class="inf-unit">Puntos</span>
+            <div class="inf-title">🔗 Phishing / Scam</div>
             <span class="inf-badge">GRAVE</span>
-            <p class="inf-desc">Enlaces de phishing, invitaciones no autorizadas, o descargas dudosas.</p>
+            <p class="inf-desc">Distribución de links sospechosos o estafas comerciales.</p>
           </div>
-          <div class="inf-card" style="--c:#ff6644">
-            <span class="inf-pts">70</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">🔞 Contenido NSFW</strong>
+
+          <div class="inf-card" data-pts="70" style="--c:#ef4444">
+            <span class="inf-pts">70</span><span class="inf-unit">Puntos</span>
+            <div class="inf-title">🔞 NSFW No Autorizado</div>
             <span class="inf-badge">MUY GRAVE</span>
-            <p class="inf-desc">Publicar contenido para adultos en canales de texto o voz no autorizados.</p>
+            <p class="inf-desc">Publicación de contenido adulto en canales no designados.</p>
           </div>
-          <div class="inf-card" style="--c:var(--red)">
-            <span class="inf-pts">80</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">🚫 Discriminación / Odio</strong>
+
+          <div class="inf-card" data-pts="80" style="--c:#ef4444">
+            <span class="inf-pts">80</span><span class="inf-unit">Puntos</span>
+            <div class="inf-title">🚫 Discurso de Odio</div>
             <span class="inf-badge">MUY GRAVE</span>
-            <p class="inf-desc">Comentarios racistas, homófobos, tránsfobos, xenófobos o discurso de odio.</p>
+            <p class="inf-desc">Ataques sistemáticos discriminatorios o xenófobos.</p>
           </div>
-          <div class="inf-card" style="--c:#ff3333">
-            <span class="inf-pts">90</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">💵 Estafas / Scam</strong>
-            <span class="inf-badge">CRÍTICO</span>
-            <p class="inf-desc">Promoción de estafas comerciales, phishing financiero o fraudes directos.</p>
-          </div>
-          <div class="inf-card" style="--c:#ff0000">
-            <span class="inf-pts">100</span><span class="inf-unit">puntos</span>
-            <strong class="inf-name">📛 Doxxing Extremo</strong>
-            <span class="inf-badge">CRÍTICO</span>
-            <p class="inf-desc">Publicación de información personal privada ajena sin consentimiento.</p>
+
+          <div class="inf-card" data-pts="100" style="--c:#dc2626">
+            <span class="inf-pts">100</span><span class="inf-unit">Puntos</span>
+            <div class="inf-title">📛 Doxxing / Ilegal</div>
+            <span class="inf-badge">CRÍTICO CAPITAL</span>
+            <p class="inf-desc">Filtración de datos privados o delitos cibernéticos mayores.</p>
           </div>
         </div>
 
-        <div class="pts-legend stagger">
-          <span class="pts-chip" style="--c:var(--teal)"><span class="dot"></span>0–39 · Avisos</span>
-          <span class="pts-chip" style="--c:var(--orange)"><span class="dot"></span>40–69 · Silencio</span>
-          <span class="pts-chip" style="--c:#ff6644"><span class="dot"></span>70–99 · Expulsión</span>
-          <span class="pts-chip" style="--c:#ff0000"><span class="dot"></span>100 · Ban Permanente</span>
-        </div>
-
-        <!-- Interactive Danger Indicator -->
-        <div class="risk-meter stagger" id="risk-simulator">
-          <div class="risk-label">🎮 Simulador Interactivo de Riesgo y Prevención</div>
-          
-          <div class="risk-control">
-            <div class="risk-value-display"><span id="risk-score">0</span> <span class="pts-suffix">PTS</span></div>
-            <input type="range" id="risk-slider" min="0" max="100" value="0" step="10" class="premium-slider">
-          </div>
-          
-          <div class="risk-gauge-container">
-            <div class="risk-bar-track">
-              <div id="risk-active-bar" class="risk-bar-fill risk-state-safe" style="width: 0%;"></div>
-            </div>
-            <div class="risk-ticks-flat" style="position: relative; height: 16px;">
-              <span style="position: absolute; left: 0%; transform: translateX(0%);">0</span>
-              <span style="position: absolute; left: 30%; transform: translateX(-50%);">30</span>
-              <span style="position: absolute; left: 60%; transform: translateX(-50%);">60</span>
-              <span style="position: absolute; left: 80%; transform: translateX(-50%);">80</span>
-              <span style="position: absolute; left: 100%; transform: translateX(-100%);">100</span>
+        <!-- Caja del Simulador de Riesgo -->
+        <div class="simulator-box">
+          <div class="sim-header">
+            <div class="sim-title">🎮 Simulador y Calculadora de Riesgo Disciplinario</div>
+            <div class="sim-score-badge">
+              <span class="sim-score-num" id="sim-score-display">0</span>
+              <span class="sim-score-unit">PTS ACUMULADOS</span>
             </div>
           </div>
 
-          <div id="risk-details-card" class="risk-details-card state-safe">
-            <div class="details-header">
-              <span class="details-icon">🟢</span>
+          <div class="sim-slider-container">
+            <input type="range" id="sim-range" min="0" max="100" step="5" value="0" class="sim-slider">
+            <div class="sim-bar-track">
+              <div class="sim-bar-fill" id="sim-bar-fill"></div>
+            </div>
+            <div class="sim-ticks">
+              <span>0 (Limpio)</span>
+              <span>20 (Aviso)</span>
+              <span>40 (Silencio 1h)</span>
+              <span>60 (Silencio 24h)</span>
+              <span>80 (Expulsión)</span>
+              <span>100 (Ban Permanente)</span>
+            </div>
+          </div>
+
+          <!-- Tarjeta Reactiva de Consecuencias y Prevención -->
+          <div class="sim-status-card" id="sim-card-details">
+            <div class="sim-status-header">
+              <div class="sim-status-icon" id="sim-icon">🟢</div>
               <div>
-                <h4 id="details-title">Estado: Limpio / Seguro</h4>
-                <p id="details-subtitle">Puntos: 0 - 39 pts | Sin sanciones automáticas</p>
+                <div class="sim-status-title" id="sim-status-title">Historial Ejemplar · Estado Seguro</div>
+                <div class="sim-status-sub" id="sim-status-sub">Rango: 0 - 19 PTS | Sin penalizaciones activas</div>
               </div>
             </div>
-            <div class="details-body">
-              <div class="details-section">
-                <h5>⚖️ Acción Aplicada:</h5>
-                <p id="details-action">Solo recibirás advertencias verbales (Avisos) y el bot borrará el mensaje infractor. No hay castigos físicos de tiempo fuera o expulsión.</p>
+
+            <div class="sim-info-grid">
+              <div class="sim-info-block">
+                <h5>⚖️ Acción Ejecutada por el Sistema:</h5>
+                <p id="sim-action-desc">Tu historial está en orden. En caso de una falta leve involuntaria, el sistema solo eliminará el mensaje infractor y enviará un recordatorio formativo en el canal.</p>
               </div>
-              <div class="details-section">
-                <h5>💡 Cómo Evitarlo (Tutorial de Evasión):</h5>
-                <ul id="details-tutorials">
-                  <li>Familiarízate con las reglas del servidor.</li>
-                  <li>Evita usar abreviaturas ofensivas (ej: "ptm", "hdtpm", "pndj"), ya que la IA del bot las analiza sin contexto como lenguaje vulgar.</li>
-                  <li>El comportamiento positivo sin infracciones reduce tu historial automáticamente.</li>
+
+              <div class="sim-info-block">
+                <h5>💡 Protocolo de Prevención & Evasión de Faltas:</h5>
+                <ul id="sim-prevention-list">
+                  <li>Lee la descripción temática antes de enviar multimedia en canales específicos.</li>
+                  <li>Evita el uso de abreviaturas malsonantes reiteradas para no activar filtros de lenguaje hostil.</li>
+                  <li>Si mantienes tu historial sin faltas por 30 días, se descuentan 20 puntos de penalizaciones previas.</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="pts-bars stagger" id="pts-bars">
-          <!-- Escala Dinámica de Sanciones (Progreso de 10 en 10) -->
-          <div class="pts-row"><div class="pts-lbl">0 pts</div><div class="pts-track"><div class="pts-fill" data-w="0" style="background:#555; color:#555;"></div></div><div class="pts-action" style="color:#aaa">Primer Aviso</div></div>
-          <div class="pts-row"><div class="pts-lbl">10 pts</div><div class="pts-track"><div class="pts-fill" data-w="10" style="background:var(--teal); color:var(--teal);"></div></div><div class="pts-action" style="color:var(--teal)">Aviso Leve</div></div>
-          <div class="pts-row"><div class="pts-lbl">20 pts</div><div class="pts-track"><div class="pts-fill" data-w="20" style="background:var(--teal); color:var(--teal);"></div></div><div class="pts-action" style="color:var(--teal)">Aviso Moderado</div></div>
-          <div class="pts-row"><div class="pts-lbl">30 pts</div><div class="pts-track"><div class="pts-fill" data-w="30" style="background:var(--yellow); color:var(--yellow);"></div></div><div class="pts-action" style="color:var(--yellow)">Aviso Crítico</div></div>
-          <div class="pts-row"><div class="pts-lbl">40 pts</div><div class="pts-track"><div class="pts-fill" data-w="40" style="background:var(--orange); color:var(--orange);"></div></div><div class="pts-action" style="color:var(--orange)">Silencio Corto (1h)</div></div>
-          <div class="pts-row"><div class="pts-lbl">50 pts</div><div class="pts-track"><div class="pts-fill" data-w="50" style="background:#ff6644; color:#ff6644;"></div></div><div class="pts-action" style="color:#ff6644">Silencio Medio (12h)</div></div>
-          <div class="pts-row"><div class="pts-lbl">60 pts</div><div class="pts-track"><div class="pts-fill" data-w="60" style="background:var(--red); color:var(--red);"></div></div><div class="pts-action" style="color:var(--red)">Silencio Largo (1d)</div></div>
-          <div class="pts-row"><div class="pts-lbl">70 pts</div><div class="pts-track"><div class="pts-fill" data-w="70" style="background:#ff3333; color:#ff3333;"></div></div><div class="pts-action" style="color:#ff3333">Aislamiento Completo (3d)</div></div>
-          <div class="pts-row"><div class="pts-lbl">80 pts</div><div class="pts-track"><div class="pts-fill" data-w="80" style="background:var(--orange); color:var(--orange);"></div></div><div class="pts-action" style="color:var(--orange)">Expulsión Directa</div></div>
-          <div class="pts-row"><div class="pts-lbl">90 pts</div><div class="pts-track"><div class="pts-fill" data-w="90" style="background:#600000; color:#600000;"></div></div><div class="pts-action" style="color:#aa0000">Ban Temporal (30d)</div></div>
-          <div class="pts-row"><div class="pts-lbl">100 pts</div><div class="pts-track"><div class="pts-fill" data-w="100" style="background:#111111; color:#ff0000; box-shadow: 0 0 6px #ff0000"></div></div><div class="pts-action" style="color:#ff0000; font-weight: bold; text-shadow: 0 0 3px #ff0000;">Ban Permanente</div></div>
-        </div>
-        </div>
-
-        <div class="callout cl-teal">
-          <div class="ci">⏳</div>
-          <p><strong>Expiración automática —</strong> El sistema descuenta 20 puntos por cada 30 días sin infracciones. El comportamiento positivo restaura tu historial progresivamente.</p>
-        </div>
-
-        <!-- TABS DE VARIACIONES DE PUNTOS -->
-      </div>
-
-      <div class="gap"></div>
-      <div class="stitle reveal" id="sanciones">
-        <span class="stitle-badge">§ 06</span>
-        <h2>Variaciones y Sanciones</h2>
-      </div>
-
-      <style>
-        .pts-tabs {
-          display: flex;
-          gap: 16px;
-          margin-bottom: 24px;
-        }
-        .pts-tab-btn {
-          flex: 1;
-          background: var(--surface2);
-          border: 1px solid var(--border);
-          border-radius: var(--radius-lg);
-          padding: 20px;
-          text-align: center;
-          cursor: pointer;
-          transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-          position: relative;
-          overflow: hidden;
-          box-shadow: var(--shadow);
-        }
-        .pts-tab-btn::before {
-          content: '';
-          position: absolute;
-          top: 0; left: 0; right: 0; height: 3px;
-          background: transparent;
-          transition: background 0.3s ease;
-        }
-        .pts-tab-btn:hover {
-          transform: translateY(-4px);
-          background: var(--surface3);
-        }
-        .pts-tab-btn.active {
-          background: var(--surface3);
-        }
-        .pts-tab-btn.tab-sancion.active {
-          border-color: rgba(224,96,112,0.4);
-          box-shadow: 0 8px 24px rgba(224,96,112,0.15);
-        }
-        .pts-tab-btn.tab-sancion.active::before { background: var(--red); }
-        .pts-tab-btn.tab-karma.active {
-          border-color: rgba(255, 215, 0, 0.4);
-          box-shadow: 0 8px 24px rgba(255, 215, 0, 0.15);
-        }
-        .pts-tab-btn.tab-karma.active::before { background: #ffd700; }
-        
-        .pts-tab-icon {
-          font-size: 2rem;
-          margin-bottom: 8px;
-          display: block;
-        }
-        .pts-tab-title {
-          font-family: 'Playfair Display', serif;
-          font-size: 1.2rem;
-          font-weight: 700;
-          color: var(--white);
-          margin-bottom: 4px;
-        }
-        .pts-tab-desc {
-          font-size: 0.85rem;
-          color: var(--subtext);
-        }
-        
-        .pts-tab-content {
-          display: none;
-          animation: pts-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-        .pts-tab-content.active {
-          display: block;
-        }
-        @keyframes pts-fade-in {
-          from { opacity: 0; transform: translateY(15px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @media (max-width: 600px) {
-          .pts-tabs { flex-direction: column; gap: 12px; }
-        }
-      </style>
-
-      <div class="pts-tabs reveal">
-        <div class="pts-tab-btn tab-sancion active" onclick="showPtsTab('sancion')">
-          <span class="pts-tab-icon">⚖️</span>
-          <div class="pts-tab-title">Sanción Automatizada</div>
-          <div class="pts-tab-desc">Escala de penalizaciones por infracciones</div>
-        </div>
-        <div class="pts-tab-btn tab-karma" onclick="showPtsTab('karma')">
-          <span class="pts-tab-icon">✨</span>
-          <div class="pts-tab-title">Puntos a Favor</div>
-          <div class="pts-tab-desc">Beneficios por buen comportamiento (Karma)</div>
-        </div>
-      </div>
-
-      <div id="content-sancion" class="pts-tab-content active">
-        <div class="card reveal in">
-          <div class="card-header">
-            <div class="card-icon">⚖️</div>
-            <div>
-              <div class="card-title">Proceso de Sanción Automatizado</div>
-              <div class="card-sub">Las sanciones escalan proporcionalmente según los puntos acumulados.</div>
-            </div>
-          </div>
-
-          <div class="timeline stagger in">
-            <div class="tl-item">
-              <div class="tl-dot tl-warn">⚠️</div>
-              <div class="tl-body">
-                <div class="tl-name">Avisos (Strikes) <span class="tl-tag tag-w">0 - 39 PTS</span></div>
-                <div class="tl-desc">El mensaje infractor es eliminado automáticamente. El bot notifica en el canal con el motivo, los puntos acumulados y el umbral siguiente. El sistema da entre 3 y 6 oportunidades de corregir tu actitud antes de aplicar una sanción real de silencio o expulsión, aplicando a todos por igual (incluyendo al Staff).</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot tl-mute">🔇</div>
-              <div class="tl-body">
-                <div class="tl-name">Silencio Temporal <span class="tl-tag tag-m">≥ 40 PTS</span></div>
-                <div class="tl-desc">El mensaje es eliminado. El usuario recibe un timeout de <strong>10 minutos</strong> durante los cuales no puede enviar mensajes en ningún canal. Reincidencias pueden extender este período a discreción del staff.</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot tl-kick">👢</div>
-              <div class="tl-body">
-                <div class="tl-name">Expulsión Temporal <span class="tl-tag tag-k">≥ 80 PTS</span></div>
-                <div class="tl-desc">El usuario es expulsado del servidor. Puede reintegrarse mediante una nueva invitación válida, pero su historial de puntos <strong>persiste</strong>. Una reincidencia inmediata escala directamente al baneo permanente o temporal.</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot tl-ban" style="background: #e67e22;">⏱️</div>
-              <div class="tl-body">
-                <div class="tl-name" style="color: #e67e22;">Baneo Temporal <span class="tl-tag" style="background: #e67e22; color: #fff;">≥ 90 PTS</span></div>
-                <div class="tl-desc">El usuario es baneado del servidor de forma temporal.</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot tl-ban">🔨</div>
-              <div class="tl-body">
-                <div class="tl-name">Baneo Permanente <span class="tl-tag tag-b">100 PTS</span></div>
-                <div class="tl-desc">El usuario es baneado permanentemente. En casos de doxxing, scam, phishing o contenido ilegal, se genera un <strong>reporte formal a Discord Trust & Safety</strong> con todos los registros.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="callout cl-red">
-            <div class="ci">⚡</div>
-            <p><strong>Sanciones inmediatas sin acumulación de puntos:</strong> Doxxing, scam, phishing y cualquier contenido que involucre menores de edad resultan en <strong>ban permanente inmediato</strong>, independientemente del historial.</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="content-karma" class="pts-tab-content">
-        <div class="callout" style="background: rgba(255, 215, 0, 0.05); border-left: 4px solid #ffd700; margin-top: 0;">
-          <div class="ci" style="color: #ffd700; font-size: 1.8rem;">✨</div>
-          <h3 style="color: #ffd700; font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 12px; margin-top: -6px;">Puntos a Favor (Karma)</h3>
-          <p><strong>El buen comportamiento se recompensa de forma silenciosa.</strong> Si mantienes un historial limpio, ganarás <strong>+5 puntos cada 3 semanas</strong> y <strong>+30 puntos al mes</strong>. A medida que acumulas Karma, Novarito detecta tu nivel y te otorga beneficios de forma dinámica:</p>
-          
-          <div class="timeline stagger in" style="margin-top: 24px;">
-            <div class="tl-item">
-              <div class="tl-dot" style="background: #555;">😐</div>
-              <div class="tl-body">
-                <div class="tl-name" style="color: #ccc;">Modo Estándar <span class="tl-tag" style="background: #333; color: #fff;">0 - 19 PTS</span></div>
-                <div class="tl-desc">Comportamiento normal. Sin beneficios especiales ni penalizaciones.</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot" style="background: #d4af37;">🤝</div>
-              <div class="tl-body">
-                <div class="tl-name" style="color: #d4af37;">Trato Amable <span class="tl-tag" style="background: #8a7324; color: #fff;">20 - 39 PTS</span></div>
-                <div class="tl-desc">Novarito empieza a reconocer tu buen comportamiento. Te tratará de forma más empática y cálida en las conversaciones.</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot" style="background: #ffb84d;">🤫</div>
-              <div class="tl-body">
-                <div class="tl-name" style="color: #ffb84d;">Iniciativa Propia <span class="tl-tag" style="background: #a67732; color: #fff;">40 - 59 PTS</span></div>
-                <div class="tl-desc">Nivel de confianza alto. Novarito tomará la iniciativa ocasionalmente para contarte secretos, chistes o datos curiosos sin que se lo pidas.</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot" style="background: #ff9933;">🤗</div>
-              <div class="tl-body">
-                <div class="tl-name" style="color: #ff9933;">Roleo Avanzado <span class="tl-tag" style="background: #a66321; color: #fff;">60 - 79 PTS</span></div>
-                <div class="tl-desc">Afinidad desbloqueada. Novarito te seguirá la corriente si le pides jugar, realizar acciones de rol sencillas o le das abrazos interactivos.</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot" style="background: #ff7733;">🎭</div>
-              <div class="tl-body">
-                <div class="tl-name" style="color: #ff7733;">Roleos Complejos <span class="tl-tag" style="background: #a64d21; color: #fff;">80 - 99 PTS</span></div>
-                <div class="tl-desc">Desbloqueo de personalidades alternas a petición (Maid, Yandere, Tsundere, etc.) para sesiones de rol profundas y personalizadas.</div>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot" style="background: #ffcc00; box-shadow: 0 0 12px #ffcc00;">👑</div>
-              <div class="tl-body">
-                <div class="tl-name" style="color: #ffcc00; font-weight: 900; text-shadow: 0 0 8px rgba(255,204,0,0.5);">Afinidad Máxima <span class="tl-tag" style="background: #ffcc00; color: #000;">100 PTS</span></div>
-                <div class="tl-desc">El nivel máximo de confianza. Eres considerado un VIP para el bot, obteniendo acceso a todas sus capacidades experimentales y respuestas sin filtros restrictivos (dentro de lo legal).</div>
-              </div>
-            </div>
-          </div>
-          
-          <p style="margin-top: 14px; color: #ffaa00; font-size: 0.85rem;">⚠️ <em>Advertencia: Cualquier infracción o falta a las reglas (Aviso Leve o superior) reiniciará todo tu Karma a 0 instantáneamente, perdiendo todos los beneficios acumulados.</em></p>
-        </div>
-      </div>
-
-      <script>
-        function showPtsTab(tabId) {
-          document.querySelectorAll('.pts-tab-content').forEach(el => el.classList.remove('active'));
-          document.querySelectorAll('.pts-tab-btn').forEach(el => el.classList.remove('active'));
-          document.getElementById('content-' + tabId).classList.add('active');
-          document.querySelector('.tab-' + tabId).classList.add('active');
-        }
-      </script>
-      </div>
-
-      <!-- § 07 -->
-      <div class="gap"></div>
-      <div class="stitle reveal" id="legal">
-        <span class="stitle-badge">§ 07</span>
-        <h2>Marco Legal</h2>
-      </div>
-
-      <div class="card reveal">
-        <div class="card-header">
-          <div class="card-icon">📜</div>
+        <div class="callout green" style="margin-top: 24px;">
+          <div class="callout-icon">⏳</div>
           <div>
-            <div class="card-title">Disposiciones Legales</div>
-            <div class="card-sub">Obligaciones y derechos conforme a políticas de Discord y legislación aplicable.</div>
+            <strong>Mecanismo de Desgravación Automática:</strong> Los puntos de sanción no son perpetuos si no reincides. Cada 30 días de actividad limpia, el sistema resta 20 puntos hasta dejar tu registro en cero absoluto.
           </div>
         </div>
-        <table class="legal-table">
-          <thead><tr><th>Disposición</th><th>Descripción</th><th>Referencia</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Aceptación de ToS</strong></td><td>Al unirte aceptas estas normas y los Términos de Discord.</td><td><a href="https://discord.com/terms" target="_blank">discord.com/terms</a></td></tr>
-            <tr><td><strong>Edad mínima</strong></td><td>Discord requiere al menos 13 años. Canales NSFW requieren verificación de mayoría de edad (18+).</td><td>Art. 2 ToS Discord</td></tr>
-            <tr><td><strong>Contenido ilegal</strong></td><td>Cualquier contenido ilegal bajo la legislación del usuario o de EE.UU. será reportado a las autoridades competentes.</td><td>COPPA, DMCA, 18 U.S.C.</td></tr>
-            <tr><td><strong>Propiedad intelectual</strong></td><td>No se permite compartir contenido protegido sin permiso del titular. Las infracciones pueden resultar en eliminación bajo DMCA.</td><td>DMCA §512</td></tr>
-            <tr><td><strong>Privacidad de datos</strong></td><td>Los datos del bot se almacenan bajo las políticas de Firebase/Google Cloud. El usuario puede solicitar su eliminación.</td><td>GDPR Art. 17, LGPD</td></tr>
-            <tr><td><strong>Responsabilidad</strong></td><td>El servidor no se responsabiliza por el contenido de terceros. La responsabilidad recae en el autor del mensaje.</td><td>Sec. 230 CDA</td></tr>
-            <tr><td><strong>Notificación de cambios</strong></td><td>Los cambios serán notificados con al menos 48 horas de antelación en los canales oficiales.</td><td>Buena fe contractual</td></tr>
-            <tr><td><strong>Jurisdicción</strong></td><td>Este servidor opera bajo las políticas de Discord Inc. (EE.UU.). Para asuntos civiles, aplica la ley del país de residencia del usuario afectado.</td><td>Discord ToS §17</td></tr>
-          </tbody>
-        </table>
-        <div class="callout cl-gold">
-          <div class="ci">⚠️</div>
-          <p><strong>Cumplimiento de Directrices:</strong> Este servidor cumple con las <a href="https://discord.com/guidelines" target="_blank" style="color:var(--gold-lt)">Directrices de la Comunidad de Discord</a>. Las violaciones graves resultan en reportes a Discord Trust & Safety.</p>
-        </div>
       </div>
 
-      <!-- § 08 -->
-      <div class="gap"></div>
-      <div class="stitle reveal" id="apelacion">
-        <span class="stitle-badge">§ 08</span>
-        <h2>Proceso de Apelación</h2>
+      <!-- ========================================== -->
+      <!-- FASE VI: MARCO JURÍDICO LATAM Y MÉXICO 📜 -->
+      <!-- ========================================== -->
+      <div class="section-gap" id="fase-6"></div>
+      <div class="phase-header">
+        <span class="phase-badge">FASE VI</span>
+        <h2 class="phase-title">Marco Jurídico Latinoamericano & Ciberseguridad 📜</h2>
+        <div class="phase-line"></div>
       </div>
 
-      <div class="card reveal">
-        <div class="card-header">
-          <div class="card-icon">💬</div>
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">🏛️</div>
           <div>
-            <div class="card-title">Tus Derechos y Cómo Apelar</div>
-            <div class="card-sub">Toda sanción automática puede ser revisada por un administrador humano.</div>
+            <div class="card-title">Legislación Vigente sobre Delitos Digitales y Privacidad</div>
+            <div class="card-sub">Selecciona un país para consultar los artículos jurídicos y códigos penales aplicables a conductas dentro de plataformas digitales.</div>
           </div>
         </div>
-        <ul class="rule-list stagger">
-          <li class="rule-item"><span class="rnum gold">A</span><div class="rtxt"><strong>Derecho a apelar</strong><span>Cualquier usuario sancionado por el sistema automatizado tiene derecho a solicitar revisión humana. Los administradores pueden revertir, reducir o mantener la sanción tras evaluar el contexto completo.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">B</span><div class="rtxt"><strong>Procedimiento de apelación</strong><span>Contacta a un administrador por mensaje directo explicando: (1) el mensaje eliminado, (2) el contexto de la conversación, (3) por qué consideras que fue un error. Se revisará el registro completo de la IA.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">C</span><div class="rtxt"><strong>Tiempo de respuesta</strong><span>Las apelaciones serán revisadas dentro de las próximas 48 horas hábiles. Durante este período la sanción permanece activa salvo decisión contraria de un administrador.</span></div></li>
-          <li class="rule-item"><span class="rnum red">D</span><div class="rtxt"><strong>Sanciones no apelables</strong><span>Los baneos por doxxing, distribución de contenido de menores, scam o phishing son permanentes. Los reportes emitidos a Discord Inc. no pueden ser retirados.</span></div></li>
-          <li class="rule-item"><span class="rnum red">E</span><div class="rtxt"><strong>Evasión de sanciones</strong><span>Crear cuentas alternativas para evadir un ban o silencio resulta en el ban permanente de todas las cuentas involucradas y reporte inmediato a Discord.</span></div></li>
-        </ul>
+
+        <!-- Selector de Países -->
+        <div class="country-selector">
+          <button class="country-btn active" data-country="all">🌐 Ver Todos</button>
+          <button class="country-btn" data-country="mx">🇲🇽 México</button>
+          <button class="country-btn" data-country="ar">🇦🇷 Argentina</button>
+          <button class="country-btn" data-country="co">🇨🇴 Colombia</button>
+          <button class="country-btn" data-country="cl">🇨🇱 Chile</button>
+          <button class="country-btn" data-country="pe">🇵🇪 Perú</button>
+          <button class="country-btn" data-country="intl">⚖️ Internacional / Discord</button>
+        </div>
+
+        <!-- Contenedor de Artículos Jurídicos -->
+        <div class="legal-cards-container" id="legal-cards">
+
+          <!-- MÉXICO -->
+          <div class="legal-item" data-c="mx">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇲🇽 Delitos contra la Intimidad Sexual (Ley Olimpia)</span>
+              <span class="legal-badge-country" style="color:#34d399; border-color:rgba(52,211,153,0.3)">MÉXICO</span>
+            </div>
+            <div class="legal-law-ref">Código Penal Federal · Art. 199 Octies / Ley General de Acceso de las Mujeres a una Vida Libre de Violencia</div>
+            <p>Sanciona con penas de 3 a 6 años de prisión la difusión, comercialización, distribución o intercambio de contenido íntimo o sexual sin consentimiento a través de medios digitales o redes sociales.</p>
+          </div>
+
+          <div class="legal-item" data-c="mx">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇲🇽 Acceso Ilícito a Sistemas y Datos Personales</span>
+              <span class="legal-badge-country" style="color:#34d399; border-color:rgba(52,211,153,0.3)">MÉXICO</span>
+            </div>
+            <div class="legal-law-ref">Código Penal Federal · Art. 211 Bis 1 al 211 Bis 7 / Ley Federal de Protección de Datos Personales (LFPDPPP)</div>
+            <p>Tipifica penalmente el acceso no autorizado, sabotaje, robo de credenciales (phishing) o destrucción de bases de datos informáticas y el uso ilícito de información privada ajena.</p>
+          </div>
+
+          <div class="legal-item" data-c="mx">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇲🇽 Amenazas y Coacción Digital</span>
+              <span class="legal-badge-country" style="color:#34d399; border-color:rgba(52,211,153,0.3)">MÉXICO</span>
+            </div>
+            <div class="legal-law-ref">Código Penal Federal · Art. 282</div>
+            <p>Establece penas pecuniarias y de prisión a quien amenace a otro con causarle daño en su persona, bienes, honor o derechos, aplicable a mensajes en plataformas digitales.</p>
+          </div>
+
+          <!-- ARGENTINA -->
+          <div class="legal-item" data-c="ar">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇦🇷 Régimen Penal de Delitos Informáticos</span>
+              <span class="legal-badge-country" style="color:#60a5fa; border-color:rgba(96,165,250,0.3)">ARGENTINA</span>
+            </div>
+            <div class="legal-law-ref">Ley 26.388 · Modificatoria del Código Penal de la Nación</div>
+            <p>Penaliza la interceptación indebida de comunicaciones electrónicas, daño informático, distribución de virus y estafas telemáticas.</p>
+          </div>
+
+          <div class="legal-item" data-c="ar">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇦🇷 Protección de Datos y Habeas Data</span>
+              <span class="legal-badge-country" style="color:#60a5fa; border-color:rgba(96,165,250,0.3)">ARGENTINA</span>
+            </div>
+            <div class="legal-law-ref">Ley 25.326 de Protección de Datos Personales / Art. 149 bis CP (Amenazas)</div>
+            <p>Garantiza el derecho al honor y la intimidad digital, sancionando la revelación no consentida de información privada registrada en bancos de datos.</p>
+          </div>
+
+          <!-- COLOMBIA -->
+          <div class="legal-item" data-c="co">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇨🇴 Protección de la Información y Sistemas Informáticos</span>
+              <span class="legal-badge-country" style="color:#fbbf24; border-color:rgba(251,191,36,0.3)">COLOMBIA</span>
+            </div>
+            <div class="legal-law-ref">Ley 1273 de 2009 · Código Penal Colombiano (Arts. 269A - 269J)</div>
+            <p>Crea tipos penales como el acceso abusivo a sistema informático, interceptación de datos, daño informático, uso de software malicioso y suplantación de sitios web para capturar datos (phishing).</p>
+          </div>
+
+          <div class="legal-item" data-c="co">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇨🇴 Habeas Data y Derecho al Olvido</span>
+              <span class="legal-badge-country" style="color:#fbbf24; border-color:rgba(251,191,36,0.3)">COLOMBIA</span>
+            </div>
+            <div class="legal-law-ref">Ley Estatutaria 1581 de 2012</div>
+            <p>Regula el tratamiento de datos personales y faculta a todo ciudadano a solicitar la supresión o rectificación de su información en registros digitales.</p>
+          </div>
+
+          <!-- CHILE -->
+          <div class="legal-item" data-c="cl">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇨🇱 Tipificación de Delitos Informáticos y Ciberseguridad</span>
+              <span class="legal-badge-country" style="color:#f87171; border-color:rgba(248,113,113,0.3)">CHILE</span>
+            </div>
+            <div class="legal-law-ref">Ley 21.459 / Convenio de Budapest</div>
+            <p>Establece normas sobre delitos informáticos: ataque a la integridad de sistemas, interceptación ilícita, falsificación informática y receptación de datos confidenciales.</p>
+          </div>
+
+          <!-- PERÚ -->
+          <div class="legal-item" data-c="pe">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇵🇪 Ley de Delitos Informáticos y Acoso Digital</span>
+              <span class="legal-badge-country" style="color:#f87171; border-color:rgba(248,113,113,0.3)">PERÚ</span>
+            </div>
+            <div class="legal-law-ref">Ley 30096 & Ley 30171 / Decreto Legislativo 1410 (Acoso y Difusión no consentida)</div>
+            <p>Sanciona el acceso indebido, fraude informático, acoso cibernético (stalking), chantaje sexual y divulgación de imágenes privadas sin autorización.</p>
+          </div>
+
+          <!-- INTERNACIONAL & DISCORD -->
+          <div class="legal-item" data-c="intl">
+            <div class="legal-item-head">
+              <span class="legal-item-title">⚖️ Términos de Servicio y Directrices de Discord</span>
+              <span class="legal-badge-country" style="color:#a78bfa; border-color:rgba(167,139,250,0.3)">GLOBAL</span>
+            </div>
+            <div class="legal-law-ref">Discord Terms of Service & Community Guidelines / DMCA §512 / COPPA</div>
+            <p>Exige un mínimo de edad de 13 años (o mayor según legislación local) y prohíbe terminantemente el doxxing, odio, malware y acoso, facultando la eliminación de cuentas infractoras a nivel global.</p>
+          </div>
+
+        </div>
       </div>
 
-
-      <!-- § 09 -->
-      <div class="gap"></div>
-      <div class="stitle reveal" id="derechos">
-        <span class="stitle-badge">§ 09</span>
-        <h2>Derechos del Usuario</h2>
+      <!-- ========================================== -->
+      <!-- FASE VII: DERECHOS DEL USUARIO Y APELACIÓN 📜 -->
+      <!-- ========================================== -->
+      <div class="section-gap" id="fase-7"></div>
+      <div class="phase-header">
+        <span class="phase-badge">FASE VII</span>
+        <h2 class="phase-title">Garantías del Usuario y Protocolo de Apelación 📜</h2>
+        <div class="phase-line"></div>
       </div>
 
-      <div class="card reveal">
-        <div class="card-header">
-          <div class="card-icon">👑</div>
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">⚖️</div>
           <div>
-            <div class="card-title">Garantías y Libertades en Umas Community</div>
-            <div class="card-sub">Todos los miembros gozan de los siguientes derechos fundamentales siempre que respeten las normativas.</div>
+            <div class="card-title">Carta de Derechos Fundamentales en Umas Community</div>
+            <div class="card-sub">Principios de protección a los usuarios frente a sanciones automáticas o arbitrarias.</div>
           </div>
         </div>
-        <ul class="rule-list stagger">
-          <li class="rule-item"><span class="rnum gold">1</span><div class="rtxt"><strong>Libertad de Expresión</strong><span>Tienes total libertad para opinar, sugerir, debatir y expresarte, siempre y cuando no se rompan las normas de respeto, no se fomente el odio, y se haga en el canal adecuado.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">2</span><div class="rtxt"><strong>Presunción de Inocencia</strong><span>Si Novarito o un sistema automático comete un error al sancionarte por contexto ambiguo, tienes el derecho de ser considerado inocente hasta que un administrador evalúe el caso manualmente.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">3</span><div class="rtxt"><strong>Privacidad Absoluta</strong><span>Garantizamos que el Staff jamás obligará a los usuarios a mostrar contenido privado. Tus mensajes directos son tuyos, y nadie puede exigirte revelar tu identidad real ni datos que no quieras compartir.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">4</span><div class="rtxt"><strong>Uso de Herramientas</strong><span>Tienes derecho a disfrutar de todas las características del servidor de forma justa: desde usar los bots de música, crear canales de voz personalizados temporales, y proponer emojis o actividades al Staff.</span></div></li>
-          <li class="rule-item"><span class="rnum gold">5</span><div class="rtxt"><strong>Trato Igualitario</strong><span>No existen favores especiales. Las normas aplican para todos por igual, incluyendo al propio Staff, artistas y creadores de contenido. Si el Staff incumple, puedes reportarlo al Owner.</span></div></li>
-        </ul>
-      </div>
 
-      <div class="appeal reveal" style="margin-top: 60px;">
-        <h3>¿Crees que fue un error del sistema?</h3>
-        <p>Revisamos cada caso con transparencia. La IA puede equivocarse en contextos ambiguos. Un administrador humano siempre puede corregir la decisión.</p>
-        <a class="appeal-btn" href="discord://discord.com/channels/1493288927388369139/1504912669809836274">🌸 Contactar un Administrador</a>
+        <div class="rules-grid">
+          <div class="rule-box">
+            <span class="r-tag gold">#1</span>
+            <div class="r-content">
+              <strong>Presunción de Buena Fe e Inocencia</strong>
+              <p>Todo usuario sancionado por una mala interpretación contextual de los algoritmos tiene derecho a ser considerado inocente y solicitar una evaluación humana objetiva.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag gold">#2</span>
+            <div class="r-content">
+              <strong>Derecho a la Privacidad Inviolable</strong>
+              <p>Ningún miembro del equipo de moderación podrá exigir a los usuarios revelar información privada, encender cámaras o compartir capturas de chats ajenos.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag gold">#3</span>
+            <div class="r-content">
+              <strong>Auditoría y Transparencia en Sanciones</strong>
+              <p>Cualquier sanción de silencio, expulsión o baneo debe contar con un registro de causa y puntos emitido en los logs de seguridad accesibles a la administración.</p>
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <span class="r-tag gold">#4</span>
+            <div class="r-content">
+              <strong>Derecho a Petición y Sugerencias Comunitarias</strong>
+              <p>Los miembros tienen plena libertad para proponer dinámicas, nuevos canales, emojis y mejoras organizativas en el canal designado para sugerencias.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Llamado a la Acción de Apelación -->
+        <div class="appeal-card">
+          <div class="appeal-title">¿Consideras que tu sanción fue un error algorítmico?</div>
+          <p class="appeal-p">
+            La moderación automatizada prioriza la seguridad comunitaria, pero los algoritmos pueden errar ante giros lingüísticos o contextos particulares. Nuestro equipo revisa solicitudes de apelación con neutralidad en un plazo de 24 a 48 horas.
+          </p>
+          <a href="https://discord.com/channels/1493288927388369139/1504912669809836274" class="appeal-btn" target="_blank" rel="noopener noreferrer">
+            <span>🌿 Abrir Ticket de Apelación</span> ➔
+          </a>
+        </div>
       </div>
 
     </div><!-- /container -->
 
+    <!-- Footer -->
     <footer>
-      <div class="footer-logo">✦ Alero · Servidor Oficial ✦</div>
+      <div class="footer-logo">✦ Umas Community · Servidor Oficial ✦</div>
       <p>
-        <a href="https://discord.com/terms" target="_blank">Términos de Discord</a> ·
-        <a href="https://discord.com/guidelines" target="_blank">Directrices</a> ·
-        <a href="https://discord.com/privacy" target="_blank">Privacidad</a>
+        <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">Términos de Discord</a> ·
+        <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer">Directrices de la Comunidad</a> ·
+        <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">Políticas de Privacidad</a>
       </p>
-      <p>© 2026 Servidor de Alero · Reglamento Oficial · Todos los derechos reservados.</p>
-      <p style="margin-top:4px;font-size:0.76rem;">Moderación automatizada por <strong style="color:var(--rose-lt)">Novarito</strong> · Impulsado por Inteligencia Artificial</p>
+      <p style="margin-top: 6px;">
+        © 2026 Umas Community · Reglamento y Marco de Seguridad Digital · Todos los derechos reservados.
+      </p>
+      <p style="margin-top: 4px; font-size: 0.74rem; color: rgba(220,252,231,0.35);">
+        Comunidad independiente sin fines de lucro bajo Uso Legítimo (Fair Use). No afiliada directamente con Cygames ni Discord Inc.
+      </p>
     </footer>
-
-  </main><!-- /mountain-cave -->
+  </main>
 </div><!-- /scroll-content -->
 
+<!-- ── SCRIPT DE COMPORTAMIENTO INTERACTIVO Y DETECCIÓN ── -->
 <script>
-  // ── Generador de campo de estrellas titilantes ──
-  function buildStarField(container, count) {
+  // ── 1. Detección de Dispositivo y Entorno ──
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+  const deviceTag = document.getElementById('device-tag');
+  if (deviceTag) {
+    deviceTag.textContent = isMobile ? '📱 Mobile Mode' : '💻 PC Mode';
+  }
+
+  // ── 2. Generador de Partículas Botánicas (Hojas y Luciérnagas) ──
+  function spawnBotanicalParticles(container, count) {
     if (!container) return;
-    const colors = ['#ffffff', '#ffd369', '#ff85a2', '#c090f0', '#a8e8ff'];
+    const leafSymbols = ['🍃', '🌿', '🍀', '✨'];
     const frag = document.createDocumentFragment();
+
     for (let i = 0; i < count; i++) {
-      const s = document.createElement('div');
-      const size = (Math.random() * 2 + 0.6).toFixed(2);
-      const isBig = size > 2;
-      s.className = 'twinkle-star' + (isBig ? ' big' : '') + (Math.random() > 0.5 ? ' drift' : '');
-      s.style.top = (Math.random() * 100).toFixed(2) + '%';
-      s.style.left = (Math.random() * 100).toFixed(2) + '%';
-      s.style.width = size + 'px';
-      s.style.height = size + 'px';
-      s.style.color = colors[Math.floor(Math.random() * colors.length)];
-      if (isBig) s.style.background = s.style.color;
-      s.style.setProperty('--dur', (Math.random() * 3 + 2).toFixed(2) + 's');
-      s.style.setProperty('--ddur', (Math.random() * 30 + 25).toFixed(2) + 's');
-      s.style.setProperty('--delay', (Math.random() * 5).toFixed(2) + 's');
-      s.style.setProperty('--min-o', (Math.random() * 0.2 + 0.05).toFixed(2));
-      s.style.setProperty('--max-o', (Math.random() * 0.4 + 0.6).toFixed(2));
-      frag.appendChild(s);
+      // Hojas flotantes
+      const leaf = document.createElement('div');
+      leaf.className = 'leaf-particle';
+      leaf.textContent = leafSymbols[Math.floor(Math.random() * leafSymbols.length)];
+      leaf.style.left = (Math.random() * 95).toFixed(1) + '%';
+      leaf.style.top = (Math.random() * -20) + 'px';
+      leaf.style.fontSize = (Math.random() * 12 + 10).toFixed(0) + 'px';
+      leaf.style.animationDuration = (Math.random() * 12 + 10).toFixed(1) + 's';
+      leaf.style.animationDelay = (Math.random() * 8).toFixed(1) + 's';
+      leaf.style.opacity = (Math.random() * 0.5 + 0.3).toFixed(2);
+      frag.appendChild(leaf);
+
+      // Luciérnagas verdes
+      if (i % 2 === 0) {
+        const fly = document.createElement('div');
+        fly.className = 'firefly';
+        fly.style.left = (Math.random() * 95).toFixed(1) + '%';
+        fly.style.top = (Math.random() * 90 + 5).toFixed(1) + '%';
+        fly.style.animationDuration = (Math.random() * 4 + 3).toFixed(1) + 's';
+        fly.style.animationDelay = (Math.random() * 4).toFixed(1) + 's';
+        frag.appendChild(fly);
+      }
     }
     container.appendChild(frag);
   }
 
-  const isMobileDevice = window.matchMedia('(max-width: 680px)').matches || /Mobi|Android/i.test(navigator.userAgent);
-  buildStarField(document.getElementById('enter-star-field'), isMobileDevice ? 100 : 200);
-  buildStarField(document.getElementById('bg-star-field'), isMobileDevice ? 70 : 140);
+  spawnBotanicalParticles(document.getElementById('particles-layer'), isMobile ? 18 : 36);
+  spawnBotanicalParticles(document.getElementById('enter-particles'), isMobile ? 14 : 28);
 
-  // ── Scroll reveal observer ──
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.05 });
-
-  // Animaciones solo arrancan al hacer clic en Entrar
-  // document.querySelectorAll('.reveal, .stagger').forEach(el => io.observe(el));
-
-  // ── Animated progress bars ──
-  const barsEl = document.getElementById('pts-bars');
-  const barsIO = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      setTimeout(() => {
-        document.querySelectorAll('.pts-fill').forEach(b => {
-          b.style.width = b.dataset.w + '%';
-        });
-      }, 200);
-      barsIO.unobserve(barsEl);
-    }
-  }, { threshold: 0.4 });
-  if (barsEl) barsIO.observe(barsEl);
-
-
-  // ── Active nav highlight (Robust Scroll Listener) ──
-  const sections = Array.from(document.querySelectorAll('section[id], main[id]'));
-  const links = document.querySelectorAll('.nav a');
-  
-  window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollY = window.scrollY;
-    
-    sections.forEach(sec => {
-      const secTop = sec.offsetTop - 100; // offset for navbar
-      const secHeight = sec.offsetHeight;
-      if (scrollY >= secTop && scrollY < secTop + secHeight) {
-        current = sec.getAttribute('id');
-      }
-    });
-    
-    links.forEach(a => {
-      a.classList.remove('active');
-      if (current && a.getAttribute('href') === '#' + current) {
-        a.classList.add('active');
-      }
-    });
-  }, { passive: true });
-  // ── Enter Experience & Audio ──
+  // ── 3. Experiencia de Entrada y Audio ──
   const enterScreen = document.getElementById('enter-screen');
   const enterBtn = document.getElementById('enter-btn');
   const bgAudio = document.getElementById('bg-audio');
-  const heroOverlay = document.querySelector('.hero-text-overlay');
-
-  // Forzar reproducción del video al cargar
   const heroVid = document.getElementById('hero-video');
+
   if (heroVid) {
     heroVid.muted = true;
     heroVid.play().catch(() => {});
   }
 
-  enterBtn.addEventListener('click', () => {
-    // 1. Ocultar enter-screen con fade
-    enterScreen.style.opacity = '0';
-    enterScreen.style.pointerEvents = 'none';
-
-    // 2. Audio ambiental
-    if (bgAudio) {
-      bgAudio.volume = 0.3;
-      bgAudio.play().catch(() => {});
-    }
-
-    // 3. Animación del título hero
-    setTimeout(() => {
-      if (heroOverlay) heroOverlay.classList.add('start-anim');
-    }, 800);
-
-    // 4. Eliminar del DOM y arrancar reveal
-    setTimeout(() => {
-      if (enterScreen && enterScreen.parentNode) {
-        enterScreen.parentNode.removeChild(enterScreen);
+  if (enterBtn && enterScreen) {
+    enterBtn.addEventListener('click', () => {
+      enterScreen.style.opacity = '0';
+      enterScreen.style.pointerEvents = 'none';
+      if (bgAudio) {
+        bgAudio.volume = 0.25;
+        bgAudio.play().catch(() => {});
       }
-      document.querySelectorAll('.reveal, .stagger').forEach(el => io.observe(el));
-    }, 2600);
+      setTimeout(() => {
+        enterScreen.style.display = 'none';
+      }, 900);
+    });
+  }
+
+  // ── 4. Control del Simulador y Matriz Sancional ──
+  const simRange = document.getElementById('sim-range');
+  const simBarFill = document.getElementById('sim-bar-fill');
+  const simScoreDisplay = document.getElementById('sim-score-display');
+  const simIcon = document.getElementById('sim-icon');
+  const simStatusTitle = document.getElementById('sim-status-title');
+  const simStatusSub = document.getElementById('sim-status-sub');
+  const simActionDesc = document.getElementById('sim-action-desc');
+  const simPreventionList = document.getElementById('sim-prevention-list');
+  const infCards = document.querySelectorAll('.inf-card');
+
+  // Datos dinámicos por nivel de puntos
+  const sanctionTiers = [
+    {
+      min: 0, max: 19,
+      icon: '🟢',
+      title: 'Historial Ejemplar · Estado Seguro',
+      sub: 'Rango: 0 - 19 PTS | Sin penalizaciones activas',
+      action: 'Tu historial está en orden. En caso de una falta leve involuntaria, el sistema solo eliminará el mensaje infractor y enviará un recordatorio formativo en el canal.',
+      preventions: [
+        'Lee la descripción temática antes de enviar multimedia en canales específicos.',
+        'Evita el uso de abreviaturas malsonantes reiteradas para no activar filtros de lenguaje hostil.',
+        'Si mantienes tu historial sin faltas por 30 días, se descuentan 20 puntos de penalizaciones previas.'
+      ]
+    },
+    {
+      min: 20, max: 39,
+      icon: '🟡',
+      title: 'Aviso Formal · Advertencia de Seguridad',
+      sub: 'Rango: 20 - 39 PTS | Advertencia disciplinaria activa',
+      action: 'Eliminación del mensaje e inserción de advertencia formal en tu registro. Estás a un paso del umbral de silencio temporal si cometes una falta adicional.',
+      preventions: [
+        'Modera el vocabulario y detén discusiones acaloradas antes de recurrir a insultos directos.',
+        'Evita saturar el chat con enlaces continuos sin mediar conversación.',
+        'Los puntos acumulados bajarán a 0 si mantienes conducta limpia.'
+      ]
+    },
+    {
+      min: 40, max: 59,
+      icon: '🔇',
+      title: 'Silencio Temporal Corto (Time-Out 1 Hora)',
+      sub: 'Rango: 40 - 59 PTS | Restricción temporal de escritura',
+      action: 'Time-Out automático en Discord por 1 hora. El usuario no podrá enviar mensajes ni reaccionar en ninguna sala de texto o voz del servidor.',
+      preventions: [
+        'Aprovecha la hora de descanso para calmar la tensión del chat.',
+        'Reincorporarse con actitud hostil duplicará el tiempo de silencio automáticamente a 12 horas.',
+        'No intentes abandonar y volver a entrar al servidor; la restricción persiste en la base de datos.'
+      ]
+    },
+    {
+      min: 60, max: 79,
+      icon: '🟠',
+      title: 'Silencio Prolongado (Time-Out 24 Horas)',
+      sub: 'Rango: 60 - 79 PTS | Bloqueo preventivo de 1 día',
+      action: 'Silencio por 24 horas continuas y notificación automática al equipo de moderación para supervisión del caso.',
+      preventions: [
+        'Revisa detalladamente las reglas de la Fase I y II para evitar faltas al reingresar.',
+        'Si consideras que la acumulación fue fruto de un malentendido, utiliza el canal de apelaciones de forma calmada.',
+        'Evita crear cuentas secundarias para hablar; hacerlo resultará en baneo permanente.'
+      ]
+    },
+    {
+      min: 80, max: 99,
+      icon: '👢',
+      title: 'Expulsión Directa del Servidor (Kick Disciplinario)',
+      sub: 'Rango: 80 - 99 PTS | Expulsión con historial persistente',
+      action: 'El usuario es expulsado de la comunidad. Podrá volver mediante una invitación pública válida, pero conservará su historial de puntos intacto bajo libertad condicional.',
+      preventions: [
+        'Al reingresar, cualquier infracción adicional escalará directamente al baneo permanente.',
+        'Mantén un perfil respetuoso y participa constructivamente para iniciar el proceso de reducción de faltas.'
+      ]
+    },
+    {
+      min: 100, max: 100,
+      icon: '🚨',
+      title: 'Baneo Permanente Inmediato & Bloqueo de Acceso',
+      sub: '100 PTS | Expulsión definitiva de la comunidad',
+      action: 'Baneo permanente de la cuenta y veto de dirección IP. En casos de doxxing, malware, acoso grave o material ilegal, se remitirá reporte a Discord Trust & Safety y autoridades.',
+      preventions: [
+        'El doxxing, las estafas financieras y las amenazas graves conllevan baneo irreversible directo sin derecho a apelación simplificada.',
+        'Solo se admitirán revisiones por error de identidad comprobable mediante solicitud formal.'
+      ]
+    }
+  ];
+
+  function updateSimulatorUI(score) {
+    if (simScoreDisplay) simScoreDisplay.textContent = score;
+    if (simBarFill) simBarFill.style.width = score + '%';
+
+    const tier = sanctionTiers.find(t => score >= t.min && score <= t.max) || sanctionTiers[0];
+    if (simIcon) simIcon.textContent = tier.icon;
+    if (simStatusTitle) simStatusTitle.textContent = tier.title;
+    if (simStatusSub) simStatusSub.textContent = tier.sub;
+    if (simActionDesc) simActionDesc.textContent = tier.action;
+
+    if (simPreventionList) {
+      simPreventionList.innerHTML = tier.preventions.map(p => `<li>${p}</li>`).join('');
+    }
+  }
+
+  if (simRange) {
+    simRange.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10);
+      updateSimulatorUI(val);
+      // Desmarcar tarjetas si se mueve manualmente el slider
+      infCards.forEach(c => c.classList.remove('selected'));
+    });
+  }
+
+  // Selección Interactiva en la Matriz de Infracciones
+  let accumulatedPoints = 0;
+  infCards.forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('selected');
+      // Recalcular suma de tarjetas seleccionadas
+      let sum = 0;
+      document.querySelectorAll('.inf-card.selected').forEach(c => {
+        sum += parseInt(c.dataset.pts || 0, 10);
+      });
+      if (sum > 100) sum = 100;
+      if (simRange) simRange.value = sum;
+      updateSimulatorUI(sum);
+    });
   });
 
-  // ── Interactive Risk Simulator Controller ──
-  const riskSlider = document.getElementById('risk-slider');
-  const riskScore = document.getElementById('risk-score');
-  const riskActiveBar = document.getElementById('risk-active-bar');
-  const detailsCard = document.getElementById('risk-details-card');
-  const detailsIcon = detailsCard ? detailsCard.querySelector('.details-icon') : null;
-  const detailsTitle = document.getElementById('details-title');
-  const detailsSubtitle = document.getElementById('details-subtitle');
-  const detailsAction = document.getElementById('details-action');
-  const detailsTutorials = document.getElementById('details-tutorials');
+  // ── 5. Filtro Interactivo de Leyes por País ──
+  const countryButtons = document.querySelectorAll('.country-btn');
+  const legalItems = document.querySelectorAll('.legal-item');
 
-  const riskData = {
-    0: {
-      status: "Limpio / Seguro",
-      range: "0 - 9 pts",
-      action: "Ninguna sanción física. El bot de Novarito solo borrará tu mensaje si es inapropiado y te recordará de forma amigable las normas.",
-      icon: "🟢",
-      className: "state-safe",
-      tutorials: [
-        "No uses palabras vulgares para probar el bot, ya que registrará la infracción.",
-        "Si tienes dudas sobre una palabra, pregunta a los moderadores primero.",
-        "El bot es amigable pero mantendrá tu historial de puntos por 30 días."
-      ]
-    },
-    10: {
-      status: "Aviso Leve",
-      range: "10 - 19 pts",
-      action: "Aviso 1. Tu mensaje ofensivo o spam es borrado y sumas 10 puntos a tu historial. Recibirás un aviso informativo en el canal.",
-      icon: "🟡",
-      className: "state-caution",
-      tutorials: [
-        "Evita el spam de mensajes repetitivos o el envío de enlaces sin contexto.",
-        "Si cometes un error leve, no te preocupes: los puntos se borran solos tras 30 días sin más infracciones."
-      ]
-    },
-    20: {
-      status: "Aviso Moderado",
-      range: "20 - 29 pts",
-      action: "Aviso 2. Borrado de mensaje y advertencia formal. Ya estás cerca de entrar al umbral de silencio.",
-      icon: "🟡",
-      className: "state-caution",
-      tutorials: [
-        "Si entras en discusiones acaloradas, tómate un descanso. Responder con insultos directos sumará 20 puntos adicionales de inmediato.",
-        "Recuerda que el Staff recibe notificaciones del Guardián del bot sobre tus advertencias."
-      ]
-    },
-    30: {
-      status: "Aviso Crítico",
-      range: "30 - 39 pts",
-      action: "Aviso Crítico. Última advertencia antes de ser silenciado automáticamente en el servidor.",
-      icon: "🟠",
-      className: "state-warn",
-      tutorials: [
-        "Modera tu vocabulario por completo. Cualquier grosería o actitud tóxica adicional gatillará el silencio automático.",
-        "No intentes esquivar el filtro usando caracteres especiales (ej: p.t.m), la IA del bot analiza el significado real de las palabras."
-      ]
-    },
-    40: {
-      status: "Silencio Corto",
-      range: "40 - 49 pts",
-      action: "Silencio Temporal de 1 hora. El bot te aplicará un Time Out en Discord y no podrás escribir en ningún canal.",
-      icon: "🔇",
-      className: "state-warn",
-      tutorials: [
-        "Utiliza esta hora para calmarte. Si regresas al chat con la misma actitud hostil, la sanción escalará a 12 horas.",
-        "Aprovecha para leer los canales de tutoriales o reglas."
-      ]
-    },
-    50: {
-      status: "Silencio Medio",
-      range: "50 - 59 pts",
-      action: "Silencio de 12 horas. Sanción aplicada por acumular más faltas o reincidencia moderada.",
-      icon: "🔇",
-      className: "state-warn",
-      tutorials: [
-        "El bot notificará a los moderadores. No intentes salir y volver a entrar al servidor, el silencio persiste."
-      ]
-    },
-    60: {
-      status: "Silencio Largo",
-      range: "60 - 69 pts",
-      action: "Silencio de 24 horas (1 día). Bloqueo completo por comportamiento hostil persistente.",
-      icon: "🔇",
-      className: "state-danger",
-      tutorials: [
-        "Para evitar llegar a este punto, utiliza los canales de voz en lugar de texto si sientes frustración.",
-        "Si consideras que las advertencias previas fueron un error de IA, abre un ticket de apelación pacíficamente en lugar de discutir con el bot."
-      ]
-    },
-    70: {
-      status: "Aislamiento Completo",
-      range: "70 - 79 pts",
-      action: "Silencio de 3 días (72 horas) y aislamiento total en canales de voz.",
-      icon: "🔇",
-      className: "state-danger",
-      tutorials: [
-        "Acepta el aislamiento sin intentar evadirlo. Crear cuentas alternativas (alts) para hablar resultará en ban permanente para ambas cuentas.",
-        "Aprovecha el tiempo para leer detenidamente las reglas. Al volver, evita cualquier conflicto por 30 días para que tus puntos bajen de forma natural."
-      ]
-    },
-    80: {
-      status: "Expulsión del Servidor",
-      range: "80 - 89 pts",
-      action: "Expulsión Directa (Kick). Serás removido del servidor de inmediato. Podrás volver con una invitación, pero tu historial de puntos no se borrará.",
-      icon: "👢",
-      className: "state-danger",
-      tutorials: [
-        "Si fuiste expulsado, significa que se agotó la paciencia. Para regresar, solicita una invitación a un administrador por MD.",
-        "Al reingresar, entrarás en 'Libertad Condicional'. Usa el servidor solo para observar y evita debates hasta que el bot descuente puntos por buena conducta."
-      ]
-    },
-    90: {
-      status: "Baneo Temporal",
-      range: "90 - 99 pts",
-      action: "Baneo Temporal por 30 días. Tu cuenta será completamente vetada del servidor durante un mes.",
-      icon: "🔨",
-      className: "state-danger",
-      tutorials: [
-        "Esta es la última frontera. Los administradores del bot tienen registro completo de tus infracciones."
-      ]
-    },
-    100: {
-      status: "Baneo Permanente",
-      range: "100 pts",
-      action: "Baneo Permanente Inmediato. Bloqueo definitivo de tu cuenta y dirección IP para reingresar. Se reportará a Discord Trust & Safety si es por doxxing o estafas.",
-      icon: "🚨",
-      className: "state-danger",
-      tutorials: [
-        "El doxxing, acoso extremo o robo de datos causan baneo automático sin importar tus puntos previos.",
-        "Esta sanción es irreversible excepto mediante apelación manual con Lara/Gio."
-      ]
-    }
-  };
+  countryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      countryButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const targetCountry = btn.dataset.country;
 
-  function updateSimulator(value) {
-    if (!riskScore || !riskActiveBar || !detailsCard) return;
-    riskScore.textContent = value;
-    riskActiveBar.style.width = value + '%';
-    
-    let state = "safe";
-    if (value >= 40 && value < 70) state = "caution";
-    else if (value >= 70 && value < 90) state = "warn";
-    else if (value >= 90) state = "danger";
-    
-    riskActiveBar.className = `risk-bar-fill risk-state-${state}`;
-    
-    const data = riskData[value];
-    if (data) {
-      detailsCard.className = `risk-details-card ${data.className}`;
-      if (detailsIcon) detailsIcon.textContent = data.icon;
-      if (detailsTitle) detailsTitle.textContent = `Estado: ${data.status}`;
-      if (detailsSubtitle) detailsSubtitle.textContent = `Puntos: ${data.range} | Sanción Activa`;
-      if (detailsAction) detailsAction.innerHTML = data.action;
-      if (detailsTutorials) {
-        detailsTutorials.innerHTML = data.tutorials.map(t => `<li>${t}</li>`).join('');
-      }
-    }
-  }
-
-  if (riskSlider) {
-    riskSlider.addEventListener('input', (e) => {
-      updateSimulator(parseInt(e.target.value));
+      legalItems.forEach(item => {
+        if (targetCountry === 'all' || item.dataset.c === targetCountry) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
     });
-    updateSimulator(0);
-  }
+  });
+
+  // ── 6. Resaltado de Navegación Activa al Hacer Scroll ──
+  const navLinks = document.querySelectorAll('.nav a');
+  const sections = document.querySelectorAll('[id^="fase-"]');
+
+  window.addEventListener('scroll', () => {
+    let currentId = '';
+    const scrollPos = window.scrollY + 140;
+
+    sections.forEach(sec => {
+      if (scrollPos >= sec.offsetTop) {
+        currentId = sec.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (currentId && link.getAttribute('href') === '#' + currentId) {
+        link.classList.add('active');
+      }
+    });
+  }, { passive: true });
 </script>
-  </body>
+
+</body>
 </html>
- 
