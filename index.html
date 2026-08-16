@@ -21,20 +21,20 @@
     :root {
       --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
       --ease-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
-      --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-soft: cubic-bezier(0.2, 0.9, 0.3, 1);
 
       /* Paleta Esmeralda Profunda & Dark Forest */
-      --bg: #030a06;
-      --bg-gradient: radial-gradient(circle at 50% 20%, #0d281a 0%, #06140d 45%, #020704 100%);
-      --surface: rgba(9, 25, 16, 0.72);
-      --surface-solid: #091910;
-      --surface2: rgba(15, 39, 26, 0.75);
-      --surface3: rgba(22, 56, 37, 0.85);
-      --surface4: #1e4b33;
+      --bg: #020704;
+      --bg-gradient: radial-gradient(circle at 50% 20%, #0d281a 0%, #05140d 45%, #010603 100%);
+      --surface: rgba(8, 22, 14, 0.76);
+      --surface-solid: #07190f;
+      --surface2: rgba(13, 35, 23, 0.8);
+      --surface3: rgba(18, 48, 32, 0.88);
+      --surface4: #1c4730;
 
-      --border: rgba(52, 211, 153, 0.14);
-      --border-hi: rgba(52, 211, 153, 0.38);
-      --border-glow: rgba(16, 185, 129, 0.3);
+      --border: rgba(52, 211, 153, 0.15);
+      --border-hi: rgba(52, 211, 153, 0.4);
+      --border-glow: rgba(16, 185, 129, 0.32);
 
       --emerald: #10b981;
       --emerald-lt: #34d399;
@@ -53,8 +53,8 @@
       --blue: #3b82f6;
 
       --text: #dcfce7;
-      --text-muted: #8bb39e;
-      --text-dim: #5a806d;
+      --text-muted: #8eb7a2;
+      --text-dim: #577f6b;
       --white: #ffffff;
 
       --radius-xl: 24px;
@@ -62,8 +62,8 @@
       --radius: 14px;
       --radius-sm: 10px;
 
-      --shadow: 0 0 0 1px rgba(52, 211, 153, 0.12), 0 20px 50px rgba(0, 0, 0, 0.85), 0 4px 16px rgba(0, 0, 0, 0.5);
-      --shadow-glow: 0 0 35px rgba(16, 185, 129, 0.22);
+      --shadow: 0 0 0 1px rgba(52, 211, 153, 0.12), 0 24px 60px rgba(0, 0, 0, 0.85), 0 4px 18px rgba(0, 0, 0, 0.55);
+      --shadow-glow: 0 0 40px rgba(16, 185, 129, 0.25);
     }
 
     html {
@@ -110,7 +110,7 @@
       height: auto;
       transform: translate(-50%, -50%);
       object-fit: cover;
-      filter: saturate(0.85) brightness(0.38) contrast(1.15);
+      filter: saturate(0.9) brightness(0.38) contrast(1.18);
       opacity: 0.65;
     }
 
@@ -118,16 +118,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse at 50% 25%, rgba(16, 185, 129, 0.12) 0%, transparent 65%),
-        radial-gradient(ellipse at 50% 75%, rgba(6, 78, 59, 0.25) 0%, rgba(3, 10, 6, 0.88) 60%, rgba(3, 10, 6, 0.98) 100%);
-    }
-
-    /* Noise overlay for cinematic texture */
-    .hero-texture {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(52, 211, 153, 0.03) 0%, transparent 80%);
-      pointer-events: none;
+        radial-gradient(ellipse at 50% 25%, rgba(16, 185, 129, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse at 50% 75%, rgba(6, 78, 59, 0.28) 0%, rgba(2, 7, 4, 0.88) 60%, rgba(1, 4, 2, 0.98) 100%);
     }
 
     /* Canvas Particles (Leaves & Spores) */
@@ -140,14 +132,14 @@
       z-index: 1;
     }
 
-    /* ─── Pantalla de Entrada ASMR e Inicio Cinematográfico ─── */
+    /* ─── Pantalla de Entrada Espacial/Solar & ASMR ─── */
     #enter-screen {
       position: fixed;
       inset: 0;
       width: 100vw;
       height: 100vh;
       height: 100dvh;
-      background: radial-gradient(circle at 50% 35%, #0d281a 0%, #041009 60%, #010503 100%);
+      background: radial-gradient(circle at 50% 30%, #0d2e1e 0%, #05180f 45%, #010603 100%);
       z-index: 9999;
       display: flex;
       flex-direction: column;
@@ -155,19 +147,65 @@
       align-items: center;
       text-align: center;
       padding: clamp(16px, 5vw, 32px);
+      overflow: hidden;
       transition: opacity 0.85s var(--ease-spring), transform 0.85s var(--ease-spring), filter 0.85s ease, visibility 0.85s;
     }
 
     #enter-screen.dismissed {
       opacity: 0;
       transform: scale(1.06);
-      filter: blur(14px);
+      filter: blur(16px);
       pointer-events: none;
       visibility: hidden;
     }
 
+    /* Elementos Celestiales de Fondo (Sol, Nebulosa y Espacio) */
+    .celestial-backdrop {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .celestial-sun {
+      position: absolute;
+      top: 18%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(220px, 45vw, 480px);
+      height: clamp(220px, 45vw, 480px);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(110, 231, 183, 0.45) 0%, rgba(52, 211, 153, 0.25) 35%, rgba(251, 191, 36, 0.12) 65%, transparent 75%);
+      filter: blur(35px);
+      animation: solar-pulse 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes solar-pulse {
+      0%   { transform: translate(-50%, -50%) scale(0.92); opacity: 0.75; }
+      100% { transform: translate(-50%, -50%) scale(1.12); opacity: 1; }
+    }
+
+    .solar-rays {
+      position: absolute;
+      top: 18%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(380px, 75vw, 750px);
+      height: clamp(380px, 75vw, 750px);
+      background: conic-gradient(from 0deg, transparent 0deg, rgba(52, 211, 153, 0.08) 30deg, transparent 60deg, rgba(251, 191, 36, 0.06) 90deg, transparent 120deg, rgba(110, 231, 183, 0.08) 180deg, transparent 240deg, rgba(52, 211, 153, 0.07) 300deg, transparent 360deg);
+      border-radius: 50%;
+      filter: blur(25px);
+      animation: ray-rotate 35s linear infinite;
+    }
+
+    @keyframes ray-rotate {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to   { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
     .enter-content {
-      max-width: 640px;
+      max-width: 680px;
       position: relative;
       z-index: 2;
       animation: enter-pop 1.1s var(--ease-spring) both;
@@ -186,42 +224,55 @@
       font-size: clamp(0.65rem, 1.8vw, 0.74rem);
       font-weight: 700;
       color: var(--mint);
-      background: rgba(16, 185, 129, 0.12);
+      background: rgba(16, 185, 129, 0.15);
       border: 1px solid var(--border-hi);
       padding: 6px 18px;
       border-radius: 100px;
       margin-bottom: 20px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      box-shadow: 0 0 25px rgba(16, 185, 129, 0.2);
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
     }
 
+    /* Logo de Entrada sin saltos de línea raros */
     .enter-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.3rem, 7vw, 4.2rem);
+      font-size: clamp(1.9rem, 5.8vw, 3.6rem);
       font-weight: 900;
       color: var(--white);
       letter-spacing: -0.02em;
-      line-height: 1.12;
+      line-height: 1.15;
       margin-bottom: 12px;
       text-shadow: 0 4px 35px rgba(16, 185, 129, 0.45);
-      animation: floating-glow 4s ease-in-out infinite alternate;
+      white-space: nowrap;
     }
 
-    @keyframes floating-glow {
-      0%   { transform: translateY(0); filter: drop-shadow(0 0 20px rgba(52, 211, 153, 0.3)); }
-      100% { transform: translateY(-6px); filter: drop-shadow(0 0 40px rgba(52, 211, 153, 0.65)); }
-    }
-
-    .enter-logo span {
+    .enter-logo .logo-main span {
       background: linear-gradient(135deg, #6ee7b7 0%, #34d399 45%, #fbbf24 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
+    .logo-leaf {
+      display: inline-block;
+      font-size: 0.88em;
+      filter: drop-shadow(0 0 16px rgba(52, 211, 153, 0.85));
+      animation: leaf-sway 3.2s ease-in-out infinite alternate;
+      transform-origin: bottom center;
+    }
+
+    @keyframes leaf-sway {
+      0%   { transform: rotate(-6deg) scale(0.96); }
+      100% { transform: rotate(8deg) scale(1.06); }
+    }
+
     .enter-sub {
-      font-size: clamp(0.88rem, 2.2vw, 1.08rem);
+      font-size: clamp(0.86rem, 2.2vw, 1.05rem);
       color: var(--text-muted);
       margin-bottom: 34px;
       font-style: italic;
@@ -279,20 +330,20 @@
     .enter-footer {
       margin-top: 30px;
       font-size: clamp(0.68rem, 1.8vw, 0.76rem);
-      color: rgba(220, 252, 231, 0.45);
+      color: rgba(220, 252, 231, 0.48);
       line-height: 1.6;
     }
 
-    /* ─── Navigation Bar (Extrema Compatibilidad Móvil & Desktop) ─── */
+    /* ─── Navigation Bar Suave & Ultra-Responsiva ─── */
     .nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 500;
-      background: rgba(3, 10, 6, 0.88);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      background: rgba(2, 7, 4, 0.88);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -449,7 +500,7 @@
       .nav-device-tag { display: block; }
     }
 
-    /* ─── Hero Text Overlay (Animación Mágica, ASMR & Transparencia 50%) ─── */
+    /* ─── Hero Text Overlay con Fade-In Suave y Transparencia 50% ─── */
     .scroll-content {
       position: relative;
       z-index: 10;
@@ -474,26 +525,30 @@
       pointer-events: auto;
       z-index: 20;
       opacity: 0;
-      transition: opacity 0.8s ease-in-out, filter 0.8s ease;
+      transform: translateY(35px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease;
+      filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.6));
     }
 
     .hero-text-overlay.start-anim {
-      animation: hero-enter-glow 4.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      opacity: 0.50; /* 50% de opacidad en reposo */
+      transform: translateY(0);
+      animation: hero-fade-in-glow 3.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    @keyframes hero-enter-glow {
+    @keyframes hero-fade-in-glow {
       0% {
         opacity: 0;
-        transform: translateY(40px) scale(1.05);
-        filter: drop-shadow(0 0 45px rgba(52, 211, 153, 0.95));
+        transform: translateY(40px) scale(0.96);
+        filter: drop-shadow(0 0 50px rgba(52, 211, 153, 0.95));
       }
       35% {
         opacity: 1;
         transform: translateY(0) scale(1);
-        filter: drop-shadow(0 0 65px rgba(110, 231, 183, 0.95)) drop-shadow(0 0 35px rgba(251, 191, 36, 0.65));
+        filter: drop-shadow(0 0 75px rgba(110, 231, 183, 0.95)) drop-shadow(0 0 40px rgba(251, 191, 36, 0.7));
       }
       100% {
-        opacity: 0.50; /* Termina al 50% de transparencia en reposo */
+        opacity: 0.50; /* Asentamiento suave al 50% */
         transform: translateY(0) scale(1);
         filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.6));
       }
@@ -504,11 +559,33 @@
       filter: drop-shadow(0 0 35px rgba(52, 211, 153, 0.8)) drop-shadow(0 0 20px rgba(251, 191, 36, 0.5));
     }
 
+    /* Animación en cascada suave para elementos del hero */
+    .hero-text-overlay.start-anim .hero-badge {
+      animation: hero-child-fade 0.9s 0.1s var(--ease-spring) both;
+    }
+    .hero-text-overlay.start-anim .hero-eyebrow {
+      animation: hero-child-fade 0.9s 0.25s var(--ease-spring) both;
+    }
+    .hero-text-overlay.start-anim .hero-title {
+      animation: hero-child-fade 1.1s 0.4s var(--ease-spring) both, title-sweep-bg 2.5s 0.8s ease-in-out forwards;
+    }
+    .hero-text-overlay.start-anim .hero-desc {
+      animation: hero-child-fade 0.9s 0.6s var(--ease-spring) both;
+    }
+    .hero-text-overlay.start-anim .scroll-indicator {
+      animation: hero-child-fade 0.9s 0.75s var(--ease-spring) both;
+    }
+
+    @keyframes hero-child-fade {
+      from { opacity: 0; transform: translateY(25px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(3, 10, 6, 0.78);
+      background: rgba(2, 7, 4, 0.78);
       backdrop-filter: blur(10px);
       border: 1px solid var(--border-hi);
       color: var(--mint);
@@ -538,20 +615,6 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.1rem, 6.2vw, 4.6rem);
       font-weight: 900;
-      background: linear-gradient(to bottom, #ffffff 45%, #e2f5ec 70%, #34d399 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.16;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-      opacity: 0;
-      transform: translateY(0);
-      filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.9));
-      position: relative;
-    }
-
-    .hero-text-overlay.start-anim .hero-title {
       background: 
         linear-gradient(110deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%),
         linear-gradient(to bottom, #ffffff 45%, #e2f5ec 70%, #34d399 100%);
@@ -561,17 +624,15 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      animation: title-in 1s 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards, title-sweep-bg 2.5s 0.9s ease-in-out forwards;
+      line-height: 1.16;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      position: relative;
     }
 
     @keyframes title-sweep-bg {
       0%   { background-position: 100% 0, 0 0; }
       100% { background-position: 0% 0, 0 0; }
-    }
-
-    @keyframes title-in {
-      from { opacity: 0; transform: translateY(15px); }
-      to   { opacity: 1; transform: translateY(0); }
     }
 
     .hero-title .accent {
@@ -618,8 +679,8 @@
 
     /* ─── Contenedor Principal (Main Body) ─── */
     .main-body {
-      background: rgba(3, 10, 6, 0.95);
-      backdrop-filter: blur(24px);
+      background: rgba(2, 7, 4, 0.96);
+      backdrop-filter: blur(28px);
       position: relative;
       padding-top: 40px;
       border-top: 1px solid var(--border);
@@ -633,7 +694,7 @@
 
     .section-gap { height: clamp(50px, 8vw, 80px); }
 
-    /* ─── Titulares de Fase Estables y Limpios ─── */
+    /* ─── Titulares de Fase Suaves y Estables ─── */
     .phase-header {
       display: flex;
       align-items: center;
@@ -671,7 +732,7 @@
       min-width: 30px;
     }
 
-    /* ─── Tarjetas de Contenido (Cards con Reveal Suave) ─── */
+    /* ─── Tarjetas de Contenido (Cards con GUI Suave) ─── */
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -862,7 +923,7 @@
       font-size: 0.55rem;
       font-weight: 800;
       color: var(--emerald-lt);
-      background: rgba(3, 10, 6, 0.9);
+      background: rgba(2, 7, 4, 0.9);
       padding: 2px 6px;
       border-radius: 4px;
       border: 1px solid var(--border-hi);
@@ -909,9 +970,9 @@
       line-height: 1.4;
     }
 
-    /* Simulador Interactivo */
+    /* Simulador Interactivo Suave */
     .simulator-box {
-      background: rgba(3, 10, 6, 0.88);
+      background: rgba(2, 7, 4, 0.88);
       border: 1px solid var(--border-hi);
       border-radius: var(--radius-lg);
       padding: clamp(18px, 3.5vw, 28px);
@@ -984,7 +1045,7 @@
       background: var(--emerald-lt);
       cursor: pointer;
       box-shadow: 0 0 18px var(--emerald);
-      border: 3px solid #030a06;
+      border: 3px solid #020704;
       transition: transform 0.2s var(--ease-spring);
     }
 
@@ -1280,7 +1341,7 @@
       border-top: 1px solid var(--border);
       padding: clamp(40px, 6vw, 55px) 20px;
       text-align: center;
-      background: #020704;
+      background: #010402;
       font-size: clamp(0.76rem, 1.6vw, 0.84rem);
       color: var(--text-muted);
       line-height: 1.8;
@@ -1313,15 +1374,22 @@
     <source src="bg-hq.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
-  <div class="hero-texture"></div>
   <canvas id="particles-canvas"></canvas>
 </div>
 
-<!-- ── Pantalla de Entrada ASMR e Inicio ── -->
+<!-- ── Pantalla de Entrada Espacial & Solar ASMR ── -->
 <div id="enter-screen">
+  <div class="celestial-backdrop">
+    <div class="celestial-sun"></div>
+    <div class="solar-rays"></div>
+  </div>
+
   <div class="enter-content">
     <div class="enter-badge">✦ Servidor de Fans en Discord · Fanmade ✦</div>
-    <h1 class="enter-logo">Umas <span>Community</span> 🌿</h1>
+    <h1 class="enter-logo">
+      <span class="logo-main">Umas <span>Community</span></span>
+      <span class="logo-leaf">🌿</span>
+    </h1>
     <div class="enter-sub">— Protocolo de Convivencia, Seguridad y Normativa del Servidor de Fans —</div>
     <div class="enter-btn-wrapper">
       <button class="enter-btn" id="enter-btn">
@@ -2053,7 +2121,7 @@
 
 <!-- ── SCRIPT DE COMPORTAMIENTO INTERACTIVO, ASMR AUDIO SYNTHESIZER & PROGRESIÓN (10 EN 10) ── -->
 <script>
-  // ── 1. Motor Sintetizador ASMR Web Audio API (Sin archivos externos requeridos) ──
+  // ── 1. Motor Sintetizador ASMR Avanzado (Web Audio API) ──
   let audioCtx = null;
   let soundEnabled = true;
 
@@ -2069,34 +2137,42 @@
     }
   }
 
-  // Sonido suave de toque de madera / burbuja ASMR
-  function playSoftTap(freq = 480, duration = 0.05) {
+  // Toque suave orgánico tipo madera / burbuja ASMR
+  function playSoftTap(freq = 520, duration = 0.045) {
     if (!soundEnabled || !audioCtx) return;
     try {
-      const osc = audioCtx.createOscillator();
+      const osc1 = audioCtx.createOscillator();
+      const osc2 = audioCtx.createOscillator();
       const gain = audioCtx.createGain();
       const filter = audioCtx.createBiquadFilter();
 
       filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(900, audioCtx.currentTime);
+      filter.frequency.setValueAtTime(1100, audioCtx.currentTime);
 
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(140, audioCtx.currentTime + duration);
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      osc1.frequency.exponentialRampToValueAtTime(130, audioCtx.currentTime + duration);
+
+      osc2.type = 'triangle';
+      osc2.frequency.setValueAtTime(freq * 0.5, audioCtx.currentTime);
+      osc2.frequency.exponentialRampToValueAtTime(80, audioCtx.currentTime + duration);
 
       gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
 
-      osc.connect(filter);
+      osc1.connect(filter);
+      osc2.connect(filter);
       filter.connect(gain);
       gain.connect(audioCtx.destination);
 
-      osc.start();
-      osc.stop(audioCtx.currentTime + duration);
+      osc1.start();
+      osc2.start();
+      osc1.stop(audioCtx.currentTime + duration);
+      osc2.stop(audioCtx.currentTime + duration);
     } catch (e) {}
   }
 
-  // Sonido cristalino / campanilla suave ASMR
+  // Campanilla armónica cristalina
   function playCrystalChime(notes = [523.25, 659.25, 783.99]) {
     if (!soundEnabled || !audioCtx) return;
     try {
@@ -2109,23 +2185,23 @@
         osc.frequency.setValueAtTime(freq, audioCtx.currentTime + delay);
 
         gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.05, audioCtx.currentTime + delay);
-        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + delay + 0.35);
+        gain.gain.setValueAtTime(0.06, audioCtx.currentTime + delay);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + delay + 0.4);
 
         osc.connect(gain);
         gain.connect(audioCtx.destination);
 
         osc.start(audioCtx.currentTime + delay);
-        osc.stop(audioCtx.currentTime + delay + 0.35);
+        osc.stop(audioCtx.currentTime + delay + 0.4);
       });
     } catch (e) {}
   }
 
-  // Sonido de brisa / suspiro suave al abrir
-  function playBreezeSweep() {
+  // Suspiro estelar / brisa cósmica al abrir
+  function playCosmicSweep() {
     if (!soundEnabled || !audioCtx) return;
     try {
-      const bufferSize = audioCtx.sampleRate * 0.5;
+      const bufferSize = audioCtx.sampleRate * 0.6;
       const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
       const output = buffer.getChannelData(0);
       for (let i = 0; i < bufferSize; i++) {
@@ -2137,22 +2213,22 @@
 
       const filter = audioCtx.createBiquadFilter();
       filter.type = 'bandpass';
-      filter.frequency.setValueAtTime(400, audioCtx.currentTime);
-      filter.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.3);
-      filter.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.5);
-      filter.Q.setValueAtTime(3.0, audioCtx.currentTime);
+      filter.frequency.setValueAtTime(320, audioCtx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(1400, audioCtx.currentTime + 0.35);
+      filter.frequency.exponentialRampToValueAtTime(180, audioCtx.currentTime + 0.6);
+      filter.Q.setValueAtTime(2.5, audioCtx.currentTime);
 
       const gain = audioCtx.createGain();
       gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
-      gain.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 0.2);
-      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.5);
+      gain.gain.linearRampToValueAtTime(0.09, audioCtx.currentTime + 0.25);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.6);
 
       whiteNoise.connect(filter);
       filter.connect(gain);
       gain.connect(audioCtx.destination);
 
       whiteNoise.start();
-      whiteNoise.stop(audioCtx.currentTime + 0.5);
+      whiteNoise.stop(audioCtx.currentTime + 0.6);
     } catch (e) {}
   }
 
@@ -2185,12 +2261,12 @@
     deviceTag.textContent = isMobile ? '📱 Mobile View' : '💻 PC Mode';
   }
 
-  // ── 3. Canvas Avanzado de Partículas Botánicas (Lush Leaves & Glowing Spores) ──
+  // ── 3. Canvas Avanzado de Partículas Botánicas y Esporales ──
   const canvas = document.getElementById('particles-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
     let particles = [];
-    const maxParticles = isMobile ? 22 : 45;
+    const maxParticles = isMobile ? 24 : 48;
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
@@ -2206,18 +2282,18 @@
       reset(initial = false) {
         this.x = Math.random() * canvas.width;
         this.y = initial ? Math.random() * canvas.height : -20;
-        this.size = Math.random() * 8 + 4;
-        this.speedY = Math.random() * 0.8 + 0.3;
+        this.size = Math.random() * 7 + 3.5;
+        this.speedY = Math.random() * 0.75 + 0.25;
         this.speedX = Math.sin(Math.random() * Math.PI) * 0.4 - 0.2;
         this.rot = Math.random() * 360;
-        this.rotSpeed = (Math.random() - 0.5) * 1.2;
-        this.opacity = Math.random() * 0.45 + 0.15;
-        this.type = Math.random() > 0.4 ? 'leaf' : 'spore';
+        this.rotSpeed = (Math.random() - 0.5) * 1.1;
+        this.opacity = Math.random() * 0.45 + 0.18;
+        this.type = Math.random() > 0.45 ? 'leaf' : 'spore';
         this.glow = Math.random() * 8 + 4;
       }
       update() {
         this.y += this.speedY;
-        this.x += Math.sin(this.y * 0.01) * 0.5 + this.speedX;
+        this.x += Math.sin(this.y * 0.01) * 0.45 + this.speedX;
         this.rot += this.rotSpeed;
         if (this.y > canvas.height + 25 || this.x < -30 || this.x > canvas.width + 30) {
           this.reset();
@@ -2234,14 +2310,14 @@
           ctx.shadowBlur = this.glow;
           ctx.shadowColor = '#10b981';
           ctx.beginPath();
-          ctx.ellipse(0, 0, this.size, this.size * 0.5, 0, 0, Math.PI * 2);
+          ctx.ellipse(0, 0, this.size, this.size * 0.48, 0, 0, Math.PI * 2);
           ctx.fill();
         } else {
           ctx.fillStyle = '#fbbf24';
-          ctx.shadowBlur = this.glow * 1.5;
+          ctx.shadowBlur = this.glow * 1.4;
           ctx.shadowColor = '#f59e0b';
           ctx.beginPath();
-          ctx.arc(0, 0, this.size * 0.35, 0, Math.PI * 2);
+          ctx.arc(0, 0, this.size * 0.32, 0, Math.PI * 2);
           ctx.fill();
         }
         ctx.restore();
@@ -2263,7 +2339,7 @@
     animateParticles();
   }
 
-  // ── 4. Experiencia de Entrada Cinematográfica ──
+  // ── 4. Experiencia de Entrada Cinematográfica (Con Fade-In Suave Garantizado) ──
   const enterScreen = document.getElementById('enter-screen');
   const enterBtn = document.getElementById('enter-btn');
   const bgAudio = document.getElementById('bg-audio');
@@ -2277,7 +2353,7 @@
   if (enterBtn && enterScreen) {
     enterBtn.addEventListener('click', () => {
       initAudio();
-      playBreezeSweep();
+      playCosmicSweep();
       playCrystalChime([523.25, 659.25, 783.99, 1046.5]);
 
       enterScreen.classList.add('dismissed');
@@ -2287,10 +2363,15 @@
         bgAudio.play().catch(() => {});
       }
 
+      // Disparar animación suave de entrada en el Hero
       setTimeout(() => {
         const heroOverlay = document.getElementById('hero-text-overlay');
-        if (heroOverlay) heroOverlay.classList.add('start-anim');
-      }, 350);
+        if (heroOverlay) {
+          heroOverlay.classList.remove('start-anim');
+          void heroOverlay.offsetWidth; // Forzar reflow limpio
+          heroOverlay.classList.add('start-anim');
+        }
+      }, 300);
 
       setTimeout(() => {
         enterScreen.style.display = 'none';
@@ -2457,7 +2538,7 @@
     }
 
     if (playSound && score !== lastScore) {
-      playSoftTap(350 + score * 8, 0.04);
+      playSoftTap(360 + score * 7, 0.04);
       lastScore = score;
     }
   }
@@ -2486,7 +2567,7 @@
   infCards.forEach(card => {
     card.addEventListener('click', () => {
       card.classList.toggle('selected');
-      playSoftTap(card.classList.contains('selected') ? 600 : 320, 0.05);
+      playSoftTap(card.classList.contains('selected') ? 640 : 340, 0.045);
 
       let sum = 0;
       document.querySelectorAll('.inf-card.selected').forEach(c => {
@@ -2508,7 +2589,7 @@
     btn.addEventListener('click', () => {
       countryButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      playSoftTap(520, 0.04);
+      playSoftTap(540, 0.04);
 
       const targetCountry = btn.dataset.country;
 
@@ -2548,7 +2629,7 @@
   // Sonidito suave al hacer click en los links del navbar
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      playSoftTap(450, 0.04);
+      playSoftTap(460, 0.04);
     });
   });
 
