@@ -1,15 +1,10 @@
 # 📝 CHANGELOG — UMAS COMMUNITY RULES WEB
 
-## [2.0.0] - 2026-08-26
+## [2.1.0] - 2026-08-26
 
-### 🚀 Nuevas Funcionalidades
-- **Filtro por Categorías:** Barra superior interactiva con 5 categorías (`Conducta`, `Comunicación`, `Seguridad`, `Comunidad`, `Moderación`).
-- **Motor de Búsqueda con Ranking:** Pipeline de búsqueda con normalización Unicode NFD, diccionario semántico de sinónimos y puntuación ponderada.
-- **Simulador Determinista:** Integración de 3 selectores de graduación (Reincidencia, Intencionalidad, Cooperación) con cálculo determinista y exportación de informe de moderación.
-- **PWA & Favicon SVG:** `manifest.webmanifest` y `favicon.svg` oficiales para instalación en dispositivos móviles y PC.
-- **Estilos de Impresión (@media print):** Diagramación para exportar o imprimir el reglamento completo en PDF.
-
-### 🛡️ Mantenibilidad y Calidad
-- **Bootstrap Modular:** 12 namespaces en JavaScript que previenen conflictos y errores en consola.
-- **MIME Types en Servidor:** Configuración en Express para servir `.webmanifest` y `.svg` correctamente.
-- **Persistencia Versionada:** Almacenamiento seguro de preferencias de sonido, país y categoría en `localStorage`.
+### 🚀 Mejoras Críticas en Buscador y UX
+- **Lista de Resultados Interactiva en Modal:** El buscador ahora renderiza una lista de tarjetas directamente dentro del modal con tag, severidad, título, snippet y botón de acción.
+- **Navegación por Teclado Command Palette:** Soporte completo para `ArrowDown`, `ArrowUp`, `Enter` y `Escape` dentro del modal.
+- **Flujo Completo de Navegación:** Al seleccionar un resultado, el modal se cierra, realiza scroll suave hacia la regla, la expande automáticamente y le aplica un resplandor esmeralda durante 3.8 segundos.
+- **Panel de Categorías Estructurado:** Rediseño del panel de categorías con conteo dinámico en tiempo real (`Mostrando X de 20 normas`) y visualización responsive sin recortes.
+- **Alineación de Metadatos:** Cabeceras de tarjetas normalizadas con `#Tag`, severidad, categoría, puntos, botón de copiado y botón de detalles.

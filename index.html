@@ -13,15 +13,15 @@
   <meta name="apple-mobile-web-app-title" content="Umas Rules" />
 
   <!-- OpenGraph / Discord Rich Embed Meta Tags -->
-  <title>Reglamento Oficial & Convivencia Comunitaria 2.0 · Umas Community 🌿</title>
-  <meta name="description" content="Manual integral de convivencia, mediación pedagógica, seguridad digital, simulador determinista de sanciones y marco legal Iberoamérica." />
+  <title>Reglamento Oficial & Convivencia Comunitaria · Umas Community 🌿</title>
+  <meta name="description" content="Manual integral de convivencia, mediación pedagógica, seguridad digital, simulador determinista de sanciones y buscador semántico inteligente." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rules-web.onrender.com" />
-  <meta property="og:title" content="Reglamento Oficial 2.0 · Umas Community 🌿" />
+  <meta property="og:title" content="Reglamento Oficial · Umas Community 🌿" />
   <meta property="og:description" content="Una comunidad sana se construye entre todos. Manual interactivo de convivencia, seguridad y mediación formativa." />
   <meta property="og:image" content="https://rules-web.onrender.com/favicon.svg" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Reglamento Oficial 2.0 · Umas Community 🌿" />
+  <meta name="twitter:title" content="Reglamento Oficial · Umas Community 🌿" />
   <meta name="twitter:description" content="Protocolo de convivencia, matriz sancional y directrices comunitarias." />
 
   <!-- Google Fonts: Plus Jakarta Sans, Playfair Display, JetBrains Mono -->
@@ -47,11 +47,11 @@
       --bg-dark: #010402;
       --bg-gradient: radial-gradient(circle at 50% 15%, #092416 0%, #04140b 50%, #010503 100%);
       
-      --surface: rgba(6, 22, 14, 0.52);
-      --surface-solid: rgba(8, 28, 18, 0.85);
-      --surface2: rgba(10, 32, 20, 0.50);
-      --surface3: rgba(14, 46, 30, 0.65);
-      --surface4: rgba(20, 66, 44, 0.78);
+      --surface: rgba(6, 22, 14, 0.55);
+      --surface-solid: rgba(8, 28, 18, 0.90);
+      --surface2: rgba(10, 32, 20, 0.54);
+      --surface3: rgba(14, 46, 30, 0.70);
+      --surface4: rgba(20, 66, 44, 0.85);
 
       --border: rgba(52, 211, 153, 0.18);
       --border-hi: rgba(110, 231, 183, 0.45);
@@ -90,6 +90,10 @@
       scroll-behavior: smooth;
       background: var(--bg);
       font-size: 16px;
+    }
+
+    body.modal-open {
+      overflow: hidden;
     }
 
     ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -707,47 +711,76 @@
 
     .section-gap { height: clamp(40px, 6vw, 65px); }
 
-    /* ─── Barra de Filtrado por Categoría ─── */
-    .category-filter-bar {
+    /* ─── Panel Temático de Categorías Rediseñado ─── */
+    .theme-categories-panel {
+      background: linear-gradient(135deg, rgba(6, 26, 17, 0.75) 0%, rgba(3, 14, 9, 0.85) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-hi);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .categories-panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--mint);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .category-counter-badge {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--border-hi);
+      color: var(--emerald-lt);
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 0.68rem;
+    }
+
+    .category-pills-deck {
       display: flex;
       align-items: center;
       gap: 8px;
-      overflow-x: auto;
-      padding: 8px 4px 16px;
-      margin-bottom: 24px;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
+      flex-wrap: wrap;
     }
-    .category-filter-bar::-webkit-scrollbar { display: none; }
 
-    .cat-btn {
+    .cat-pill {
       background: var(--surface2);
-      backdrop-filter: blur(12px);
       border: 1px solid var(--border);
       color: var(--text-muted);
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 7px 16px;
+      padding: 8px 16px;
       border-radius: 100px;
       cursor: pointer;
-      white-space: nowrap;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       transition: all 0.22s var(--ease-spring);
+      white-space: nowrap;
     }
-    .cat-btn:hover {
+
+    .cat-pill:hover {
       background: var(--surface3);
       color: var(--white);
       border-color: var(--border-hi);
       transform: translateY(-2px);
     }
-    .cat-btn.active {
+
+    .cat-pill.active {
       background: rgba(16, 185, 129, 0.25);
       border-color: var(--emerald-lt);
       color: var(--mint);
-      box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
     }
 
     /* ─── Banner Resumen Rápido ("Antes de Entrar") ─── */
@@ -758,7 +791,7 @@
       border: 1px solid var(--border-hi);
       border-radius: var(--radius-xl);
       padding: clamp(20px, 4vw, 32px);
-      margin-bottom: 40px;
+      margin-bottom: 28px;
       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
     }
 
@@ -937,10 +970,11 @@
       box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
     }
 
-    .rule-box.highlight-match {
+    .rule-box.rule-search-highlight {
       border-color: var(--emerald-lt) !important;
-      background: rgba(16, 185, 129, 0.22) !important;
-      box-shadow: 0 0 25px rgba(52, 211, 153, 0.45) !important;
+      background: rgba(16, 185, 129, 0.28) !important;
+      box-shadow: 0 0 35px rgba(52, 211, 153, 0.65) !important;
+      transform: scale(1.015);
     }
 
     .rule-box.dim-unmatched {
@@ -1896,22 +1930,22 @@
       margin-bottom: 8px;
     }
 
-    /* ─── Modal Buscador en Tiempo Real (Pipeline & Ranking) ─── */
+    /* ─── Modal Buscador Interactivo con Lista de Resultados ─── */
     .search-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(1, 6, 3, 0.84);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(1, 6, 3, 0.86);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       z-index: 2000;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: clamp(20px, 8vh, 80px) 16px 20px;
+      padding: clamp(16px, 5vh, 60px) 16px 20px;
       opacity: 0;
       pointer-events: none;
       visibility: hidden;
-      transition: opacity 0.3s var(--ease-spring), visibility 0.3s;
+      transition: opacity 0.28s var(--ease-spring), visibility 0.28s;
     }
 
     .search-overlay.open {
@@ -1922,17 +1956,36 @@
 
     .search-container {
       width: 100%;
-      max-width: 680px;
-      background: rgba(6, 24, 15, 0.94);
+      max-width: 720px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      background: rgba(6, 24, 15, 0.95);
       border: 1px solid var(--border-hi);
       border-radius: var(--radius-xl);
-      padding: 20px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-      transform: translateY(-20px) scale(0.96);
-      transition: transform 0.3s var(--ease-spring);
+      padding: clamp(16px, 3vw, 24px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(16, 185, 129, 0.2);
+      transform: translateY(-20px) scale(0.97);
+      transition: transform 0.28s var(--ease-spring);
     }
 
     .search-overlay.open .search-container { transform: translateY(0) scale(1); }
+
+    .search-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .search-modal-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--mint);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
 
     .search-input-wrapper {
       position: relative;
@@ -1947,7 +2000,7 @@
 
     .search-input-wrapper:focus-within {
       border-color: var(--emerald-lt);
-      box-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.35);
     }
 
     .search-input-icon { font-size: 1.2rem; color: var(--mint); }
@@ -1976,15 +2029,101 @@
       align-items: center;
     }
 
-    .search-results-info {
+    .search-status-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 14px;
+      margin-top: 10px;
+      margin-bottom: 8px;
       padding: 0 4px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
+    }
+
+    /* Lista Dinámica de Resultados Clickeables */
+    .search-results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: auto;
+      max-height: 48vh;
+      padding-right: 4px;
+      margin-top: 6px;
+      scrollbar-width: thin;
+    }
+
+    .search-result-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.2s var(--ease-spring);
+      position: relative;
+      text-align: left;
+    }
+
+    .search-result-card:hover, .search-result-card.selected {
+      background: rgba(16, 185, 129, 0.22);
+      border-color: var(--emerald-lt);
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    .search-res-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .search-res-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .search-res-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .search-res-snippet {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .search-res-snippet mark {
+      background: rgba(52, 211, 153, 0.35);
+      color: #ffffff;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+
+    .search-res-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--mint);
+      margin-top: 2px;
+    }
+
+    .search-empty-state {
+      padding: 24px 12px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
     }
 
     .search-quick-tags {
@@ -2087,14 +2226,12 @@
         line-height: 1.5 !important;
       }
       .hero-wrapper, #enter-screen, .nav, .search-overlay, .scroll-top-btn, 
-      .glass-toast, .hero-actions, .category-filter-bar, .copy-rule-btn, 
+      .glass-toast, .hero-actions, .theme-categories-panel, .copy-rule-btn, 
       .rule-toggle-btn, .sound-toggle-btn, .hero-search-trigger, 
       .sim-presets-deck, .sim-slider-container, .inf-grid {
         display: none !important;
       }
-      .scroll-content {
-        margin-top: 0 !important;
-      }
+      .scroll-content { margin-top: 0 !important; }
       .hero-text-overlay {
         position: static !important;
         height: auto !important;
@@ -2128,21 +2265,14 @@
         padding: 8pt 0 0 !important;
         display: block !important;
       }
-      .rule-main-title, .card-title, .phase-title {
-        color: #064e3b !important;
-      }
-      .rule-summary-text, .card-sub, .rule-section-desc {
-        color: #374151 !important;
-      }
+      .rule-main-title, .card-title, .phase-title { color: #064e3b !important; }
+      .rule-summary-text, .card-sub, .rule-section-desc { color: #374151 !important; }
       .r-tag, .phase-badge, .legal-badge-country {
         background: #e5e7eb !important;
         color: #111827 !important;
         border: 1pt solid #9ca3af !important;
       }
-      a {
-        text-decoration: none !important;
-        color: #065f46 !important;
-      }
+      a { text-decoration: none !important; color: #065f46 !important; }
     }
 
     /* ─── Accesibilidad & Reduced Motion ─── */
@@ -2171,6 +2301,13 @@
       .rule-box.open .rule-expandable-body { padding: 12px 14px 16px; }
       .sim-milestones { grid-template-columns: repeat(6, 1fr); }
       .inf-grid { grid-template-columns: 1fr; }
+      .category-pills-deck {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+      }
+      .category-pills-deck::-webkit-scrollbar { display: none; }
     }
   </style>
 </head>
@@ -2201,7 +2338,7 @@
     </h1>
     <div class="enter-sub">— Protocolo de Convivencia, Mediación Formativa, Matriz Sancional & Amparo Legal —</div>
     <div class="enter-btn-wrapper">
-      <button class="enter-btn" id="enter-btn">
+      <button class="enter-btn" id="enter-btn" type="button">
         <span>Entrar al Reglamento</span> ➔
       </button>
     </div>
@@ -2237,12 +2374,12 @@
   </div>
 
   <div class="nav-controls">
-    <button class="nav-search-btn" id="nav-search-btn" title="Buscar norma (Atajo: / o Ctrl+K)">
+    <button class="nav-search-btn" id="nav-search-btn" type="button" title="Buscar norma (Atajo: / o Ctrl+K)">
       <span>🔍</span>
       <span>Buscar</span>
       <span class="kbd-shortcut">/</span>
     </button>
-    <button class="sound-toggle-btn" id="sound-toggle-btn" title="Activar/Desactivar efectos de sonido ASMR">
+    <button class="sound-toggle-btn" id="sound-toggle-btn" type="button" title="Activar/Desactivar efectos de sonido ASMR">
       <span id="sound-icon">🔊</span>
       <span id="sound-text">ASMR: ON</span>
     </button>
@@ -2267,8 +2404,8 @@
     </div>
     <div class="hero-actions">
       <a href="#fase-1" class="hero-cta-btn"><span>🌿 Explorar Normas</span> ▾</a>
-      <button class="hero-search-trigger" id="hero-search-trigger"><span>🔍 Buscar tema rápido</span> <kbd style="font-size:0.7rem; opacity:0.8;">Ctrl+K</kbd></button>
-      <button class="print-doc-btn" id="print-doc-btn" title="Imprimir o guardar PDF del reglamento"><span>🖨️ Imprimir / PDF</span></button>
+      <button class="hero-search-trigger" id="hero-search-trigger" type="button"><span>🔍 Buscar tema rápido</span> <kbd style="font-size:0.7rem; opacity:0.8;">Ctrl+K</kbd></button>
+      <button class="print-doc-btn" id="print-doc-btn" type="button" title="Imprimir o guardar PDF del reglamento"><span>🖨️ Imprimir / PDF</span></button>
     </div>
     <div class="scroll-indicator">
       <span>Desliza para explorar</span>
@@ -2277,7 +2414,7 @@
   </div>
 
   <!-- Contenedor Principal de Fases -->
-  <main class="main-body">
+  <main class="main-body" id="main-content">
     <div class="container">
 
       <!-- ========================================== -->
@@ -2318,14 +2455,22 @@
         </div>
       </div>
 
-      <!-- Barra de Filtros por Categoría -->
-      <div class="category-filter-bar" id="category-filter-bar">
-        <button class="cat-btn active" data-cat="all">🌎 Todas las Normas</button>
-        <button class="cat-btn" data-cat="conducta">🛡️ Conducta & Respeto</button>
-        <button class="cat-btn" data-cat="comunicacion">💬 Comunicación & Canales</button>
-        <button class="cat-btn" data-cat="seguridad">🔐 Cero Tolerancia & Ciberseguridad</button>
-        <button class="cat-btn" data-cat="comunidad">🎮 Convivencia & Comunidad</button>
-        <button class="cat-btn" data-cat="moderacion">🧑⚖️ Ética & Código Staff</button>
+      <!-- ========================================== -->
+      <!-- PANEL TEMÁTICO DE CATEGORÍAS REDISEÑADO 🏷️ -->
+      <!-- ========================================== -->
+      <div class="theme-categories-panel" id="categories-panel">
+        <div class="categories-panel-head">
+          <span>🏷️ Explorar por Categoría</span>
+          <span class="category-counter-badge" id="category-counter-badge">Mostrando 20 de 20 normas</span>
+        </div>
+        <div class="category-pills-deck" id="category-pills-deck">
+          <button class="cat-pill active" data-cat="all" type="button">🌎 Todas (<span class="cat-num" data-cat-num="all">20</span>)</button>
+          <button class="cat-pill" data-cat="conducta" type="button">🛡️ Conducta & Respeto (<span class="cat-num" data-cat-num="conducta">2</span>)</button>
+          <button class="cat-pill" data-cat="comunicacion" type="button">💬 Comunicación & Canales (<span class="cat-num" data-cat-num="comunicacion">5</span>)</button>
+          <button class="cat-pill" data-cat="seguridad" type="button">🔐 Cero Tolerancia & Ciberseguridad (<span class="cat-num" data-cat-num="seguridad">5</span>)</button>
+          <button class="cat-pill" data-cat="comunidad" type="button">🎮 Comunidad & Dinámicas (<span class="cat-num" data-cat-num="comunidad">2</span>)</button>
+          <button class="cat-pill" data-cat="moderacion" type="button">🧑⚖️ Ética & Código Staff (<span class="cat-num" data-cat-num="moderacion">4</span>)</button>
+        </div>
       </div>
 
       <!-- ========================================== -->
@@ -2360,7 +2505,7 @@
                   <span class="r-points-badge">+20 a +30 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #01"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #01"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Dignidad, Trato Digno y Respeto Incondicional</div>
@@ -2407,7 +2552,7 @@
           </div>
 
           <!-- #02 -->
-          <div class="rule-box" data-rule="02" data-cat="conducta" data-keywords="acoso hostigamiento bullying stalking persecucion dms mensajes privados insistencia broma">
+          <div class="rule-box" data-rule="02" data-cat="conducta" data-keywords="acoso hostigamiento bullying stalking persecucion dms mensajes privados insistencia broma hostigar">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-02" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2417,7 +2562,7 @@
                   <span class="r-points-badge">+40 PTS (Time-Out)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #02"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #02"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Prevención de Acoso, Hostigamiento y Asedio</div>
@@ -2468,7 +2613,7 @@
                   <span class="r-points-badge">+10 a +20 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #03"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #03"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Control de Spam, Flood y Ruido Visual</div>
@@ -2502,7 +2647,7 @@
                   <span class="r-points-badge">+20 a +40 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #04"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #04"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Publicidad, Autopromoción y Enlaces Externos</div>
@@ -2532,7 +2677,7 @@
                   <span class="r-points-badge">Igualdad Normativa</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #05"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #05"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Igualdad Normativa y Cero Privilegios</div>
@@ -2580,7 +2725,7 @@
                   <span class="r-points-badge">+10 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #06"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #06"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Uso Coherente de Canales Temáticos</div>
@@ -2606,7 +2751,7 @@
                   <span class="r-points-badge">+20 a +40 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #07"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #07"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Confort Auditivo y Etiqueta en Canales de Voz</div>
@@ -2632,7 +2777,7 @@
                   <span class="r-points-badge">+50 PTS (Time-Out 12h)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #08"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #08"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Consentimiento en Grabaciones y Transmisiones</div>
@@ -2651,7 +2796,7 @@
                   <span class="r-points-badge">+10 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #09"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #09"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Canalización Correcta de Comandos de Bots</div>
@@ -2670,7 +2815,7 @@
                   <span class="r-points-badge">+10 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #10"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #10"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Etiquetado Obligatorio y Protección de Spoilers</div>
@@ -2713,7 +2858,7 @@
                   <span class="r-points-badge">+100 PTS (Baneo Definitivo)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #11"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #11"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Doxxing y Filtración de Datos Privados (Tolerancia Cero)</div>
@@ -2743,7 +2888,7 @@
                   <span class="r-points-badge">+100 PTS (Baneo)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #12"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #12"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Estafas, Phishing, Malware y Enlaces Engañosos</div>
@@ -2762,7 +2907,7 @@
                   <span class="r-points-badge">+100 PTS (Expulsión & Denuncia)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #13"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #13"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Protección de Menores y Contenido Ilícito</div>
@@ -2781,7 +2926,7 @@
                   <span class="r-points-badge">+100 PTS (Baneo)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #14"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #14"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Amenazas, Extorsión, Incursiones (Raids) y Sabotaje</div>
@@ -2800,7 +2945,7 @@
                   <span class="r-points-badge">+100 PTS (Veto de Alts)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #15"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #15"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Evasión de Sanciones Mediante Cuentas Secundarias (Alts)</div>
@@ -2848,7 +2993,7 @@
                   <span class="r-points-badge">Mediación Primero</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M1"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #M1"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Mediación Formativa y Desescalada de Conflictos</div>
@@ -2867,7 +3012,7 @@
                   <span class="r-points-badge">Imparcialidad</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M2"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #M2"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Imparcialidad y Cero Conflicto de Interés</div>
@@ -2886,7 +3031,7 @@
                   <span class="r-points-badge">Evidencia Obligatoria</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M3"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #M3"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Preservación de Evidencias y Auditoría de Sanciones</div>
@@ -2905,7 +3050,7 @@
                   <span class="r-points-badge">Supervisión Directiva</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M4"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #M4"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Supervisión y Canal para Reportar Moderación</div>
@@ -3022,7 +3167,7 @@
           <div class="sim-header">
             <div class="sim-title">🎮 Simulador de Estado Sancional</div>
             <div class="sim-header-right">
-              <button class="copy-sanction-btn" id="copy-sanction-summary-btn" title="Copiar informe de moderación">
+              <button class="copy-sanction-btn" id="copy-sanction-summary-btn" type="button" title="Copiar informe de moderación">
                 <span>📋 Copiar Informe</span>
               </button>
               <div class="sim-score-badge">
@@ -3035,12 +3180,12 @@
           <!-- Presets de Casos Reales -->
           <div class="sim-presets-deck">
             <span class="sim-presets-label">Casos reales:</span>
-            <button class="sim-preset-btn" data-preset="0">🟢 Limpio (0)</button>
-            <button class="sim-preset-btn" data-preset="10">🌱 Spam leve (10)</button>
-            <button class="sim-preset-btn" data-preset="30">🟡 Pelea en chat (30)</button>
-            <button class="sim-preset-btn" data-preset="40">🔇 Acoso DMs (40)</button>
-            <button class="sim-preset-btn" data-preset="70">🟠 Falta grave (70)</button>
-            <button class="sim-preset-btn" data-preset="100">🚨 Doxxing (100)</button>
+            <button class="sim-preset-btn" data-preset="0" type="button">🟢 Limpio (0)</button>
+            <button class="sim-preset-btn" data-preset="10" type="button">🌱 Spam leve (10)</button>
+            <button class="sim-preset-btn" data-preset="30" type="button">🟡 Pelea en chat (30)</button>
+            <button class="sim-preset-btn" data-preset="40" type="button">🔇 Acoso DMs (40)</button>
+            <button class="sim-preset-btn" data-preset="70" type="button">🟠 Falta grave (70)</button>
+            <button class="sim-preset-btn" data-preset="100" type="button">🚨 Doxxing (100)</button>
           </div>
 
           <!-- Slider -->
@@ -3120,17 +3265,17 @@
         </div>
 
         <div class="country-selector">
-          <button class="country-btn active" data-country="all">🌎 Todos los Países</button>
-          <button class="country-btn" data-country="mx">🇲🇽 México</button>
-          <button class="country-btn" data-country="co">🇨🇴 Colombia</button>
-          <button class="country-btn" data-country="cl">🇨🇱 Chile</button>
-          <button class="country-btn" data-country="ar">🇦🇷 Argentina</button>
-          <button class="country-btn" data-country="pe">🇵🇪 Perú</button>
-          <button class="country-btn" data-country="ec">🇪🇨 Ecuador</button>
-          <button class="country-btn" data-country="cr">🇨🇷 Costa Rica</button>
-          <button class="country-btn" data-country="uy">🇺🇾 Uruguay</button>
-          <button class="country-btn" data-country="es">🇪🇸 España</button>
-          <button class="country-btn" data-country="intl">⚖️ Global / Discord</button>
+          <button class="country-btn active" data-country="all" type="button">🌎 Todos los Países</button>
+          <button class="country-btn" data-country="mx" type="button">🇲🇽 México</button>
+          <button class="country-btn" data-country="co" type="button">🇨🇴 Colombia</button>
+          <button class="country-btn" data-country="cl" type="button">🇨🇱 Chile</button>
+          <button class="country-btn" data-country="ar" type="button">🇦🇷 Argentina</button>
+          <button class="country-btn" data-country="pe" type="button">🇵🇪 Perú</button>
+          <button class="country-btn" data-country="ec" type="button">🇪🇨 Ecuador</button>
+          <button class="country-btn" data-country="cr" type="button">🇨🇷 Costa Rica</button>
+          <button class="country-btn" data-country="uy" type="button">🇺🇾 Uruguay</button>
+          <button class="country-btn" data-country="es" type="button">🇪🇸 España</button>
+          <button class="country-btn" data-country="intl" type="button">⚖️ Global / Discord</button>
         </div>
 
         <div class="legal-cards-container">
@@ -3331,7 +3476,7 @@
 
         <div class="faq-deck">
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button class="faq-question-btn" aria-expanded="false" type="button">
               <span>¿Qué ocurre si rompo una regla accidentalmente por ser nuevo?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
@@ -3341,7 +3486,7 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button class="faq-question-btn" aria-expanded="false" type="button">
               <span>¿Los puntos de advertencia expiran con el tiempo?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
@@ -3351,7 +3496,7 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button class="faq-question-btn" aria-expanded="false" type="button">
               <span>¿Qué debo hacer si alguien me envía mensajes privados molestos o sospechosos?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
@@ -3361,7 +3506,7 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button class="faq-question-btn" aria-expanded="false" type="button">
               <span>¿Puedo usar una cuenta secundaria (alt) en el servidor?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
@@ -3371,7 +3516,7 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button class="faq-question-btn" aria-expanded="false" type="button">
               <span>¿Dónde puedo pedir ayuda si tengo dudas sobre el servidor?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
@@ -3402,34 +3547,45 @@
   </main>
 </div><!-- /scroll-content -->
 
-<!-- ── Modal Buscador en Tiempo Real ── -->
-<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Buscador del Reglamento">
-  <div class="search-container">
+<!-- ── Modal Buscador Interactivo con Lista de Resultados Clickeables ── -->
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-labelledby="search-modal-title">
+  <section class="search-container" id="search-modal">
+    <header class="search-modal-header">
+      <span class="search-modal-title" id="search-modal-title">🔍 Buscador del Reglamento</span>
+      <button class="search-close-btn" id="search-close-btn" type="button" title="Cerrar (Esc)" aria-label="Cerrar buscador">✕</button>
+    </header>
+
     <div class="search-input-wrapper">
       <span class="search-input-icon">🔍</span>
-      <input type="text" id="rules-search-input" class="search-input" placeholder="Buscar norma, tema o sanción (ej: doxxing, spam, voz, apelación, staff)..." autocomplete="off" />
-      <button class="search-close-btn" id="search-close-btn" title="Cerrar (Esc)">✕</button>
+      <input type="text" id="rules-search-input" class="search-input" placeholder="Escribe para buscar norma, tema o sanción (ej: acoso, doxxing, spam, voz)..." autocomplete="off" aria-autocomplete="list" aria-controls="search-results-list" />
     </div>
-    <div class="search-results-info">
-      <div id="search-count-text">Escribe para filtrar normas instantáneamente</div>
-      <div style="font-size:0.65rem;">Atajos: <kbd style="color:var(--mint);">ESC</kbd> para salir · <kbd style="color:var(--mint);">Ctrl+K</kbd> para buscar</div>
+
+    <div class="search-status-bar">
+      <div id="search-status" aria-live="polite">Escribe para encontrar y saltar a cualquier norma</div>
+      <div style="font-size:0.65rem;">Atajos: <kbd style="color:var(--mint);">↑/↓</kbd> navegar · <kbd style="color:var(--mint);">ENTER</kbd> abrir · <kbd style="color:var(--mint);">ESC</kbd> salir</div>
     </div>
+
+    <!-- Lista Dinámica de Resultados Clickeables -->
+    <div id="search-results-list" class="search-results-list" role="listbox" aria-label="Resultados de búsqueda">
+      <!-- Se puebla dinámicamente -->
+    </div>
+
     <div class="search-quick-tags">
       <span style="font-size:0.7rem; color:var(--text-dim); display:flex; align-items:center;">Sugerencias:</span>
-      <button class="search-tag-chip" data-query="doxxing">🚨 Doxxing</button>
-      <button class="search-tag-chip" data-query="acoso">🛡️ Acoso & Hostigamiento</button>
-      <button class="search-tag-chip" data-query="spam">💬 Spam & Flood</button>
-      <button class="search-tag-chip" data-query="voz">🎙️ Audio & Voz</button>
-      <button class="search-tag-chip" data-query="menores">🛡️ Protección Menores</button>
-      <button class="search-tag-chip" data-query="staff">⚖️ Código Staff</button>
-      <button class="search-tag-chip" data-query="apelacion">📜 Apelación</button>
-      <button class="search-tag-chip" data-query="puntos">📊 Sanciones</button>
+      <button class="search-tag-chip" data-query="doxxing" type="button">🚨 Doxxing</button>
+      <button class="search-tag-chip" data-query="acoso" type="button">🛡️ Acoso & Hostigamiento</button>
+      <button class="search-tag-chip" data-query="spam" type="button">💬 Spam & Flood</button>
+      <button class="search-tag-chip" data-query="voz" type="button">🎙️ Audio & Voz</button>
+      <button class="search-tag-chip" data-query="menores" type="button">🛡️ Protección Menores</button>
+      <button class="search-tag-chip" data-query="staff" type="button">⚖️ Código Staff</button>
+      <button class="search-tag-chip" data-query="apelacion" type="button">📜 Apelación</button>
+      <button class="search-tag-chip" data-query="puntos" type="button">📊 Sanciones</button>
     </div>
-  </div>
+  </section>
 </div>
 
 <!-- ── Botón Flotante Volver Arriba ── -->
-<button class="scroll-top-btn" id="scroll-top-btn" title="Volver al inicio" aria-label="Volver arriba">↑</button>
+<button class="scroll-top-btn" id="scroll-top-btn" type="button" title="Volver al inicio" aria-label="Volver arriba">↑</button>
 
 <!-- ── Toast Notificación ── -->
 <div class="glass-toast" id="glass-toast">
@@ -3437,11 +3593,11 @@
   <span id="toast-msg">¡Texto copiado al portapapeles!</span>
 </div>
 
-<!-- ── ARQUITECTURA MODULAR JAVASCRIPT: ROBUSTA, TESTEADA Y DETERMINISTA ── -->
+<!-- ── ARQUITECTURA MODULAR JAVASCRIPT: E2E INTERACTIVA, ROBUSTA Y DETERMINISTA ── -->
 <script>
 /**
  * Umas Community Rules Web 2.0 Engine
- * Namespaces: APP_CONFIG, Storage, Utils, AudioEngine, SearchEngine, RulesModule, SimulatorModule, LawsModule, FAQModule, BackgroundModule, DiscordLinksModule, GlobalErrorHandler, Bootstrap
+ * Single Source of Truth, Weighted Search Ranking, Interactive Modal List & Category Filter
  */
 
 // ==========================================
@@ -3482,7 +3638,19 @@ const APP_CONFIG = {
 };
 
 // ==========================================
-// 2. MODULE: STORAGE
+// 2. STATE MANAGER (Single Source of Truth)
+// ==========================================
+const AppState = {
+  activeCategory: 'all',
+  searchQuery: '',
+  searchResults: [],
+  selectedIndex: -1,
+  isSearchOpen: false,
+  triggerElement: null
+};
+
+// ==========================================
+// 3. MODULE: STORAGE
 // ==========================================
 const Storage = {
   get(key, defaultVal) {
@@ -3501,7 +3669,7 @@ const Storage = {
 };
 
 // ==========================================
-// 3. MODULE: UTILS
+// 4. MODULE: UTILS
 // ==========================================
 const Utils = {
   normalizeText(str) {
@@ -3561,7 +3729,7 @@ const Utils = {
 };
 
 // ==========================================
-// 4. MODULE: AUDIO (ASMR Synthesizer)
+// 5. MODULE: AUDIO (ASMR Synthesizer)
 // ==========================================
 const AudioEngine = {
   ctx: null,
@@ -3668,27 +3836,29 @@ const AudioEngine = {
 };
 
 // ==========================================
-// 5. MODULE: SEARCH (Ranking & Pipeline)
+// 6. MODULE: SEARCH ENGINE (Interactive & Weighted)
 // ==========================================
 const SearchEngine = {
   overlay: null,
   input: null,
-  countDisplay: null,
+  resultsList: null,
+  statusDisplay: null,
   ruleBoxes: [],
 
   init() {
     this.overlay = document.getElementById('search-overlay');
     this.input = document.getElementById('rules-search-input');
-    this.countDisplay = document.getElementById('search-count-text');
-    this.ruleBoxes = Array.from(document.querySelectorAll('.rule-box'));
+    this.resultsList = document.getElementById('search-results-list');
+    this.statusDisplay = document.getElementById('search-status');
+    this.ruleBoxes = Array.from(document.querySelectorAll('.rule-box[data-rule]'));
 
     const navBtn = document.getElementById('nav-search-btn');
     const heroTrigger = document.getElementById('hero-search-trigger');
     const closeBtn = document.getElementById('search-close-btn');
     const tagChips = document.querySelectorAll('.search-tag-chip');
 
-    if (navBtn) navBtn.addEventListener('click', () => this.open());
-    if (heroTrigger) heroTrigger.addEventListener('click', () => this.open());
+    if (navBtn) navBtn.addEventListener('click', (e) => this.open(e.currentTarget));
+    if (heroTrigger) heroTrigger.addEventListener('click', (e) => this.open(e.currentTarget));
     if (closeBtn) closeBtn.addEventListener('click', () => this.close());
 
     if (this.overlay) {
@@ -3697,18 +3867,21 @@ const SearchEngine = {
       });
     }
 
+    // Keyboard Shortcuts & Navigation
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && this.overlay && this.overlay.classList.contains('open')) {
+      if (e.key === 'Escape' && AppState.isSearchOpen) {
         this.close();
+        return;
       }
       if ((e.key === '/' || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) && !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
         e.preventDefault();
-        this.open();
+        this.open(document.activeElement);
       }
     });
 
     if (this.input) {
       this.input.addEventListener('input', (e) => this.search(e.target.value));
+      this.input.addEventListener('keydown', (e) => this.handleKeydown(e));
     }
 
     tagChips.forEach(chip => {
@@ -3723,8 +3896,12 @@ const SearchEngine = {
     });
   },
 
-  open() {
+  open(trigger) {
     AudioEngine.resumeContext();
+    AppState.triggerElement = trigger;
+    AppState.isSearchOpen = true;
+    document.body.classList.add('modal-open');
+
     if (this.overlay) {
       this.overlay.classList.add('open');
       setTimeout(() => this.input && this.input.focus(), 80);
@@ -3733,30 +3910,47 @@ const SearchEngine = {
   },
 
   close() {
+    AppState.isSearchOpen = false;
+    document.body.classList.remove('modal-open');
+
     if (this.overlay) {
       this.overlay.classList.remove('open');
       if (this.input) this.input.value = '';
-      this.reset();
+      this.clearResults();
       AudioEngine.playSoftTap(340, 0.04);
+    }
+
+    if (AppState.triggerElement && typeof AppState.triggerElement.focus === 'function') {
+      AppState.triggerElement.focus();
     }
   },
 
-  reset() {
-    this.ruleBoxes.forEach(box => {
-      box.classList.remove('highlight-match', 'dim-unmatched');
-    });
-    if (this.countDisplay) {
-      this.countDisplay.textContent = 'Escribe para filtrar normas instantáneamente';
+  clearResults() {
+    AppState.searchQuery = '';
+    AppState.searchResults = [];
+    AppState.selectedIndex = -1;
+
+    if (this.resultsList) {
+      this.resultsList.replaceChildren();
     }
+    if (this.statusDisplay) {
+      this.statusDisplay.textContent = 'Escribe para encontrar y saltar a cualquier norma';
+    }
+
+    this.ruleBoxes.forEach(box => box.classList.remove('dim-unmatched'));
   },
 
   search(query) {
     const cleanQ = Utils.normalizeText(query);
+    AppState.searchQuery = cleanQ;
+    AppState.selectedIndex = -1;
+
     if (!cleanQ) {
-      this.reset();
+      this.clearResults();
       return;
     }
 
+    // Expand Synonyms
     const searchTerms = [cleanQ];
     for (const [key, list] of Object.entries(APP_CONFIG.synonyms)) {
       if (Utils.normalizeText(key).includes(cleanQ) || cleanQ.includes(Utils.normalizeText(key))) {
@@ -3764,62 +3958,267 @@ const SearchEngine = {
       }
     }
 
-    let matchCount = 0;
-    const scoredRules = [];
+    const scored = [];
 
     this.ruleBoxes.forEach(box => {
-      const title = Utils.normalizeText(box.querySelector('.rule-main-title')?.textContent || '');
-      const keywords = Utils.normalizeText(box.dataset.keywords || '');
-      const summary = Utils.normalizeText(box.querySelector('.rule-summary-text')?.textContent || '');
-      const ruleNum = Utils.normalizeText(box.dataset.rule || '');
+      const ruleId = box.dataset.rule || '';
+      const category = box.dataset.cat || '';
+      const title = box.querySelector('.rule-main-title')?.textContent || '';
+      const summary = box.querySelector('.rule-summary-text')?.textContent || '';
+      const keywords = box.dataset.keywords || '';
+      const tag = box.querySelector('.r-tag')?.textContent || '';
+      const severity = box.querySelector('.r-severity-badge')?.textContent || '';
+
+      const normTitle = Utils.normalizeText(title);
+      const normKeywords = Utils.normalizeText(keywords);
+      const normSummary = Utils.normalizeText(summary);
+      const normCategory = Utils.normalizeText(category);
+      const normTag = Utils.normalizeText(tag);
 
       let score = 0;
 
-      if (title === cleanQ) score += 100;
-      else if (title.includes(cleanQ)) score += 70;
+      if (normTitle === cleanQ) score += 100;
+      else if (normTitle.includes(cleanQ)) score += 80;
 
-      if (ruleNum === cleanQ || `#${ruleNum}` === cleanQ) score += 90;
+      if (normTag === cleanQ || `#${ruleId}`.toLowerCase() === cleanQ || ruleId.toLowerCase() === cleanQ) score += 90;
 
-      if (searchTerms.some(t => keywords.includes(t))) score += 50;
-      if (searchTerms.some(t => summary.includes(t))) score += 25;
+      if (searchTerms.some(t => normKeywords.includes(t))) score += 60;
+      if (normCategory.includes(cleanQ)) score += 40;
+      if (searchTerms.some(t => normSummary.includes(t))) score += 25;
+
+      // Check category boost if active category matches
+      if (AppState.activeCategory !== 'all' && box.dataset.cat === AppState.activeCategory) {
+        score += 15;
+      }
 
       if (score > 0) {
-        scoredRules.push({ box, score });
-        box.classList.add('highlight-match');
-        box.classList.remove('dim-unmatched');
-        box.classList.add('open');
-        const toggleBtn = box.querySelector('.rule-toggle-btn span:first-child');
-        if (toggleBtn) toggleBtn.textContent = 'Cerrar';
-        matchCount++;
-      } else {
-        box.classList.remove('highlight-match');
-        box.classList.add('dim-unmatched');
+        scored.push({ box, ruleId, title, summary, category, severity, tag, score });
       }
     });
 
-    if (this.countDisplay) {
-      if (matchCount > 0) {
-        this.countDisplay.innerHTML = `<span>${matchCount}</span> norma(s) coincidente(s) resaltada(s)`;
-      } else {
-        this.countDisplay.innerHTML = `<span style="color:var(--red-lt);">Sin coincidencias directas</span> — prueba con otra palabra (ej: acoso, spam, privacidad)`;
+    // Sort by Score Descending
+    scored.sort((a, b) => b.score - a.score);
+    AppState.searchResults = scored;
+
+    this.renderResults(scored, cleanQ);
+  },
+
+  renderResults(results, query) {
+    if (!this.resultsList) return;
+    this.resultsList.replaceChildren();
+
+    if (results.length === 0) {
+      if (this.statusDisplay) {
+        this.statusDisplay.innerHTML = `<span style="color:var(--red-lt);">0 coincidencias</span> para "${query}" — prueba con otra palabra`;
       }
+      const emptyDiv = document.createElement('div');
+      emptyDiv.className = 'search-empty-state';
+      emptyDiv.textContent = `No encontramos una norma para "${query}". Revisa la ortografía o prueba con sugerencias.`;
+      this.resultsList.appendChild(emptyDiv);
+      return;
     }
 
-    if (matchCount > 0) {
-      AudioEngine.playSoftTap(580, 0.035);
+    if (this.statusDisplay) {
+      this.statusDisplay.innerHTML = `<span>${results.length}</span> norma(s) encontrada(s) — haz clic o presiona ENTER para saltar`;
+    }
+
+    // Create safe DOM elements for each result
+    results.forEach((item, index) => {
+      const card = document.createElement('div');
+      card.className = 'search-result-card';
+      card.setAttribute('role', 'option');
+      card.setAttribute('tabindex', '0');
+      card.dataset.rule = item.ruleId;
+      card.dataset.index = index;
+
+      const topRow = document.createElement('div');
+      topRow.className = 'search-res-top';
+
+      const metaLeft = document.createElement('div');
+      metaLeft.className = 'search-res-meta';
+
+      const tagSpan = document.createElement('span');
+      tagSpan.className = 'r-tag';
+      tagSpan.textContent = item.tag;
+
+      const catSpan = document.createElement('span');
+      catSpan.className = 'r-cat-badge';
+      catSpan.textContent = item.category;
+
+      const sevSpan = document.createElement('span');
+      sevSpan.className = 'r-severity-badge lev-3';
+      sevSpan.textContent = item.severity;
+
+      metaLeft.append(tagSpan, catSpan, sevSpan);
+      topRow.appendChild(metaLeft);
+
+      const titleDiv = document.createElement('div');
+      titleDiv.className = 'search-res-title';
+      titleDiv.textContent = item.title;
+
+      const snippetDiv = document.createElement('div');
+      snippetDiv.className = 'search-res-snippet';
+      snippetDiv.textContent = item.summary;
+
+      const actionDiv = document.createElement('div');
+      actionDiv.className = 'search-res-action';
+      actionDiv.textContent = 'Ver y expandir norma ➔';
+
+      card.append(topRow, titleDiv, snippetDiv, actionDiv);
+
+      card.addEventListener('click', () => {
+        this.selectSearchResult(item.ruleId);
+      });
+
+      this.resultsList.appendChild(card);
+    });
+
+    AudioEngine.playSoftTap(580, 0.035);
+  },
+
+  handleKeydown(e) {
+    const cards = Array.from(this.resultsList?.querySelectorAll('.search-result-card') || []);
+    if (cards.length === 0) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      AppState.selectedIndex = Math.min(AppState.selectedIndex + 1, cards.length - 1);
+      this.updateKeyboardSelection(cards);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      AppState.selectedIndex = Math.max(AppState.selectedIndex - 1, 0);
+      this.updateKeyboardSelection(cards);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (AppState.selectedIndex >= 0 && cards[AppState.selectedIndex]) {
+        const ruleId = cards[AppState.selectedIndex].dataset.rule;
+        if (ruleId) this.selectSearchResult(ruleId);
+      } else if (cards.length > 0) {
+        const ruleId = cards[0].dataset.rule;
+        if (ruleId) this.selectSearchResult(ruleId);
+      }
+    }
+  },
+
+  updateKeyboardSelection(cards) {
+    cards.forEach((card, idx) => {
+      const isSelected = idx === AppState.selectedIndex;
+      card.classList.toggle('selected', isSelected);
+      card.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+      if (isSelected) {
+        card.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        AudioEngine.playSoftTap(480, 0.025);
+      }
+    });
+  },
+
+  selectSearchResult(ruleId) {
+    const targetBox = document.querySelector(`.rule-box[data-rule="${ruleId}"]`);
+    if (!targetBox) return;
+
+    // 1. Close Modal
+    this.close();
+
+    // 2. Ensure rule is visible if category filter was hiding it
+    if (targetBox.style.display === 'none') {
+      CategoriesModule.apply('all');
+    }
+
+    // 3. Expand Target Rule
+    targetBox.classList.add('open');
+    const headerBar = targetBox.querySelector('.rule-header-bar');
+    if (headerBar) headerBar.setAttribute('aria-expanded', 'true');
+    const toggleBtn = targetBox.querySelector('.rule-toggle-btn span:first-child');
+    if (toggleBtn) toggleBtn.textContent = 'Cerrar';
+
+    // 4. Smooth Scroll to Rule
+    targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // 5. Apply Temporary Glow Highlight
+    document.querySelectorAll('.rule-box').forEach(b => b.classList.remove('rule-search-highlight'));
+    targetBox.classList.add('rule-search-highlight');
+    AudioEngine.playCrystal([784, 1046.5]);
+
+    setTimeout(() => {
+      targetBox.classList.remove('rule-search-highlight');
+    }, 3800);
+
+    if (headerBar) headerBar.focus();
+  }
+};
+
+// ==========================================
+// 7. MODULE: CATEGORIES (Dynamic & Responsive)
+// ==========================================
+const CategoriesModule = {
+  pills: [],
+  ruleBoxes: [],
+  counterBadge: null,
+
+  init() {
+    this.pills = Array.from(document.querySelectorAll('.cat-pill'));
+    this.ruleBoxes = Array.from(document.querySelectorAll('.rule-box[data-rule]'));
+    this.counterBadge = document.getElementById('category-counter-badge');
+
+    // Calculate real dynamic counts from dataset
+    this.updateCategoryCounts();
+
+    this.pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const cat = pill.dataset.cat || 'all';
+        this.apply(cat);
+        AudioEngine.playSoftTap(540, 0.04);
+      });
+    });
+
+    const savedCat = Storage.get(APP_CONFIG.storageKeys.category, 'all');
+    this.apply(savedCat);
+  },
+
+  updateCategoryCounts() {
+    const counts = { all: this.ruleBoxes.length };
+    this.ruleBoxes.forEach(box => {
+      const c = box.dataset.cat || 'general';
+      counts[c] = (counts[c] || 0) + 1;
+    });
+
+    document.querySelectorAll('.cat-num').forEach(span => {
+      const catKey = span.dataset.catNum;
+      if (counts[catKey] !== undefined) {
+        span.textContent = counts[catKey];
+      }
+    });
+  },
+
+  apply(category) {
+    AppState.activeCategory = category;
+    Storage.set(APP_CONFIG.storageKeys.category, category);
+
+    this.pills.forEach(p => p.classList.toggle('active', p.dataset.cat === category));
+
+    let visibleCount = 0;
+    this.ruleBoxes.forEach(box => {
+      if (category === 'all' || box.dataset.cat === category) {
+        box.style.display = 'block';
+        visibleCount++;
+      } else {
+        box.style.display = 'none';
+      }
+    });
+
+    if (this.counterBadge) {
+      this.counterBadge.textContent = `Mostrando ${visibleCount} de ${this.ruleBoxes.length} normas`;
     }
   }
 };
 
 // ==========================================
-// 6. MODULE: RULES & CATEGORY FILTERING
+// 8. MODULE: RULES & COPYING
 // ==========================================
 const RulesModule = {
   init() {
-    const ruleBoxes = document.querySelectorAll('.rule-box');
-    const catButtons = document.querySelectorAll('.cat-btn');
+    const ruleBoxes = document.querySelectorAll('.rule-box[data-rule]');
 
-    // Expand / Collapse Action
     ruleBoxes.forEach(box => {
       const headerBar = box.querySelector('.rule-header-bar');
       const toggleBtn = box.querySelector('.rule-toggle-btn');
@@ -3857,6 +4256,7 @@ const RulesModule = {
       if (actionsRight && !actionsRight.querySelector('.copy-rule-btn')) {
         const copyBtn = document.createElement('button');
         copyBtn.className = 'copy-rule-btn';
+        copyBtn.type = 'button';
         copyBtn.innerHTML = '<span>📋</span> <span>Copiar</span>';
         copyBtn.title = 'Copiar norma para Discord';
         copyBtn.setAttribute('aria-label', 'Copiar norma para Discord');
@@ -3888,35 +4288,11 @@ const RulesModule = {
         actionsRight.insertBefore(copyBtn, actionsRight.firstChild);
       }
     });
-
-    // Category Filter Bar Logic
-    const applyCategory = (targetCat) => {
-      catButtons.forEach(b => b.classList.toggle('active', b.dataset.cat === targetCat));
-      ruleBoxes.forEach(box => {
-        if (targetCat === 'all' || box.dataset.cat === targetCat) {
-          box.style.display = 'block';
-        } else {
-          box.style.display = 'none';
-        }
-      });
-    };
-
-    catButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const cat = btn.dataset.cat || 'all';
-        Storage.set(APP_CONFIG.storageKeys.category, cat);
-        applyCategory(cat);
-        AudioEngine.playSoftTap(520, 0.04);
-      });
-    });
-
-    const savedCat = Storage.get(APP_CONFIG.storageKeys.category, 'all');
-    applyCategory(savedCat);
   }
 };
 
 // ==========================================
-// 7. MODULE: SIMULATOR (Deterministic Engine)
+// 9. MODULE: SIMULATOR (Deterministic Engine)
 // ==========================================
 const SimulatorModule = {
   tiers: {
@@ -4197,7 +4573,7 @@ const SimulatorModule = {
 };
 
 // ==========================================
-// 8. MODULE: LAWS (Country Selector)
+// 10. MODULE: LAWS (Country Selector)
 // ==========================================
 const LawsModule = {
   init() {
@@ -4234,7 +4610,7 @@ const LawsModule = {
 };
 
 // ==========================================
-// 9. MODULE: FAQ (Accordion)
+// 11. MODULE: FAQ (Accordion)
 // ==========================================
 const FAQModule = {
   init() {
@@ -4260,7 +4636,7 @@ const FAQModule = {
 };
 
 // ==========================================
-// 10. MODULE: BACKGROUND & MEDIA RESILIENCE
+// 12. MODULE: BACKGROUND & MEDIA RESILIENCE
 // ==========================================
 const BackgroundModule = {
   init() {
@@ -4364,7 +4740,7 @@ const BackgroundModule = {
 };
 
 // ==========================================
-// 11. MODULE: DISCORD LINKS & NAVIGATION
+// 13. MODULE: DISCORD LINKS & NAVIGATION
 // ==========================================
 const DiscordLinksModule = {
   init() {
@@ -4468,18 +4844,19 @@ const DiscordLinksModule = {
 };
 
 // ==========================================
-// 12. CENTRAL BOOTSTRAP (DOMContentLoaded)
+// 14. CENTRAL BOOTSTRAP (DOMContentLoaded)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
   AudioEngine.init();
   SearchEngine.init();
+  CategoriesModule.init();
   RulesModule.init();
   SimulatorModule.init();
   LawsModule.init();
   FAQModule.init();
   BackgroundModule.init();
   DiscordLinksModule.init();
-  console.log('🌿 Umas Community Rules Web 2.0 engine initialized cleanly.');
+  console.log('🌿 Umas Community Rules Web 2.0 Engine online and responsive.');
 });
 </script>
 

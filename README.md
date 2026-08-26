@@ -1,36 +1,22 @@
-# 🌿 Umas Community · Rules Web 2.0
+# 🌿 Umas Community · Rules Web 2.1
 
-Reglamento oficial y manual interactivo de convivencia, seguridad digital, matriz sancional y mediación formativa para la comunidad de Discord **Umas Community**.
+Reglamento oficial y manual interactivo de convivencia, seguridad digital, matriz sancional determinista y mediación formativa para la comunidad de Discord **Umas Community**.
 
 🌐 **Sitio en Producción:** [https://rules-web.onrender.com](https://rules-web.onrender.com)
 
 ---
 
-## 🌟 Características Principales
+## 🌟 Novedades de la Versión 2.1
 
-1. **Buscador Contextual Inteligente:** Tolerante a acentos, mayúsculas y sinónimos (`acoso` ↔ `hostigamiento`, `spam` ↔ `flood`, `doxxing` ↔ `datos personales`), con atajos `/` o `Ctrl+K` y `Escape`.
-2. **20 Fichas de Normas Expandibles:** Con resúmenes claros, insignias de severidad, ejemplos contrastados (❌ INCORRECTO vs ✅ CORRECTO) y botón de copiado Markdown para Discord.
-3. **Simulador Sancional Determinista:** Escala de 0 a 100 puntos en pasos de 10 con evaluación de reincidencia, intencionalidad y cooperación, además de exportación de informe para el Staff.
-4. **Marco Jurídico Latinoamericano:** Fichas normativas homologadas con los códigos penales y leyes de ciberseguridad de 10 países.
-5. **PWA & Impresión PDF:** Instalable como aplicación web y optimizado para exportación limpia a PDF mediante `Ctrl+P`.
-6. **Accesibilidad & Rendimiento:** Cumplimiento de WCAG 2.2 AA, soporte de `@media (prefers-reduced-motion: reduce)`, ahorro de datos (`Save-Data`) y consola limpia con 0 errores JavaScript.
-
----
-
-## 🛠️ Tecnologías y Arquitectura
-
-- **Frontend:** HTML5 semántico, CSS3 moderno (Glassmorphism, CSS Custom Properties), JavaScript ES6+ modular.
-- **Backend:** Node.js + Express para servicio de archivos estáticos y endpoint `/api/health`.
-- **Despliegue:** Render Web Service integrado con repositorio GitHub `Lara2026ss/rules-web`.
-
----
-
-## 🚀 Desarrollo Local
-
-```bash
-# Instalar dependencias
-npm install
-
-# Iniciar servidor local en el puerto 3000
-npm start
-```
+1. **Buscador Interactivo Command Palette:**
+   - Lista dinámica de resultados dentro del modal con navegación por teclado (`↑`/`↓`/`Enter`).
+   - Salto directo, auto-expansión y resplandor esmeralda en la norma seleccionada.
+   - Diccionario semántico de sinónimos y búsqueda ponderada.
+2. **Panel Temático de Categorías:**
+   - Filtros instantáneos por Conducta, Comunicación, Seguridad, Comunidad y Moderación.
+   - Conteo reactivo calculado en tiempo real.
+3. **Simulador Sancional Determinista:**
+   - Graduación de 0 a 100 PTS según reincidencia, intencionalidad y cooperación.
+   - Botón para exportar informe disciplinario para el Staff en Discord.
+4. **PWA & Modo Impresión PDF:**
+   - Instalable en móviles y optimizado para exportación limpia con `Ctrl+P`.
