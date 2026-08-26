@@ -3,6 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- OpenGraph / Discord Rich Embed Meta Tags -->
+  <meta name="description" content="Reglamento Oficial y Protocolo de Convivencia Fanmade en Discord · Umas Community. Matriz sancional interactiva, amparo legal Iberoamérica y mediación pedagógica." />
+  <meta name="theme-color" content="#10b981" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rules-web.onrender.com" />
+  <meta property="og:title" content="Reglamento del Servidor de Fans en Discord · Umas Community 🌿" />
+  <meta property="og:description" content="Manual de convivencia en 7 fases: mediación, seguridad forense, simulador interactivo de sanciones y leyes de ciberseguridad." />
+  <meta property="og:image" content="https://rules-web.onrender.com/poster.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reglamento · Umas Community 🌿" />
+  <meta name="twitter:description" content="Protocolo de convivencia, matriz sancional y directrices comunitarias." />
+  <meta name="twitter:image" content="https://rules-web.onrender.com/poster.jpg" />
+
   <title>Reglamento del Servidor de Fans en Discord · Umas Community 🌿</title>
 
   <!-- Google Fonts: Plus Jakarta Sans, Playfair Display, JetBrains Mono -->
@@ -23,18 +36,18 @@
       --ease-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
       --ease-soft: cubic-bezier(0.2, 0.9, 0.3, 1);
 
-      /* Paleta Esmeralda Profunda & Dark Forest */
+      /* Paleta Esmeralda Profunda, Soft Glass & Pure Transparency */
       --bg: #020704;
       --bg-gradient: radial-gradient(circle at 50% 20%, #0d281a 0%, #05140d 45%, #010603 100%);
-      --surface: rgba(8, 22, 14, 0.76);
-      --surface-solid: #07190f;
-      --surface2: rgba(13, 35, 23, 0.8);
-      --surface3: rgba(18, 48, 32, 0.88);
-      --surface4: #1c4730;
+      --surface: rgba(6, 22, 14, 0.40);
+      --surface-solid: rgba(8, 28, 18, 0.55);
+      --surface2: rgba(10, 32, 20, 0.42);
+      --surface3: rgba(14, 46, 30, 0.52);
+      --surface4: rgba(18, 62, 42, 0.62);
 
-      --border: rgba(52, 211, 153, 0.15);
-      --border-hi: rgba(52, 211, 153, 0.4);
-      --border-glow: rgba(16, 185, 129, 0.32);
+      --border: rgba(52, 211, 153, 0.16);
+      --border-hi: rgba(110, 231, 183, 0.38);
+      --border-glow: rgba(16, 185, 129, 0.28);
 
       --emerald: #10b981;
       --emerald-lt: #34d399;
@@ -62,8 +75,8 @@
       --radius: 14px;
       --radius-sm: 10px;
 
-      --shadow: 0 0 0 1px rgba(52, 211, 153, 0.12), 0 24px 60px rgba(0, 0, 0, 0.85), 0 4px 18px rgba(0, 0, 0, 0.55);
-      --shadow-glow: 0 0 40px rgba(16, 185, 129, 0.25);
+      --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.42), inset 0 1px 1px 0 rgba(255, 255, 255, 0.08);
+      --shadow-glow: 0 0 35px rgba(52, 211, 153, 0.22);
     }
 
     html {
@@ -86,7 +99,7 @@
       min-height: 100dvh;
     }
 
-    /* ─── Video & Procedural Multi-Layer Ambient Background ─── */
+    /* ─── Video & Procedural Multi-Layer Ambient Background Siempre Visible ─── */
     .hero-wrapper {
       position: fixed;
       top: 0;
@@ -110,16 +123,16 @@
       height: auto;
       transform: translate(-50%, -50%);
       object-fit: cover;
-      filter: saturate(0.9) brightness(0.38) contrast(1.18);
-      opacity: 0.65;
+      filter: saturate(0.95) brightness(0.42) contrast(1.15);
+      opacity: 0.70;
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse at 50% 25%, rgba(16, 185, 129, 0.14) 0%, transparent 65%),
-        radial-gradient(ellipse at 50% 75%, rgba(6, 78, 59, 0.28) 0%, rgba(2, 7, 4, 0.88) 60%, rgba(1, 4, 2, 0.98) 100%);
+        radial-gradient(ellipse at 50% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 65%),
+        radial-gradient(ellipse at 50% 80%, rgba(6, 78, 59, 0.15) 0%, rgba(2, 7, 4, 0.35) 60%, rgba(1, 4, 2, 0.5) 100%);
     }
 
     /* Canvas Particles (Leaves & Spores) */
@@ -213,7 +226,7 @@
 
     @keyframes enter-pop {
       from { opacity: 0; transform: translateY(40px) scale(0.94); }
-      to   { opacity: 1; transform: translateY(0) scale(1); }
+      to   { opacity: 1; transform: translateY(0); scale: 1; }
     }
 
     .enter-badge {
@@ -334,23 +347,45 @@
       line-height: 1.6;
     }
 
-    /* ─── Navigation Bar Suave & Ultra-Responsiva ─── */
+    /* ─── Navigation Bar Soft Frosted Glass ─── */
     .nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 500;
-      background: rgba(2, 7, 4, 0.88);
-      backdrop-filter: blur(22px);
-      -webkit-backdrop-filter: blur(22px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(2, 7, 4, 0.62);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(52, 211, 153, 0.18);
       display: flex;
       align-items: center;
       padding: 0 clamp(12px, 3vw, 28px);
       gap: 8px;
-      box-shadow: 0 4px 30px rgba(0,0,0,0.7);
-      transition: transform 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.55);
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease, visibility 0.65s;
+    }
+
+    .nav.nav-visible {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-reading-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2.5px;
+      width: 0%;
+      background: linear-gradient(90deg, #10b981 0%, #34d399 50%, #fbbf24 100%);
+      box-shadow: 0 0 12px rgba(52, 211, 153, 0.85);
+      transition: width 0.08s linear;
+      pointer-events: none;
+      z-index: 501;
     }
 
     .nav-brand {
@@ -396,6 +431,7 @@
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
       padding: 6px 0;
+      scroll-behavior: smooth;
     }
 
     .nav-links-scroll::-webkit-scrollbar { display: none; }
@@ -405,7 +441,7 @@
       color: var(--text-muted);
       font-size: clamp(0.75rem, 1.5vw, 0.84rem);
       font-weight: 600;
-      padding: 10px 12px;
+      padding: 9px 12px;
       white-space: nowrap;
       transition: color 0.25s ease, background 0.25s ease, transform 0.2s ease;
       display: flex;
@@ -437,7 +473,7 @@
 
     .nav a.active {
       color: var(--emerald-lt);
-      background: rgba(16, 185, 129, 0.12);
+      background: rgba(16, 185, 129, 0.14);
     }
 
     .nav a.active::after {
@@ -500,7 +536,7 @@
       .nav-device-tag { display: block; }
     }
 
-    /* ─── Hero Text Overlay con Fade-In Suave y Transparencia 50% ─── */
+    /* ─── Hero Text Overlay con Revelación Cristalina y Fluida ─── */
     .scroll-content {
       position: relative;
       z-index: 10;
@@ -522,63 +558,63 @@
       align-items: center;
       text-align: center;
       padding: 0 clamp(16px, 4vw, 36px);
-      pointer-events: auto;
+      pointer-events: none;
       z-index: 20;
       opacity: 0;
+      visibility: hidden;
       transform: translateY(35px);
-      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease;
-      filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.6));
+      transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease, visibility 0.8s;
+      filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.75));
     }
 
     .hero-text-overlay.start-anim {
-      opacity: 0.50; /* 50% de opacidad en reposo */
+      opacity: 0.50;
+      visibility: visible;
+      pointer-events: auto;
       transform: translateY(0);
-      animation: hero-fade-in-glow 3.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: hero-soft-glow-fade 2.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    @keyframes hero-fade-in-glow {
+    @keyframes hero-soft-glow-fade {
       0% {
         opacity: 0;
-        transform: translateY(40px) scale(0.96);
-        filter: drop-shadow(0 0 50px rgba(52, 211, 153, 0.95));
+        transform: translateY(26px) scale(0.97);
+        filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 0px rgba(52, 211, 153, 0));
       }
-      35% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: drop-shadow(0 0 75px rgba(110, 231, 183, 0.95)) drop-shadow(0 0 40px rgba(251, 191, 36, 0.7));
+      45% {
+        /* Brillo sutil, ultra-suave y etéreo durante 2 segundos */
+        opacity: 0.82;
+        transform: translateY(0) scale(1.003);
+        filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 20px rgba(110, 231, 183, 0.24)) drop-shadow(0 0 10px rgba(251, 191, 36, 0.12));
       }
       100% {
-        opacity: 0.50; /* Asentamiento suave al 50% */
+        /* Se apaga suavemente y queda permanentemente al 50% de transparencia */
+        opacity: 0.50;
         transform: translateY(0) scale(1);
-        filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.6));
+        filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.75));
       }
-    }
-
-    .hero-text-overlay:hover {
-      opacity: 0.92;
-      filter: drop-shadow(0 0 35px rgba(52, 211, 153, 0.8)) drop-shadow(0 0 20px rgba(251, 191, 36, 0.5));
     }
 
     /* Animación en cascada suave para elementos del hero */
     .hero-text-overlay.start-anim .hero-badge {
-      animation: hero-child-fade 0.9s 0.1s var(--ease-spring) both;
+      animation: hero-child-fade 0.8s 0.05s var(--ease-spring) both;
     }
     .hero-text-overlay.start-anim .hero-eyebrow {
-      animation: hero-child-fade 0.9s 0.25s var(--ease-spring) both;
+      animation: hero-child-fade 0.8s 0.16s var(--ease-spring) both;
     }
     .hero-text-overlay.start-anim .hero-title {
-      animation: hero-child-fade 1.1s 0.4s var(--ease-spring) both, title-sweep-bg 2.5s 0.8s ease-in-out forwards;
+      animation: hero-child-fade 0.95s 0.28s var(--ease-spring) both;
     }
     .hero-text-overlay.start-anim .hero-desc {
-      animation: hero-child-fade 0.9s 0.6s var(--ease-spring) both;
+      animation: hero-child-fade 0.8s 0.42s var(--ease-spring) both;
     }
     .hero-text-overlay.start-anim .scroll-indicator {
-      animation: hero-child-fade 0.9s 0.75s var(--ease-spring) both;
+      animation: hero-child-fade 0.8s 0.56s var(--ease-spring) both;
     }
 
     @keyframes hero-child-fade {
-      from { opacity: 0; transform: translateY(25px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(28px) scale(0.96); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     .hero-badge {
@@ -615,12 +651,8 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.1rem, 6.2vw, 4.6rem);
       font-weight: 900;
-      background: 
-        linear-gradient(110deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%),
-        linear-gradient(to bottom, #ffffff 45%, #e2f5ec 70%, #34d399 100%);
-      background-size: 300% 100%, 100% 100%;
-      background-position: 100% 0, 0 0;
-      background-repeat: no-repeat;
+      color: #ffffff;
+      background: linear-gradient(135deg, #ffffff 40%, #d1fae5 70%, #34d399 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -628,11 +660,7 @@
       letter-spacing: -0.02em;
       margin-bottom: 16px;
       position: relative;
-    }
-
-    @keyframes title-sweep-bg {
-      0%   { background-position: 100% 0, 0 0; }
-      100% { background-position: 0% 0, 0 0; }
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.65);
     }
 
     .hero-title .accent {
@@ -677,13 +705,12 @@
       100% { transform: scaleY(1); transform-origin: bottom; opacity: 0; }
     }
 
-    /* ─── Contenedor Principal (Main Body) ─── */
+    /* ─── Contenedor Principal (Main Body Translúcido & Fondo Siempre Presente) ─── */
     .main-body {
-      background: rgba(2, 7, 4, 0.96);
-      backdrop-filter: blur(28px);
+      background: transparent;
       position: relative;
       padding-top: 40px;
-      border-top: 1px solid var(--border);
+      border-top: none;
     }
 
     .container {
@@ -713,7 +740,7 @@
       border-radius: 6px;
       letter-spacing: 0.08em;
       flex-shrink: 0;
-      box-shadow: 0 0 10px rgba(52, 211, 153, 0.3);
+      box-shadow: 0 0 14px rgba(52, 211, 153, 0.35);
     }
 
     .phase-title {
@@ -723,6 +750,7 @@
       color: var(--white);
       letter-spacing: -0.01em;
       white-space: nowrap;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
     }
 
     .phase-line {
@@ -732,9 +760,11 @@
       min-width: 30px;
     }
 
-    /* ─── Tarjetas de Contenido (Cards con GUI Suave) ─── */
+    /* ─── Tarjetas de Contenido (Cards Frosted Glass Ultra Suaves) ─── */
     .card {
       background: var(--surface);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
       padding: clamp(20px, 4vw, 36px);
@@ -742,13 +772,14 @@
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
-      transition: transform 0.35s var(--ease-spring), border-color 0.35s ease, box-shadow 0.35s ease;
+      transition: transform 0.35s var(--ease-spring), border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
     }
 
     .card:hover {
+      background: rgba(10, 34, 22, 0.48);
       border-color: var(--border-hi);
       transform: translateY(-3px);
-      box-shadow: var(--shadow), var(--shadow-glow);
+      box-shadow: 0 14px 40px 0 rgba(0, 0, 0, 0.55), var(--shadow-glow), inset 0 1px 1px rgba(255, 255, 255, 0.12);
     }
 
     .card-head {
@@ -763,6 +794,7 @@
       height: clamp(44px, 6vw, 54px);
       border-radius: var(--radius);
       background: linear-gradient(135deg, var(--surface2), var(--surface3));
+      backdrop-filter: blur(10px);
       border: 1px solid var(--border-hi);
       display: grid;
       place-items: center;
@@ -777,6 +809,7 @@
       font-weight: 800;
       color: var(--white);
       margin-bottom: 4px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
     }
 
     .card-sub {
@@ -785,7 +818,7 @@
       line-height: 1.5;
     }
 
-    /* ─── Listas de Reglas ─── */
+    /* ─── Listas de Reglas (Frosted Glass Suave) ─── */
     .rules-grid {
       display: flex;
       flex-direction: column;
@@ -798,6 +831,8 @@
       align-items: flex-start;
       padding: clamp(14px, 2.5vw, 18px) clamp(16px, 3vw, 22px);
       background: var(--surface2);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       transition: all 0.28s var(--ease-spring);
@@ -808,7 +843,7 @@
       background: var(--surface3);
       border-color: var(--border-hi);
       transform: translateX(4px);
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .r-tag {
@@ -839,6 +874,32 @@
       font-size: clamp(0.82rem, 1.6vw, 0.88rem);
       color: var(--text-muted);
       line-height: 1.62;
+    }
+
+    .rule-sublist {
+      margin-top: 8px;
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: clamp(0.80rem, 1.5vw, 0.86rem);
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .rule-sublist li strong {
+      display: inline;
+      color: var(--emerald-lt);
+      font-size: inherit;
+      font-weight: 700;
+    }
+
+    .rule-sublist li.warn strong {
+      color: var(--gold-lt);
+    }
+
+    .rule-sublist li.danger strong {
+      color: var(--red-lt);
     }
 
     /* ─── Callouts y Alertas ─── */
@@ -892,6 +953,8 @@
 
     .inf-card {
       background: var(--surface2);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 18px 14px;
@@ -900,18 +963,21 @@
       transition: all 0.28s var(--ease-spring);
       position: relative;
       user-select: none;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
     }
 
     .inf-card:hover {
+      background: var(--surface3);
       transform: translateY(-4px);
       border-color: var(--border-hi);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .inf-card.selected {
-      background: rgba(16, 185, 129, 0.2);
+      background: rgba(16, 185, 129, 0.22);
+      backdrop-filter: blur(16px);
       border-color: var(--emerald-lt);
-      box-shadow: 0 0 24px rgba(16, 185, 129, 0.4);
+      box-shadow: 0 0 26px rgba(16, 185, 129, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.15);
     }
 
     .inf-card.selected::after {
@@ -923,7 +989,8 @@
       font-size: 0.55rem;
       font-weight: 800;
       color: var(--emerald-lt);
-      background: rgba(2, 7, 4, 0.9);
+      background: rgba(2, 7, 4, 0.75);
+      backdrop-filter: blur(8px);
       padding: 2px 6px;
       border-radius: 4px;
       border: 1px solid var(--border-hi);
@@ -936,6 +1003,7 @@
       line-height: 1;
       display: block;
       color: var(--c, var(--emerald-lt));
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     .inf-unit {
@@ -950,6 +1018,7 @@
       font-weight: 700;
       color: var(--white);
       margin: 8px 0 4px;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
     }
 
     .inf-badge {
@@ -959,8 +1028,8 @@
       padding: 2px 7px;
       border-radius: 4px;
       color: var(--c, var(--mint));
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       margin-bottom: 6px;
     }
 
@@ -970,14 +1039,16 @@
       line-height: 1.4;
     }
 
-    /* Simulador Interactivo Suave */
+    /* Simulador Interactivo Frosted Glass */
     .simulator-box {
-      background: rgba(2, 7, 4, 0.88);
-      border: 1px solid var(--border-hi);
+      background: rgba(6, 24, 15, 0.42);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(52, 211, 153, 0.22);
       border-radius: var(--radius-lg);
       padding: clamp(18px, 3.5vw, 28px);
       margin-top: 24px;
-      box-shadow: 0 0 35px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.08);
     }
 
     .sim-header {
@@ -994,6 +1065,7 @@
       font-size: clamp(1.1rem, 2.5vw, 1.3rem);
       font-weight: 800;
       color: var(--white);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
 
     .sim-score-badge {
@@ -1001,10 +1073,11 @@
       align-items: baseline;
       gap: 6px;
       background: var(--surface2);
+      backdrop-filter: blur(12px);
       border: 1px solid var(--border-hi);
       padding: 6px 18px;
       border-radius: 100px;
-      box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .sim-score-num {
@@ -1013,12 +1086,61 @@
       font-weight: 900;
       color: var(--mint);
       transition: color 0.3s ease;
+      text-shadow: 0 0 15px rgba(52, 211, 153, 0.5);
     }
 
     .sim-score-unit {
       font-size: 0.7rem;
       font-weight: 800;
       color: var(--text-muted);
+    }
+
+    /* ─── Botones de Escenarios / Presets de Casos Reales ─── */
+    .sim-presets-deck {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+      align-items: center;
+    }
+
+    .sim-presets-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--mint);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-right: 4px;
+    }
+
+    .sim-preset-btn {
+      background: var(--surface2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s var(--ease-spring);
+    }
+
+    .sim-preset-btn:hover {
+      background: var(--surface3);
+      color: var(--white);
+      border-color: var(--border-hi);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    }
+
+    .sim-preset-btn:active {
+      transform: translateY(0);
     }
 
     /* Slider de 10 en 10 */
@@ -1056,6 +1178,7 @@
     .sim-bar-track {
       height: 14px;
       background: var(--surface2);
+      backdrop-filter: blur(8px);
       border-radius: 100px;
       overflow: hidden;
       position: relative;
@@ -1072,7 +1195,7 @@
       background: linear-gradient(90deg, #10b981, #f59e0b, #ef4444, #991b1b);
     }
 
-    /* Marcadores Clickeables de 10 en 10 (Optimizados para Móvil) */
+    /* Marcadores Clickeables de 10 en 10 */
     .sim-milestones {
       display: grid;
       grid-template-columns: repeat(11, 1fr);
@@ -1082,6 +1205,7 @@
 
     .sim-milestone-pill {
       background: var(--surface2);
+      backdrop-filter: blur(8px);
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 6px 2px;
@@ -1099,23 +1223,27 @@
       color: var(--white);
       border-color: var(--border-hi);
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .sim-milestone-pill.active {
       background: var(--emerald-dark);
       color: var(--mint);
       border-color: var(--emerald);
-      box-shadow: 0 0 12px rgba(16, 185, 129, 0.35);
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.4);
     }
 
-    /* Tarjeta Reactiva de Estado */
+    /* Tarjeta Reactiva de Estado Frosted */
     .sim-status-card {
       background: var(--surface2);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: clamp(16px, 3vw, 24px);
       margin-top: 18px;
       transition: all 0.3s var(--ease-spring);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
     }
 
     .sim-status-header {
@@ -1137,6 +1265,7 @@
       font-size: clamp(1.05rem, 2.2vw, 1.25rem);
       font-weight: 800;
       color: var(--white);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
 
     .sim-status-sub {
@@ -1146,18 +1275,23 @@
 
     .sim-info-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+      gap: 16px;
     }
 
-    @media (max-width: 768px) {
-      .sim-info-grid { grid-template-columns: 1fr; gap: 14px; }
-      .sim-milestones { grid-template-columns: repeat(6, 1fr); gap: 6px; }
+    .sim-info-block {
+      background: var(--surface2);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(14px, 2.5vw, 18px);
+      transition: all 0.3s ease;
     }
 
-    @media (max-width: 480px) {
-      .sim-milestones { grid-template-columns: repeat(4, 1fr); }
-      .inf-grid { grid-template-columns: 1fr; }
+    .sim-info-block:hover {
+      border-color: var(--border-hi);
+      background: var(--surface3);
     }
 
     .sim-info-block h5 {
@@ -1180,7 +1314,7 @@
       padding-left: 16px;
     }
 
-    /* ─── MARCO JURÍDICO LATAM PROFUNDO ─── */
+    /* ─── MARCO JURÍDICO LATAM PROFUNDO FROSTED GLASS ─── */
     .country-selector {
       display: flex;
       gap: 8px;
@@ -1195,6 +1329,8 @@
 
     .country-btn {
       background: var(--surface2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border: 1px solid var(--border);
       border-radius: 100px;
       padding: 8px 18px;
@@ -1214,13 +1350,14 @@
       color: var(--white);
       border-color: var(--border-hi);
       transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     .country-btn.active {
-      background: rgba(16, 185, 129, 0.2);
+      background: rgba(16, 185, 129, 0.22);
       border-color: var(--emerald-lt);
       color: var(--mint);
-      box-shadow: 0 0 18px rgba(16, 185, 129, 0.25);
+      box-shadow: 0 0 18px rgba(16, 185, 129, 0.3);
     }
 
     .legal-cards-container {
@@ -1231,6 +1368,8 @@
 
     .legal-item {
       background: var(--surface2);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: clamp(16px, 3vw, 22px);
@@ -1238,13 +1377,14 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
     }
 
     .legal-item:hover {
       background: var(--surface3);
       border-color: var(--border-hi);
       transform: translateX(4px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .legal-item-head {
@@ -1259,6 +1399,7 @@
       font-size: clamp(0.95rem, 2vw, 1.05rem);
       font-weight: 800;
       color: var(--white);
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
     }
 
     .legal-badge-country {
@@ -1267,7 +1408,7 @@
       font-weight: 800;
       padding: 3px 10px;
       border-radius: 100px;
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.08);
       border: 1px solid var(--border);
     }
 
@@ -1275,11 +1416,12 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: clamp(0.74rem, 1.5vw, 0.8rem);
       color: var(--mint);
-      background: rgba(16, 185, 129, 0.08);
+      background: rgba(16, 185, 129, 0.12);
       padding: 3px 8px;
       border-radius: 6px;
       display: inline-block;
       width: fit-content;
+      border: 1px solid rgba(52, 211, 153, 0.2);
     }
 
     .legal-item p {
@@ -1288,15 +1430,17 @@
       line-height: 1.6;
     }
 
-    /* ─── Proceso de Apelación ─── */
+    /* ─── Proceso de Apelación Frosted ─── */
     .appeal-card {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(6, 78, 59, 0.3) 100%);
-      border: 1px solid var(--emerald-lt);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.16) 0%, rgba(6, 78, 59, 0.32) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(110, 231, 183, 0.42);
       border-radius: var(--radius-xl);
       padding: clamp(24px, 5vw, 42px);
       text-align: center;
       margin-top: 36px;
-      box-shadow: 0 0 45px rgba(16, 185, 129, 0.18);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 45px rgba(16, 185, 129, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.12);
     }
 
     .appeal-title {
@@ -1363,6 +1507,384 @@
       color: var(--white);
       margin-bottom: 10px;
     }
+
+    /* ─── Optimizaciones Específicas para Móviles (Ultra Fluidez & 60 FPS) ─── */
+    @media (max-width: 768px) {
+      .nav {
+        padding: 0 10px;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .nav-brand {
+        padding: 10px 8px 10px 0;
+        margin-right: 2px;
+        gap: 6px;
+      }
+      .nav-logo-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.95rem;
+      }
+      .nav-title {
+        font-size: 0.88rem;
+      }
+      .nav-links-scroll {
+        gap: 4px;
+        padding: 6px 0;
+        scroll-snap-type: x mandatory;
+      }
+      .nav a {
+        padding: 7px 10px;
+        font-size: 0.76rem;
+        scroll-snap-align: start;
+      }
+      .sound-toggle-btn {
+        padding: 5px 8px;
+        font-size: 0.65rem;
+      }
+      .sound-toggle-btn #sound-text {
+        display: none;
+      }
+      .hero-title {
+        font-size: clamp(1.75rem, 7vw, 2.4rem);
+      }
+      .hero-desc {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+      }
+      .card {
+        padding: clamp(16px, 3.5vw, 20px);
+        border-radius: var(--radius-lg);
+      }
+      .rule-box {
+        padding: 12px 14px;
+        gap: 10px;
+      }
+      .r-tag {
+        font-size: 0.62rem;
+        padding: 2px 6px;
+      }
+      .rule-sublist {
+        padding-left: 14px;
+        gap: 4px;
+        font-size: 0.78rem;
+      }
+      .simulator-box {
+        padding: 14px;
+      }
+      .sim-milestones {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 4px;
+      }
+      .sim-milestone-pill {
+        padding: 8px 2px;
+        font-size: 0.66rem;
+        min-height: 36px;
+        display: grid;
+        place-items: center;
+      }
+      .inf-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+      .inf-card {
+        padding: 12px 8px;
+      }
+      .inf-pts {
+        font-size: 1.6rem;
+      }
+      .legal-item {
+        padding: 14px;
+      }
+      .country-btn {
+        padding: 6px 14px;
+        font-size: 0.76rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .inf-grid {
+        grid-template-columns: 1fr;
+      }
+      .sim-milestones {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .enter-logo {
+        font-size: clamp(1.6rem, 7.5vw, 2.2rem);
+      }
+      .enter-sub {
+        font-size: 0.82rem;
+        margin-bottom: 24px;
+      }
+    }
+  
+    /* ─── Buscador en Tiempo Real & Modal Glass ─── */
+    .nav-search-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border-hi);
+      color: var(--mint);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(0.68rem, 1.5vw, 0.74rem);
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 100px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s var(--ease-spring);
+      white-space: nowrap;
+    }
+    .nav-search-btn:hover {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: var(--emerald-lt);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.35);
+    }
+    .nav-search-btn .kbd-shortcut {
+      background: rgba(2, 7, 4, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-size: 0.62rem;
+      color: var(--text-muted);
+    }
+
+    /* Modal / Barra de búsqueda desplegable */
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(1, 6, 3, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: clamp(20px, 8vh, 80px) 16px 20px;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transition: opacity 0.3s var(--ease-spring), visibility 0.3s;
+    }
+    .search-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+    .search-container {
+      width: 100%;
+      max-width: 680px;
+      background: rgba(6, 24, 15, 0.85);
+      border: 1px solid var(--border-hi);
+      border-radius: var(--radius-xl);
+      padding: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(16, 185, 129, 0.25);
+      transform: translateY(-20px) scale(0.96);
+      transition: transform 0.3s var(--ease-spring);
+    }
+    .search-overlay.open .search-container {
+      transform: translateY(0) scale(1);
+    }
+    .search-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 18px;
+    }
+    .search-input-wrapper:focus-within {
+      border-color: var(--emerald-lt);
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+    }
+    .search-input-icon {
+      font-size: 1.2rem;
+      color: var(--mint);
+    }
+    .search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--white);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      font-weight: 600;
+    }
+    .search-input::placeholder {
+      color: var(--text-dim);
+    }
+    .search-close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      transition: color 0.2s;
+    }
+    .search-close-btn:hover {
+      color: var(--white);
+    }
+    .search-results-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      padding: 0 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+    .search-results-info span {
+      color: var(--mint);
+      font-weight: 700;
+    }
+    .search-quick-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .search-tag-chip {
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .search-tag-chip:hover {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: var(--emerald-lt);
+      color: var(--white);
+    }
+
+    /* Resaltado de búsqueda */
+    mark.search-highlight {
+      background: rgba(245, 158, 11, 0.35);
+      color: #ffffff;
+      padding: 0 3px;
+      border-radius: 3px;
+      font-weight: 800;
+      border-bottom: 2px solid var(--gold-lt);
+    }
+
+    /* Botón de Copiar Norma en cada Box */
+    .rule-box {
+      position: relative;
+    }
+    .copy-rule-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(2, 7, 4, 0.6);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      border-radius: 8px;
+      padding: 5px 9px;
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.22s var(--ease-spring);
+      opacity: 0.6;
+    }
+    .rule-box:hover .copy-rule-btn {
+      opacity: 1;
+    }
+    .copy-rule-btn:hover {
+      background: var(--surface4);
+      color: var(--mint);
+      border-color: var(--border-hi);
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+    }
+    .copy-rule-btn.copied {
+      background: rgba(16, 185, 129, 0.3);
+      color: var(--white);
+      border-color: var(--emerald-lt);
+      opacity: 1;
+    }
+
+    /* Toast Notification Flotante */
+    .glass-toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(6, 24, 15, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--emerald-lt);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(16, 185, 129, 0.4);
+      color: var(--white);
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 99999;
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s var(--ease-spring), opacity 0.4s ease;
+    }
+    .glass-toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Botón Flotante Scroll-to-Top */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(6, 24, 15, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-hi);
+      color: var(--mint);
+      font-size: 1.25rem;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      z-index: 400;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 20px rgba(16, 185, 129, 0.25);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px) scale(0.9);
+      transition: all 0.35s var(--ease-spring);
+    }
+    .scroll-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+    .scroll-top-btn:hover {
+      background: var(--surface4);
+      color: var(--white);
+      border-color: var(--emerald-lt);
+      transform: translateY(-4px) scale(1.08);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6), 0 0 30px rgba(52, 211, 153, 0.5);
+    }
+
   </style>
 </head>
 <body>
@@ -1385,20 +1907,20 @@
   </div>
 
   <div class="enter-content">
-    <div class="enter-badge">✦ Servidor de Fans en Discord · Fanmade ✦</div>
+    <div class="enter-badge">✦ SERVIDOR FANMADE DE DISCORD · COMUNIDAD & PROTOCOLO 🌿 ✦</div>
     <h1 class="enter-logo">
       <span class="logo-main">Umas <span>Community</span></span>
       <span class="logo-leaf">🌿</span>
     </h1>
-    <div class="enter-sub">— Protocolo de Convivencia, Seguridad y Normativa del Servidor de Fans —</div>
+    <div class="enter-sub">— Protocolo de Convivencia, Preservación Digital, Matriz Sancional & Amparo Legal —</div>
     <div class="enter-btn-wrapper">
       <button class="enter-btn" id="enter-btn">
         <span>Entrar al Reglamento Fanmade</span> ➔
       </button>
     </div>
     <div class="enter-footer">
-      Ambiente comunitario seguro regulado bajo moderación ética, transparente y mediación humana.<br>
-      Servidor comunitario de fans independiente (Fanmade). No afiliado ni respaldado por Cygames Inc. ni Discord Inc.
+      Espacio seguro de aficionados regulado bajo moderación ética, transparente, mediación humana y evidencia forense digital.<br>
+      Servidor comunitario de fans independiente (Fanmade). No afiliado, respaldado ni vinculado a Cygames Inc. ni Discord Inc.
     </div>
   </div>
 </div>
@@ -1409,13 +1931,14 @@
 </audio>
 
 <!-- ── Barra de Navegación ── -->
-<nav class="nav" role="navigation" aria-label="Navegación principal">
+<nav class="nav" id="main-nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav-reading-progress" id="nav-reading-progress"></div>
   <a href="#" class="nav-brand">
     <div class="nav-logo-icon">🌿</div>
     <div class="nav-title">Umas <span>Community</span></div>
   </a>
 
-  <div class="nav-links-scroll">
+  <div class="nav-links-scroll" id="nav-links-scroll">
     <a href="#fase-1">🌱 Convivencia</a>
     <a href="#fase-2">🎙️ Canales & Voz</a>
     <a href="#fase-3">🛡️ Seguridad</a>
@@ -1426,11 +1949,16 @@
   </div>
 
   <div class="nav-controls">
+        <button class="nav-search-btn" id="nav-search-btn" title="Buscar norma o palabra clave (Atajo: / o Ctrl+K)">
+      <span>🔍</span>
+      <span>Buscar</span>
+      <span class="kbd-shortcut">/</span>
+    </button>
     <button class="sound-toggle-btn" id="sound-toggle-btn" title="Activar/Desactivar efectos de sonido ASMR">
       <span id="sound-icon">🔊</span>
       <span id="sound-text">ASMR: ON</span>
     </button>
-    <div class="nav-device-tag" id="device-tag">💻 PC Mode</div>
+    <div class="nav-device-tag" id="device-tag">💻 Modo PC Ultra Glass</div>
   </div>
 </nav>
 
@@ -1439,14 +1967,14 @@
 
   <!-- Hero Text (Con animación luminosa y elegancia visual) -->
   <div class="hero-text-overlay" id="hero-text-overlay">
-    <div class="hero-badge">✦ SERVIDOR DE DISCORD · PROYECTO FANMADE 🌿 ✦</div>
-    <p class="hero-eyebrow">— Umas Community · Normativa del Servidor de Fans —</p>
+    <div class="hero-badge">✦ SERVIDOR DE DISCORD · PROYECTO COMUNITARIO FANMADE 🌿 ✦</div>
+    <p class="hero-eyebrow">— Umas Community · Normativa Integral y Protocolo Fanmade —</p>
     <h1 class="hero-title">
-      Reglamento del Servidor de <span class="accent">Discord</span><br>
+      Reglamento del Servidor <span class="accent">Discord</span><br>
       & Convivencia Fanmade
     </h1>
     <p class="hero-desc">
-      Normativa de convivencia comunitaria estructurada en 7 fases con protocolo de moderación formativa, matriz de sanciones progresiva y amparo jurídico latinoamericano.
+      Manual exhaustivo de convivencia estructurado en 7 fases: mediación pedagógica formativa, preservación forense de evidencias digitales, simulador interactivo de sanciones y homologación con leyes de ciberseguridad en Iberoamérica y las Directrices Oficiales de Discord.
     </p>
     <div class="scroll-indicator">
       <span>Desliza para explorar</span>
@@ -1473,7 +2001,7 @@
           <div class="card-icon">🤝</div>
           <div>
             <div class="card-title">Código de Conducta y Trato Comunitario</div>
-            <div class="card-sub">Fundamentos esenciales obligatorios para todos los miembros, colaboradores y moderadores.</div>
+            <div class="card-sub">Fundamentos esenciales obligatorios para todos los miembros, colaboradores, boosters y moderadores.</div>
           </div>
         </div>
 
@@ -1481,47 +2009,72 @@
           <div class="rule-box">
             <span class="r-tag">#01</span>
             <div class="r-content">
-              <strong>Dignidad Humana y Respeto Incondicional</strong>
-              <p>Todo integrante de la comunidad merece un trato digno, empático y libre de prejuicios. Queda estrictamente prohibida cualquier manifestación de racismo, xenofobia, machismo, homofobia, transfobia, discriminación religiosa, socioeconómica o capacitista.</p>
+              <strong>#01 Dignidad, Integridad y Respeto Incondicional</strong>
+              <p>Todo integrante de la comunidad merece un trato digno, empático y libre de prejuicios. La comunidad se fundamenta en la inclusión activa, el respeto recíproco y la convivencia pacífica entre aficionados.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Insultos denigrantes, burlas despectivas, expresiones de racismo, xenofobia, machismo, homofobia, transfobia, capacitismo o discriminación religiosa, ideológica o socioeconómica.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> En discusiones intensas, enfoca tus argumentos exclusivamente en las ideas o temáticas sin descalificar ni atacar a la persona detrás de la pantalla.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> +20 a +30 PTS (Aviso disciplinario directo o Time-Out según el tono y la gravedad del incidente; reincidencia escala de 12h a 24h de silencio).</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#02</span>
             <div class="r-content">
-              <strong>Cero Acoso, Intimidación y Hostigamiento</strong>
-              <p>No se tolerará la persecución reiterada, la burla malintencionada sistemática, las insistencias no deseadas en chats públicos ni el asedio mediante mensajes directos (DMs). El consentimiento y los límites personales de cada integrante son inviolables.</p>
+              <strong>#02 Prevención Absoluta de Acoso, Hostigamiento y Asedio</strong>
+              <p>Los límites personales son inviolables. El hostigamiento sistemático, las insistencias invasivas y la persecución deterioran la seguridad del servidor y no serán tolerados bajo ninguna circunstancia.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Persecución entre canales o hilos, menciones insistentes tras una negativa, asedio o insinuaciones no deseadas por mensaje directo (DMs), mofas sistemáticas y acoso psicológico (cyberbullying o stalking).</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Si otro miembro te solicita explícitamente detener una broma, conversación o interacción, cesa de inmediato. El "no" es definitivo e incondicional.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> +40 PTS (Time-Out obligatorio de 1 a 12 horas en Discord; reincidencias escalan a +70 PTS con 3 días de aislamiento o expulsión definitiva).</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#03</span>
             <div class="r-content">
-              <strong>Control de Spam, Flood y Ruido Visual</strong>
-              <p>Queda prohibida la saturación intencional de canales con mensajes repetitivos, muros de texto incoherentes, exceso masivo de emoticonos/stickers, cadenas de copia y pega o menciones colectivas sin autorización administrativa (@everyone / @here).</p>
+              <strong>#03 Control de Spam, Flood, Ruido Visual y Menciones Masivas</strong>
+              <p>La legibilidad y la fluidez del chat son prioritarias para todos los usuarios. La saturación deliberada interrumpe las conversaciones comunitarias y colapsa los canales de texto.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Envío masivo de mensajes idénticos consecutivos, muros de texto incoherentes (copypastas), saturación excesiva de emojis/stickers/GIFs, caracteres repetidos sin sentido y uso no autorizado de menciones globales (<code>@everyone</code>, <code>@here</code> o roles generales).</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Sintetiza tus ideas en un solo mensaje estructurado en lugar de múltiples fragmentos seguidos. Utiliza hilos para debates extensos.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> +10 a +20 PTS (Eliminación inmediata de mensajes y aviso formativo; en ataques coordinados se aplica Time-Out instantáneo).</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#04</span>
             <div class="r-content">
-              <strong>Publicidad y Promoción No Autorizada</strong>
-              <p>No está permitido promocionar servidores de Discord externos, canales de streaming propios o ajenos, redes sociales personales, comercios ni recaudaciones de fondos en canales públicos o por mensaje directo sin consentimiento expreso de la Administración.</p>
+              <strong>#04 Publicidad, Autopromoción y Enlaces No Autorizados</strong>
+              <p>Umas Community es un espacio de encuentro fanmade sin fines de lucro, no una plataforma publicitaria de autopromoción masiva ni de captación de usuarios hacia otros proyectos.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Difusión no consentida de invitaciones a servidores externos de Discord, canales personales de streaming/YouTube con fines comerciales, venta de productos/cuentas, criptomonedas o recaudaciones de fondos en canales públicos o por mensaje directo.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Si deseas compartir creaciones artísticas (fanarts, guías, clips), utiliza exclusivamente los canales `#arte` y `#creadores` o solicita autorización previa al Staff mediante ticket.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> +20 a +40 PTS (Retiro del enlace y aviso disciplinario; la autopromoción no solicitada por DM conlleva expulsión o veto).</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#05</span>
             <div class="r-content">
-              <strong>Igualdad Normativa y Cero Privilegios</strong>
-              <p>El reglamento vincula por igual a recién llegados, usuarios veteranos, amigos personales, moderadores y administradores. Ningún rol jerárquico, booster o estatus social en el servidor exime del cumplimiento estricto del código de conducta.</p>
+              <strong>#05 Igualdad Normativa, Convivencia Ejemplar y Cero Privilegios</strong>
+              <p>El reglamento vincula por igual a toda la comunidad. No existen fueros especiales por antigüedad, rol jerárquico, donaciones económicas ni vínculos de amistad con el Staff.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Exigir impunidad alegando estatus de Server Booster, rango veterano o amistad con moderadores; presionar al Staff para evadir sanciones o recibir tratos preferenciales ante faltas disciplinarias.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Asume la responsabilidad de tus intervenciones en el servidor y acata las orientaciones del equipo de moderación con madurez y educación.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> Invalidez inmediata de cualquier reclamo de privilegio y aplicación rigurosa de los puntos de sanción correspondientes a la falta cometida.</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="callout green">
           <div class="callout-icon">🌿</div>
-          <div><strong>Filosofía de Comunidad:</strong> La diversidad de criterios fomenta debates enriquecedores siempre que prime la educación y el respeto mutuo. Las discrepancias de opinión nunca justifican la hostilidad personal.</div>
+          <div><strong>Filosofía Comunitaria:</strong> La diversidad de criterios enriquece la convivencia siempre que prevalezca el respeto recíproco. La divergencia de opiniones es bienvenida; la hostilidad personal y el desprecio hacia otros miembros, jamás.</div>
         </div>
       </div>
 
@@ -1540,7 +2093,7 @@
           <div class="card-icon">🎧</div>
           <div>
             <div class="card-title">Uso Adecuado de Salas Temáticas y Canales de Audio</div>
-            <div class="card-sub">Organización del servidor, etiqueta de streaming y salud auditiva en llamadas.</div>
+            <div class="card-sub">Organización del servidor, etiqueta de streaming, salud auditiva y respeto en llamadas.</div>
           </div>
         </div>
 
@@ -1548,40 +2101,65 @@
           <div class="rule-box">
             <span class="r-tag">#06</span>
             <div class="r-content">
-              <strong>Uso Coherente de Canales Temáticos</strong>
-              <p>Cada canal (#general, #arte, #música, #gaming, #memes, #anuncios) tiene una temática delimitada. Mantener los contenidos en sus espacios correspondientes garantiza una lectura limpia y ordenada para toda la comunidad.</p>
+              <strong>#06 Uso Coherente y Organización de Canales Temáticos</strong>
+              <p>Cada canal del servidor posee una temática delimitada (<code>#general</code>, <code>#arte</code>, <code>#música</code>, <code>#gaming</code>, <code>#memes</code>, <code>#anuncios</code>). Mantener los contenidos ordenados garantiza una lectura agradable para todos.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Enviar memes o imágenes masivas en `#general`, discutir spoilers en salas públicas de bienvenida o desviar debates técnicos a canales incompatibles entorpeciendo a otros lectores.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Lee la descripción anclada del canal antes de publicar. Si la conversación cambia de temática, trasládala al canal correspondiente o abre un hilo.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> +10 PTS (Reubicación/eliminación del contenido y recordatorio formativo por parte del Staff).</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#07</span>
             <div class="r-content">
-              <strong>Salud Auditiva y Etiqueta en Canales de Voz</strong>
-              <p>Prohibido el uso de moduladores de voz distorsionados, amplificadores de sonido ensordecedores (ear-rape), sonidos estridentes imprevistos (screamers), reproducción de ruidos molestos reiterados o la interrupción constante del diálogo entre miembros.</p>
+              <strong>#07 Salud Auditiva, Respeto y Etiqueta en Canales de Voz</strong>
+              <p>Las salas de audio son espacios de charla, gaming y convivencia donde debe primar el confort auditivo, el respeto a los turnos de habla y la comunicación fluida.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Uso de moduladores distorsionados con volumen ensordecedor (ear-rape), screamers imprevistos, soundboards abusivos continuos, gritos estridentes reiterados o silenciar/ensordecer a otros con el fin de sabotear la llamada.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Configura la sensibilidad de tu micrófono en Discord (Push-to-Talk o supresión de ruido Krisp) y consulta a los demás participantes antes de reproducir música o efectos de sonido.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> +20 a +40 PTS (Muteo temporal de voz en el servidor y Time-Out de 1 a 12 horas en caso de reincidencia persistente).</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#08</span>
             <div class="r-content">
-              <strong>Grabaciones y Transmisiones Consentidas</strong>
-              <p>Queda terminantemente prohibido grabar conversaciones de audio o capturar pantallas/video en canales de voz privados o públicos sin la autorización expresa de todos los participantes presentes en la llamada.</p>
+              <strong>#08 Consentimiento y Privacidad en Grabaciones y Transmisiones</strong>
+              <p>La privacidad y el derecho a la propia imagen de cada integrante son inviolables en canales de voz, videollamadas y sesiones de streaming comunitarias.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Grabar el audio o video de conversaciones privadas o públicas, capturar pantallas de videollamadas o retransmitir la voz de terceros sin su autorización previa, unánime y explícita.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Avisa con antelación a todos los miembros presentes antes de iniciar una grabación o transmisión en vivo y detén la captura si algún participante manifiesta desacuerdo.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> +50 a +70 PTS (Time-Out prolongado de 24h a 72h o expulsión disciplinaria según la gravedad de la exposición).</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#09</span>
             <div class="r-content">
-              <strong>Canalización Exclusiva de Comandos de Bots</strong>
-              <p>Los comandos de música, minijuegos, economía y utilidades deben ejecutarse exclusivamente en el canal <code>#comandos</code> para evitar saturar las salas de conversación general.</p>
+              <strong>#09 Canalización Exclusiva y Moderación de Comandos de Bots</strong>
+              <p>Los bots automatizan utilidades, música y entretenimiento, pero su uso descontrolado satura las salas de diálogo de mensajes automáticos.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Ejecutar comandos de música, minijuegos, economía, niveles o spam de comandos en `#general` o canales de texto no habilitados para bots.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Dirígete al canal <code>#comandos</code> o interactúa con los bots mediante sus interfaces de botones y comandos de barra diagonal (`/`) en sus salas designadas.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> +10 PTS (Eliminación de comandos y aviso formativo de reubicación).</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#10</span>
             <div class="r-content">
-              <strong>Protección y Etiquetado Obligatorio de Spoilers</strong>
-              <p>Cualquier revelación argumental de animes, series, películas, videojuegos, novelas o mangas recientes debe ocultarse obligatoriamente mediante las barras de spoiler de Discord: <code>||texto spoiler||</code>.</p>
+              <strong>#10 Etiquetado Obligatorio y Protección Contra Spoilers</strong>
+              <p>La comunidad comparte el interés por diversas franquicias, animes y videojuegos; revelar tramas sin previo aviso arruina la experiencia de otros aficionados.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Revelar finales, muertes de personajes, giros argumentales o información confidencial de series, películas, mangas o videojuegos recientes sin utilizar las etiquetas de censura.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Escribe claramente el título de la obra fuera de la censura y cubre el texto sensible con las barras de spoiler de Discord: <code>[Nombre de la Obra] ||Texto con spoiler||</code>.</li>
+                <li><strong class="warn">Sanción aplicable:</strong> +10 a +20 PTS (Censura inmediata del mensaje y advertencia disciplinaria).</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1610,47 +2188,72 @@
           <div class="rule-box">
             <span class="r-tag red">#11</span>
             <div class="r-content">
-              <strong>Doxxing y Filtración de Datos Personales (Cero Tolerancia)</strong>
-              <p>Publicar, compartir o amenazar con exponer información privada de terceros (nombres reales, fotografías privadas, ubicaciones, domicilios, teléfonos, documentos de identidad, instituciones educativas o lugares de trabajo) conlleva baneo definitivo e irrevocable.</p>
+              <strong>#11 Doxxing y Filtración de Datos Personales (Tolerancia Cero)</strong>
+              <p>La seguridad física, digital y familiar de cada usuario es la máxima prioridad del servidor. Exponer información personal vulnera derechos fundamentales y leyes penales internacionales.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Publicar, compartir, almacenar o amenazar con exponer nombres reales, fotos privadas, geolocalizaciones, domicilios, números telefónicos, documentos de identidad (DNI/CURP/RUT), centros educativos o lugares de trabajo de terceros.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Nunca archives ni compartas información sensible de otros usuarios. Si recibes datos privados, no los reenvíes y repórtalo de inmediato al Staff mediante ticket de seguridad.</li>
+                <li><strong class="danger">Sanción aplicable:</strong> <strong>+100 PTS (Baneo Permanente Irrevocable de cuenta e IP, preservación forense de registros y denuncia penal formal).</strong></li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag red">#12</span>
             <div class="r-content">
-              <strong>Estafas, Phishing y Distribución de Malware</strong>
-              <p>Prohibida la difusión de enlaces engañosos (falsos Nitro de Discord, generadores de saldo, páginas clonadas de inicio de sesión), software malicioso, virus, troyanos o cualquier intento de capturar credenciales de miembros del servidor.</p>
+              <strong>#12 Estafas, Phishing, Malware y Enlaces Engañosos</strong>
+              <p>Protección incondicional contra fraudes cibernéticos, robo de cuentas y vulneración de dispositivos dentro de la comunidad.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Difundir enlaces fraudulentos (falsas promociones de Nitro, generadores de saldo/monedas, páginas clonadas de login de Discord/Steam), ejecutables maliciosos (<code>.exe</code>, <code>.scr</code>, <code>.bat</code>), troyanos o scripts de robo de tokens.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Desconfía de cualquier enlace que prometa regalos o beneficios sospechosos. Verifica siempre las URLs oficiales y activa la autenticación en dos pasos (2FA) en tu cuenta.</li>
+                <li><strong class="danger">Sanción aplicable:</strong> <strong>+60 a +100 PTS (Baneo inmediato y reporte de la cuenta comprometida ante Discord Trust & Safety).</strong></li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag red">#13</span>
             <div class="r-content">
-              <strong>Protección Estricta de Menores y Contenido Ilícito</strong>
-              <p>Cualquier material sexual explícito que involucre, simule involucrar o haga referencia a menores de edad está prohibido con tolerancia cero absoluta y será reportado de inmediato al NCMEC y a las fiscalías de cibercrimen correspondientes.</p>
+              <strong>#13 Protección Estricta de Menores y Contenido Ilícito (Tolerancia Cero)</strong>
+              <p>Salvaguarda irrestricta de niños, niñas y adolescentes. Cumplimiento estricto de los tratados internacionales de derechos de la infancia.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Publicación, distribución, tenencia, insinuación, enlaces o bromas alusivas a material de abuso o explotación sexual infantil (CSAM/CSEM), grooming, acoso a menores o explotación de cualquier índole.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Tolerancia cero absoluta. Cualquier contenido que aluda o afecte la integridad de menores de edad queda completamente erradicado.</li>
+                <li><strong class="danger">Sanción aplicable:</strong> <strong>+100 PTS (Baneo Permanente Inmediato, bloqueo total de huella digital y reporte urgente ante el NCMEC, Discord Trust & Safety y fiscalías de cibercrimen).</strong></li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag red">#14</span>
             <div class="r-content">
-              <strong>Amenazas de Violencia Física, DDoS y Sabotaje</strong>
-              <p>Amenazar con agresiones físicas directas, extorsión, ataques de denegación de servicio (DDoS), llamadas de falsas emergencias (swatting) o sabotaje informático derivará en expulsión inmediata y preservación forense de registros.</p>
+              <strong>#14 Amenazas de Violencia Física, DDoS, Extorsión y Sabotaje</strong>
+              <p>Preservación de la integridad física, la seguridad personal y la estabilidad técnica de toda la comunidad.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Amenazas de agresión física directa, extorsión económica o emocional (sextorsión), ataques de denegación de servicio (DDoS), llamadas falsas a servicios policiales (swatting), incursiones masivas de sabotaje (raids) o ataques a la infraestructura del servidor.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Resuelve cualquier desacuerdo de forma madura mediante el diálogo o solicita mediación formal del equipo de Staff.</li>
+                <li><strong class="danger">Sanción aplicable:</strong> <strong>+100 PTS (Baneo Permanente Irrevocable y entrega de evidencias técnicas a las autoridades policiales competentes).</strong></li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag red">#15</span>
             <div class="r-content">
-              <strong>Evasión de Sanciones Mediante Cuentas Secundarias (Alts)</strong>
-              <p>El uso o creación de cuentas alternativas para sortear silencias temporales, expulsiones o bloqueos causará el veto definitivo y automático de todas las cuentas vinculadas por IP o huella digital.</p>
+              <strong>#15 Evasión de Sanciones Mediante Cuentas Secundarias (Alts)</strong>
+              <p>Las sanciones disciplinarias son de carácter personal y vinculante para el usuario infractor, independientemente del cliente o cuenta que utilice.</p>
+              <ul class="rule-sublist">
+                <li><strong class="danger">Conductas Prohibidas:</strong> Crear, poseer o utilizar cuentas secundarias (alts) para acceder al servidor tras haber recibido advertencias, silencios temporales (Time-Outs), expulsiones o bloqueos disciplinarios.</li>
+                <li><strong>¿Cómo evitarlo?:</strong> Si consideras que tu sanción fue injusta, abre un ticket formal de apelación desde tu cuenta original en lugar de crear multicuentas clandestinas.</li>
+                <li><strong class="danger">Sanción aplicable:</strong> <strong>+100 PTS (Veto total e irrevocable de todas las cuentas vinculadas por IP o huella digital, sin derecho a apelación posterior).</strong></li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="callout red">
           <div class="callout-icon">⚠️</div>
-          <div><strong>Aviso de Seguridad Crítica:</strong> Las infracciones de la Fase III no entran en el cómputo gradual de advertencias: detonan la sanción máxima de 100 PTS y el reporte directo a las instancias legales competentes.</div>
+          <div><strong>Aviso de Seguridad Crítica:</strong> Las infracciones de la Fase III no entran en el cómputo gradual de advertencias: detonan la sanción máxima de 100 PTS de forma instantánea, el baneo permanente y el reporte formal ante las instancias legales competentes.</div>
         </div>
       </div>
 
@@ -1669,7 +2272,7 @@
           <div class="card-icon">🛡️</div>
           <div>
             <div class="card-title">Protocolo de Mediación y Transparencia Directiva</div>
-            <div class="card-sub">Criterio formativo, imparcialidad en sanciones y deberes éticos del equipo de moderación.</div>
+            <div class="card-sub">Criterio formativo, imparcialidad en sanciones, desescalada de conflictos y deberes éticos del Staff.</div>
           </div>
         </div>
 
@@ -1677,32 +2280,45 @@
           <div class="rule-box">
             <span class="r-tag">#M1</span>
             <div class="r-content">
-              <strong>Mediación Formativa y Criterio Proporcional</strong>
-              <p>Los moderadores priorizan el diálogo, la orientación y la desescalada de tensiones antes de recurrir a sanciones restrictivas. Toda intervención busca preservar el buen clima comunitario y corregir la conducta, no humillar al usuario.</p>
+              <strong>#M1 Mediación Formativa, Desescalada y Criterio Proporcional</strong>
+              <p>Los moderadores priorizan el diálogo empático, la orientación pedagógica y la desescalada de tensiones antes de recurrir a sanciones restrictivas. Toda intervención busca preservar el buen clima comunitario, educar sobre la normativa y corregir la conducta, nunca humillar, confrontar o ridiculizar al usuario.</p>
+              <ul class="rule-sublist">
+                <li><strong>Obligaciones del Staff:</strong> Explicar con claridad y educación qué norma fue infringida y cómo evitarla en el futuro.</li>
+                <li><strong class="danger">Prohibiciones:</strong> Sancionar con prepotencia, insultar a usuarios sancionados o aplicar castigos desproporcionados a faltas menores.</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#M2</span>
             <div class="r-content">
-              <strong>Trazabilidad y Transparencia en Registros (Audit Logs)</strong>
-              <p>Cada acción disciplinaria (advertencia, silencio, expulsión o baneo) debe quedar documentada en los registros internos del equipo con motivo explícito y evidencia respaldada. Las sanciones arbitrarias o sin causa justificada están prohibidas.</p>
+              <strong>#M2 Trazabilidad, Auditoría y Transparencia en Registros (Audit Logs)</strong>
+              <p>Cada acción disciplinaria (advertencia, silencio temporal, expulsión o baneo) debe quedar rigurosamente documentada en los registros internos del equipo de moderación, adjuntando motivo explícito, captura o log de evidencia y marco normativo aplicado. Las sanciones arbitrarias o sin causa justificada quedan estrictamente prohibidas e invalidadas.</p>
+              <ul class="rule-sublist">
+                <li><strong>Garantía de Auditoría:</strong> La Administración revisa periódicamente los registros para corroborar la legitimidad de cada intervención.</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#M3</span>
             <div class="r-content">
-              <strong>Neutralidad Absoluta, Cero Favoritismo y No Represalias</strong>
-              <p>Ningún moderador podrá utilizar sus permisos para beneficio personal, venganzas particulares o para proteger a amistades que incumplan las normas. En casos de conflicto directo de interés, la resolución debe delegarse a un compañero neutral.</p>
+              <strong>#M3 Neutralidad Absoluta, Cero Favoritismo y No Represalias</strong>
+              <p>Ningún moderador podrá utilizar sus permisos para beneficio propio, venganzas particulares o para encubrir a amistades que infrinjan las normas. En casos de conflicto directo de interés o roces personales, la resolución disciplinaria debe delegarse obligatoriamente a un compañero del equipo totalmente neutral.</p>
+              <ul class="rule-sublist">
+                <li><strong>Deber de Abstención:</strong> Si un moderador se encuentra emocionalmente involucrado en una discusión, debe ceder el caso a otro integrante del Staff.</li>
+              </ul>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag">#M4</span>
             <div class="r-content">
-              <strong>Programa de Desgravación y Rehabilitación Activa</strong>
-              <p>Se reconoce y premia la corrección de conducta: por cada <strong>30 días continuos de actividad pacífica y sin incidentes</strong>, se descuentan <strong>20 puntos</strong> del registro disciplinario hasta restablecer el historial en cero absoluto.</p>
+              <strong>#M4 Programa de Desgravación, Rehabilitación y Registro Cero</strong>
+              <p>El sistema sancional reconoce y premia la corrección genuina de conducta: por cada <strong>30 días continuos de actividad pacífica y sin incidentes</strong>, se descuentan automáticamente <strong>20 puntos</strong> del registro disciplinario del usuario hasta restablecer su historial en cero absoluto.</p>
+              <ul class="rule-sublist">
+                <li><strong>Oportunidad de Redención:</strong> Los puntos no son una condena perpetua; el buen comportamiento continuo devuelve la cuenta al estado de confianza plena.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1731,81 +2347,92 @@
         <div class="inf-grid" id="infractions-matrix">
           <div class="inf-card" data-pts="10" style="--c:#34d399">
             <span class="inf-pts">10</span><span class="inf-unit">Puntos</span>
-            <div class="inf-title">🔁 Spam / Flood</div>
+            <div class="inf-title">🔁 Spam / Flood Leve</div>
             <span class="inf-badge">LEVE</span>
-            <p class="inf-desc">Mensajes repetitivos, cadenas o enlaces sin contexto.</p>
+            <p class="inf-desc">Mensajes repetitivos, cadenas de copia y pega, saturación de emojis/stickers o enlaces sin contexto.</p>
           </div>
 
           <div class="inf-card" data-pts="20" style="--c:#34d399">
             <span class="inf-pts">20</span><span class="inf-unit">Puntos</span>
-            <div class="inf-title">🤬 Lenguaje Hostil</div>
+            <div class="inf-title">🤬 Lenguaje Hostil / Faltas de Respeto</div>
             <span class="inf-badge">LEVE</span>
-            <p class="inf-desc">Vocabulario ofensivo o groserías continuadas fuera de tono.</p>
+            <p class="inf-desc">Vocabulario ofensivo, groserías continuadas fuera de tono, provocaciones o desacato a la moderación.</p>
           </div>
 
           <div class="inf-card" data-pts="30" style="--c:#eab308">
             <span class="inf-pts">30</span><span class="inf-unit">Puntos</span>
-            <div class="inf-title">💢 Insulto Directo</div>
+            <div class="inf-title">💢 Insultos Directos y Menosprecio</div>
             <span class="inf-badge">MODERADO</span>
-            <p class="inf-desc">Ataques verbales o menosprecio a miembros del servidor.</p>
+            <p class="inf-desc">Ataques verbales directos, burlas sistemáticas hacia la persona o humillaciones dirigidas a miembros del servidor.</p>
           </div>
 
           <div class="inf-card" data-pts="40" style="--c:#f59e0b">
             <span class="inf-pts">40</span><span class="inf-unit">Puntos</span>
-            <div class="inf-title">😤 Acoso Continuado</div>
+            <div class="inf-title">😤 Acoso Continuado e Intimidación</div>
             <span class="inf-badge">MODERADO</span>
-            <p class="inf-desc">Hostigamiento reiterado pese a la negativa de la víctima.</p>
+            <p class="inf-desc">Hostigamiento sistemático, asedio por DMs o persecución de usuarios tras su negativa explícita a interactuar.</p>
           </div>
 
           <div class="inf-card" data-pts="50" style="--c:#f97316">
             <span class="inf-pts">50</span><span class="inf-unit">Puntos</span>
-            <div class="inf-title">😠 Amenaza Verbal</div>
+            <div class="inf-title">😠 Amenazas Verbales y Hostilidad Grave</div>
             <span class="inf-badge">GRAVE</span>
-            <p class="inf-desc">Intimidaciones de agresión física o sabotaje digital.</p>
+            <p class="inf-desc">Intimidaciones de daño físico, chantajes psicológicos o amenazas de sabotaje digital comunitario.</p>
           </div>
 
           <div class="inf-card" data-pts="60" style="--c:#f97316">
             <span class="inf-pts">60</span><span class="inf-unit">Puntos</span>
-            <div class="inf-title">🔗 Phishing / Scam</div>
+            <div class="inf-title">🔗 Phishing, Scam y Enlaces Maliciosos</div>
             <span class="inf-badge">GRAVE</span>
-            <p class="inf-desc">Distribución de links sospechosos o estafas comerciales.</p>
+            <p class="inf-desc">Distribución de links sospechosos, falsas promociones de Nitro, generadores de saldo o estafas comerciales.</p>
           </div>
 
           <div class="inf-card" data-pts="70" style="--c:#ef4444">
             <span class="inf-pts">70</span><span class="inf-unit">Puntos</span>
-            <div class="inf-title">🔞 NSFW No Autorizado</div>
+            <div class="inf-title">🔞 Contenido NSFW No Autorizado</div>
             <span class="inf-badge">MUY GRAVE</span>
-            <p class="inf-desc">Publicación de contenido adulto en canales no designados.</p>
+            <p class="inf-desc">Publicación o difusión de material para adultos, gore o violencia gráfica en canales generales no designados.</p>
           </div>
 
           <div class="inf-card" data-pts="80" style="--c:#ef4444">
             <span class="inf-pts">80</span><span class="inf-unit">Puntos</span>
-            <div class="inf-title">🚫 Discurso de Odio</div>
+            <div class="inf-title">🚫 Discurso de Odio y Discriminación</div>
             <span class="inf-badge">MUY GRAVE</span>
-            <p class="inf-desc">Ataques sistemáticos discriminatorios o xenófobos.</p>
+            <p class="inf-desc">Ataques sistemáticos discriminatorios, racistas, homófobos, xenófobos, transfóbicos o incitación al odio.</p>
           </div>
 
           <div class="inf-card" data-pts="100" style="--c:#dc2626">
             <span class="inf-pts">100</span><span class="inf-unit">Puntos</span>
-            <div class="inf-title">📛 Doxxing / Delito</div>
+            <div class="inf-title">📛 Doxxing, CSAM y Delito Cibernético</div>
             <span class="inf-badge">CRÍTICO CAPITAL</span>
-            <p class="inf-desc">Filtración de datos privados o delitos cibernéticos mayores.</p>
+            <p class="inf-desc">Filtración de datos personales, vulneración a menores, ataques DDoS o delitos informáticos graves.</p>
           </div>
         </div>
 
-        <!-- Caja del Simulador de Riesgo (Progreso de 10 en 10) -->
+        <!-- Caja del Simulador de Riesgo (Progreso de 10 en 10 con Presets Gamificados) -->
         <div class="simulator-box">
           <div class="sim-header">
-            <div class="sim-title">🎮 Simulador y Calculadora de Riesgo Disciplinario</div>
+            <div class="sim-title">🎮 Simulador Interactivo de Riesgo & Calculadora Sancional</div>
             <div class="sim-score-badge">
               <span class="sim-score-num" id="sim-score-display">0</span>
               <span class="sim-score-unit">PTS ACUMULADOS</span>
             </div>
           </div>
 
+          <!-- Botones de Escenarios Rápidos / Casos Reales -->
+          <div class="sim-presets-deck">
+            <span class="sim-presets-label">⚡ Casos Reales:</span>
+            <button class="sim-preset-btn" data-preset="10">🟢 Spam Leve (10 pts)</button>
+            <button class="sim-preset-btn" data-preset="20">🟡 Discusión Tensa (20 pts)</button>
+            <button class="sim-preset-btn" data-preset="40">🟠 Acoso / Desacato (40 pts)</button>
+            <button class="sim-preset-btn" data-preset="70">🔴 Falta Grave / NSFW (70 pts)</button>
+            <button class="sim-preset-btn" data-preset="100">🚨 Doxxing / CSAM / Ciberdelito (100 pts)</button>
+            <button class="sim-preset-btn" data-preset="0">🔄 Historial Limpio (0 pts)</button>
+          </div>
+
           <div class="sim-slider-container">
             <!-- STEP = 10 OBLIGATORIO -->
-            <input type="range" id="sim-range" min="0" max="100" step="10" value="0" class="sim-slider">
+            <input type="range" id="sim-range" min="0" max="100" step="10" value="0" class="sim-slider" aria-label="Nivel de puntos sancionales de 0 a 100">
             <div class="sim-bar-track">
               <div class="sim-bar-fill" id="sim-bar-fill"></div>
             </div>
@@ -1826,7 +2453,7 @@
             </div>
           </div>
 
-          <!-- Tarjeta Reactiva de Consecuencias y Prevención -->
+          <!-- Tarjeta Reactiva de Consecuencias, Razones, Prevención y Marco Legal -->
           <div class="sim-status-card" id="sim-card-details">
             <div class="sim-status-header">
               <div class="sim-status-icon" id="sim-icon">🟢</div>
@@ -1838,17 +2465,27 @@
 
             <div class="sim-info-grid">
               <div class="sim-info-block">
-                <h5>⚖️ Acción Ejecutada por Moderación:</h5>
-                <p id="sim-action-desc">Tu historial está completamente limpio. En caso de una falta leve involuntaria, el equipo de moderación retirará el mensaje infractor y enviará un recordatorio formativo.</p>
+                <h5>⚖️ Acción Disciplinaria Ejecutada:</h5>
+                <p id="sim-action-desc">Tu historial está completamente limpio y gozas de plena confianza comunitaria. En caso de una falta involuntaria leve, el Staff retirará el mensaje y enviará un recordatorio formativo de orientación sin aplicar restricciones.</p>
               </div>
 
               <div class="sim-info-block">
-                <h5>💡 Protocolo de Prevención & Evasión de Faltas:</h5>
+                <h5>❓ ¿Por qué se aplica este criterio?:</h5>
+                <p id="sim-why-desc">La comunidad prioriza la presunción de buena fe y la convivencia formativa. Sin antecedentes, los pequeños errores contextuales se orientan pedagógicamente para fomentar una cultura amigable y constructiva.</p>
+              </div>
+
+              <div class="sim-info-block">
+                <h5>💡 Protocolo de Prevención & Evasión:</h5>
                 <ul id="sim-prevention-list">
-                  <li>Lee la descripción temática antes de enviar multimedia en canales específicos.</li>
-                  <li>Evita el uso de abreviaturas malsonantes reiteradas para no generar roces innecesarios.</li>
-                  <li>Si mantienes tu historial sin faltas por 30 días, se descuentan 20 puntos de penalizaciones previas.</li>
+                  <li>Lee la descripción temática antes de enviar multimedia o iniciar debates en canales específicos.</li>
+                  <li>Evita el uso de vocabulario hostil reiterado para no generar malentendidos o tensiones innecesarias.</li>
+                  <li>Si acumulas puntos, mantener tu historial sin faltas por 30 días descuenta automáticamente 20 puntos de tu registro.</li>
                 </ul>
+              </div>
+
+              <div class="sim-info-block">
+                <h5>📜 Fundamento Legal & Discord:</h5>
+                <p id="sim-legal-desc">Conformidad plena con los <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Términos de Discord</a> y principio de proporcionalidad internacional.</p>
               </div>
             </div>
           </div>
@@ -1857,7 +2494,7 @@
         <div class="callout green" style="margin-top: 24px;">
           <div class="callout-icon">⏳</div>
           <div>
-            <strong>Mecanismo de Desgravación Automática:</strong> Los puntos de sanción no son perpetuos si no reincides. Cada 30 días de actividad limpia, el sistema resta 20 puntos hasta dejar tu registro en cero absoluto.
+            <strong>Mecanismo de Desgravación Automática:</strong> Los puntos de sanción no son perpetuos. Cada 30 días continuos de participación constructiva y sin reincidencias, el sistema descuenta automáticamente 20 puntos de tu historial hasta dejarlo en cero absoluto.
           </div>
         </div>
       </div>
@@ -1889,9 +2526,19 @@
           <button class="country-btn" data-country="co">🇨🇴 Colombia</button>
           <button class="country-btn" data-country="cl">🇨🇱 Chile</button>
           <button class="country-btn" data-country="pe">🇵🇪 Perú</button>
+          <button class="country-btn" data-country="ec">🇪🇨 Ecuador</button>
+          <button class="country-btn" data-country="cr">🇨🇷 Costa Rica</button>
           <button class="country-btn" data-country="uy">🇺🇾 Uruguay</button>
           <button class="country-btn" data-country="es">🇪🇸 España</button>
           <button class="country-btn" data-country="intl">⚖️ Internacional / Discord</button>
+        </div>
+
+        <!-- Banner de Preservación Forense y Evidencia Digital -->
+        <div class="callout green" style="margin-bottom: 22px;">
+          <div class="callout-icon">🔍</div>
+          <div>
+            <strong>Estándar Internacional de Evidencia Digital (Convenio de Budapest ETS 185):</strong> Todas las sanciones graves (#11-#15) requieren captura sin recortar con fecha/hora UTC, link de mensaje de Discord (`discord.com/channels/...`), ID de Snowflake de 18 dígitos del usuario y registro inmutable en el log de auditoría.
+          </div>
         </div>
 
         <!-- Contenedor de Artículos Jurídicos -->
@@ -1903,7 +2550,7 @@
               <span class="legal-item-title">🇲🇽 Delitos contra la Intimidad Sexual (Ley Olimpia)</span>
               <span class="legal-badge-country" style="color:#34d399; border-color:rgba(52,211,153,0.3)">MÉXICO</span>
             </div>
-            <div class="legal-law-ref">Código Penal Federal · Art. 199 Octies / Ley General de Acceso de las Mujeres a una Vida Libre de Violencia</div>
+            <div class="legal-law-ref"><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Código Penal Federal · Art. 199 Octies</a> / Ley General de Acceso de las Mujeres a una Vida Libre de Violencia</div>
             <p>Sanciona con penas de 3 a 6 años de prisión y multas de 500 a 1,000 UMA la divulgación, almacenamiento, comercialización, distribución o intercambio de contenido íntimo o sexual sin consentimiento a través de medios digitales o redes sociales.</p>
           </div>
 
@@ -1912,17 +2559,17 @@
               <span class="legal-item-title">🇲🇽 Acceso Ilícito a Sistemas y Ciberdelitos</span>
               <span class="legal-badge-country" style="color:#34d399; border-color:rgba(52,211,153,0.3)">MÉXICO</span>
             </div>
-            <div class="legal-law-ref">Código Penal Federal · Arts. 211 Bis 1 al 211 Bis 7 / Ley Federal de Protección de Datos Personales (LFPDPPP)</div>
+            <div class="legal-law-ref"><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Código Penal Federal · Arts. 211 Bis 1 al 211 Bis 7</a> / Ley Federal de Protección de Datos Personales (LFPDPPP)</div>
             <p>Tipifica penalmente el acceso no autorizado a sistemas informáticos, robo de credenciales mediante phishing, daño o sustracción de bases de datos y la comercialización ilícita de información privada confidencial.</p>
           </div>
 
           <div class="legal-item" data-c="mx">
             <div class="legal-item-head">
-              <span class="legal-item-title">🇲🇽 Amenazas y Coacción Digital</span>
+              <span class="legal-item-title">🇲🇽 Amenazas, Coacción Digital y Hostigamiento</span>
               <span class="legal-badge-country" style="color:#34d399; border-color:rgba(52,211,153,0.3)">MÉXICO</span>
             </div>
-            <div class="legal-law-ref">Código Penal Federal · Art. 282</div>
-            <p>Establece penas privativas de la libertad a quien amenace a otro con causarle daño en su persona, bienes, honor o derechos, aplicable plenamente a interacciones y mensajes en plataformas digitales.</p>
+            <div class="legal-law-ref"><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Código Penal Federal · Art. 282</a> y leyes estatales de ciberacoso</div>
+            <p>Establece penas privativas de la libertad a quien amenace a otro con causarle daño en su persona, bienes, honor o derechos, plenamente vinculante a interacciones en plataformas digitales y redes sociales.</p>
           </div>
 
           <!-- ARGENTINA -->
@@ -1931,8 +2578,8 @@
               <span class="legal-item-title">🇦🇷 Régimen Penal de Delitos Informáticos</span>
               <span class="legal-badge-country" style="color:#60a5fa; border-color:rgba(96,165,250,0.3)">ARGENTINA</span>
             </div>
-            <div class="legal-law-ref">Ley 26.388 · Código Penal de la Nación (Arts. 153 bis, 183 y 184)</div>
-            <p>Sanciona el acceso indebido a sistemas informáticos de acceso restringido, daño informático, distribución de software malicioso y la interceptación ilegal de correspondencia electrónica.</p>
+            <div class="legal-law-ref"><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/140000-144999/141790/norma.htm" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 26.388 · Código Penal de la Nación (Arts. 153 bis, 183 y 184)</a></div>
+            <p>Sanciona el acceso indebido a sistemas informáticos de acceso restringido, daño informático, distribución de software malicioso, ataques de denegación de servicio y la interceptación ilegal de correspondencia electrónica.</p>
           </div>
 
           <div class="legal-item" data-c="ar">
@@ -1940,8 +2587,8 @@
               <span class="legal-item-title">🇦🇷 Protección de Datos Personales y Prevención del Grooming</span>
               <span class="legal-badge-country" style="color:#60a5fa; border-color:rgba(96,165,250,0.3)">ARGENTINA</span>
             </div>
-            <div class="legal-law-ref">Ley 25.326 de Protección de Datos / Ley 27.590 (Prevención del Grooming) / Art. 149 bis CP</div>
-            <p>Garantiza el honor y la privacidad de datos personales. Tipifica penalmente el contacto a menores de edad por medios digitales con fines sexuales y las amenazas o coacciones telemáticas.</p>
+            <div class="legal-law-ref"><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/norma.htm" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 25.326</a> / <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/340000-344999/344876/norma.htm" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 27.590 (Ley Mica Ortega)</a> / Art. 131 y 149 bis CP</div>
+            <p>Garantiza el honor y la privacidad de datos personales. Tipifica penalmente el contacto a menores de edad por medios digitales con fines sexuales (grooming) y las amenazas o coacciones telemáticas.</p>
           </div>
 
           <!-- COLOMBIA -->
@@ -1950,17 +2597,17 @@
               <span class="legal-item-title">🇨🇴 Protección de la Información y Delitos Informáticos</span>
               <span class="legal-badge-country" style="color:#fbbf24; border-color:rgba(251,191,36,0.3)">COLOMBIA</span>
             </div>
-            <div class="legal-law-ref">Ley 1273 de 2009 · Código Penal Colombiano (Arts. 269A - 269J)</div>
-            <p>Crea tipos penales como el acceso abusivo a sistema informático, obstaculización de datos, interceptación ilegítima, uso de software malicioso, violación de datos personales y suplantación de sitios web para capturar datos (phishing).</p>
+            <div class="legal-law-ref"><a href="https://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Leyes/1677274" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 1273 de 2009 · Código Penal Colombiano (Arts. 269A al 269J)</a></div>
+            <p>Crea tipos penales como el acceso abusivo a sistema informático, obstaculización ilegítima de datos, uso de software malicioso, violación de datos personales y suplantación de sitios web para capturar datos (phishing).</p>
           </div>
 
           <div class="legal-item" data-c="co">
             <div class="legal-item-head">
-              <span class="legal-item-title">🇨🇴 Habeas Data y Salvaguarda de la Niñez</span>
+              <span class="legal-item-title">🇨🇴 Habeas Data y Salvaguarda Integral de la Niñez</span>
               <span class="legal-badge-country" style="color:#fbbf24; border-color:rgba(251,191,36,0.3)">COLOMBIA</span>
             </div>
-            <div class="legal-law-ref">Ley Estatutaria 1581 de 2012 / Ley 1098 de 2006 (Código de Infancia y Adolescencia)</div>
-            <p>Regula el tratamiento estricto de datos personales y consagra el interés superior de los menores, prohibiendo cualquier vulneración a su integridad digital.</p>
+            <div class="legal-law-ref"><a href="https://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Leyes/1684346" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley Estatutaria 1581 de 2012</a> / Ley 1098 de 2006 (Código de la Infancia y la Adolescencia)</div>
+            <p>Regula el tratamiento estricto de datos personales y consagra el interés superior de los menores, prohibiendo cualquier vulneración o difusión no consentida de su información e integridad digital.</p>
           </div>
 
           <!-- CHILE -->
@@ -1969,17 +2616,17 @@
               <span class="legal-item-title">🇨🇱 Ley de Delitos Informáticos y Ciberseguridad</span>
               <span class="legal-badge-country" style="color:#f87171; border-color:rgba(248,113,113,0.3)">CHILE</span>
             </div>
-            <div class="legal-law-ref">Ley 21.459 (Marco de Delitos Informáticos y Convenio de Budapest)</div>
-            <p>Tipifica el ataque a la integridad de sistemas, interceptación ilícita de datos, falsificación informática, fraude digital y receptación o divulgación de datos confidenciales.</p>
+            <div class="legal-law-ref"><a href="https://www.bcn.cl/leychile/navegar?idNorma=1177196" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 21.459 (Marco de Delitos Informáticos - Convenio de Budapest)</a></div>
+            <p>Tipifica el ataque a la integridad de sistemas, interceptación ilícita de datos, falsificación informática, fraude digital, acceso ilícito y la receptación o divulgación de datos confidenciales obtenidos sin autorización.</p>
           </div>
 
           <div class="legal-item" data-c="cl">
             <div class="legal-item-head">
-              <span class="legal-item-title">🇨🇱 Protección de la Vida Privada</span>
+              <span class="legal-item-title">🇨🇱 Protección de la Vida Privada y Datos Personales</span>
               <span class="legal-badge-country" style="color:#f87171; border-color:rgba(248,113,113,0.3)">CHILE</span>
             </div>
-            <div class="legal-law-ref">Ley 19.628 sobre Protección de la Vida Privada y Datos de Carácter Personal</div>
-            <p>Establece que el tratamiento de datos personales solo puede efectuarse cuando la ley o el titular lo consientan expresamente, facultando la indemnización por filtraciones ilícitas.</p>
+            <div class="legal-law-ref"><a href="https://www.bcn.cl/leychile/navegar?idNorma=141599" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 19.628 sobre Protección de la Vida Privada</a> / Ley 20.536</div>
+            <p>Establece que el tratamiento y publicación de datos personales requiere consentimiento expreso del titular, facultando el ejercicio de acciones legales e indemnizaciones por filtraciones ilícitas.</p>
           </div>
 
           <!-- PERÚ -->
@@ -1988,8 +2635,8 @@
               <span class="legal-item-title">🇵🇪 Ley de Delitos Informáticos y Ciberacoso</span>
               <span class="legal-badge-country" style="color:#f87171; border-color:rgba(248,113,113,0.3)">PERÚ</span>
             </div>
-            <div class="legal-law-ref">Ley 30096 & Ley 30171 / Decreto Legislativo 1410</div>
-            <p>Sanciona el acceso indebido, fraude informático, acoso cibernético (stalking), chantaje sexual (sextorsión) y la divulgación de imágenes íntimas sin autorización.</p>
+            <div class="legal-law-ref"><a href="https://busquedas.elperuano.pe/normaslegales/ley-de-delitos-informaticos-ley-n-30096-997637-1/" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 30096 & Ley 30171</a> / <a href="https://busquedas.elperuano.pe/normaslegales/decreto-legislativo-que-incorpora-el-delito-de-acoso-acoso-se-decreto-legislativo-n-1410-1691136-1/" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Decreto Legislativo 1410 (Acoso y Sextorsión)</a></div>
+            <p>Sanciona el acceso indebido, fraude informático, acoso cibernético (stalking), chantaje sexual (sextorsión) y la divulgación de imágenes íntimas o información personal sin autorización.</p>
           </div>
 
           <div class="legal-item" data-c="pe">
@@ -1997,18 +2644,56 @@
               <span class="legal-item-title">🇵🇪 Protección de Datos Personales</span>
               <span class="legal-badge-country" style="color:#f87171; border-color:rgba(248,113,113,0.3)">PERÚ</span>
             </div>
-            <div class="legal-law-ref">Ley 29733 de Protección de Datos Personales y su Reglamento (D.S. 003-2013-JUS)</div>
-            <p>Garantiza el derecho fundamental a la autodeterminación informativa y regula las medidas de seguridad técnica aplicables a registros digitales.</p>
+            <div class="legal-law-ref"><a href="https://busquedas.elperuano.pe/normaslegales/ley-de-proteccion-de-datos-personales-ley-n-29733-662705-1/" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 29733 de Protección de Datos Personales</a> / D.S. 003-2013-JUS</div>
+            <p>Garantiza el derecho fundamental a la autodeterminación informativa y regula las medidas de seguridad técnica aplicables a bancos de datos y registros digitales en plataformas telemáticas.</p>
+          </div>
+
+          <!-- ECUADOR -->
+          <div class="legal-item" data-c="ec">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇪🇨 Delitos contra la Intimidad y Datos Personales</span>
+              <span class="legal-badge-country" style="color:#fbbf24; border-color:rgba(251,191,36,0.3)">ECUADOR</span>
+            </div>
+            <div class="legal-law-ref"><a href="https://www.defensa.gob.ec/wp-content/uploads/downloads/2021/03/COIP_act_feb-2021.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">COIP · Art. 178 (Violación a la intimidad)</a> / LOPDP</div>
+            <p>Sanciona con pena privativa de libertad de 1 a 3 años la divulgación, almacenamiento, comercialización o difusión de datos privados, imágenes íntimas o comunicaciones telemáticas sin consentimiento expreso.</p>
+          </div>
+
+          <div class="legal-item" data-c="ec">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇪🇨 Ciberdelitos y Ataque a la Integridad de Sistemas</span>
+              <span class="legal-badge-country" style="color:#fbbf24; border-color:rgba(251,191,36,0.3)">ECUADOR</span>
+            </div>
+            <div class="legal-law-ref"><a href="https://www.defensa.gob.ec/wp-content/uploads/downloads/2021/03/COIP_act_feb-2021.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">COIP · Arts. 190, 230 y 232 (Fraude y Sabotaje)</a></div>
+            <p>Tipifica penalmente la apropiación fraudulenta telemática (estafas y phishing), la interceptación no autorizada de datos informáticos y el sabotaje o destrucción de sistemas y servidores digitales.</p>
+          </div>
+
+          <!-- COSTA RICA -->
+          <div class="legal-item" data-c="cr">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇨🇷 Ley de Delitos Informáticos y Ciberseguridad</span>
+              <span class="legal-badge-country" style="color:#60a5fa; border-color:rgba(96,165,250,0.3)">COSTA RICA</span>
+            </div>
+            <div class="legal-law-ref"><a href="http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=73024" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 9048 · Código Penal de Costa Rica (Arts. 217 bis y 230 bis)</a></div>
+            <p>Sanciona con prisión la suplantación de identidad digital, la violación de correspondencia electrónica, la interceptación no autorizada de comunicaciones privadas y el espionaje informático.</p>
+          </div>
+
+          <div class="legal-item" data-c="cr">
+            <div class="legal-item-head">
+              <span class="legal-item-title">🇨🇷 Protección de la Persona frente al Tratamiento de sus Datos</span>
+              <span class="legal-badge-country" style="color:#60a5fa; border-color:rgba(96,165,250,0.3)">COSTA RICA</span>
+            </div>
+            <div class="legal-law-ref"><a href="http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 8968 de Protección de Datos Personales (PRODHAB)</a></div>
+            <p>Garantiza a toda persona el derecho a la autodeterminación informativa y tutela la privacidad frente a la filtración o comercialización no autorizada de registros en plataformas digitales.</p>
           </div>
 
           <!-- URUGUAY -->
           <div class="legal-item" data-c="uy">
             <div class="legal-item-head">
-              <span class="legal-item-title">🇺🇾 Protección de Datos y Acción de Habeas Data</span>
+              <span class="legal-item-title">🇺🇾 Protección de Datos Personales y Acción de Habeas Data</span>
               <span class="legal-badge-country" style="color:#38bdf8; border-color:rgba(56,189,248,0.3)">URUGUAY</span>
             </div>
-            <div class="legal-law-ref">Ley 18.331 de Protección de Datos Personales y Acción de Habeas Data</div>
-            <p>Reconoce el derecho a la protección de datos personales como un derecho inherente a la personalidad humana, regulando su almacenamiento y confidencialidad.</p>
+            <div class="legal-law-ref"><a href="https://www.impo.com.uy/bases/leyes/18331-2008" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 18.331 de Protección de Datos</a> / <a href="https://www.impo.com.uy/bases/leyes/19580-2017" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 19.580 (Violencia Digital)</a></div>
+            <p>Reconoce el derecho a la protección de datos personales como un derecho inherente a la personalidad humana, sancionando la difusión no consentida de información privada y contenidos íntimos.</p>
           </div>
 
           <!-- ESPAÑA -->
@@ -2017,18 +2702,18 @@
               <span class="legal-item-title">🇪🇸 Descubrimiento y Revelación de Secretos (Hacking & Doxxing)</span>
               <span class="legal-badge-country" style="color:#fbbf24; border-color:rgba(251,191,36,0.3)">ESPAÑA</span>
             </div>
-            <div class="legal-law-ref">Código Penal Español · Arts. 197 a 197 quinquies / RGPD (Reglamento UE 2016/679)</div>
-            <p>Castiga con penas de prisión de hasta 5 años la interceptación de comunicaciones, acceso no autorizado a sistemas informáticos y la difusión inconsentida de imágenes o datos personales obtenidos sin autorización.</p>
+            <div class="legal-law-ref"><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Código Penal Español · Arts. 197 al 197 quinquies</a> / <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2018-16673" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">LOPDGDD Ley Orgánica 3/2018</a> / RGPD UE</div>
+            <p>Castiga con penas de prisión de hasta 5 años la interceptación de comunicaciones, acceso no autorizado a sistemas informáticos y la difusión inconsentida de imágenes o datos personales obtenidos sin autorización previa.</p>
           </div>
 
           <!-- INTERNACIONAL & DISCORD -->
           <div class="legal-item" data-c="intl">
             <div class="legal-item-head">
-              <span class="legal-item-title">⚖️ Términos de Servicio y Directrices de Discord</span>
+              <span class="legal-item-title">⚖️ Términos de Servicio y Directrices Comunitarias de Discord</span>
               <span class="legal-badge-country" style="color:#a78bfa; border-color:rgba(167,139,250,0.3)">GLOBAL</span>
             </div>
-            <div class="legal-law-ref">Discord Terms of Service & Community Guidelines / DMCA §512 / COPPA</div>
-            <p>Exige un mínimo de edad de 13 años (o mayor según legislación local) y prohíbe terminantemente el doxxing, odio, malware y acoso, facultando la eliminación de cuentas infractoras a nivel global.</p>
+            <div class="legal-law-ref"><a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Discord Terms</a> / <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Community Guidelines</a> / <a href="https://www.coe.int/en/web/cybercrime/the-budapest-convention" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Convenio Budapest ETS 185</a></div>
+            <p>Exige un mínimo de edad de 13 años (o mayor según la legislación nacional) y prohíbe terminantemente el doxxing, el acoso, los discursos de odio, el malware y el contenido de abuso infantil, facultando la eliminación global de cuentas infractoras.</p>
           </div>
 
         </div>
@@ -2049,7 +2734,7 @@
           <div class="card-icon">⚖️</div>
           <div>
             <div class="card-title">Carta de Derechos Fundamentales en Umas Community</div>
-            <div class="card-sub">Principios de protección a los integrantes de la comunidad frente a sanciones injustificadas o malentendidos.</div>
+            <div class="card-sub">Principios de protección y garantías procesales para todos los integrantes de la comunidad frente a sanciones o malentendidos.</div>
           </div>
         </div>
 
@@ -2058,15 +2743,15 @@
             <span class="r-tag gold">#1</span>
             <div class="r-content">
               <strong>Presunción de Buena Fe y Debido Proceso</strong>
-              <p>Todo integrante sancionado por un malentendido contextual o error de apreciación tiene derecho a ser considerado de buena fe y a solicitar una revisión objetiva e imparcial de su caso.</p>
+              <p>Todo integrante sancionado por un malentendido contextual o error de apreciación tiene derecho a ser considerado de buena fe y a solicitar una revisión formal, objetiva e imparcial de su caso por parte de moderadores que no hayan estado involucrados en el incidente.</p>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag gold">#2</span>
             <div class="r-content">
-              <strong>Derecho a la Privacidad Inviolable</strong>
-              <p>Ningún miembro del equipo de moderación podrá exigir a los usuarios revelar información privada, encender cámaras o compartir capturas de conversaciones externas confidenciales.</p>
+              <strong>Derecho a la Privacidad Inviolable y No Intromisión</strong>
+              <p>Ningún miembro del equipo de moderación podrá exigir a los usuarios revelar su identidad real, encender cámaras, compartir capturas de conversaciones externas confidenciales o proporcionar información sensible para permanecer en el servidor.</p>
             </div>
           </div>
 
@@ -2074,15 +2759,15 @@
             <span class="r-tag gold">#3</span>
             <div class="r-content">
               <strong>Auditoría, Transparencia y Justificación de Causa</strong>
-              <p>Cualquier sanción de silencio, expulsión o baneo debe contar con un registro de causa y puntos emitido en los logs de seguridad accesibles a la administración para evitar abusos.</p>
+              <p>Cualquier sanción disciplinaria de silencio temporal, expulsión o baneo debe contar con un registro de causa y puntos emitido en los canales de auditoría interna accesibles a la Administración para garantizar trazabilidad y prevenir abusos de poder.</p>
             </div>
           </div>
 
           <div class="rule-box">
             <span class="r-tag gold">#4</span>
             <div class="r-content">
-              <strong>Derecho a Petición y Sugerencias Comunitarias</strong>
-              <p>Los integrantes tienen plena libertad para proponer dinámicas, nuevos canales, emojis y mejoras organizativas en el canal designado para sugerencias ciudadanas.</p>
+              <strong>Derecho a Petición y Sugerencias Ciudadanas</strong>
+              <p>Los integrantes tienen plena libertad para proponer dinámicas, eventos comunitarios, nuevos canales, emojis y mejoras organizativas en el canal designado para sugerencias, recibiendo respuesta fundamentada por parte del Staff.</p>
             </div>
           </div>
         </div>
@@ -2091,7 +2776,7 @@
         <div class="appeal-card">
           <div class="appeal-title">¿Consideras que tu sanción fue injustificada o producto de un malentendido?</div>
           <p class="appeal-p">
-            La moderación comunitaria prioriza la seguridad y la convivencia, pero pueden ocurrir confusiones o interpretaciones erróneas. Nuestro equipo revisa solicitudes de apelación con neutralidad y empatía en un plazo de 24 a 48 horas.
+            La moderación comunitaria prioriza la seguridad y la convivencia pacífica, pero pueden ocurrir confusiones o interpretaciones erróneas. Nuestro equipo revisa solicitudes de apelación con neutralidad, empatía y rigurosidad en un plazo promedio de 24 a 48 horas.
           </p>
           <a href="https://discord.com/channels/1493288927388369139/1504912669809836274" class="appeal-btn" target="_blank" rel="noopener noreferrer">
             <span>🌿 Abrir Ticket de Apelación</span> ➔
@@ -2258,15 +2943,15 @@
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
   const deviceTag = document.getElementById('device-tag');
   if (deviceTag) {
-    deviceTag.textContent = isMobile ? '📱 Mobile View' : '💻 PC Mode';
+    deviceTag.textContent = isMobile ? '📱 Modo Móvil Fluido' : '💻 Modo PC Ultra Glass';
   }
 
-  // ── 3. Canvas Avanzado de Partículas Botánicas y Esporales ──
+  // ── 3. Canvas Avanzado de Partículas (Optimizado para 60 FPS en Móvil) ──
   const canvas = document.getElementById('particles-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
     let particles = [];
-    const maxParticles = isMobile ? 24 : 48;
+    const maxParticles = isMobile ? 14 : 44;
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
@@ -2282,18 +2967,18 @@
       reset(initial = false) {
         this.x = Math.random() * canvas.width;
         this.y = initial ? Math.random() * canvas.height : -20;
-        this.size = Math.random() * 7 + 3.5;
-        this.speedY = Math.random() * 0.75 + 0.25;
-        this.speedX = Math.sin(Math.random() * Math.PI) * 0.4 - 0.2;
+        this.size = Math.random() * 6 + (isMobile ? 2.5 : 3.5);
+        this.speedY = Math.random() * 0.65 + 0.22;
+        this.speedX = Math.sin(Math.random() * Math.PI) * 0.35 - 0.175;
         this.rot = Math.random() * 360;
-        this.rotSpeed = (Math.random() - 0.5) * 1.1;
-        this.opacity = Math.random() * 0.45 + 0.18;
+        this.rotSpeed = (Math.random() - 0.5) * 1.0;
+        this.opacity = Math.random() * 0.40 + 0.18;
         this.type = Math.random() > 0.45 ? 'leaf' : 'spore';
-        this.glow = Math.random() * 8 + 4;
+        this.glow = isMobile ? 0 : Math.random() * 8 + 4;
       }
       update() {
         this.y += this.speedY;
-        this.x += Math.sin(this.y * 0.01) * 0.45 + this.speedX;
+        this.x += Math.sin(this.y * 0.01) * 0.35 + this.speedX;
         this.rot += this.rotSpeed;
         if (this.y > canvas.height + 25 || this.x < -30 || this.x > canvas.width + 30) {
           this.reset();
@@ -2307,15 +2992,19 @@
 
         if (this.type === 'leaf') {
           ctx.fillStyle = '#34d399';
-          ctx.shadowBlur = this.glow;
-          ctx.shadowColor = '#10b981';
+          if (!isMobile) {
+            ctx.shadowBlur = this.glow;
+            ctx.shadowColor = '#10b981';
+          }
           ctx.beginPath();
           ctx.ellipse(0, 0, this.size, this.size * 0.48, 0, 0, Math.PI * 2);
           ctx.fill();
         } else {
           ctx.fillStyle = '#fbbf24';
-          ctx.shadowBlur = this.glow * 1.4;
-          ctx.shadowColor = '#f59e0b';
+          if (!isMobile) {
+            ctx.shadowBlur = this.glow * 1.4;
+            ctx.shadowColor = '#f59e0b';
+          }
           ctx.beginPath();
           ctx.arc(0, 0, this.size * 0.32, 0, Math.PI * 2);
           ctx.fill();
@@ -2330,20 +3019,23 @@
 
     function animateParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+      }
       requestAnimationFrame(animateParticles);
     }
     animateParticles();
   }
 
-  // ── 4. Experiencia de Entrada Cinematográfica (Con Fade-In Suave Garantizado) ──
+  // ── 4. Experiencia de Entrada Cinematográfica (Sin Glitches & Sincronizada) ──
   const enterScreen = document.getElementById('enter-screen');
   const enterBtn = document.getElementById('enter-btn');
   const bgAudio = document.getElementById('bg-audio');
   const heroVid = document.getElementById('hero-video');
+  const mainNav = document.getElementById('main-nav');
+  const heroOverlay = document.getElementById('hero-text-overlay');
+  const readingProgress = document.getElementById('nav-reading-progress');
 
   if (heroVid) {
     heroVid.muted = true;
@@ -2356,22 +3048,25 @@
       playCosmicSweep();
       playCrystalChime([523.25, 659.25, 783.99, 1046.5]);
 
+      // 1. Transición de desvanecimiento suave para la pantalla de bienvenida
       enterScreen.classList.add('dismissed');
+
+      // 2. Navbar visible inmediatamente
+      if (mainNav) {
+        mainNav.classList.add('nav-visible');
+      }
 
       if (bgAudio) {
         bgAudio.volume = 0.22;
         bgAudio.play().catch(() => {});
       }
 
-      // Disparar animación suave de entrada en el Hero
+      // 3. El Hero NO se ve nada al dar click; tras exactamente 1.0 segundo aparece con fade-in y suave destello de 2s
       setTimeout(() => {
-        const heroOverlay = document.getElementById('hero-text-overlay');
         if (heroOverlay) {
-          heroOverlay.classList.remove('start-anim');
-          void heroOverlay.offsetWidth; // Forzar reflow limpio
           heroOverlay.classList.add('start-anim');
         }
-      }, 300);
+      }, 1000);
 
       setTimeout(() => {
         enterScreen.style.display = 'none';
@@ -2379,7 +3074,7 @@
     });
   }
 
-  // ── 5. Matriz y Simulador Sancional (ESCALA EXACTA DE 10 EN 10 CON ASMR) ──
+  // ── 5. Matriz y Simulador Sancional (ESCALA EXACTA DE 10 EN 10 CON ASMR & PRESETS) ──
   const simRange = document.getElementById('sim-range');
   const simBarFill = document.getElementById('sim-bar-fill');
   const simScoreDisplay = document.getElementById('sim-score-display');
@@ -2387,121 +3082,156 @@
   const simStatusTitle = document.getElementById('sim-status-title');
   const simStatusSub = document.getElementById('sim-status-sub');
   const simActionDesc = document.getElementById('sim-action-desc');
+  const simWhyDesc = document.getElementById('sim-why-desc');
   const simPreventionList = document.getElementById('sim-prevention-list');
+  const simLegalDesc = document.getElementById('sim-legal-desc');
   const infCards = document.querySelectorAll('.inf-card');
   const milestonePills = document.querySelectorAll('.sim-milestone-pill');
+  const presetBtns = document.querySelectorAll('.sim-preset-btn');
 
   const exactTiers = {
     0: {
       icon: '🟢',
       title: 'Historial Ejemplar · Estado Seguro',
       sub: '0 PTS | Sin sanciones ni advertencias activas',
-      action: 'Tu cuenta goza de plena confianza comunitaria. En caso de una falta menor accidental, el equipo de moderación únicamente borrará el mensaje infractor y enviará una orientación cordial sin aplicar restricciones.',
+      action: 'Tu cuenta goza de máxima confianza comunitaria. En caso de una equivocación involuntaria de baja intensidad, el Staff únicamente retirará el mensaje y brindará una orientación pedagógica sin aplicar sanciones restrictivas.',
+      why: 'La comunidad privilegia la presunción de buena fe y la convivencia formativa. Sin antecedentes negativos, los errores menores se gestionan como oportunidades de aprendizaje.',
       preventions: [
-        'Continúa participando con normalidad respetando las temáticas de los canales.',
-        'Mantén un trato cordial y amistoso para disfrutar de todas las dinámicas del servidor.',
-        'Si tienes dudas sobre las normas, puedes consultar con cualquier moderador.'
-      ]
+        'Participa constructivamente respetando las temáticas de cada sala y las normas básicas.',
+        'Mantén una actitud amable y empática hacia nuevos integrantes y moderadores.',
+        'Si tienes dudas sobre las directrices, consulta a cualquier miembro del Staff antes de publicar.'
+      ],
+      legal: 'Conformidad con las <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Directrices de la Comunidad de Discord</a> (Convivencia Pacífica) y Principio de Presunción de Inocencia.'
     },
     10: {
       icon: '🟢',
       title: 'Aviso Inicial Leve (Strike 1)',
       sub: '10 PTS | Advertencia formativa de orientación',
-      action: 'El mensaje infractor es retirado. El equipo de moderación emite un aviso formativo privado o en el canal recordando la norma transgredida. No hay tiempo fuera ni restricciones de voz.',
+      action: 'Retiro inmediato del mensaje infractor por parte de la moderación. Se emite un aviso formativo privado o en el canal recordando la norma transgredida. No se aplican tiempos fuera ni restricciones de voz.',
+      why: 'Corregir a tiempo conductas como spam involuntario, desvío de canales o enlaces sin contexto antes de que afecten la fluidez de la sala.',
       preventions: [
-        'Evita enviar mensajes repetitivos o enlaces sin contexto en salas generales.',
-        'Si cometes un error leve, no te preocupes: se descuentan 20 puntos tras 30 días de conducta limpia.'
-      ]
+        'Verifica el canal adecuado antes de enviar multimedia, comandos o cadenas de texto.',
+        'Evita saturar con stickers, emojis o caracteres repetitivos consecutivos.',
+        'Recuerda que este aviso se elimina automáticamente tras 30 días de conducta limpia.'
+      ],
+      legal: 'Discord Community Guidelines (Spam, Flood & Rate Limiting) · Protocolo de Moderación Preventiva.'
     },
     20: {
       icon: '🟡',
       title: 'Aviso Disciplinario Moderado (Strike 2)',
       sub: '20 PTS | Registro de advertencia activa',
-      action: 'Retiro del contenido y notificación disciplinaria directa. Estás en la antesala de sanciones restrictivas; cualquier falta moderada posterior activará silencio temporal.',
+      action: 'Retiro del contenido y notificación disciplinaria directa en los registros de auditoría. Tu cuenta ingresa en la antesala de sanciones restrictivas; cualquier falta moderada posterior activará silencio temporal automático.',
+      why: 'Evitar la escalada de lenguaje hostil, groserías continuas o provocaciones que generen tensiones innecesarias entre usuarios.',
       preventions: [
-        'Modera tu vocabulario y no recurras a groserías o agresiones verbales continuadas.',
-        'Si una discusión se torna tensa, toma un descanso del chat antes de insultar.'
-      ]
+        'Modera tu vocabulario y no recurras a descalificaciones o comentarios pasivo-agresivos.',
+        'Si una conversación se torna tensa, toma una pausa y no respondas a provocaciones.',
+        'Utiliza los hilos para debates sin entorpecer el flujo principal de los canales.'
+      ],
+      legal: 'Discord Terms of Service (Respeto Mutuo) · Amparo en leyes locales contra hostigamiento verbal leve.'
     },
     30: {
       icon: '🟡',
       title: 'Advertencia Crítica Pre-Silencio (Strike 3)',
       sub: '30 PTS | Última advertencia sin penalización física',
-      action: 'Último aviso preventivo antes de la aplicación obligatoria de Time-Out en Discord. Los moderadores reciben aviso de advertencia crítica en los logs.',
+      action: 'Último aviso preventivo formal antes de la aplicación obligatoria de Time-Out en Discord. El equipo de moderación registra una advertencia crítica con notificación formal al usuario.',
+      why: 'Faltas reiteradas como insultos directos o desacato a las indicaciones del Staff no pueden tolerarse sin una llamada de atención contundente.',
       preventions: [
-        'Cero tolerancia al vocabulario hostil. Cualquier falta adicional detonará silencio inmediato.',
-        'Los moderadores y los registros evalúan el significado contextual y la intención del mensaje.'
-      ]
+        'Cero tolerancia al vocabulario ofensivo o burlas personales hacia otros miembros.',
+        'Respeta estrictamente las indicaciones de los moderadores cuando soliciten calmar el ambiente.',
+        'Recuerda que la próxima infracción implicará la pérdida inmediata del derecho a escribir y hablar.'
+      ],
+      legal: 'Discord Safety Center (Prevención de Acoso Digital) · Estándar de Desescalada de Conflictos.'
     },
     40: {
       icon: '🔇',
       title: 'Silencio Temporal Corto (Time-Out 1 Hora)',
       sub: '40 PTS | Bloqueo temporal de escritura en todo el servidor',
-      action: 'Time-Out en Discord por 1 hora completa. Se te restringe el envío de mensajes, hilos, audios y reacciones en todos los canales de texto y voz.',
+      action: 'Time-Out oficial en Discord por 1 hora completa. Se restringe el envío de mensajes, hilos, audios, reacciones y participación en canales de voz en toda la comunidad.',
+      why: 'Cortar de raíz dinámicas de acoso incipiente, insultos reiterados o discusiones acaloradas descontroladas, forzando un período de enfriamiento.',
       preventions: [
-        'Aprovecha la hora de descanso para calmar la molestia o tensión.',
-        'Regresar al chat manteniendo la misma actitud hostil escalará automáticamente a 12 horas.'
-      ]
+        'Aprovecha la hora de pausa para calmarte y revisar el reglamento del servidor.',
+        'No intentes evadir el silencio mediante mensajes directos a otros miembros para continuar la disputa.',
+        'Al expirar el tiempo fuera, reintégrate con serenidad sin reanudar la confrontación previa.'
+      ],
+      legal: 'Discord Community Guidelines (Acoso e Intimidación) · Ley 21.459 (Chile) / Ley 30096 (Perú).'
     },
     50: {
       icon: '🔇',
       title: 'Silencio Temporal Medio (Time-Out 12 Horas)',
       sub: '50 PTS | Sanción disciplinaria por reincidencia',
-      action: 'Silencio por 12 horas continuas. La infracción queda indexada en la base de datos de moderación y requiere supervisión directa del equipo de staff.',
+      action: 'Silencio obligatorio por 12 horas continuas. La infracción queda indexada en la base de datos de moderación y requiere supervisión directa del equipo de Staff.',
+      why: 'Sancionar amenazas verbales, intimidaciones o faltas moderadas acumuladas que demuestran desinterés por las normas de convivencia.',
       preventions: [
-        'No intentes abandonar y volver a unirte al servidor; el silencio es restaurado de inmediato por el sistema.',
-        'Revisa el marco de reglas mientras se cumple el período de sanción.'
-      ]
+        'No recurras a amenazas de ningún tipo; el respeto mutuo es el pilar de la comunidad.',
+        'No salgas ni vuelvas a entrar al servidor; el bot restaurará el silencio pendiente automáticamente.',
+        'Consulta con el Staff si tienes dudas sobre el motivo de tu sanción antes de volver a escribir.'
+      ],
+      legal: 'Código Penal Federal México Art. 282 · COIP Ecuador Art. 178 · Código Penal España Art. 172 ter.'
     },
     60: {
       icon: '🔇',
       title: 'Silencio Prolongado (Time-Out 24 Horas)',
       sub: '60 PTS | Bloqueo preventivo de 1 día entero',
-      action: 'Bloqueo total de escritura por 24 horas (1 día). Se genera un reporte interno para el Staff sobre reiteración de conductas hostiles.',
+      action: 'Bloqueo total de escritura e interacción por 24 horas (1 día completo). Se genera un reporte interno formal sobre conductas de riesgo (phishing sospechoso, difusión de enlaces dudosos o acoso severo).',
+      why: 'Proteger a la comunidad frente a riesgos de seguridad digital o conductas reiteradas que comprometan la tranquilidad del servidor.',
       preventions: [
-        'Si sientes desacuerdo con las advertencias previas, redacta una apelación formal en lugar de confrontar en salas públicas.',
-        'Evita utilizar cuentas alternativas para hablar; detectarlo causará baneo permanente.'
-      ]
+        'Nunca compartas enlaces no verificados, supuestas promociones de Nitro o páginas sospechosas.',
+        'Si consideras injusta la sanción, abre un ticket formal de apelación en lugar de confrontar públicamente.',
+        'Queda estrictamente prohibido usar cuentas secundarias (alts); hacerlo causará baneo permanente.'
+      ],
+      legal: 'Ley 1273 Colombia (Ciberdelitos) · Ley 26.388 Argentina · Ley 9048 Costa Rica (Phishing & Fraude).'
     },
     70: {
       icon: '🔇',
       title: 'Aislamiento Completo (Time-Out 3 Días / 72 Horas)',
       sub: '70 PTS | Bloqueo extendido por faltas graves',
-      action: 'Aislamiento total y Time-Out por 72 horas (3 días). Esta sanción se aplica ante faltas graves como acoso continuo o acumulación reiterada de sanciones.',
+      action: 'Aislamiento disciplinario total por 72 horas (3 días). Esta sanción se aplica ante faltas graves como publicación de contenido NSFW en canales no autorizados, acoso persistente o acumulación crítica de sanciones.',
+      why: 'Garantizar un espacio seguro libre de material explícito no autorizado y erradicar conductas tóxicas persistentes.',
       preventions: [
-        'Acepta el aislamiento sin intentar evadirlo mediante proxies o alts.',
-        'Al reintegrarte, participa constructivamente para iniciar el ciclo de reducción de 20 puntos cada 30 días.'
-      ]
+        'Respeta escrupulosamente los límites temáticos y de edad para contenido multimedia.',
+        'Cumple los 3 días de aislamiento sin intentar eludir la medida mediante proxies o multicuentas.',
+        'Al reintegrarte, tu historial requerirá 30 días de conducta limpia para comenzar a desgravar puntos.'
+      ],
+      legal: 'Discord Age-Gate Policy · Ley 19.580 Uruguay · LOPDGDD 3/2018 España (Protección de Espacios Digitales).'
     },
     80: {
       icon: '👢',
       title: 'Expulsión Directa del Servidor (Kick Disciplinario)',
       sub: '80 PTS | Remoción del servidor con historial retenido',
-      action: 'El usuario es expulsado del servidor. Podrá reincorporarse mediante invitación válida, pero entrará en período de Libertad Condicional con sus 80 puntos intactos.',
+      action: 'El usuario es expulsado del servidor. Podrá reincorporarse mediante invitación válida, pero entrará en período de Libertad Condicional conservando sus 80 puntos activos en la base de datos.',
+      why: 'Sancionar discursos de odio, discriminación grave o desobediencia sistemática al reglamento que hacen insostenible la permanencia ordinaria.',
       preventions: [
-        'Al reingresar, cualquier infracción adicional escalará directamente al baneo temporal de un mes o permanente.',
-        'Solicita orientación a los moderadores si no comprendiste el motivo de tu expulsión.'
-      ]
+        'Al reingresar, cualquier infracción adicional escalará directamente al baneo de 30 días o definitivo.',
+        'Revisa íntegramente este reglamento antes de volver a interactuar en los canales.',
+        'Pide orientación a la moderación si no comprendiste las causas exactas de tu expulsión.'
+      ],
+      legal: 'Discord Hate Speech Policy (Tolerancia Cero al Odio) · Directrices Internacionales contra la Discriminación.'
     },
     90: {
       icon: '🔨',
       title: 'Baneo Temporal Severo (Ban por 30 Días)',
       sub: '90 PTS | Veto total de acceso a la comunidad por 1 mes',
-      action: 'Baneo completo durante 30 días. Tu cuenta queda vetada de todos los canales y eventos de la comunidad hasta el cumplimiento total del plazo.',
+      action: 'Baneo completo durante 30 días continuos. Tu cuenta queda vetada de todos los canales, salas de voz y eventos de la comunidad hasta el cumplimiento total del plazo estipulado.',
+      why: 'Última oportunidad formativa antes de la expulsión definitiva ante reincidencias extremas o conductas muy graves.',
       preventions: [
-        'Esta es la última frontera antes del veto irreversible definitivo.',
-        'Los registros forenses se preservan para cotejo en caso de intento de reingreso no autorizado.'
-      ]
+        'Esta es la última frontera antes del veto irreversible e inapelable.',
+        'No intentes ingresar con cuentas alternativas durante el mes de veto; se detectará y causará baneo permanente inmediato.',
+        'Los registros forenses se preservan para cotejo en caso de incidentes adicionales.'
+      ],
+      legal: 'Cláusula de Rescisión Unilateral de Acceso bajo los Términos de Servicio de Discord.'
     },
     100: {
       icon: '🚨',
       title: 'Baneo Permanente Definitivo & Reporte Formal',
-      sub: '100 PTS | Expulsión irreversible y veto de cuenta e IP',
-      action: 'Baneo permanente irrevocable de la cuenta e IP. En casos de Doxxing, malware, acoso sexual, estafas o delitos graves, se emite denuncia formal a Discord Trust & Safety y a las autoridades policiales competentes.',
+      sub: '100 PTS | Expulsión irreversible y veto total de cuenta e IP',
+      action: 'Baneo permanente irrevocable de la cuenta e IP. En casos de Doxxing, malware, CSAM, amenazas graves o delitos informáticos, se emite denuncia formal ante Discord Trust & Safety y las fiscalías de cibercrimen correspondientes.',
+      why: 'Tolerancia cero absoluta ante delitos digitales, vulneración de menores, filtración de datos privados y ataques informáticos que atentan contra la ley y la integridad de las personas.',
       preventions: [
-        'El doxxing, el robo de credenciales y las amenazas graves conllevan baneo directo de 100 PTS sin gradualidad.',
-        'Solo se admitirán revisiones ante evidencia inequívoca de suplantación de identidad comprobable.'
-      ]
+        'El Doxxing, el malware, la extorsión y el CSAM conllevan 100 PTS directos sin gradualidad.',
+        'Solo se admitirán revisiones ante evidencia inequívoca de suplantación o hackeo comprobable mediante ticket de apelación.',
+        'Preserva siempre la legalidad y el respeto a la intimidad ajena en todas las plataformas digitales.'
+      ],
+      legal: 'Código Penal Federal México (Art. 199 Octies Ley Olimpia) · Convenio de Budapest ETS 185 · Reporte NCMEC / Discord Trust & Safety.'
     }
   };
 
@@ -2532,9 +3262,14 @@
     if (simStatusTitle) simStatusTitle.textContent = tier.title;
     if (simStatusSub) simStatusSub.textContent = tier.sub;
     if (simActionDesc) simActionDesc.textContent = tier.action;
+    if (simWhyDesc) simWhyDesc.textContent = tier.why || '';
 
     if (simPreventionList) {
       simPreventionList.innerHTML = tier.preventions.map(p => `<li>${p}</li>`).join('');
+    }
+
+    if (simLegalDesc) {
+      simLegalDesc.innerHTML = tier.legal || '';
     }
 
     if (playSound && score !== lastScore) {
@@ -2559,6 +3294,17 @@
       if (simRange) simRange.value = val;
       playCrystalChime([440 + val * 5, 554 + val * 5]);
       updateSimulatorUI(val);
+      infCards.forEach(c => c.classList.remove('selected'));
+    });
+  });
+
+  // Presets Rápidos de Casos Reales
+  presetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = parseInt(btn.dataset.preset, 10);
+      if (simRange) simRange.value = val;
+      playCrystalChime([523.25, 659.25 + val * 4, 783.99 + val * 4]);
+      updateSimulatorUI(val, true);
       infCards.forEach(c => c.classList.remove('selected'));
     });
   });
@@ -2604,30 +3350,51 @@
     });
   });
 
-  // ── 7. Resaltado de Navegación Activa y Scroll ──
-  const navLinks = document.querySelectorAll('.nav a');
+  // ── 7. Resaltado de Navegación Activa, Auto-Scroll en Móvil y Barra de Lectura ──
+  const navScrollLinks = document.querySelectorAll('.nav-links-scroll a');
+  const navScrollContainer = document.getElementById('nav-links-scroll');
   const phaseSections = document.querySelectorAll('[id^="fase-"]');
 
-  window.addEventListener('scroll', () => {
+  function updateScrollAndNav() {
+    const scrollY = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progressPercent = docHeight > 0 ? Math.min(100, Math.max(0, (scrollY / docHeight) * 100)) : 0;
+
+    if (readingProgress) {
+      readingProgress.style.width = progressPercent + '%';
+    }
+
     let currentId = '';
-    const scrollPos = window.scrollY + 120;
+    const triggerOffset = window.innerHeight * 0.35;
 
     phaseSections.forEach(sec => {
-      if (scrollPos >= sec.offsetTop) {
+      const top = sec.getBoundingClientRect().top;
+      if (top <= triggerOffset) {
         currentId = sec.getAttribute('id');
       }
     });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (currentId && link.getAttribute('href') === '#' + currentId) {
-        link.classList.add('active');
+    navScrollLinks.forEach(link => {
+      const isTarget = currentId && link.getAttribute('href') === '#' + currentId;
+      if (isTarget) {
+        if (!link.classList.contains('active')) {
+          link.classList.add('active');
+          // Auto-scroll suave de la barra en dispositivos móviles
+          if (navScrollContainer && isMobile) {
+            link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
+        }
+      } else {
+        link.classList.remove('active');
       }
     });
-  }, { passive: true });
+  }
+
+  window.addEventListener('scroll', updateScrollAndNav, { passive: true });
+  window.addEventListener('resize', updateScrollAndNav, { passive: true });
 
   // Sonidito suave al hacer click en los links del navbar
-  navLinks.forEach(link => {
+  navScrollLinks.forEach(link => {
     link.addEventListener('click', () => {
       playSoftTap(460, 0.04);
     });
@@ -2635,7 +3402,239 @@
 
   // Inicializar en 0
   updateSimulatorUI(0);
+
+  // ── 8. Buscador en Tiempo Real & Filtro Dinámico con ASMR ──
+  const searchOverlay = document.getElementById('search-overlay');
+  const navSearchBtn = document.getElementById('nav-search-btn');
+  const searchCloseBtn = document.getElementById('search-close-btn');
+  const searchInput = document.getElementById('rules-search-input');
+  const searchCountText = document.getElementById('search-count-text');
+  const searchTagChips = document.querySelectorAll('.search-tag-chip');
+  const allRuleBoxes = document.querySelectorAll('.rule-box');
+  const allCards = document.querySelectorAll('.card');
+
+  function openSearch() {
+    initAudio();
+    if (searchOverlay) {
+      searchOverlay.classList.add('open');
+      setTimeout(() => searchInput && searchInput.focus(), 100);
+      playCrystalChime([659.25, 880]);
+    }
+  }
+
+  function closeSearch() {
+    if (searchOverlay) {
+      searchOverlay.classList.remove('open');
+      if (searchInput) searchInput.value = '';
+      clearHighlightsAndFilter();
+      playSoftTap(320, 0.04);
+    }
+  }
+
+  if (navSearchBtn) navSearchBtn.addEventListener('click', openSearch);
+  if (searchCloseBtn) searchCloseBtn.addEventListener('click', closeSearch);
+
+  if (searchOverlay) {
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) closeSearch();
+    });
+  }
+
+  // Atajos de teclado: '/' o 'Ctrl+K' para abrir, 'Escape' para cerrar
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('open')) {
+      closeSearch();
+    }
+    if ((e.key === '/' || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+      e.preventDefault();
+      openSearch();
+    }
+  });
+
+  function clearHighlightsAndFilter() {
+    allRuleBoxes.forEach(box => {
+      box.style.display = 'flex';
+      box.style.borderColor = '';
+      box.style.background = '';
+    });
+    allCards.forEach(card => card.style.display = 'block');
+    if (searchCountText) searchCountText.textContent = 'Escribe para filtrar normas instantáneamente';
+  }
+
+  function performSearch(query) {
+    const q = query.trim().toLowerCase();
+    if (!q) {
+      clearHighlightsAndFilter();
+      return;
+    }
+
+    let matchesCount = 0;
+    let firstMatch = null;
+
+    allCards.forEach(card => {
+      const boxes = card.querySelectorAll('.rule-box');
+      let cardHasMatch = false;
+
+      boxes.forEach(box => {
+        const text = box.textContent.toLowerCase();
+        if (text.includes(q)) {
+          box.style.display = 'flex';
+          box.style.borderColor = 'var(--emerald-lt)';
+          box.style.background = 'rgba(16, 185, 129, 0.16)';
+          cardHasMatch = true;
+          matchesCount++;
+          if (!firstMatch) firstMatch = box;
+        } else {
+          box.style.display = 'none';
+        }
+      });
+
+      card.style.display = cardHasMatch ? 'block' : 'none';
+    });
+
+    if (searchCountText) {
+      searchCountText.innerHTML = matchesCount > 0 
+        ? `<span>${matchesCount}</span> coincidencia(s) encontrada(s)` 
+        : `<span style="color:var(--red-lt);">No se encontraron normas</span>`;
+    }
+
+    if (matchesCount > 0) {
+      playSoftTap(580, 0.035);
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => performSearch(e.target.value));
+  }
+
+  searchTagChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const q = chip.dataset.query;
+      if (searchInput) {
+        searchInput.value = q;
+        performSearch(q);
+      }
+      playSoftTap(500, 0.04);
+    });
+  });
+
+  // ── 9. Botón Copiar Norma al Portapapeles con Formato Discord & Toast ──
+  const glassToast = document.getElementById('glass-toast');
+  const toastMsg = document.getElementById('toast-msg');
+  let toastTimer = null;
+
+  function showToast(text, icon = '✨') {
+    if (!glassToast) return;
+    const toastIcon = document.getElementById('toast-icon');
+    if (toastIcon) toastIcon.textContent = icon;
+    if (toastMsg) toastMsg.textContent = text;
+
+    glassToast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      glassToast.classList.remove('show');
+    }, 2800);
+  }
+
+  allRuleBoxes.forEach((box, index) => {
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'copy-rule-btn';
+    copyBtn.innerHTML = '<span>📋</span> <span>Copiar</span>';
+    copyBtn.title = 'Copiar norma formateada para Discord';
+    copyBtn.setAttribute('aria-label', 'Copiar norma');
+
+    copyBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      initAudio();
+      
+      const titleElem = box.querySelector('strong');
+      const descElem = box.querySelector('p');
+      const tagElem = box.querySelector('.r-tag');
+      
+      const tag = tagElem ? tagElem.textContent.trim() : `#${index + 1}`;
+      const title = titleElem ? titleElem.textContent.trim() : '';
+      const desc = descElem ? descElem.textContent.trim() : '';
+
+      const discordFormatted = `🌿 **Umas Community · ${title}** (${tag})
+> ${desc}
+📜 *Reglamento completo:* https://rules-web.onrender.com`;
+
+      navigator.clipboard.writeText(discordFormatted).then(() => {
+        copyBtn.classList.add('copied');
+        copyBtn.innerHTML = '<span>✓</span> <span>¡Copiado!</span>';
+        playCrystalChime([880, 1174.66]);
+        showToast(`Norma ${tag} copiada con formato Discord`, '📋');
+
+        setTimeout(() => {
+          copyBtn.classList.remove('copied');
+          copyBtn.innerHTML = '<span>📋</span> <span>Copiar</span>';
+        }, 2200);
+      }).catch(() => {
+        showToast('No se pudo copiar automáticamente', '⚠️');
+      });
+    });
+
+    box.appendChild(copyBtn);
+  });
+
+  // ── 10. Botón Flotante Scroll-to-Top ──
+  const scrollTopBtn = document.getElementById('scroll-top-btn');
+
+  function handleScrollTopVisibility() {
+    if (!scrollTopBtn) return;
+    if (window.scrollY > 450) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', handleScrollTopVisibility, { passive: true });
+
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+      initAudio();
+      playSoftTap(600, 0.05);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
 </script>
+
+
+<!-- ── Modal Buscador en Tiempo Real ── -->
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Buscador del Reglamento">
+  <div class="search-container">
+    <div class="search-input-wrapper">
+      <span class="search-input-icon">🔍</span>
+      <input type="text" id="rules-search-input" class="search-input" placeholder="Buscar norma, tema o sanción (ej: doxxing, spam, audio, apelación)..." autocomplete="off" />
+      <button class="search-close-btn" id="search-close-btn" title="Cerrar (Esc)">✕</button>
+    </div>
+    <div class="search-results-info">
+      <div id="search-count-text">Escribe para filtrar normas instantáneamente</div>
+      <div style="font-size:0.65rem;">Atajo: <kbd style="color:var(--mint);">ESC</kbd> para salir</div>
+    </div>
+    <div class="search-quick-tags">
+      <span style="font-size:0.7rem; color:var(--text-dim); display:flex; align-items:center;">Sugerencias:</span>
+      <button class="search-tag-chip" data-query="doxxing">🚨 Doxxing</button>
+      <button class="search-tag-chip" data-query="spam">💬 Spam & Flood</button>
+      <button class="search-tag-chip" data-query="voz">🎙️ Audio & Voz</button>
+      <button class="search-tag-chip" data-query="menores">🛡️ Protección Menores</button>
+      <button class="search-tag-chip" data-query="apelación">⚖️ Apelación</button>
+      <button class="search-tag-chip" data-query="staff">🛡️ Código Staff</button>
+      <button class="search-tag-chip" data-query="puntos">📊 Puntos & Strikes</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Botón Flotante Volver Arriba ── -->
+<button class="scroll-top-btn" id="scroll-top-btn" title="Volver al inicio" aria-label="Volver arriba">↑</button>
+
+<!-- ── Toast Notificación ── -->
+<div class="glass-toast" id="glass-toast">
+  <span id="toast-icon">✨</span>
+  <span id="toast-msg">¡Texto copiado al portapapeles!</span>
+</div>
 
 </body>
 </html>
