@@ -1,29 +1,37 @@
 const express = require('express');
 const path = require('path');
-const cors = require('cors');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(express.json());
-app.use(express.static(path.join(__dirname)));
+// Proper MIME types
+express.static.mime.define({
+  'image/svg+xml': ['svg'],
+  'application/manifest+json': ['webmanifest']
+});
 
-// Health check endpoint para Render
+// Cache control and static serving
+app.use(express.static(path.join(__dirname), {
+  maxAge: '1h',
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.webmanifest')) {
+      res.setHeader('Content-Type', 'application/manifest+json');
+    }
+  }
+}));
+
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    service: 'rules-web',
+    version: '2.0.0',
     uptime: process.uptime(),
     timestamp: new Date().toISOString()
   });
 });
 
-// Fallback a index.html
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`✨ Rules Web activo en http://localhost:${PORT}`);
+  console.log(`Umas Community Rules Web 2.0 active on port ${PORT}`);
 });
