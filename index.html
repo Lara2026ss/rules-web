@@ -8,6 +8,11 @@
   <title>Reglamento Oficial & Convivencia Comunitaria · Umas Community 🌿</title>
   <meta name="description" content="Manual de convivencia en 7 fases: mediación pedagógica, seguridad digital, simulador interactivo de sanciones, amparo legal Iberoamérica y directrices de Discord." />
   <meta name="theme-color" content="#10b981" />
+  <!-- Favicon & PWA Manifest -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.webmanifest" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rules-web.onrender.com" />
   <meta property="og:title" content="Reglamento Oficial · Umas Community 🌿" />
@@ -2207,9 +2212,252 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ─── @media print — Exportación Profesional a PDF ─── */
+    @media print {
+      /* Hide non-content elements */
+      #enter-screen, .hero-wrapper, #particles-canvas,
+      #hero-video, .nav, #search-overlay, .glass-toast,
+      .scroll-top-btn, .enter-btn, .hero-actions,
+      .hero-search-trigger, .sound-toggle-btn,
+      .copy-rule-btn, .rule-toggle-btn,
+      .sim-presets-deck, .sim-slider-container,
+      .report-channels-grid, .appeal-btn,
+      .country-selector, .search-quick-tags,
+      .inf-grid, .inf-card,
+      footer .footer-logo + p + p { display: none !important; }
+
+      /* Page layout */
+      body {
+        background: #fff !important;
+        color: #1a1a1a !important;
+        font-size: 11pt !important;
+        line-height: 1.6 !important;
+      }
+
+      .scroll-content {
+        margin-top: 0 !important;
+      }
+
+      .hero-text-overlay {
+        display: none !important;
+      }
+
+      .main-body {
+        background: transparent !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+
+      /* Cards and rule boxes */
+      .card {
+        background: #f9fafb !important;
+        border: 1px solid #d1d5db !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        border-radius: 8px !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 16pt !important;
+        padding: 14pt !important;
+      }
+
+      .rule-box {
+        background: #fff !important;
+        border: 1px solid #e5e7eb !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      /* Always show expanded content in print */
+      .rule-expandable-body {
+        max-height: none !important;
+        opacity: 1 !important;
+        padding: 12pt 16pt !important;
+        display: block !important;
+        border-top: 1px solid #e5e7eb !important;
+      }
+
+      .faq-answer-body {
+        max-height: none !important;
+        opacity: 1 !important;
+        display: block !important;
+        padding: 8pt 16pt !important;
+      }
+
+      /* Phase headers */
+      .phase-header {
+        border-bottom: 2px solid #10b981;
+        page-break-after: avoid;
+        break-after: avoid;
+        margin-bottom: 12pt;
+      }
+
+      .phase-badge {
+        background: #10b981 !important;
+        color: #fff !important;
+        border-radius: 4pt !important;
+        padding: 3pt 8pt !important;
+      }
+
+      .phase-title {
+        color: #1a1a1a !important;
+        font-size: 16pt !important;
+      }
+
+      /* Text colors */
+      .card-title, .rule-main-title, .sim-status-title, h1, h2, h3, h4 {
+        color: #1a1a1a !important;
+        text-shadow: none !important;
+      }
+
+      .card-sub, .rule-summary-text, .text-muted, p, li, span {
+        color: #374151 !important;
+      }
+
+      .rule-section-heading {
+        color: #065f46 !important;
+      }
+
+      /* Severity badges in print */
+      .r-severity-badge {
+        border: 1px solid currentColor !important;
+        background: transparent !important;
+      }
+
+      /* Examples */
+      .rule-example-card.bad {
+        background: #fff5f5 !important;
+        border-color: #fc8181 !important;
+        color: #742a2a !important;
+      }
+      .rule-example-card.good {
+        background: #f0fff4 !important;
+        border-color: #68d391 !important;
+        color: #22543d !important;
+      }
+
+      /* Callouts */
+      .callout.green {
+        background: #f0fdf4 !important;
+        border-left: 4px solid #10b981 !important;
+        color: #065f46 !important;
+      }
+
+      .callout.red {
+        background: #fff5f5 !important;
+        border-left: 4px solid #ef4444 !important;
+        color: #742a2a !important;
+      }
+
+      /* Section gaps reduced */
+      .section-gap {
+        height: 20pt !important;
+      }
+
+      /* Print header */
+      @page {
+        margin: 2cm;
+      }
+
+      /* Simulator simplified */
+      .simulator-box {
+        display: block !important;
+        background: #f9fafb !important;
+        border: 1px solid #d1d5db !important;
+      }
+
+      /* Legal items */
+      .legal-item {
+        border: 1px solid #e5e7eb !important;
+        break-inside: avoid;
+      }
+
+      /* Links */
+      a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #6b7280;
+      }
+    }
+
+
+    /* ─── Category Filter Bar ─── */
+    .category-filter-bar {
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding: clamp(14px, 2.5vw, 18px) clamp(16px, 3vw, 22px);
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .category-filter-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--mint);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .category-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cat-chip {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: clamp(0.76rem, 1.5vw, 0.84rem);
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.22s var(--ease-spring);
+    }
+
+    .cat-chip:hover {
+      background: var(--surface3);
+      color: var(--white);
+      border-color: var(--border-hi);
+      transform: translateY(-2px);
+    }
+
+    .cat-chip.active {
+      background: rgba(16, 185, 129, 0.22);
+      border-color: var(--emerald-lt);
+      color: var(--mint);
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25);
+    }
+
+    .rule-box.cat-hidden {
+      display: none !important;
+    }
+
+    @media print {
+      .category-filter-bar { display: none !important; }
+    }
   </style>
 </head>
 <body>
+<!-- Skip to main content for keyboard/screen reader users -->
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
 <!-- ── Fixed Ambient Multi-Layer Background ── -->
 <div class="hero-wrapper">
@@ -2236,7 +2484,7 @@
     </h1>
     <div class="enter-sub">— Protocolo de Convivencia, Mediación Formativa, Matriz Sancional & Amparo Legal —</div>
     <div class="enter-btn-wrapper">
-      <button class="enter-btn" id="enter-btn">
+      <button type="button" class="enter-btn" id="enter-btn">
         <span>Entrar al Reglamento</span> ➔
       </button>
     </div>
@@ -2272,12 +2520,12 @@
   </div>
 
   <div class="nav-controls">
-    <button class="nav-search-btn" id="nav-search-btn" title="Buscar norma (Atajo: / o Ctrl+K)">
+    <button type="button" class="nav-search-btn" id="nav-search-btn" title="Buscar norma (Atajo: / o Ctrl+K)">
       <span>🔍</span>
       <span>Buscar</span>
       <span class="kbd-shortcut">/</span>
     </button>
-    <button class="sound-toggle-btn" id="sound-toggle-btn" title="Activar/Desactivar efectos de sonido ASMR">
+    <button type="button" class="sound-toggle-btn" id="sound-toggle-btn" title="Activar/Desactivar efectos de sonido ASMR">
       <span id="sound-icon">🔊</span>
       <span id="sound-text">ASMR: ON</span>
     </button>
@@ -2302,7 +2550,7 @@
     </div>
     <div class="hero-actions">
       <a href="#fase-1" class="hero-cta-btn"><span>🌿 Explorar Normas</span> ▾</a>
-      <button class="hero-search-trigger" id="hero-search-trigger"><span>🔍 Buscar tema rápido</span> <kbd style="font-size:0.7rem; opacity:0.8;">Ctrl+K</kbd></button>
+      <button type="button" class="hero-search-trigger" id="hero-search-trigger"><span>🔍 Buscar tema rápido</span> <kbd style="font-size:0.7rem; opacity:0.8;">Ctrl+K</kbd></button>
     </div>
     <div class="scroll-indicator">
       <span>Desliza para explorar</span>
@@ -2311,7 +2559,7 @@
   </div>
 
   <!-- Contenedor Principal de Fases -->
-  <main class="main-body">
+  <main class="main-body" id="main-content">
     <div class="container">
 
       <!-- ========================================== -->
@@ -2371,10 +2619,23 @@
           </div>
         </div>
 
+        <!-- Category Filter Chips -->
+        <div class="category-filter-bar" id="category-filter-bar" role="group" aria-label="Filtrar reglas por categoría">
+          <div class="category-filter-label">Filtrar por categoría:</div>
+          <div class="category-chips">
+            <button type="button" class="cat-chip active" data-cat="all">🌿 Todas las normas</button>
+            <button type="button" class="cat-chip" data-cat="conducta">🛡️ Conducta</button>
+            <button type="button" class="cat-chip" data-cat="comunicacion">💬 Comunicación</button>
+            <button type="button" class="cat-chip" data-cat="seguridad">🔐 Seguridad</button>
+            <button type="button" class="cat-chip" data-cat="comunidad">🎮 Comunidad</button>
+            <button type="button" class="cat-chip" data-cat="moderacion">⚖️ Moderación</button>
+          </div>
+        </div>
+
         <div class="rules-grid">
 
           <!-- #01 -->
-          <div class="rule-box" data-rule="01" data-keywords="respeto dignidad discriminacion insultos xenofobia racismo machismo homofobia transfobia peleas discusion debate">
+          <div class="rule-box" data-rule="01" data-category="conducta" data-keywords="respeto dignidad discriminacion insultos xenofobia racismo machismo homofobia transfobia peleas discusion debate">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-01" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2383,7 +2644,7 @@
                   <span class="r-points-badge">+20 a +30 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #01"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #01"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Dignidad, Trato Digno y Respeto Incondicional</div>
@@ -2424,7 +2685,7 @@
           </div>
 
           <!-- #02 -->
-          <div class="rule-box" data-rule="02" data-keywords="acoso hostigamiento bullying stalking persecucion dms mensajes privados insistencia broma">
+          <div class="rule-box" data-rule="02" data-category="conducta" data-keywords="acoso hostigamiento bullying stalking persecucion dms mensajes privados insistencia broma">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-02" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2433,7 +2694,7 @@
                   <span class="r-points-badge">+40 PTS (Time-Out)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #02"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #02"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Prevención de Acoso, Hostigamiento y Asedio</div>
@@ -2474,7 +2735,7 @@
           </div>
 
           <!-- #03 -->
-          <div class="rule-box" data-rule="03" data-keywords="spam flood menciones everyone here copypasta emojis stickers saturacion ruido visual mensajes repetitivos">
+          <div class="rule-box" data-rule="03" data-category="comunicacion" data-keywords="spam flood menciones everyone here copypasta emojis stickers saturacion ruido visual mensajes repetitivos">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-03" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2483,7 +2744,7 @@
                   <span class="r-points-badge">+10 a +20 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #03"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #03"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Control de Spam, Flood y Ruido Visual</div>
@@ -2524,7 +2785,7 @@
           </div>
 
           <!-- #04 -->
-          <div class="rule-box" data-rule="04" data-keywords="publicidad spam promocion invitaciones youtube twitch redes sociales ventas compras servidores">
+          <div class="rule-box" data-rule="04" data-category="comunicacion" data-keywords="publicidad spam promocion invitaciones youtube twitch redes sociales ventas compras servidores">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-04" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2533,7 +2794,7 @@
                   <span class="r-points-badge">+20 a +40 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #04"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #04"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Publicidad, Autopromoción y Enlaces Externos</div>
@@ -2574,7 +2835,7 @@
           </div>
 
           <!-- #05 -->
-          <div class="rule-box" data-rule="05" data-keywords="igualdad privilegios booster vip amigos staff inmunidad impunidad reglas generales">
+          <div class="rule-box" data-rule="05" data-category="conducta" data-keywords="igualdad privilegios booster vip amigos staff inmunidad impunidad reglas generales">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-05" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2583,7 +2844,7 @@
                   <span class="r-points-badge">Igualdad Normativa</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #05"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #05"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Igualdad Normativa y Cero Privilegios</div>
@@ -2636,7 +2897,7 @@
         <div class="rules-grid">
 
           <!-- #06 -->
-          <div class="rule-box" data-rule="06" data-keywords="canales salas general memes arte musica off-topic tematica desvio">
+          <div class="rule-box" data-rule="06" data-category="comunicacion" data-keywords="canales salas general memes arte musica off-topic tematica desvio">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-06" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2645,7 +2906,7 @@
                   <span class="r-points-badge">+10 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #06"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #06"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Uso Coherente de Canales Temáticos</div>
@@ -2673,7 +2934,7 @@
           </div>
 
           <!-- #07 -->
-          <div class="rule-box" data-rule="07" data-keywords="voz llamada microfono audio gritos ear-rape soundboard volumen krisp push to talk ensordecer">
+          <div class="rule-box" data-rule="07" data-category="comunicacion" data-keywords="voz llamada microfono audio gritos ear-rape soundboard volumen krisp push to talk ensordecer">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-07" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2682,7 +2943,7 @@
                   <span class="r-points-badge">+20 a +40 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #07"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #07"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Confort Auditivo y Etiqueta en Canales de Voz</div>
@@ -2710,7 +2971,7 @@
           </div>
 
           <!-- #08 -->
-          <div class="rule-box" data-rule="08" data-keywords="grabaciones transmisiones streaming privacidad fotos camara consentir permiso">
+          <div class="rule-box" data-rule="08" data-category="comunicacion" data-keywords="grabaciones transmisiones streaming privacidad fotos camara consentir permiso">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-08" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2719,7 +2980,7 @@
                   <span class="r-points-badge">+50 PTS (Time-Out 12h)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #08"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #08"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Consentimiento en Grabaciones y Transmisiones</div>
@@ -2747,7 +3008,7 @@
           </div>
 
           <!-- #09 -->
-          <div class="rule-box" data-rule="09" data-keywords="bots comandos musica niveles economia minijuegos barra slash">
+          <div class="rule-box" data-rule="09" data-category="comunidad" data-keywords="bots comandos musica niveles economia minijuegos barra slash">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-09" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2756,7 +3017,7 @@
                   <span class="r-points-badge">+10 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #09"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #09"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Canalización Correcta de Comandos de Bots</div>
@@ -2776,7 +3037,7 @@
           </div>
 
           <!-- #10 -->
-          <div class="rule-box" data-rule="10" data-keywords="spoilers anime manga series peliculas censura tramas final historia">
+          <div class="rule-box" data-rule="10" data-category="comunicacion" data-keywords="spoilers anime manga series peliculas censura tramas final historia">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-10" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2785,7 +3046,7 @@
                   <span class="r-points-badge">+10 PTS</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #10"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #10"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Etiquetado Obligatorio y Protección de Spoilers</div>
@@ -2829,7 +3090,7 @@
         <div class="rules-grid">
 
           <!-- #11 -->
-          <div class="rule-box" data-rule="11" data-keywords="doxxing datos personales privacidad fotos reales dni curp rut telefono direccion exponer hackeo">
+          <div class="rule-box" data-rule="11" data-category="seguridad" data-keywords="doxxing datos personales privacidad fotos reales dni curp rut telefono direccion exponer hackeo">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-11" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2838,7 +3099,7 @@
                   <span class="r-points-badge">+100 PTS (Baneo Definitivo)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #11"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #11"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Doxxing y Filtración de Datos Privados (Tolerancia Cero)</div>
@@ -2862,7 +3123,7 @@
           </div>
 
           <!-- #12 -->
-          <div class="rule-box" data-rule="12" data-keywords="estafas phishing malware virus robo cuentas nitro falso links peligrosos">
+          <div class="rule-box" data-rule="12" data-category="seguridad" data-keywords="estafas phishing malware virus robo cuentas nitro falso links peligrosos">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-12" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2871,7 +3132,7 @@
                   <span class="r-points-badge">+100 PTS (Baneo)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #12"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #12"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Estafas, Phishing, Malware y Enlaces Engañosos</div>
@@ -2891,7 +3152,7 @@
           </div>
 
           <!-- #13 -->
-          <div class="rule-box" data-rule="13" data-keywords="menores proteccion infantil csam csem grooming ilicito edad seguridad">
+          <div class="rule-box" data-rule="13" data-category="seguridad" data-keywords="menores proteccion infantil csam csem grooming ilicito edad seguridad">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-13" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2900,7 +3161,7 @@
                   <span class="r-points-badge">+100 PTS (Expulsión & Denuncia)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #13"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #13"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Protección de Menores y Contenido Ilícito</div>
@@ -2920,7 +3181,7 @@
           </div>
 
           <!-- #14 -->
-          <div class="rule-box" data-rule="14" data-keywords="amenazas violencia extorsion ddos raid sabotaje swatting ataques">
+          <div class="rule-box" data-rule="14" data-category="seguridad" data-keywords="amenazas violencia extorsion ddos raid sabotaje swatting ataques">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-14" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2929,7 +3190,7 @@
                   <span class="r-points-badge">+100 PTS (Baneo)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #14"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #14"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Amenazas, Extorsión, Incursiones (Raids) y Sabotaje</div>
@@ -2945,7 +3206,7 @@
           </div>
 
           <!-- #15 -->
-          <div class="rule-box" data-rule="15" data-keywords="cuentas secundarias alts evasion sanciones multicuentas ban evasion">
+          <div class="rule-box" data-rule="15" data-category="moderacion" data-keywords="cuentas secundarias alts evasion sanciones multicuentas ban evasion">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-15" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -2954,7 +3215,7 @@
                   <span class="r-points-badge">+100 PTS (Veto de Alts)</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #15"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #15"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Evasión de Sanciones Mediante Cuentas Secundarias (Alts)</div>
@@ -3003,7 +3264,7 @@
         <div class="rules-grid">
 
           <!-- #M1 -->
-          <div class="rule-box" data-rule="M1" data-keywords="staff moderadores mediacion dialogo criterio pedagogico desescalada educar orientar">
+          <div class="rule-box" data-rule="M1" data-category="moderacion" data-keywords="staff moderadores mediacion dialogo criterio pedagogico desescalada educar orientar">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-M1" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -3012,7 +3273,7 @@
                   <span class="r-points-badge">Mediación Primero</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M1"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M1"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Mediación Formativa y Desescalada de Conflictos</div>
@@ -3028,7 +3289,7 @@
           </div>
 
           <!-- #M2 -->
-          <div class="rule-box" data-rule="M2" data-keywords="imparcialidad neutralidad staff amigos conflicto interes justicia">
+          <div class="rule-box" data-rule="M2" data-category="moderacion" data-keywords="imparcialidad neutralidad staff amigos conflicto interes justicia">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-M2" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -3037,7 +3298,7 @@
                   <span class="r-points-badge">Imparcialidad</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M2"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M2"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Imparcialidad y Cero Conflicto de Interés</div>
@@ -3046,7 +3307,7 @@
           </div>
 
           <!-- #M3 -->
-          <div class="rule-box" data-rule="M3" data-keywords="evidencias auditoria logs capturas justificacion causa registros">
+          <div class="rule-box" data-rule="M3" data-category="moderacion" data-keywords="evidencias auditoria logs capturas justificacion causa registros">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-M3" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -3055,7 +3316,7 @@
                   <span class="r-points-badge">Evidencia Obligatoria</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M3"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M3"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Preservación de Evidencias y Auditoría de Sanciones</div>
@@ -3064,7 +3325,7 @@
           </div>
 
           <!-- #M4 -->
-          <div class="rule-box" data-rule="M4" data-keywords="abuso de poder reportar staff administracion apelacion quejas">
+          <div class="rule-box" data-rule="M4" data-category="moderacion" data-keywords="abuso de poder reportar staff administracion apelacion quejas">
             <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-M4" tabindex="0">
               <div class="rule-meta-top">
                 <div class="rule-meta-left">
@@ -3073,7 +3334,7 @@
                   <span class="r-points-badge">Supervisión Directiva</span>
                 </div>
                 <div class="rule-actions-right">
-                  <button class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M4"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
+                  <button type="button" class="rule-toggle-btn" aria-label="Desplegar detalles de la regla #M4"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
                 </div>
               </div>
               <div class="rule-main-title">Supervisión y Canal para Reportar Moderación</div>
@@ -3182,7 +3443,7 @@
           <div class="sim-header">
             <div class="sim-title">🎮 Simulador de Estado Sancional</div>
             <div class="sim-header-right">
-              <button class="copy-sanction-btn" id="copy-sanction-summary-btn" title="Copiar resumen para Discord">
+              <button type="button" class="copy-sanction-btn" id="copy-sanction-summary-btn" title="Copiar resumen para Discord">
                 <span>📋 Copiar Resumen</span>
               </button>
               <div class="sim-score-badge">
@@ -3195,12 +3456,12 @@
           <!-- Presets de Casos Reales -->
           <div class="sim-presets-deck">
             <span class="sim-presets-label">Casos reales:</span>
-            <button class="sim-preset-btn" data-preset="0">🟢 Limpio (0)</button>
-            <button class="sim-preset-btn" data-preset="10">🌱 Spam leve (10)</button>
-            <button class="sim-preset-btn" data-preset="30">🟡 Pelea en chat (30)</button>
-            <button class="sim-preset-btn" data-preset="40">🔇 Acoso DMs (40)</button>
-            <button class="sim-preset-btn" data-preset="70">🟠 Falta grave (70)</button>
-            <button class="sim-preset-btn" data-preset="100">🚨 Doxxing (100)</button>
+            <button type="button" class="sim-preset-btn" data-preset="0">🟢 Limpio (0)</button>
+            <button type="button" class="sim-preset-btn" data-preset="10">🌱 Spam leve (10)</button>
+            <button type="button" class="sim-preset-btn" data-preset="30">🟡 Pelea en chat (30)</button>
+            <button type="button" class="sim-preset-btn" data-preset="40">🔇 Acoso DMs (40)</button>
+            <button type="button" class="sim-preset-btn" data-preset="70">🟠 Falta grave (70)</button>
+            <button type="button" class="sim-preset-btn" data-preset="100">🚨 Doxxing (100)</button>
           </div>
 
           <!-- Slider -->
@@ -3280,17 +3541,17 @@
         </div>
 
         <div class="country-selector">
-          <button class="country-btn active" data-country="all">🌎 Todos los Países</button>
-          <button class="country-btn" data-country="mx">🇲🇽 México</button>
-          <button class="country-btn" data-country="co">🇨🇴 Colombia</button>
-          <button class="country-btn" data-country="cl">🇨🇱 Chile</button>
-          <button class="country-btn" data-country="ar">🇦🇷 Argentina</button>
-          <button class="country-btn" data-country="pe">🇵🇪 Perú</button>
-          <button class="country-btn" data-country="ec">🇪🇨 Ecuador</button>
-          <button class="country-btn" data-country="cr">🇨🇷 Costa Rica</button>
-          <button class="country-btn" data-country="uy">🇺🇾 Uruguay</button>
-          <button class="country-btn" data-country="es">🇪🇸 España</button>
-          <button class="country-btn" data-country="intl">⚖️ Global / Discord</button>
+          <button type="button" class="country-btn active" data-country="all">🌎 Todos los Países</button>
+          <button type="button" class="country-btn" data-country="mx">🇲🇽 México</button>
+          <button type="button" class="country-btn" data-country="co">🇨🇴 Colombia</button>
+          <button type="button" class="country-btn" data-country="cl">🇨🇱 Chile</button>
+          <button type="button" class="country-btn" data-country="ar">🇦🇷 Argentina</button>
+          <button type="button" class="country-btn" data-country="pe">🇵🇪 Perú</button>
+          <button type="button" class="country-btn" data-country="ec">🇪🇨 Ecuador</button>
+          <button type="button" class="country-btn" data-country="cr">🇨🇷 Costa Rica</button>
+          <button type="button" class="country-btn" data-country="uy">🇺🇾 Uruguay</button>
+          <button type="button" class="country-btn" data-country="es">🇪🇸 España</button>
+          <button type="button" class="country-btn" data-country="intl">⚖️ Global / Discord</button>
         </div>
 
         <div class="legal-cards-container">
@@ -3491,7 +3752,7 @@
 
         <div class="faq-deck">
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
               <span>¿Qué ocurre si rompo una regla accidentalmente por ser nuevo?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
@@ -3501,7 +3762,7 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
               <span>¿Los puntos de advertencia expiran con el tiempo?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
@@ -3511,7 +3772,7 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
               <span>¿Qué debo hacer si alguien me envía mensajes privados molestos o sospechosos?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
@@ -3521,7 +3782,7 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
               <span>¿Puedo usar una cuenta secundaria (alt) en el servidor?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
@@ -3531,12 +3792,42 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" aria-expanded="false">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
               <span>¿Dónde puedo pedir ayuda si tengo dudas sobre el servidor?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
             <div class="faq-answer-body">
               Puedes preguntar con confianza en el canal `#ayuda` o abrir un ticket privado con el equipo de Staff desde el canal de tickets.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>¿Qué tipo de contenido está permitido compartir en el servidor?</span>
+              <span class="faq-icon-arrow">▼</span>
+            </button>
+            <div class="faq-answer-body">
+              Puedes compartir fanart, clips de juego, memes, recomendaciones de anime, música y contenido relacionado con la temática del servidor en los canales adecuados. El contenido NSFW explícito o violento no está permitido bajo ninguna circunstancia, independientemente del canal.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>¿Cómo funciona el sistema de niveles y rangos del servidor?</span>
+              <span class="faq-icon-arrow">▼</span>
+            </button>
+            <div class="faq-answer-body">
+              Los rangos se obtienen mediante participación activa y positiva en la comunidad. Nunca se otorgan comprando paquetes ni a cambio de favoritismos. Los boosters reciben un rol especial de agradecimiento, pero sin privilegios normativos adicionales.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>¿Qué hago si encuentro contenido que infringe las reglas y ningún Staff está activo?</span>
+              <span class="faq-icon-arrow">▼</span>
+            </button>
+            <div class="faq-answer-body">
+              Usa la función de reporte nativa de Discord (clic derecho sobre el mensaje → "Reportar") y abre un ticket con capturas de pantalla adjuntas. El Staff revisará los reportes en cuanto esté disponible. No respondas ni alimentes la situación mientras esperas: hacerlo puede considerarse provocación.
             </div>
           </div>
         </div>
@@ -3568,7 +3859,7 @@
     <div class="search-input-wrapper">
       <span class="search-input-icon">🔍</span>
       <input type="text" id="rules-search-input" class="search-input" placeholder="Buscar norma, tema o sanción (ej: doxxing, spam, voz, apelación, staff)..." autocomplete="off" />
-      <button class="search-close-btn" id="search-close-btn" title="Cerrar (Esc)">✕</button>
+      <button type="button" class="search-close-btn" id="search-close-btn" title="Cerrar (Esc)">✕</button>
     </div>
     <div class="search-results-info">
       <div id="search-count-text">Escribe para filtrar normas instantáneamente</div>
@@ -3576,20 +3867,20 @@
     </div>
     <div class="search-quick-tags">
       <span style="font-size:0.7rem; color:var(--text-dim); display:flex; align-items:center;">Sugerencias:</span>
-      <button class="search-tag-chip" data-query="doxxing">🚨 Doxxing</button>
-      <button class="search-tag-chip" data-query="acoso">🛡️ Acoso & Hostigamiento</button>
-      <button class="search-tag-chip" data-query="spam">💬 Spam & Flood</button>
-      <button class="search-tag-chip" data-query="voz">🎙️ Audio & Voz</button>
-      <button class="search-tag-chip" data-query="menores">🛡️ Protección Menores</button>
-      <button class="search-tag-chip" data-query="staff">⚖️ Código Staff</button>
-      <button class="search-tag-chip" data-query="apelacion">📜 Apelación</button>
-      <button class="search-tag-chip" data-query="puntos">📊 Sanciones</button>
+      <button type="button" class="search-tag-chip" data-query="doxxing">🚨 Doxxing</button>
+      <button type="button" class="search-tag-chip" data-query="acoso">🛡️ Acoso & Hostigamiento</button>
+      <button type="button" class="search-tag-chip" data-query="spam">💬 Spam & Flood</button>
+      <button type="button" class="search-tag-chip" data-query="voz">🎙️ Audio & Voz</button>
+      <button type="button" class="search-tag-chip" data-query="menores">🛡️ Protección Menores</button>
+      <button type="button" class="search-tag-chip" data-query="staff">⚖️ Código Staff</button>
+      <button type="button" class="search-tag-chip" data-query="apelacion">📜 Apelación</button>
+      <button type="button" class="search-tag-chip" data-query="puntos">📊 Sanciones</button>
     </div>
   </div>
 </div>
 
 <!-- ── Botón Flotante Volver Arriba ── -->
-<button class="scroll-top-btn" id="scroll-top-btn" title="Volver al inicio" aria-label="Volver arriba">↑</button>
+<button type="button" class="scroll-top-btn" id="scroll-top-btn" title="Volver al inicio" aria-label="Volver arriba">↑</button>
 
 <!-- ── Toast Notificación ── -->
 <div class="glass-toast" id="glass-toast">
@@ -3926,14 +4217,29 @@ const SearchEngine = {
     }
 
     let matchCount = 0;
+    const scored = [];
 
     this.ruleBoxes.forEach(box => {
-      const boxData = Utils.normalizeText(
-        (box.textContent || '') + ' ' + (box.dataset.keywords || '') + ' ' + (box.dataset.rule || '')
-      );
-      const isMatch = searchTerms.some(t => boxData.includes(t));
+      // Skip category-hidden boxes
+      if (box.classList.contains('cat-hidden')) return;
 
-      if (isMatch) {
+      let score = 0;
+      const ruleTitle = Utils.normalizeText(box.querySelector('.rule-main-title')?.textContent || '');
+      const ruleSummary = Utils.normalizeText(box.querySelector('.rule-summary-text')?.textContent || '');
+      const ruleKeywords = Utils.normalizeText(box.dataset.keywords || '');
+      const ruleTag = Utils.normalizeText(box.dataset.rule || '');
+      const ruleBody = Utils.normalizeText(box.querySelector('.rule-expandable-body')?.textContent || '');
+
+      searchTerms.forEach(t => {
+        if (ruleTag === t) score += 120;
+        if (ruleTitle.includes(t)) score += 100;
+        if (ruleKeywords.includes(t)) score += 50;
+        if (ruleSummary.includes(t)) score += 35;
+        if (ruleBody.includes(t)) score += 15;
+      });
+
+      if (score > 0) {
+        scored.push({ box, score });
         box.classList.add('highlight-match');
         box.classList.remove('dim-unmatched');
         box.classList.add('open');
@@ -3945,6 +4251,15 @@ const SearchEngine = {
         box.classList.add('dim-unmatched');
       }
     });
+
+    // Sort visually by score (highest relevance first)
+    if (scored.length > 1) {
+      const rulesContainer = scored[0].box.closest('.rules-grid');
+      if (rulesContainer) {
+        scored.sort((a, b) => b.score - a.score);
+        scored.forEach(({ box }) => rulesContainer.appendChild(box));
+      }
+    }
 
     if (this.countDisplay) {
       if (matchCount > 0) {
@@ -4568,6 +4883,54 @@ const DiscordLinksModule = {
   }
 };
 
+
+// ==========================================
+// 13. MODULE: CATEGORY FILTER
+// ==========================================
+const CategoryFilter = {
+  activeCategory: 'all',
+
+  init() {
+    const chips = document.querySelectorAll('.cat-chip');
+    const savedCat = Storage.get('umas_rules_category_v1', 'all');
+    this.applyFilter(savedCat);
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const cat = chip.dataset.cat || 'all';
+        this.activeCategory = cat;
+        Storage.set('umas_rules_category_v1', cat);
+        this.applyFilter(cat);
+        AudioEngine.playSoftTap(520, 0.04);
+      });
+    });
+  },
+
+  applyFilter(cat) {
+    const chips = document.querySelectorAll('.cat-chip');
+    const ruleBoxes = document.querySelectorAll('.rule-box[data-category]');
+
+    chips.forEach(c => c.classList.toggle('active', c.dataset.cat === cat));
+
+    ruleBoxes.forEach(box => {
+      if (cat === 'all' || box.dataset.category === cat) {
+        box.classList.remove('cat-hidden');
+      } else {
+        box.classList.add('cat-hidden');
+      }
+    });
+
+    // Show category count
+    const visible = [...ruleBoxes].filter(b => !b.classList.contains('cat-hidden')).length;
+    const bar = document.getElementById('category-filter-bar');
+    const label = bar ? bar.querySelector('.category-filter-label') : null;
+    if (label) {
+      label.textContent = cat === 'all'
+        ? 'Filtrar por categoría:'
+        : `${visible} norma(s) en esta categoría:`;
+    }
+  }
+};
 // ==========================================
 // 12. CENTRAL BOOTSTRAP (DOMContentLoaded)
 // ==========================================
@@ -4580,8 +4943,22 @@ document.addEventListener('DOMContentLoaded', () => {
   FAQModule.init();
   BackgroundModule.init();
   DiscordLinksModule.init();
+  CategoryFilter.init();
   console.log('🌿 Umas Community Rules Web engine initialized cleanly.');
 });
+
+// ==========================================
+// GLOBAL ERROR HANDLING (Runtime Safety)
+// ==========================================
+window.addEventListener('error', function(e) {
+  console.error('[Umas Rules Error]', e.message, 'at', e.filename + ':' + e.lineno);
+});
+
+window.addEventListener('unhandledrejection', function(e) {
+  console.error('[Umas Rules Unhandled Promise]', e.reason);
+  e.preventDefault();
+});
+
 </script>
 
 </body>
