@@ -1,12 +1,12 @@
 {
   "name": "Umas Community · Reglamento Oficial",
   "short_name": "Umas Rules",
-  "description": "Manual de convivencia comunitaria, mediación formativa, matriz sancional y amparo legal.",
+  "description": "Manual y protocolo interactivo de convivencia, seguridad digital, sanciones y mediación para Umas Community.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#020704",
   "theme_color": "#10b981",
-  "orientation": "any",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "/favicon.svg",
@@ -14,5 +14,6 @@
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "categories": ["community", "utilities", "social"]
 }

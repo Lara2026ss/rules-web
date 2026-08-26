@@ -3,18 +3,23 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Proper MIME types
+// Set custom MIME types
 express.static.mime.define({
-  'image/svg+xml': ['svg'],
-  'application/manifest+json': ['webmanifest']
+  'application/manifest+json': ['webmanifest'],
+  'image/svg+xml': ['svg']
 });
 
-// Cache control and static serving
 app.use(express.static(path.join(__dirname), {
-  maxAge: '1h',
+  maxAge: '1d',
   setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache');
+    }
     if (filePath.endsWith('.webmanifest')) {
-      res.setHeader('Content-Type', 'application/manifest+json');
+      res.setHeader('Content-Type', 'application/manifest+json; charset=utf-8');
+    }
+    if (filePath.endsWith('.svg')) {
+      res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
     }
   }
 }));
@@ -23,6 +28,7 @@ app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
     version: '2.0.0',
+    service: 'rules-web',
     uptime: process.uptime(),
     timestamp: new Date().toISOString()
   });
@@ -33,5 +39,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Umas Community Rules Web 2.0 active on port ${PORT}`);
+  console.log(`🌿 Umas Community Rules Web 2.0 server running on port ${PORT}`);
 });

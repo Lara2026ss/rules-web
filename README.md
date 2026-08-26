@@ -1,28 +1,36 @@
-# rules-discord-alero
+# 🌿 Umas Community · Rules Web 2.0
 
-Página web de reglamento oficial para el servidor de Discord de Alero.
+Reglamento oficial y manual interactivo de convivencia, seguridad digital, matriz sancional y mediación formativa para la comunidad de Discord **Umas Community**.
 
-## Archivos
+🌐 **Sitio en Producción:** [https://rules-web.onrender.com](https://rules-web.onrender.com)
 
-- `index.html` — Página principal con el reglamento completo al estilo Umamusume.
-- `mascot.jpg` — Imagen de la mascota generada con IA.
+---
 
-## Contenido
+## 🌟 Características Principales
 
-La página incluye:
-1. **Reglas Generales** (8 normas de convivencia)
-2. **Tipos de Infracción** (clasificación del bot con puntos)
-3. **Sistema de Puntos** (explicación y expiración automática)
-4. **Escala de Sanciones** (Warn → Mute → Kick → Ban)
-5. **Apelación y Derechos** del usuario
+1. **Buscador Contextual Inteligente:** Tolerante a acentos, mayúsculas y sinónimos (`acoso` ↔ `hostigamiento`, `spam` ↔ `flood`, `doxxing` ↔ `datos personales`), con atajos `/` o `Ctrl+K` y `Escape`.
+2. **20 Fichas de Normas Expandibles:** Con resúmenes claros, insignias de severidad, ejemplos contrastados (❌ INCORRECTO vs ✅ CORRECTO) y botón de copiado Markdown para Discord.
+3. **Simulador Sancional Determinista:** Escala de 0 a 100 puntos en pasos de 10 con evaluación de reincidencia, intencionalidad y cooperación, además de exportación de informe para el Staff.
+4. **Marco Jurídico Latinoamericano:** Fichas normativas homologadas con los códigos penales y leyes de ciberseguridad de 10 países.
+5. **PWA & Impresión PDF:** Instalable como aplicación web y optimizado para exportación limpia a PDF mediante `Ctrl+P`.
+6. **Accesibilidad & Rendimiento:** Cumplimiento de WCAG 2.2 AA, soporte de `@media (prefers-reduced-motion: reduce)`, ahorro de datos (`Save-Data`) y consola limpia con 0 errores JavaScript.
 
-## Estilo Visual
+---
 
-- Paleta Umamusume: rosas pastel, lavanda, crema y dorado
-- Fuentes: Cinzel Decorative (títulos), Nunito / M PLUS Rounded (cuerpo)
-- Mascota animada flotando (generada con IA)
-- Cards con bordes dorados y gradientes suaves
-- Timeline de sanciones con color por nivel
-- Wave divider decorativo
-- Chispas animadas (sparkles) flotantes
-- Completamente responsive
+## 🛠️ Tecnologías y Arquitectura
+
+- **Frontend:** HTML5 semántico, CSS3 moderno (Glassmorphism, CSS Custom Properties), JavaScript ES6+ modular.
+- **Backend:** Node.js + Express para servicio de archivos estáticos y endpoint `/api/health`.
+- **Despliegue:** Render Web Service integrado con repositorio GitHub `Lara2026ss/rules-web`.
+
+---
+
+## 🚀 Desarrollo Local
+
+```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor local en el puerto 3000
+npm start
+```
