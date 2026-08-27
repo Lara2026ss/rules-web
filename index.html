@@ -2309,6 +2309,199 @@
       }
       .category-pills-deck::-webkit-scrollbar { display: none; }
     }
+  
+    /* ─── v3.0 Navigation Extensions ─── */
+    .lang-select-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border-hi);
+      color: var(--mint);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 100px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+    .lang-select-btn:hover {
+      background: var(--surface3);
+      border-color: var(--emerald-lt);
+    }
+    .staff-nav-btn {
+      background: rgba(192, 132, 252, 0.15);
+      border: 1px solid rgba(192, 132, 252, 0.4);
+      color: var(--purple);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 6px 12px;
+      border-radius: 100px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s;
+    }
+    .staff-nav-btn:hover {
+      background: rgba(192, 132, 252, 0.28);
+      border-color: var(--purple);
+      transform: scale(1.03);
+    }
+    .network-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .network-badge.online { color: #86efac; background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.3); }
+    .network-badge.offline { color: #fde047; background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.35); }
+
+    /* ─── v3.0 Quiz Interactivo (Onboarding) ─── */
+    .quiz-container {
+      background: linear-gradient(135deg, rgba(6, 28, 18, 0.75) 0%, rgba(2, 12, 7, 0.9) 100%);
+      border: 1px solid var(--border-hi);
+      border-radius: var(--radius-xl);
+      padding: clamp(20px, 4vw, 32px);
+      margin-top: 24px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+    }
+    .quiz-progress-bar {
+      height: 6px;
+      background: var(--surface3);
+      border-radius: 100px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .quiz-progress-fill {
+      height: 100%;
+      width: 20%;
+      background: linear-gradient(90deg, #10b981, #34d399);
+      transition: width 0.3s ease;
+    }
+    .quiz-q-title {
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .quiz-options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .quiz-option-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .quiz-option-btn:hover:not(:disabled) {
+      background: var(--surface3);
+      border-color: var(--border-hi);
+      transform: translateX(4px);
+    }
+    .quiz-option-btn.correct {
+      background: rgba(34, 197, 94, 0.2) !important;
+      border-color: #22c55e !important;
+      color: #86efac !important;
+    }
+    .quiz-option-btn.wrong {
+      background: rgba(239, 68, 68, 0.2) !important;
+      border-color: #ef4444 !important;
+      color: #fca5a5 !important;
+    }
+    .quiz-feedback-box {
+      background: var(--surface2);
+      border-left: 4px solid var(--emerald);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      font-size: 0.84rem;
+      line-height: 1.55;
+      margin-bottom: 18px;
+      display: none;
+    }
+    .quiz-certificate {
+      background: radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.25) 0%, rgba(4, 20, 12, 0.95) 100%);
+      border: 2px solid var(--emerald-lt);
+      border-radius: var(--radius-xl);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 0 35px rgba(16, 185, 129, 0.35);
+    }
+
+    /* ─── v3.0 Modal Staff Moderación ─── */
+    .staff-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(1, 6, 3, 0.88);
+      backdrop-filter: blur(18px);
+      z-index: 2100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transition: all 0.28s var(--ease-spring);
+    }
+    .staff-modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+    .staff-modal-box {
+      width: 100%;
+      max-width: 580px;
+      background: rgba(8, 24, 16, 0.96);
+      border: 1px solid rgba(192, 132, 252, 0.45);
+      border-radius: var(--radius-xl);
+      padding: clamp(20px, 4vw, 30px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(192, 132, 252, 0.25);
+    }
+    .staff-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .staff-form-group label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--purple);
+      text-transform: uppercase;
+    }
+    .staff-form-group input, .staff-form-group select, .staff-form-group textarea {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none;
+    }
+    .staff-form-group input:focus, .staff-form-group select:focus, .staff-form-group textarea:focus {
+      border-color: var(--purple);
+      box-shadow: 0 0 14px rgba(192, 132, 252, 0.35);
+    }
+
   </style>
 </head>
 <body>
@@ -2331,7 +2524,7 @@
   </div>
 
   <div class="enter-content">
-    <div class="enter-badge">✦ SANTUARIO EN DISCORD · REGLAMENTO OFICIAL 2.0 🌿 ✦</div>
+    <div class="enter-badge">✦ SANTUARIO EN DISCORD · REGLAMENTO OFICIAL 3.0 🌿 ✦</div>
     <h1 class="enter-logo">
       <span class="logo-main">Umas <span>Community</span></span>
       <span class="logo-leaf">🌿</span>
@@ -2374,6 +2567,13 @@
   </div>
 
   <div class="nav-controls">
+    <div class="network-badge online" id="network-badge"><span>●</span> <span id="network-status-text">Online</span></div>
+    <button class="lang-select-btn" id="lang-select-btn" type="button" title="Cambiar idioma (Language)">
+      <span>🌐</span> <span id="current-lang-text">ES</span>
+    </button>
+    <button class="staff-nav-btn" id="staff-nav-btn" type="button" title="Panel de moderación para Staff">
+      <span>🛡️</span> <span>Staff</span>
+    </button>
     <button class="nav-search-btn" id="nav-search-btn" type="button" title="Buscar norma (Atajo: / o Ctrl+K)">
       <span>🔍</span>
       <span>Buscar</span>
@@ -3458,7 +3658,51 @@
       <!-- ========================================== -->
       <!-- FASE VIII: PREGUNTAS FRECUENTES (FAQ) ❓ -->
       <!-- ========================================== -->
-      <div class="section-gap" id="fase-8"></div>
+      
+      <!-- ========================================== -->
+      <!-- TEST DE CONVIVENCIA Y ONBOARDING (v3.0) 🏆 -->
+      <!-- ========================================== -->
+      <div class="section-gap" id="fase-quiz"></div>
+      <div class="phase-header">
+        <span class="phase-badge">TEST COMUNITARIO</span>
+        <h2 class="phase-title">Test de Convivencia & Comprensión 🏆</h2>
+        <div class="phase-line"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">🧠</div>
+          <div>
+            <div class="card-title">UMAS Community Knowledge Test</div>
+            <div class="card-sub">Pon a prueba tu conocimiento de las normas con 5 casos prácticos y obtén tu Constancia Comunitaria Oficial.</div>
+          </div>
+        </div>
+
+        <div class="quiz-container" id="quiz-container">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+          </div>
+          <div id="quiz-step-header" style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--mint); margin-bottom:8px; font-weight:800;">
+            PREGUNTA 1 DE 5
+          </div>
+          <div class="quiz-q-title" id="quiz-question-text">
+            Un usuario en el chat general comienza a enviar reiterados mensajes molestos hacia otro miembro. ¿Cuál es el procedimiento correcto?
+          </div>
+          <div class="quiz-options-grid" id="quiz-options-grid">
+            <!-- Renderizado dinámico -->
+          </div>
+          <div class="quiz-feedback-box" id="quiz-feedback-box">
+            <!-- Feedback pedagógico -->
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <button class="hero-cta-btn" id="quiz-next-btn" type="button" style="display:none;">
+              <span>Siguiente Pregunta</span> ➔
+            </button>
+          </div>
+        </div>
+      </div>
+
+<div class="section-gap" id="fase-8"></div>
       <div class="phase-header">
         <span class="phase-badge">FASE VIII</span>
         <h2 class="phase-title">Preguntas Frecuentes (FAQ) ❓</h2>
@@ -3594,53 +3838,261 @@
 </div>
 
 <!-- ── ARQUITECTURA MODULAR JAVASCRIPT: E2E INTERACTIVA, ROBUSTA Y DETERMINISTA ── -->
+
+<!-- ── Modal Staff de Moderación (v3.0) ── -->
+<div class="staff-modal-overlay" id="staff-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="staff-modal-title">
+  <div class="staff-modal-box">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+      <h3 id="staff-modal-title" style="font-family:'Playfair Display',serif; color:var(--white); font-size:1.3rem; display:flex; align-items:center; gap:8px;">
+        <span>🛡️</span> Panel de Moderación Oficial
+      </h3>
+      <button id="staff-close-btn" type="button" style="background:none; border:none; color:var(--text-muted); font-size:1.2rem; cursor:pointer;">✕</button>
+    </div>
+
+    <form id="staff-report-form">
+      <div class="staff-form-group">
+        <label for="staff-user-id">👤 Usuario Objetivo (Nombre o ID)</label>
+        <input type="text" id="staff-user-id" required placeholder="Ej: @usuario o 1493288927388369139" />
+      </div>
+
+      <div class="staff-form-group">
+        <label for="staff-rule-id">📜 Regla Infringida</label>
+        <select id="staff-rule-id" required>
+          <option value="01">#01 Dignidad y Respeto Incondicional</option>
+          <option value="02" selected>#02 Prevención de Acoso y Hostigamiento</option>
+          <option value="03">#03 Control de Spam y Flood</option>
+          <option value="04">#04 Publicidad y Autopromoción</option>
+          <option value="07">#07 Confort Auditivo en Canales de Voz</option>
+          <option value="08">#08 Grabaciones y Transmisiones</option>
+          <option value="11">#11 Doxxing y Datos Privados</option>
+          <option value="12">#12 Estafas y Phishing</option>
+          <option value="13">#13 Protección de Menores</option>
+          <option value="14">#14 Amenazas y Raids</option>
+          <option value="15">#15 Evasión con Multicuentas</option>
+        </select>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+        <div class="staff-form-group">
+          <label for="staff-severity">📊 Severidad</label>
+          <select id="staff-severity" required>
+            <option value="1">Nivel 1 · Informativo</option>
+            <option value="2">Nivel 2 · Leve</option>
+            <option value="3">Nivel 3 · Moderado</option>
+            <option value="4" selected>Nivel 4 · Grave</option>
+            <option value="5">Nivel 5 · Crítico (Ban)</option>
+          </select>
+        </div>
+        <div class="staff-form-group">
+          <label for="staff-points">🔢 Puntos (0-100)</label>
+          <input type="number" id="staff-points" min="0" max="100" value="40" required />
+        </div>
+      </div>
+
+      <div class="staff-form-group">
+        <label for="staff-reason">📝 Motivo y Contexto del Incidente</label>
+        <textarea id="staff-reason" rows="3" required placeholder="Describe brevemente lo ocurrido (mínimo 8 caracteres)..."></textarea>
+      </div>
+
+      <div class="staff-form-group">
+        <label for="staff-key">🔐 Clave de Autorización Staff</label>
+        <input type="password" id="staff-key" required placeholder="Ingresa clave de Staff..." />
+      </div>
+
+      <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:18px;">
+        <button id="staff-cancel-btn" type="button" class="sim-preset-btn">Cancelar</button>
+        <button type="submit" class="hero-cta-btn" id="staff-submit-btn"><span>Enviar Reporte Oficial</span> ➔</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <script>
 /**
- * Umas Community Rules Web 2.0 Engine
- * Single Source of Truth, Weighted Search Ranking, Interactive Modal List & Category Filter
+ * Umas Community Rules Web 3.0 Engine
+ * Unified Dataset, i18n (ES/EN/PT), Interactive Quiz, Staff Moderation API & PWA
  */
 
 // ==========================================
-// 1. MODULE: CONFIG
+// 1. DATA: I18N DICTIONARY (ES / EN / PT)
+// ==========================================
+const DATA_I18N = {
+  es: {
+    navTitle: 'Umas <span>Community</span>',
+    searchBtn: 'Buscar',
+    soundOn: 'ASMR: ON',
+    soundOff: 'ASMR: OFF',
+    staffBtn: 'Staff',
+    heroBadge: '✦ SANTUARIO DIGITAL · REGLAMENTO DE CONVIVENCIA 3.0 🌿 ✦',
+    heroTitle: 'Reglamento de <span class="accent">Convivencia</span><br>Umas Community',
+    heroDesc: 'Una comunidad sana no se define por la cantidad de castigos que aplica, sino por la calidad del trato entre sus integrantes.',
+    heroCta: '🌿 Explorar Normas',
+    heroSearch: '🔍 Buscar tema rápido',
+    catTitle: '🏷️ Explorar por Categoría',
+    catAll: '🌎 Todas',
+    catConducta: '🛡️ Conducta & Respeto',
+    catComunicacion: '💬 Comunicación & Canales',
+    catSeguridad: '🔐 Cero Tolerancia & Ciberseguridad',
+    catComunidad: '🎮 Comunidad & Dinámicas',
+    catModeracion: '🧑⚖️ Ética & Código Staff',
+    simTitle: '🎮 Simulador de Estado Sancional',
+    copyReport: '📋 Copiar Informe',
+    quizTitle: 'Test de Convivencia & Comprensión 🏆',
+    onlineText: 'Online',
+    offlineText: 'Modo Offline',
+    copiedText: '¡Copiado al portapapeles!'
+  },
+  en: {
+    navTitle: 'Umas <span>Community</span>',
+    searchBtn: 'Search',
+    soundOn: 'ASMR: ON',
+    soundOff: 'ASMR: OFF',
+    staffBtn: 'Staff',
+    heroBadge: '✦ DIGITAL SANCTUARY · OFFICIAL COMMUNITY GUIDELINES 3.0 🌿 ✦',
+    heroTitle: 'Community <span class="accent">Guidelines</span><br>Umas Community',
+    heroDesc: 'A healthy community is defined by mutual respect and dialogue, not by the amount of punishments.',
+    heroCta: '🌿 Explore Rules',
+    heroSearch: '🔍 Quick search',
+    catTitle: '🏷️ Explore by Category',
+    catAll: '🌎 All Rules',
+    catConducta: '🛡️ Conduct & Respect',
+    catComunicacion: '💬 Communication & Channels',
+    catSeguridad: '🔐 Zero Tolerance & Security',
+    catComunidad: '🎮 Community & Dynamics',
+    catModeracion: '🧑⚖️ Staff Ethics & Mediation',
+    simTitle: '🎮 Sanction Simulator',
+    copyReport: '📋 Copy Report',
+    quizTitle: 'Community Knowledge Quiz 🏆',
+    onlineText: 'Online',
+    offlineText: 'Offline Mode',
+    copiedText: 'Copied to clipboard!'
+  },
+  pt: {
+    navTitle: 'Umas <span>Community</span>',
+    searchBtn: 'Buscar',
+    soundOn: 'ASMR: LIGADO',
+    soundOff: 'ASMR: DESLIGADO',
+    staffBtn: 'Staff',
+    heroBadge: '✦ SANTUÁRIO DIGITAL · REGULAMENTO OFICIAL 3.0 🌿 ✦',
+    heroTitle: 'Regras de <span class="accent">Convivência</span><br>Umas Community',
+    heroDesc: 'Uma comunidade saudável é construída com diálogo, empatia e respeito mútuo.',
+    heroCta: '🌿 Explorar Regras',
+    heroSearch: '🔍 Busca rápida',
+    catTitle: '🏷️ Explorar por Categoria',
+    catAll: '🌎 Todas as Regras',
+    catConducta: '🛡️ Conduta & Respeito',
+    catComunicacion: '💬 Comunicação & Canais',
+    catSeguridad: '🔐 Tolerância Zero & Segurança',
+    catComunidad: '🎮 Comunidade & Dinâmicas',
+    catModeracion: '🧑⚖️ Ética da Moderação',
+    simTitle: '🎮 Simulador de Sanções',
+    copyReport: '📋 Copiar Relatório',
+    quizTitle: 'Teste de Convivência Comunitária 🏆',
+    onlineText: 'Online',
+    offlineText: 'Modo Offline',
+    copiedText: 'Copiado para a área de transferência!'
+  }
+};
+
+// ==========================================
+// 2. DATA: SITUATIONAL QUIZ POOL
+// ==========================================
+const DATA_QUIZ = [
+  {
+    id: 1,
+    ruleId: '02',
+    question: 'Un usuario en el chat general comienza a hacer comentarios incómodos hacia otro miembro. La otra persona le pide que pare, pero él continúa diciendo que "es solo una broma". ¿Qué establece el reglamento?',
+    options: [
+      { text: 'A) Está permitido si aclara que no tiene mala intención.', isCorrect: false },
+      { text: 'B) Una broma deja de serlo cuando la otra persona pide parar; continuar constituye hostigamiento (#02).', isCorrect: true },
+      { text: 'C) Solo se sanciona si intervienen insultos explícitos.', isCorrect: false },
+      { text: 'D) El usuario afectado debe abandonar el servidor.', isCorrect: false }
+    ],
+    feedback: '✅ La regla #02 (Acoso y Hostigamiento) establece que el "no" es definitivo e incondicional. Insistir tras la negativa ajena es motivo de Time-Out.'
+  },
+  {
+    id: 2,
+    ruleId: '11',
+    question: 'Un miembro publica en un canal público la fotografía real, la ciudad y el perfil de redes sociales de otro integrante sin su autorización. ¿Cuál es la consecuencia directa?',
+    options: [
+      { text: 'A) Strike 1 de advertencia formativa.', isCorrect: false },
+      { text: 'B) Silencio temporal de 1 hora.', isCorrect: false },
+      { text: 'C) Baneo permanente inmediato (100 PTS) por Doxxing (#11) y reporte ante Discord Trust & Safety.', isCorrect: true },
+      { text: 'D) Cambio obligatorio de apodo.', isCorrect: false }
+    ],
+    feedback: '✅ La regla #11 (Doxxing) aplica Tolerancia Cero (+100 PTS directos) con expulsión permanente e irrevocable para proteger la integridad del usuario.'
+  },
+  {
+    id: 3,
+    ruleId: '03',
+    question: 'Si deseas compartir un bot de comandos de música o consultar niveles de actividad, ¿dónde debes hacerlo?',
+    options: [
+      { text: 'A) En #general mencionando @everyone.', isCorrect: false },
+      { text: 'B) En el canal dedicado #comandos para no saturar las salas de conversación (#03 / #09).', isCorrect: true },
+      { text: 'C) En cualquier canal de voz sin permiso.', isCorrect: false },
+      { text: 'D) Por mensaje privado a los moderadores.', isCorrect: false }
+    ],
+    feedback: '✅ Las reglas #03 y #09 regulan el orden temático y el uso de bots para garantizar la legibilidad y comodidad de todos los participantes.'
+  },
+  {
+    id: 4,
+    ruleId: '15',
+    question: 'Si recibes un Time-Out de 12 horas por una falta y decides entrar con una cuenta secundaria (alt) para seguir hablando, ¿qué sucede?',
+    options: [
+      { text: 'A) Es válido siempre que no repitas el error.', isCorrect: false },
+      { text: 'B) Se considera evasión de sanciones (#15) y ambas cuentas reciben una sanción severa aumentada.', isCorrect: true },
+      { text: 'C) La cuenta secundaria queda exenta si es nivel 1.', isCorrect: false },
+      { text: 'D) No ocurre nada.', isCorrect: false }
+    ],
+    feedback: '✅ La regla #15 prohíbe eludir medidas disciplinarias con cuentas alternativas. Las sanciones aplican a la persona.'
+  },
+  {
+    id: 5,
+    ruleId: 'M1',
+    question: '¿Cuál es el rol prioritario del equipo de moderadores (Staff) de Umas Community ante una discusión acalorada?',
+    options: [
+      { text: 'A) Banear a todos los involucrados de inmediato sin mediar palabra.', isCorrect: false },
+      { text: 'B) Imponer su opinión personal en el debate.', isCorrect: false },
+      { text: 'C) Actuar con mediación formativa, calmar el ambiente y orientar con respeto (#M1).', isCorrect: true },
+      { text: 'D) Ignorar el conflicto.', isCorrect: false }
+    ],
+    feedback: '✅ El Código Staff (#M1) define a los moderadores como guías y mediadores pedagógicos cuyo fin primordial es preservar la convivencia constructiva.'
+  }
+];
+
+// ==========================================
+// 3. CONFIG & STATE
 // ==========================================
 const APP_CONFIG = {
   discord: {
     ticketChannel: 'https://discord.com/channels/1493288927388369139/1504912669809836274',
     appealChannel: 'https://discord.com/channels/1493288927388369139/1504912669809836274',
-    reportChannel: 'https://discord.com/channels/1493288927388369139/1504912669809836274',
-    staffChannel: 'https://discord.com/channels/1493288927388369139/1504912669809836274',
-    inviteUrl: 'https://discord.gg/'
+    staffChannel: 'https://discord.com/channels/1493288927388369139/1504912669809836274'
   },
   storageKeys: {
-    sound: 'umas_rules_sound_v2',
-    country: 'umas_rules_country_v2',
-    category: 'umas_rules_category_v2'
+    sound: 'umas_rules_sound_v3',
+    country: 'umas_rules_country_v3',
+    category: 'umas_rules_category_v3',
+    lang: 'umas_rules_lang_v3',
+    quizSession: 'umas_rules_quiz_session_v3'
   },
   synonyms: {
-    'acoso': ['hostigamiento', 'bullying', 'stalking', 'persecucion', 'insistencia', 'molestar', 'dms', 'privado', 'hostigar'],
-    'hostigamiento': ['acoso', 'bullying', 'stalking', 'persecucion', 'hostigar'],
+    'acoso': ['hostigamiento', 'bullying', 'stalking', 'persecucion', 'insistencia', 'molestar', 'dms', 'privado', 'harassment', 'assédio'],
+    'hostigamiento': ['acoso', 'bullying', 'stalking', 'persecucion', 'harassment'],
     'spam': ['flood', 'menciones', 'ruido visual', 'mensajes repetitivos', 'copypasta', 'emojis', 'stickers', 'everyone', 'here'],
     'flood': ['spam', 'menciones', 'ruido visual', 'mensajes repetitivos'],
-    'doxxing': ['datos personales', 'privacidad', 'fotos', 'dni', 'curp', 'rut', 'telefono', 'direccion', 'exponer', 'cedula'],
-    'privacidad': ['doxxing', 'datos personales', 'fotos', 'grabaciones', 'camara', 'inviolable'],
-    'voz': ['microfono', 'audio', 'llamada', 'soundboard', 'gritos', 'ear-rape', 'krisp', 'mute', 'ensordecer'],
-    'audio': ['voz', 'microfono', 'soundboard', 'gritos', 'krisp'],
-    'menores': ['infancia', 'csam', 'csem', 'seguridad infantil', 'grooming', 'edad', 'proteccion'],
-    'staff': ['moderadores', 'moderacion', 'mediacion', 'tickets', 'abuso de poder', 'auditoria', 'administracion'],
-    'sancion': ['puntos', 'strikes', 'time-out', 'silencio', 'mute', 'kick', 'ban', 'expulsion', 'castigo'],
-    'sanciones': ['puntos', 'strikes', 'time-out', 'silencio', 'mute', 'kick', 'ban', 'expulsion'],
-    'apelacion': ['ticket', 'injusticia', 'reclamar', 'aclaracion', 'revision', 'desbaneo', 'apelar'],
-    'spoiler': ['trama', 'final', 'anime', 'manga', 'censura', 'pelicula', 'serie'],
-    'links': ['publicidad', 'promocion', 'servidores', 'phishing', 'malware', 'estafas', 'nitro', 'virus'],
-    'multicuentas': ['alts', 'cuentas secundarias', 'evasion', 'secundaria'],
-    'amenazas': ['violencia', 'extorsion', 'ddos', 'raid', 'sabotaje', 'swatting', 'ataques', 'amenaza']
+    'doxxing': ['datos personales', 'privacidad', 'fotos', 'dni', 'curp', 'rut', 'telefono', 'direccion', 'exponer', 'privacy'],
+    'privacidad': ['doxxing', 'datos personales', 'fotos', 'grabaciones', 'camara'],
+    'voz': ['microfono', 'audio', 'llamada', 'soundboard', 'gritos', 'ear-rape', 'krisp', 'mute', 'voice'],
+    'menores': ['infancia', 'csam', 'csem', 'seguridad infantil', 'grooming', 'edad', 'proteccion', 'children'],
+    'staff': ['moderadores', 'moderacion', 'mediacion', 'tickets', 'abuso de poder', 'auditoria'],
+    'sancion': ['puntos', 'strikes', 'time-out', 'silencio', 'mute', 'kick', 'ban', 'expulsion', 'sanction'],
+    'apelacion': ['ticket', 'injusticia', 'reclamar', 'aclaracion', 'revision', 'appeal']
   }
 };
 
-// ==========================================
-// 2. STATE MANAGER (Single Source of Truth)
-// ==========================================
 const AppState = {
+  lang: 'es',
   activeCategory: 'all',
   searchQuery: '',
   searchResults: [],
@@ -3650,54 +4102,36 @@ const AppState = {
 };
 
 // ==========================================
-// 3. MODULE: STORAGE
+// 4. STORAGE & UTILS
 // ==========================================
 const Storage = {
   get(key, defaultVal) {
     try {
       const val = localStorage.getItem(key);
       return val !== null ? JSON.parse(val) : defaultVal;
-    } catch (e) {
-      return defaultVal;
-    }
+    } catch (e) { return defaultVal; }
   },
   set(key, val) {
-    try {
-      localStorage.setItem(key, JSON.stringify(val));
-    } catch (e) {}
+    try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {}
   }
 };
 
-// ==========================================
-// 4. MODULE: UTILS
-// ==========================================
 const Utils = {
   normalizeText(str) {
     if (!str) return '';
-    return str
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .trim();
+    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
   },
-
-  toastTimer: null,
   showToast(text, icon = '✨') {
     const toast = document.getElementById('glass-toast');
     const toastIcon = document.getElementById('toast-icon');
     const toastMsg = document.getElementById('toast-msg');
     if (!toast) return;
-
     if (toastIcon) toastIcon.textContent = icon;
     if (toastMsg) toastMsg.textContent = text;
-
     toast.classList.add('show');
     clearTimeout(this.toastTimer);
-    this.toastTimer = setTimeout(() => {
-      toast.classList.remove('show');
-    }, 2600);
+    this.toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
   },
-
   copyToClipboard(text, onSuccess, onError) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(onSuccess).catch(() => {
@@ -3709,7 +4143,6 @@ const Utils = {
       else if (onError) onError();
     }
   },
-
   fallbackCopy(text) {
     try {
       const textArea = document.createElement('textarea');
@@ -3722,64 +4155,52 @@ const Utils = {
       const success = document.execCommand('copy');
       document.body.removeChild(textArea);
       return success;
-    } catch (e) {
-      return false;
-    }
+    } catch (e) { return false; }
   }
 };
 
 // ==========================================
-// 5. MODULE: AUDIO (ASMR Synthesizer)
+// 5. AUDIO SYNTHESIZER
 // ==========================================
 const AudioEngine = {
   ctx: null,
   enabled: true,
-
   init() {
     this.enabled = Storage.get(APP_CONFIG.storageKeys.sound, true);
     const soundToggleBtn = document.getElementById('sound-toggle-btn');
     this.updateUI();
-
     if (soundToggleBtn) {
       soundToggleBtn.addEventListener('click', () => {
         this.resumeContext();
         this.enabled = !this.enabled;
         Storage.set(APP_CONFIG.storageKeys.sound, this.enabled);
         this.updateUI();
-        if (this.enabled) {
-          this.playCrystal([659.25, 880]);
-        }
+        if (this.enabled) this.playCrystal([659.25, 880]);
       });
     }
   },
-
   resumeContext() {
     if (!this.ctx) {
       const AudioCtx = window.AudioContext || window.webkitAudioContext;
       if (AudioCtx) this.ctx = new AudioCtx();
     }
-    if (this.ctx && this.ctx.state === 'suspended') {
-      this.ctx.resume();
-    }
+    if (this.ctx && this.ctx.state === 'suspended') this.ctx.resume();
   },
-
   updateUI() {
     const soundToggleBtn = document.getElementById('sound-toggle-btn');
     const soundIcon = document.getElementById('sound-icon');
     const soundText = document.getElementById('sound-text');
-
     if (!soundToggleBtn) return;
     if (this.enabled) {
       soundToggleBtn.classList.remove('muted');
       if (soundIcon) soundIcon.textContent = '🔊';
-      if (soundText) soundText.textContent = 'ASMR: ON';
+      if (soundText) soundText.textContent = DATA_I18N[AppState.lang]?.soundOn || 'ASMR: ON';
     } else {
       soundToggleBtn.classList.add('muted');
       if (soundIcon) soundIcon.textContent = '🔇';
-      if (soundText) soundText.textContent = 'ASMR: OFF';
+      if (soundText) soundText.textContent = DATA_I18N[AppState.lang]?.soundOff || 'ASMR: OFF';
     }
   },
-
   playSoftTap(freq = 520, duration = 0.045) {
     if (!this.enabled) return;
     this.resumeContext();
@@ -3787,27 +4208,16 @@ const AudioEngine = {
     try {
       const osc = this.ctx.createOscillator();
       const gain = this.ctx.createGain();
-      const filter = this.ctx.createBiquadFilter();
-
-      filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(1100, this.ctx.currentTime);
-
       osc.type = 'sine';
       osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(120, this.ctx.currentTime + duration);
-
-      gain.gain.setValueAtTime(0.1, this.ctx.currentTime);
+      gain.gain.setValueAtTime(0.08, this.ctx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration);
-
-      osc.connect(filter);
-      filter.connect(gain);
+      osc.connect(gain);
       gain.connect(this.ctx.destination);
-
       osc.start();
       osc.stop(this.ctx.currentTime + duration);
     } catch (e) {}
   },
-
   playCrystal(notes = [523.25, 659.25, 783.99]) {
     if (!this.enabled) return;
     this.resumeContext();
@@ -3817,26 +4227,54 @@ const AudioEngine = {
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
         const delay = idx * 0.04;
-
         osc.type = 'sine';
         osc.frequency.setValueAtTime(freq, this.ctx.currentTime + delay);
-
         gain.gain.setValueAtTime(0.001, this.ctx.currentTime);
-        gain.gain.setValueAtTime(0.05, this.ctx.currentTime + delay);
-        gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + delay + 0.35);
-
+        gain.gain.setValueAtTime(0.04, this.ctx.currentTime + delay);
+        gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + delay + 0.3);
         osc.connect(gain);
         gain.connect(this.ctx.destination);
-
         osc.start(this.ctx.currentTime + delay);
-        osc.stop(this.ctx.currentTime + delay + 0.35);
+        osc.stop(this.ctx.currentTime + delay + 0.3);
       });
     } catch (e) {}
   }
 };
 
 // ==========================================
-// 6. MODULE: SEARCH ENGINE (Interactive & Weighted)
+// 6. I18N MODULE (ES / EN / PT)
+// ==========================================
+const I18nModule = {
+  languages: ['es', 'en', 'pt'],
+  init() {
+    const saved = Storage.get(APP_CONFIG.storageKeys.lang, 'es');
+    this.apply(saved);
+
+    const langBtn = document.getElementById('lang-select-btn');
+    if (langBtn) {
+      langBtn.addEventListener('click', () => {
+        const currentIdx = this.languages.indexOf(AppState.lang);
+        const nextLang = this.languages[(currentIdx + 1) % this.languages.length];
+        this.apply(nextLang);
+        AudioEngine.playSoftTap(580, 0.04);
+      });
+    }
+  },
+  apply(lang) {
+    if (!this.languages.includes(lang)) lang = 'es';
+    AppState.lang = lang;
+    Storage.set(APP_CONFIG.storageKeys.lang, lang);
+
+    const dict = DATA_I18N[lang] || DATA_I18N.es;
+    const currentLangText = document.getElementById('current-lang-text');
+    if (currentLangText) currentLangText.textContent = lang.toUpperCase();
+
+    AudioEngine.updateUI();
+  }
+};
+
+// ==========================================
+// 7. SEARCH ENGINE (Interactive Command Palette)
 // ==========================================
 const SearchEngine = {
   overlay: null,
@@ -3867,7 +4305,6 @@ const SearchEngine = {
       });
     }
 
-    // Keyboard Shortcuts & Navigation
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && AppState.isSearchOpen) {
         this.close();
@@ -3929,15 +4366,8 @@ const SearchEngine = {
     AppState.searchQuery = '';
     AppState.searchResults = [];
     AppState.selectedIndex = -1;
-
-    if (this.resultsList) {
-      this.resultsList.replaceChildren();
-    }
-    if (this.statusDisplay) {
-      this.statusDisplay.textContent = 'Escribe para encontrar y saltar a cualquier norma';
-    }
-
-    this.ruleBoxes.forEach(box => box.classList.remove('dim-unmatched'));
+    if (this.resultsList) this.resultsList.replaceChildren();
+    if (this.statusDisplay) this.statusDisplay.textContent = 'Escribe para encontrar y saltar a cualquier norma';
   },
 
   search(query) {
@@ -3950,7 +4380,8 @@ const SearchEngine = {
       return;
     }
 
-    // Expand Synonyms
+    MetricsModule.sendEvent('search', { query: cleanQ.slice(0, 30), category: AppState.activeCategory });
+
     const searchTerms = [cleanQ];
     for (const [key, list] of Object.entries(APP_CONFIG.synonyms)) {
       if (Utils.normalizeText(key).includes(cleanQ) || cleanQ.includes(Utils.normalizeText(key))) {
@@ -3976,17 +4407,13 @@ const SearchEngine = {
       const normTag = Utils.normalizeText(tag);
 
       let score = 0;
-
       if (normTitle === cleanQ) score += 100;
       else if (normTitle.includes(cleanQ)) score += 80;
-
-      if (normTag === cleanQ || `#${ruleId}`.toLowerCase() === cleanQ || ruleId.toLowerCase() === cleanQ) score += 90;
-
+      if (normTag === cleanQ || `#${ruleId}`.toLowerCase() === cleanQ) score += 90;
       if (searchTerms.some(t => normKeywords.includes(t))) score += 60;
       if (normCategory.includes(cleanQ)) score += 40;
       if (searchTerms.some(t => normSummary.includes(t))) score += 25;
 
-      // Check category boost if active category matches
       if (AppState.activeCategory !== 'all' && box.dataset.cat === AppState.activeCategory) {
         score += 15;
       }
@@ -3996,10 +4423,8 @@ const SearchEngine = {
       }
     });
 
-    // Sort by Score Descending
     scored.sort((a, b) => b.score - a.score);
     AppState.searchResults = scored;
-
     this.renderResults(scored, cleanQ);
   },
 
@@ -4009,7 +4434,7 @@ const SearchEngine = {
 
     if (results.length === 0) {
       if (this.statusDisplay) {
-        this.statusDisplay.innerHTML = `<span style="color:var(--red-lt);">0 coincidencias</span> para "${query}" — prueba con otra palabra`;
+        this.statusDisplay.innerHTML = `<span style="color:var(--red-lt);">0 coincidencias</span> para "${query}"`;
       }
       const emptyDiv = document.createElement('div');
       emptyDiv.className = 'search-empty-state';
@@ -4022,7 +4447,6 @@ const SearchEngine = {
       this.statusDisplay.innerHTML = `<span>${results.length}</span> norma(s) encontrada(s) — haz clic o presiona ENTER para saltar`;
     }
 
-    // Create safe DOM elements for each result
     results.forEach((item, index) => {
       const card = document.createElement('div');
       card.className = 'search-result-card';
@@ -4116,28 +4540,25 @@ const SearchEngine = {
     const targetBox = document.querySelector(`.rule-box[data-rule="${ruleId}"]`);
     if (!targetBox) return;
 
-    // 1. Close Modal
     this.close();
 
-    // 2. Ensure rule is visible if category filter was hiding it
     if (targetBox.style.display === 'none') {
       CategoriesModule.apply('all');
     }
 
-    // 3. Expand Target Rule
     targetBox.classList.add('open');
     const headerBar = targetBox.querySelector('.rule-header-bar');
     if (headerBar) headerBar.setAttribute('aria-expanded', 'true');
     const toggleBtn = targetBox.querySelector('.rule-toggle-btn span:first-child');
     if (toggleBtn) toggleBtn.textContent = 'Cerrar';
 
-    // 4. Smooth Scroll to Rule
     targetBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    // 5. Apply Temporary Glow Highlight
     document.querySelectorAll('.rule-box').forEach(b => b.classList.remove('rule-search-highlight'));
     targetBox.classList.add('rule-search-highlight');
     AudioEngine.playCrystal([784, 1046.5]);
+
+    MetricsModule.sendEvent('rule_view', { ruleId });
 
     setTimeout(() => {
       targetBox.classList.remove('rule-search-highlight');
@@ -4148,7 +4569,7 @@ const SearchEngine = {
 };
 
 // ==========================================
-// 7. MODULE: CATEGORIES (Dynamic & Responsive)
+// 8. CATEGORIES MODULE
 // ==========================================
 const CategoriesModule = {
   pills: [],
@@ -4160,7 +4581,6 @@ const CategoriesModule = {
     this.ruleBoxes = Array.from(document.querySelectorAll('.rule-box[data-rule]'));
     this.counterBadge = document.getElementById('category-counter-badge');
 
-    // Calculate real dynamic counts from dataset
     this.updateCategoryCounts();
 
     this.pills.forEach(pill => {
@@ -4184,16 +4604,13 @@ const CategoriesModule = {
 
     document.querySelectorAll('.cat-num').forEach(span => {
       const catKey = span.dataset.catNum;
-      if (counts[catKey] !== undefined) {
-        span.textContent = counts[catKey];
-      }
+      if (counts[catKey] !== undefined) span.textContent = counts[catKey];
     });
   },
 
   apply(category) {
     AppState.activeCategory = category;
     Storage.set(APP_CONFIG.storageKeys.category, category);
-
     this.pills.forEach(p => p.classList.toggle('active', p.dataset.cat === category));
 
     let visibleCount = 0;
@@ -4213,12 +4630,299 @@ const CategoriesModule = {
 };
 
 // ==========================================
-// 8. MODULE: RULES & COPYING
+// 9. ONBOARDING QUIZ MODULE
+// ==========================================
+const QuizModule = {
+  currentIndex: 0,
+  score: 0,
+  selectedAnswer: null,
+
+  init() {
+    this.renderQuestion();
+    const nextBtn = document.getElementById('quiz-next-btn');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => this.next());
+    }
+  },
+
+  renderQuestion() {
+    const q = DATA_QUIZ[this.currentIndex];
+    const header = document.getElementById('quiz-step-header');
+    const qText = document.getElementById('quiz-question-text');
+    const optionsGrid = document.getElementById('quiz-options-grid');
+    const feedbackBox = document.getElementById('quiz-feedback-box');
+    const nextBtn = document.getElementById('quiz-next-btn');
+    const fill = document.getElementById('quiz-progress-fill');
+
+    if (!q || !optionsGrid) return;
+
+    if (fill) fill.style.width = `${((this.currentIndex + 1) / DATA_QUIZ.length) * 100}%`;
+    if (header) header.textContent = `PREGUNTA ${this.currentIndex + 1} DE ${DATA_QUIZ.length}`;
+    if (qText) qText.textContent = q.question;
+
+    if (feedbackBox) {
+      feedbackBox.style.display = 'none';
+      feedbackBox.textContent = '';
+    }
+    if (nextBtn) nextBtn.style.display = 'none';
+
+    optionsGrid.replaceChildren();
+
+    q.options.forEach((opt, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-option-btn';
+      btn.type = 'button';
+      btn.textContent = opt.text;
+
+      btn.addEventListener('click', () => {
+        this.handleSelection(btn, opt, q);
+      });
+
+      optionsGrid.appendChild(btn);
+    });
+  },
+
+  handleSelection(selectedBtn, opt, q) {
+    const optionsGrid = document.getElementById('quiz-options-grid');
+    const feedbackBox = document.getElementById('quiz-feedback-box');
+    const nextBtn = document.getElementById('quiz-next-btn');
+
+    const buttons = optionsGrid.querySelectorAll('.quiz-option-btn');
+    buttons.forEach(b => b.disabled = true);
+
+    if (opt.isCorrect) {
+      selectedBtn.classList.add('correct');
+      this.score++;
+      AudioEngine.playCrystal([659.25, 880, 1046.5]);
+    } else {
+      selectedBtn.classList.add('wrong');
+      buttons.forEach((b, idx) => {
+        if (q.options[idx].isCorrect) b.classList.add('correct');
+      });
+      AudioEngine.playSoftTap(300, 0.06);
+    }
+
+    if (feedbackBox) {
+      feedbackBox.style.display = 'block';
+      feedbackBox.textContent = q.feedback;
+    }
+
+    if (nextBtn) {
+      nextBtn.style.display = 'inline-flex';
+      nextBtn.textContent = (this.currentIndex === DATA_QUIZ.length - 1) ? 'Ver Constancia Oficial ➔' : 'Siguiente Pregunta ➔';
+    }
+  },
+
+  next() {
+    this.currentIndex++;
+    if (this.currentIndex < DATA_QUIZ.length) {
+      this.renderQuestion();
+      AudioEngine.playSoftTap(540, 0.04);
+    } else {
+      this.renderCertificate();
+      MetricsModule.sendEvent('quiz_complete', { score: this.score, total: DATA_QUIZ.length });
+    }
+  },
+
+  renderCertificate() {
+    const container = document.getElementById('quiz-container');
+    if (!container) return;
+
+    const sessionId = `UMAS-${Date.now().toString(36).toUpperCase()}-${Math.floor(Math.random()*1000)}`;
+    const dateStr = new Date().toLocaleDateString();
+
+    container.innerHTML = `
+      <div class="quiz-certificate">
+        <div style="font-size:2.4rem; margin-bottom:10px;">🌿 🏆 ✨</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--white); margin-bottom:6px;">
+          Constancia de Comprensión del Reglamento
+        </h3>
+        <p style="color:var(--mint); font-family:'JetBrains Mono',monospace; font-size:0.85rem; margin-bottom:18px;">
+          Puntaje Obtenido: ${this.score} / ${DATA_QUIZ.length} Aciertos (${Math.round((this.score/DATA_QUIZ.length)*100)}%)
+        </p>
+        <p style="font-size:0.86rem; color:var(--text-muted); max-width:540px; margin:0 auto 20px; line-height:1.6;">
+          Se certifica que el usuario ha revisado y comprendido satisfactoriamente las directrices de convivencia, seguridad digital y respeto mutuo de Umas Community.
+        </p>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--text-dim); border-top:1px solid var(--border); padding-top:14px; margin-top:14px;">
+          ID de Sesión: <strong>${sessionId}</strong> • Fecha: ${dateStr}<br>
+          <span style="font-size:0.65rem; opacity:0.75;">(Esta constancia certifica la comprensión comunitaria; no constituye autorización administrativa de Staff).</span>
+        </div>
+        <button class="hero-cta-btn" onclick="location.reload()" style="margin-top:20px;">
+          <span>Reiniciar Test</span>
+        </button>
+      </div>
+    `;
+    AudioEngine.playCrystal([523.25, 659.25, 783.99, 1046.5]);
+  }
+};
+
+// ==========================================
+// 10. STAFF MODERATION MODULE (Backend Bridge)
+// ==========================================
+const StaffModule = {
+  overlay: null,
+  form: null,
+
+  init() {
+    this.overlay = document.getElementById('staff-modal-overlay');
+    this.form = document.getElementById('staff-report-form');
+    const openBtn = document.getElementById('staff-nav-btn');
+    const closeBtn = document.getElementById('staff-close-btn');
+    const cancelBtn = document.getElementById('staff-cancel-btn');
+
+    if (openBtn) openBtn.addEventListener('click', () => this.open());
+    if (closeBtn) closeBtn.addEventListener('click', () => this.close());
+    if (cancelBtn) cancelBtn.addEventListener('click', () => this.close());
+
+    if (this.overlay) {
+      this.overlay.addEventListener('click', (e) => {
+        if (e.target === this.overlay) this.close();
+      });
+    }
+
+    if (this.form) {
+      this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+    }
+  },
+
+  open() {
+    if (this.overlay) {
+      this.overlay.classList.add('open');
+      document.body.classList.add('modal-open');
+      AudioEngine.playCrystal([659.25, 880]);
+    }
+  },
+
+  close() {
+    if (this.overlay) {
+      this.overlay.classList.remove('open');
+      document.body.classList.remove('modal-open');
+      AudioEngine.playSoftTap(340, 0.04);
+    }
+  },
+
+  async handleSubmit(e) {
+    e.preventDefault();
+    const userId = document.getElementById('staff-user-id')?.value?.trim();
+    const ruleId = document.getElementById('staff-rule-id')?.value;
+    const severity = document.getElementById('staff-severity')?.value;
+    const points = document.getElementById('staff-points')?.value;
+    const reason = document.getElementById('staff-reason')?.value?.trim();
+    const staffKey = document.getElementById('staff-key')?.value?.trim();
+    const submitBtn = document.getElementById('staff-submit-btn');
+
+    if (!userId || !reason || !staffKey) {
+      Utils.showToast('Completa todos los campos obligatorios', '⚠️');
+      return;
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+    }
+
+    try {
+      const response = await fetch('/api/moderation/report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Staff-Key': staffKey
+        },
+        body: JSON.stringify({
+          targetUser: userId,
+          ruleId: ruleId,
+          severity: parseInt(severity, 10),
+          points: parseInt(points, 10),
+          reason: reason,
+          moderatorTag: 'Staff Web Panel'
+        })
+      });
+
+      const data = await response.json();
+      if (response.ok && data.success) {
+        Utils.showToast('¡Informe de moderación registrado con éxito!', '✅');
+        AudioEngine.playCrystal([784, 1046.5]);
+        this.form.reset();
+        this.close();
+      } else {
+        Utils.showToast(data.error || 'Error de autorización Staff', '❌');
+        AudioEngine.playSoftTap(250, 0.06);
+      }
+    } catch (err) {
+      Utils.showToast('Error de conexión con el servidor', '⚠️');
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Enviar Reporte Oficial</span> ➔';
+      }
+    }
+  }
+};
+
+// ==========================================
+// 11. PWA & OFFLINE RESILIENCE MODULE
+// ==========================================
+const PwaModule = {
+  init() {
+    const badge = document.getElementById('network-badge');
+    const statusText = document.getElementById('network-status-text');
+
+    const updateNetwork = () => {
+      const isOnline = navigator.onLine;
+      if (badge && statusText) {
+        badge.className = `network-badge ${isOnline ? 'online' : 'offline'}`;
+        statusText.textContent = isOnline ? (DATA_I18N[AppState.lang]?.onlineText || 'Online') : (DATA_I18N[AppState.lang]?.offlineText || 'Modo Offline');
+      }
+    };
+
+    window.addEventListener('online', () => {
+      updateNetwork();
+      Utils.showToast('Conexión restablecida', '🟢');
+    });
+
+    window.addEventListener('offline', () => {
+      updateNetwork();
+      Utils.showToast('Modo sin conexión activado', '🟡');
+    });
+
+    updateNetwork();
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((reg) => {
+            console.log('🌿 ServiceWorker registered successfully:', reg.scope);
+          })
+          .catch((err) => {
+            console.warn('⚠️ ServiceWorker registration skipped:', err);
+          });
+      });
+    }
+  }
+};
+
+// ==========================================
+// 12. METRICS MODULE
+// ==========================================
+const MetricsModule = {
+  sendEvent(event, data) {
+    if (!navigator.onLine) return;
+    try {
+      fetch('/api/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ event, data })
+      }).catch(() => {});
+    } catch (e) {}
+  }
+};
+
+// ==========================================
+// 13. RULES & COPY MODULE
 // ==========================================
 const RulesModule = {
   init() {
     const ruleBoxes = document.querySelectorAll('.rule-box[data-rule]');
-
     ruleBoxes.forEach(box => {
       const headerBar = box.querySelector('.rule-header-bar');
       const toggleBtn = box.querySelector('.rule-toggle-btn');
@@ -4230,7 +4934,6 @@ const RulesModule = {
         box.classList.toggle('open');
         if (headerBar) headerBar.setAttribute('aria-expanded', !isOpen);
         AudioEngine.playSoftTap(isOpen ? 380 : 540, 0.04);
-        
         const btnText = box.querySelector('.rule-toggle-btn span:first-child');
         if (btnText) btnText.textContent = box.classList.contains('open') ? 'Cerrar' : 'Detalles';
       };
@@ -4252,21 +4955,18 @@ const RulesModule = {
         });
       }
 
-      // Copy Rule Button
       if (actionsRight && !actionsRight.querySelector('.copy-rule-btn')) {
         const copyBtn = document.createElement('button');
         copyBtn.className = 'copy-rule-btn';
         copyBtn.type = 'button';
         copyBtn.innerHTML = '<span>📋</span> <span>Copiar</span>';
         copyBtn.title = 'Copiar norma para Discord';
-        copyBtn.setAttribute('aria-label', 'Copiar norma para Discord');
 
         copyBtn.addEventListener('click', (e) => {
           e.stopPropagation();
           const tag = box.querySelector('.r-tag')?.textContent?.trim() || '';
           const title = box.querySelector('.rule-main-title')?.textContent?.trim() || '';
           const summary = box.querySelector('.rule-summary-text')?.textContent?.trim() || '';
-
           const textToCopy = `🌿 **Umas Community · ${tag} ${title}**\n> ${summary}\n📜 *Reglamento:* https://rules-web.onrender.com`;
 
           Utils.copyToClipboard(
@@ -4292,140 +4992,23 @@ const RulesModule = {
 };
 
 // ==========================================
-// 9. MODULE: SIMULATOR (Deterministic Engine)
+// 14. SIMULATOR MODULE
 // ==========================================
 const SimulatorModule = {
   tiers: {
-    0: {
-      icon: '🟢',
-      title: 'Historial Ejemplar · Estado Seguro',
-      sub: '0 PTS | Sin advertencias ni restricciones activas',
-      action: 'Tu cuenta goza de máxima confianza. En caso de una equivocación menor, el Staff únicamente te dará una orientación pedagógica sin aplicar sanciones.',
-      why: 'La comunidad privilegia la presunción de buena fe y el aprendizaje mutuo.',
-      preventions: [
-        'Participa constructivamente respetando las salas y a tus compañeros.',
-        'Si tienes dudas sobre las normas, consulta a cualquier moderador.'
-      ],
-      legal: 'Conformidad con las Directrices de Convivencia Pacífica de Discord.'
-    },
-    10: {
-      icon: '🟢',
-      title: 'Aviso Formativo Inicial (Strike 1)',
-      sub: '10 PTS | Advertencia preventiva de orientación',
-      action: 'Retiro del mensaje infractor por parte de moderación y recordatorio privado o en el canal de la norma infringida. No se aplican restricciones de voz ni escritura.',
-      why: 'Corregir a tiempo conductas como spam involuntario o desvío de canales antes de que afecten la sala.',
-      preventions: [
-        'Verifica el canal adecuado antes de enviar multimedia o comandos.',
-        'Este aviso caduca tras 30 días de conducta limpia.'
-      ],
-      legal: 'Discord Community Guidelines (Spam & Rate Limiting).'
-    },
-    20: {
-      icon: '🟡',
-      title: 'Aviso Disciplinario Moderado (Strike 2)',
-      sub: '20 PTS | Registro de advertencia activa',
-      action: 'Notificación directa en el registro de moderación. Cualquier falta posterior activará silencio temporal automático.',
-      why: 'Evitar la escalada de lenguaje hostil o discusiones agresivas en canales públicos.',
-      preventions: [
-        'Modera tu vocabulario y no respondas a provocaciones.',
-        'Toma una pausa si una conversación se torna tensa.'
-      ],
-      legal: 'Discord Terms of Service (Respeto Mutuo).'
-    },
-    30: {
-      icon: '🟡',
-      title: 'Advertencia Crítica Pre-Silencio (Strike 3)',
-      sub: '30 PTS | Último aviso preventivo formal',
-      action: 'Llamada de atención formal del equipo de Staff. La próxima infracción activará Time-Out obligatorio.',
-      why: 'Sancionar el desacato a indicaciones del Staff o provocaciones reiteradas.',
-      preventions: [
-        'Respeta las peticiones de los moderadores cuando soliciten calmar el ambiente.'
-      ],
-      legal: 'Protocolo de Desescalada y Mediación Formativa.'
-    },
-    40: {
-      icon: '🔇',
-      title: 'Silencio Temporal Corto (Time-Out 1 Hora)',
-      sub: '40 PTS | Bloqueo temporal de escritura en todo el servidor',
-      action: 'Time-Out oficial en Discord por 1 hora completa. Se restringe el envío de mensajes, audios y reacciones.',
-      why: 'Cortar de raíz dinámicas de acoso, insultos continuos o discusiones fuera de control.',
-      preventions: [
-        'Aprovecha la hora de pausa para calmarte y revisar las directrices.',
-        'No envíes mensajes privados a otros usuarios para continuar la disputa.'
-      ],
-      legal: 'Discord Community Guidelines (Acoso e Intimidación).'
-    },
-    50: {
-      icon: '🔇',
-      title: 'Silencio Temporal Medio (Time-Out 12 Horas)',
-      sub: '50 PTS | Sanción disciplinaria por reincidencia',
-      action: 'Silencio obligatorio de 12 horas continuas con supervisión directa del equipo de moderación.',
-      why: 'Sancionar conductas de hostigamiento o amenazas verbales reiteradas.',
-      preventions: [
-        'El respeto mutuo es el pilar de la comunidad.'
-      ],
-      legal: 'Código Penal Federal México Art. 282 / Ley 21.459 Chile.'
-    },
-    60: {
-      icon: '🔇',
-      title: 'Silencio Prolongado (Time-Out 24 Horas)',
-      sub: '60 PTS | Bloqueo preventivo de 1 día entero',
-      action: 'Bloqueo total por 24 horas y reporte interno sobre conductas de riesgo (phishing sospechoso o acoso severo).',
-      why: 'Proteger a la comunidad frente a riesgos de seguridad digital.',
-      preventions: [
-        'Nunca compartas enlaces no verificados ni promociones dudosas de Nitro.'
-      ],
-      legal: 'Ley 1273 Colombia / Ley 26.388 Argentina (Ciberdelitos).'
-    },
-    70: {
-      icon: '🔇',
-      title: 'Aislamiento Disciplinario (Time-Out 72 Horas)',
-      sub: '70 PTS | Bloqueo extendido por faltas graves',
-      action: 'Aislamiento disciplinario total por 3 días continuos ante acumulación crítica de sanciones.',
-      why: 'Garantizar un espacio seguro y erradicar dinámicas tóxicas persistentes.',
-      preventions: [
-        'Cumple el período sin intentar eludir la medida con multicuentas.'
-      ],
-      legal: 'Discord Safety Standards.'
-    },
-    80: {
-      icon: '👢',
-      title: 'Expulsión Directa del Servidor (Kick Disciplinario)',
-      sub: '80 PTS | Remoción del servidor con historial retenido',
-      action: 'El usuario es expulsado del servidor. Podrá reincorporarse mediante invitación válida en libertad condicional.',
-      why: 'Sancionar discursos de odio o desobediencia sistemática al reglamento.',
-      preventions: [
-        'Al reingresar, cualquier falta escalará directamente al veto definitivo.'
-      ],
-      legal: 'Discord Hate Speech Policy.'
-    },
-    90: {
-      icon: '🔨',
-      title: 'Baneo Temporal Severo (Ban por 30 Días)',
-      sub: '90 PTS | Veto total de acceso por 1 mes',
-      action: 'Baneo completo durante 30 días continuos. Última oportunidad antes del veto definitivo.',
-      why: 'Faltas muy graves reiteradas que comprometen la armonía de la comunidad.',
-      preventions: [
-        'No ingreses con cuentas alternativas durante el mes de veto.'
-      ],
-      legal: 'Términos de Servicio de Discord.'
-    },
-    100: {
-      icon: '🚨',
-      title: 'Baneo Permanente Definitivo & Reporte Formal',
-      sub: '100 PTS | Expulsión irreversible y veto de cuenta e IP',
-      action: 'Baneo permanente irrevocable de la cuenta e IP. En casos de Doxxing, malware, CSAM o delitos informáticos, se emite denuncia ante Discord Trust & Safety.',
-      why: 'Tolerancia cero absoluta ante delitos digitales, vulneración de menores y ataques informáticos.',
-      preventions: [
-        'El Doxxing, el malware y el acoso a menores conllevan 100 PTS directos.'
-      ],
-      legal: 'Ley Olimpia México / Convenio de Budapest ETS 185 / Reporte NCMEC.'
-    }
+    0: { icon: '🟢', title: 'Historial Ejemplar · Estado Seguro', sub: '0 PTS | Sin advertencias activas', action: 'Confianza plena. Orientación amigable ante equivocaciones inocentes.', why: 'Presunción de buena fe.', preventions: ['Participa con respeto.', 'Consulta al Staff si tienes dudas.'], legal: 'Directrices de Convivencia de Discord.' },
+    10: { icon: '🟢', title: 'Aviso Formativo Inicial (Strike 1)', sub: '10 PTS | Advertencia preventiva', action: 'Retiro del mensaje infractor y orientación privada.', why: 'Corregir a tiempo spam involuntario o desvío.', preventions: ['Verifica el canal adecuado.'], legal: 'Discord Guidelines.' },
+    20: { icon: '🟡', title: 'Aviso Disciplinario (Strike 2)', sub: '20 PTS | Advertencia activa', action: 'Registro disciplinario; faltas posteriores activan Time-Out.', why: 'Evitar lenguaje hostil.', preventions: ['Modera tu vocabulario.'], legal: 'Términos de Discord.' },
+    30: { icon: '🟡', title: 'Advertencia Crítica (Strike 3)', sub: '30 PTS | Último aviso formal', action: 'Llamada de atención formal del Staff.', why: 'Desacato reiterado.', preventions: ['Respeta las peticiones del Staff.'], legal: 'Protocolo de Desescalada.' },
+    40: { icon: '🔇', title: 'Silencio Temporal Corto (1 Hora)', sub: '40 PTS | Time-Out en todo el servidor', action: 'Time-Out de 1 hora en canales de texto y voz.', why: 'Detener hostigamiento o insultos.', preventions: ['Toma una pausa para serenarte.'], legal: 'Directrices de Acoso.' },
+    50: { icon: '🔇', title: 'Silencio Temporal Medio (12 Horas)', sub: '50 PTS | Sanción por reincidencia', action: 'Silencio de 12 horas con supervisión.', why: 'Hostigamiento persistente.', preventions: ['Respeta a la comunidad.'], legal: 'Código Penal.' },
+    60: { icon: '🔇', title: 'Silencio Prolongado (24 Horas)', sub: '60 PTS | Bloqueo por 1 día', action: 'Bloqueo de 24 horas y reporte interno.', why: 'Links sospechosos o ataques.', preventions: ['No compartas enlaces no verificados.'], legal: 'Leyes de Delitos Informáticos.' },
+    70: { icon: '🔇', title: 'Aislamiento Disciplinario (72 Horas)', sub: '70 PTS | Bloqueo por 3 días', action: 'Aislamiento total por 3 días.', why: 'Acumulación crítica de faltas.', preventions: ['No intentes evadir con multicuentas.'], legal: 'Estándares de Seguridad.' },
+    80: { icon: '👢', title: 'Expulsión Directa (Kick Disciplinario)', sub: '80 PTS | Remoción del servidor', action: 'Expulsión del servidor con historial retenido.', why: 'Discursos de odio o sabotaje.', preventions: ['Cualquier falta posterior escalará a ban.'], legal: 'Hate Speech Policy.' },
+    90: { icon: '🔨', title: 'Baneo Temporal (30 Días)', sub: '90 PTS | Veto por 1 mes', action: 'Baneo completo durante 30 días.', why: 'Faltas graves sistemáticas.', preventions: ['Respeta el período de sanción.'], legal: 'Términos de Servicio.' },
+    100: { icon: '🚨', title: 'Baneo Permanente & Reporte Formal', sub: '100 PTS | Veto irreversible de cuenta e IP', action: 'Baneo permanente y reporte ante Discord Trust & Safety.', why: 'Tolerancia cero ante Doxxing, malware o CSAM.', preventions: ['Doxxing = expulsión inmediata.'], legal: 'Ley Olimpia / Convenio de Budapest.' }
   },
-
-  lastScore: 0,
   currentScore: 0,
-
   init() {
     const range = document.getElementById('sim-range');
     const milestonePills = document.querySelectorAll('.sim-milestone-pill');
@@ -4433,90 +5016,68 @@ const SimulatorModule = {
     const infCards = document.querySelectorAll('.inf-card');
     const copySummaryBtn = document.getElementById('copy-sanction-summary-btn');
     const printDocBtn = document.getElementById('print-doc-btn');
+    const factorReinc = document.getElementById('factor-reincidencia');
+    const factorInten = document.getElementById('factor-intencion');
+    const factorCoop = document.getElementById('factor-cooperacion');
 
-    const factorReincidencia = document.getElementById('factor-reincidencia');
-    const factorIntencion = document.getElementById('factor-intencion');
-    const factorCooperacion = document.getElementById('factor-cooperacion');
-
-    const recalculateTotal = () => {
+    const recalculate = () => {
       let base = 0;
-      document.querySelectorAll('.inf-card.selected').forEach(c => {
-        base += parseInt(c.dataset.pts || '0', 10);
-      });
-      const reinc = parseInt(factorReincidencia?.value || '0', 10);
-      const inten = parseInt(factorIntencion?.value || '0', 10);
-      const coop = parseInt(factorCooperacion?.value || '0', 10);
-
-      let total = base + reinc + inten + coop;
-      if (total < 0) total = 0;
-      if (total > 100) total = 100;
-      total = Math.round(total / 10) * 10;
-
+      document.querySelectorAll('.inf-card.selected').forEach(c => base += parseInt(c.dataset.pts || '0', 10));
+      const reinc = parseInt(factorReinc?.value || '0', 10);
+      const inten = parseInt(factorInten?.value || '0', 10);
+      const coop = parseInt(factorCoop?.value || '0', 10);
+      let total = Math.min(100, Math.max(0, Math.round((base + reinc + inten + coop) / 10) * 10));
       if (range) range.value = total;
       this.update(total, true);
     };
 
-    [factorReincidencia, factorIntencion, factorCooperacion].forEach(select => {
-      if (select) select.addEventListener('change', recalculateTotal);
-    });
+    [factorReinc, factorInten, factorCoop].forEach(s => s && s.addEventListener('change', recalculate));
 
     if (range) {
       range.addEventListener('input', (e) => {
-        const val = parseInt(e.target.value, 10);
-        this.update(val, true);
+        this.update(parseInt(e.target.value, 10), true);
         infCards.forEach(c => c.classList.remove('selected'));
       });
     }
 
-    milestonePills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        const val = parseInt(pill.dataset.val || '0', 10);
+    milestonePills.forEach(p => {
+      p.addEventListener('click', () => {
+        const val = parseInt(p.dataset.val || '0', 10);
         if (range) range.value = val;
-        AudioEngine.playCrystal([440 + val * 5, 554 + val * 5]);
-        this.update(val);
-        infCards.forEach(c => c.classList.remove('selected'));
-      });
-    });
-
-    presetBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const val = parseInt(btn.dataset.preset || '0', 10);
-        if (range) range.value = val;
-        AudioEngine.playCrystal([523.25, 659.25 + val * 4, 783.99 + val * 4]);
         this.update(val, true);
         infCards.forEach(c => c.classList.remove('selected'));
       });
     });
 
-    infCards.forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('selected');
-        AudioEngine.playSoftTap(card.classList.contains('selected') ? 640 : 340, 0.045);
-        recalculateTotal();
+    presetBtns.forEach(b => {
+      b.addEventListener('click', () => {
+        const val = parseInt(b.dataset.preset || '0', 10);
+        if (range) range.value = val;
+        this.update(val, true);
+        infCards.forEach(c => c.classList.remove('selected'));
+      });
+    });
+
+    infCards.forEach(c => {
+      c.addEventListener('click', () => {
+        c.classList.toggle('selected');
+        recalculate();
       });
     });
 
     if (copySummaryBtn) {
       copySummaryBtn.addEventListener('click', () => {
         const tier = this.tiers[this.currentScore] || this.tiers[0];
-        const summary = `📋 **INFORME DE MODERACIÓN · UMAS COMMUNITY**\n────────────────────\n> **Puntaje Evaluado:** ${this.currentScore}/100 PTS\n> **Calificación:** ${tier.title}\n> **Medida Disciplinaria:** ${tier.action}\n> **Justificación:** ${tier.why}\n> **Base Normativa:** ${tier.legal}\n────────────────────\n📜 *Verificación en vivo:* https://rules-web.onrender.com/#fase-5`;
-
-        Utils.copyToClipboard(
-          summary,
-          () => {
-            AudioEngine.playCrystal([784, 1046.5]);
-            Utils.showToast('Informe de moderación copiado para Discord', '📋');
-          },
-          () => Utils.showToast('Error al copiar informe', '⚠️')
-        );
+        const summary = `📋 **INFORME DE MODERACIÓN · UMAS COMMUNITY**\n────────────────────\n> **Puntaje Evaluado:** ${this.currentScore}/100 PTS\n> **Calificación:** ${tier.title}\n> **Medida Disciplinaria:** ${tier.action}\n> **Justificación:** ${tier.why}\n> **Base Normativa:** ${tier.legal}\n────────────────────\n📜 *Verificación:* https://rules-web.onrender.com/#fase-5`;
+        Utils.copyToClipboard(summary, () => {
+          AudioEngine.playCrystal([784, 1046.5]);
+          Utils.showToast('Informe copiado para Discord', '📋');
+        });
       });
     }
 
     if (printDocBtn) {
-      printDocBtn.addEventListener('click', () => {
-        AudioEngine.playSoftTap(600, 0.05);
-        window.print();
-      });
+      printDocBtn.addEventListener('click', () => window.print());
     }
 
     this.update(0);
@@ -4525,7 +5086,6 @@ const SimulatorModule = {
   update(val, playSound = false) {
     const score = Math.round(val / 10) * 10;
     this.currentScore = score;
-
     const scoreDisplay = document.getElementById('sim-score-display');
     const barFill = document.getElementById('sim-bar-fill');
     const icon = document.getElementById('sim-icon');
@@ -4539,68 +5099,44 @@ const SimulatorModule = {
 
     if (scoreDisplay) {
       scoreDisplay.textContent = score;
-      if (score >= 80) scoreDisplay.style.color = 'var(--red-lt)';
-      else if (score >= 40) scoreDisplay.style.color = 'var(--gold-lt)';
-      else scoreDisplay.style.color = 'var(--mint)';
+      scoreDisplay.style.color = score >= 80 ? 'var(--red-lt)' : score >= 40 ? 'var(--gold-lt)' : 'var(--mint)';
     }
-
     if (barFill) barFill.style.width = score + '%';
 
-    milestonePills.forEach(p => {
-      p.classList.toggle('active', parseInt(p.dataset.val || '0', 10) === score);
-    });
+    milestonePills.forEach(p => p.classList.toggle('active', parseInt(p.dataset.val || '0', 10) === score));
 
     const tier = this.tiers[score] || this.tiers[0];
     if (icon) icon.textContent = tier.icon;
     if (title) title.textContent = tier.title;
     if (sub) sub.textContent = tier.sub;
     if (action) action.textContent = tier.action;
-    if (why) why.textContent = tier.why || '';
+    if (why) why.textContent = tier.why;
+    if (prevList) prevList.innerHTML = tier.preventions.map(p => `<li>${p}</li>`).join('');
+    if (legal) legal.textContent = tier.legal;
 
-    if (prevList) {
-      prevList.innerHTML = tier.preventions.map(p => `<li>${p}</li>`).join('');
-    }
-
-    if (legal) {
-      legal.innerHTML = tier.legal || '';
-    }
-
-    if (playSound && score !== this.lastScore) {
-      AudioEngine.playSoftTap(360 + score * 6, 0.04);
-      this.lastScore = score;
-    }
+    if (playSound) AudioEngine.playSoftTap(360 + score * 5, 0.035);
   }
 };
 
 // ==========================================
-// 10. MODULE: LAWS (Country Selector)
+// 15. LAWS, FAQ & BACKGROUND
 // ==========================================
 const LawsModule = {
   init() {
     const countryButtons = document.querySelectorAll('.country-btn');
     const legalItems = document.querySelectorAll('.legal-item');
+    const saved = Storage.get(APP_CONFIG.storageKeys.country, 'all');
 
-    const savedCountry = Storage.get(APP_CONFIG.storageKeys.country, 'all');
-
-    const applyCountry = (targetCountry) => {
-      countryButtons.forEach(b => {
-        b.classList.toggle('active', b.dataset.country === targetCountry);
-      });
-
-      legalItems.forEach(item => {
-        if (targetCountry === 'all' || item.dataset.c === targetCountry) {
-          item.style.display = 'flex';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+    const applyCountry = (c) => {
+      countryButtons.forEach(b => b.classList.toggle('active', b.dataset.country === c));
+      legalItems.forEach(i => i.style.display = (c === 'all' || i.dataset.c === c) ? 'flex' : 'none');
     };
 
-    applyCountry(savedCountry);
+    applyCountry(saved);
 
-    countryButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const country = btn.dataset.country || 'all';
+    countryButtons.forEach(b => {
+      b.addEventListener('click', () => {
+        const country = b.dataset.country || 'all';
         Storage.set(APP_CONFIG.storageKeys.country, country);
         applyCountry(country);
         AudioEngine.playSoftTap(540, 0.04);
@@ -4609,9 +5145,6 @@ const LawsModule = {
   }
 };
 
-// ==========================================
-// 11. MODULE: FAQ (Accordion)
-// ==========================================
 const FAQModule = {
   init() {
     const faqItems = document.querySelectorAll('.faq-item');
@@ -4635,38 +5168,22 @@ const FAQModule = {
   }
 };
 
-// ==========================================
-// 12. MODULE: BACKGROUND & MEDIA RESILIENCE
-// ==========================================
 const BackgroundModule = {
   init() {
     const canvas = document.getElementById('particles-canvas');
     const heroVid = document.getElementById('hero-video');
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const isSaveData = Boolean(navigator.connection && navigator.connection.saveData);
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (heroVid) {
-      if (isSaveData || prefersReducedMotion) {
-        heroVid.pause();
-        heroVid.style.display = 'none';
-      } else {
-        heroVid.muted = true;
-        heroVid.play().catch(() => {
-          heroVid.style.opacity = '0.3';
-        });
-        heroVid.addEventListener('error', () => {
-          heroVid.style.display = 'none';
-        });
-      }
+    if (heroVid && prefersReduced) {
+      heroVid.pause();
+      heroVid.style.display = 'none';
     }
 
-    if (canvas && !prefersReducedMotion) {
+    if (canvas && !prefersReduced) {
       const ctx = canvas.getContext('2d');
       let particles = [];
       const isMobile = window.innerWidth < 768;
-      const maxParticles = isMobile ? 12 : 32;
-      let animId = null;
+      const count = isMobile ? 12 : 28;
 
       function resize() {
         canvas.width = window.innerWidth;
@@ -4675,86 +5192,48 @@ const BackgroundModule = {
       resize();
       window.addEventListener('resize', resize, { passive: true });
 
-      class Particle {
+      class Leaf {
         constructor() { this.reset(true); }
         reset(initial = false) {
           this.x = Math.random() * canvas.width;
           this.y = initial ? Math.random() * canvas.height : -20;
-          this.size = Math.random() * 5 + (isMobile ? 2 : 3);
-          this.speedY = Math.random() * 0.5 + 0.2;
-          this.speedX = Math.sin(Math.random() * Math.PI) * 0.3 - 0.15;
+          this.size = Math.random() * 4 + 2;
+          this.speedY = Math.random() * 0.4 + 0.2;
           this.rot = Math.random() * 360;
-          this.rotSpeed = (Math.random() - 0.5) * 0.8;
-          this.opacity = Math.random() * 0.35 + 0.15;
-          this.type = Math.random() > 0.4 ? 'leaf' : 'spore';
+          this.opacity = Math.random() * 0.3 + 0.15;
         }
         update() {
           this.y += this.speedY;
-          this.x += Math.sin(this.y * 0.01) * 0.3 + this.speedX;
-          this.rot += this.rotSpeed;
-          if (this.y > canvas.height + 25 || this.x < -30 || this.x > canvas.width + 30) {
-            this.reset();
-          }
+          this.rot += 0.4;
+          if (this.y > canvas.height + 25) this.reset();
         }
         draw() {
           ctx.save();
           ctx.translate(this.x, this.y);
           ctx.rotate((this.rot * Math.PI) / 180);
           ctx.globalAlpha = this.opacity;
-          if (this.type === 'leaf') {
-            ctx.fillStyle = '#34d399';
-            ctx.beginPath();
-            ctx.ellipse(0, 0, this.size, this.size * 0.48, 0, 0, Math.PI * 2);
-            ctx.fill();
-          } else {
-            ctx.fillStyle = '#fbbf24';
-            ctx.beginPath();
-            ctx.arc(0, 0, this.size * 0.35, 0, Math.PI * 2);
-            ctx.fill();
-          }
+          ctx.fillStyle = '#34d399';
+          ctx.beginPath();
+          ctx.ellipse(0, 0, this.size, this.size * 0.5, 0, 0, Math.PI * 2);
+          ctx.fill();
           ctx.restore();
         }
       }
 
-      for (let i = 0; i < maxParticles; i++) particles.push(new Particle());
+      for (let i = 0; i < count; i++) particles.push(new Leaf());
 
       function loop() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < particles.length; i++) {
-          particles[i].update();
-          particles[i].draw();
-        }
-        animId = requestAnimationFrame(loop);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(loop);
       }
       loop();
-
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-          if (animId) cancelAnimationFrame(animId);
-        } else {
-          loop();
-        }
-      });
     }
   }
 };
 
-// ==========================================
-// 13. MODULE: DISCORD LINKS & NAVIGATION
-// ==========================================
 const DiscordLinksModule = {
   init() {
-    const appealBtn = document.getElementById('appeal-main-action-btn');
-    const reportConductBtn = document.getElementById('report-conduct-btn');
-    const reportAppealBtn = document.getElementById('report-appeal-btn');
-    const reportStaffBtn = document.getElementById('report-staff-btn');
-
-    if (appealBtn) appealBtn.href = APP_CONFIG.discord.appealChannel;
-    if (reportConductBtn) reportConductBtn.href = APP_CONFIG.discord.ticketChannel;
-    if (reportAppealBtn) reportAppealBtn.href = APP_CONFIG.discord.appealChannel;
-    if (reportStaffBtn) reportStaffBtn.href = APP_CONFIG.discord.staffChannel;
-
-    // Enter Button Experience
     const enterScreen = document.getElementById('enter-screen');
     const enterBtn = document.getElementById('enter-btn');
     const mainNav = document.getElementById('main-nav');
@@ -4765,98 +5244,51 @@ const DiscordLinksModule = {
       enterBtn.addEventListener('click', () => {
         AudioEngine.resumeContext();
         AudioEngine.playCrystal([523.25, 659.25, 783.99, 1046.5]);
-
         enterScreen.classList.add('dismissed');
         if (mainNav) mainNav.classList.add('nav-visible');
-
         if (bgAudio && AudioEngine.enabled) {
           bgAudio.volume = 0.2;
           bgAudio.play().catch(() => {});
         }
-
-        setTimeout(() => {
-          if (heroOverlay) heroOverlay.classList.add('start-anim');
-        }, 700);
-
-        setTimeout(() => {
-          enterScreen.style.display = 'none';
-        }, 850);
+        setTimeout(() => heroOverlay && heroOverlay.classList.add('start-anim'), 700);
+        setTimeout(() => enterScreen.style.display = 'none', 850);
       });
     }
 
-    // Scroll, Navbar Highlight & Reading Progress
-    const navScrollLinks = document.querySelectorAll('.nav-links-scroll a');
-    const navScrollContainer = document.getElementById('nav-links-scroll');
-    const phaseSections = document.querySelectorAll('[id^="fase-"]');
     const readingProgress = document.getElementById('nav-reading-progress');
     const scrollTopBtn = document.getElementById('scroll-top-btn');
 
-    function onScroll() {
+    window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progressPercent = docHeight > 0 ? Math.min(100, Math.max(0, (scrollY / docHeight) * 100)) : 0;
-
-      if (readingProgress) readingProgress.style.width = progressPercent + '%';
-
-      if (scrollTopBtn) {
-        scrollTopBtn.classList.toggle('visible', scrollY > 400);
-      }
-
-      let currentId = '';
-      const triggerOffset = window.innerHeight * 0.35;
-
-      phaseSections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if (top <= triggerOffset) {
-          currentId = sec.getAttribute('id') || '';
-        }
-      });
-
-      navScrollLinks.forEach(link => {
-        const isTarget = currentId && link.getAttribute('href') === '#' + currentId;
-        if (isTarget) {
-          if (!link.classList.contains('active')) {
-            link.classList.add('active');
-            if (navScrollContainer && window.innerWidth < 768) {
-              link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            }
-          }
-        } else {
-          link.classList.remove('active');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll, { passive: true });
-
-    navScrollLinks.forEach(link => {
-      link.addEventListener('click', () => AudioEngine.playSoftTap(460, 0.04));
-    });
+      if (readingProgress) readingProgress.style.width = docHeight > 0 ? (scrollY / docHeight) * 100 + '%' : '0%';
+      if (scrollTopBtn) scrollTopBtn.classList.toggle('visible', scrollY > 400);
+    }, { passive: true });
 
     if (scrollTopBtn) {
-      scrollTopBtn.addEventListener('click', () => {
-        AudioEngine.playSoftTap(600, 0.05);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+      scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     }
   }
 };
 
 // ==========================================
-// 14. CENTRAL BOOTSTRAP (DOMContentLoaded)
+// 16. CENTRAL BOOTSTRAP (DOMContentLoaded)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
   AudioEngine.init();
+  I18nModule.init();
+  PwaModule.init();
   SearchEngine.init();
   CategoriesModule.init();
   RulesModule.init();
   SimulatorModule.init();
+  QuizModule.init();
+  StaffModule.init();
   LawsModule.init();
   FAQModule.init();
   BackgroundModule.init();
   DiscordLinksModule.init();
-  console.log('🌿 Umas Community Rules Web 2.0 Engine online and responsive.');
+  console.log('🌿 Umas Community Rules Web 3.0 Engine online (i18n, Quiz, Staff, PWA).');
 });
 </script>
 

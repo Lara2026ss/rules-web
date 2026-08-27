@@ -1,10 +1,16 @@
 # 📝 CHANGELOG — UMAS COMMUNITY RULES WEB
 
-## [2.1.0] - 2026-08-26
+## [3.0.0] - 2026-08-26
 
-### 🚀 Mejoras Críticas en Buscador y UX
-- **Lista de Resultados Interactiva en Modal:** El buscador ahora renderiza una lista de tarjetas directamente dentro del modal con tag, severidad, título, snippet y botón de acción.
-- **Navegación por Teclado Command Palette:** Soporte completo para `ArrowDown`, `ArrowUp`, `Enter` y `Escape` dentro del modal.
-- **Flujo Completo de Navegación:** Al seleccionar un resultado, el modal se cierra, realiza scroll suave hacia la regla, la expande automáticamente y le aplica un resplandor esmeralda durante 3.8 segundos.
-- **Panel de Categorías Estructurado:** Rediseño del panel de categorías con conteo dinámico en tiempo real (`Mostrando X de 20 normas`) y visualización responsive sin recortes.
-- **Alineación de Metadatos:** Cabeceras de tarjetas normalizadas con `#Tag`, severidad, categoría, puntos, botón de copiado y botón de detalles.
+### 🚀 Novedades Principales
+- **Panel de Moderación para Staff & API Segura (v2.2):** Modal exclusivo para moderadores conectado al endpoint protegido `/api/moderation/report` con validación estricta, registro de auditoría y despacho de embeds a Discord vía Webhook seguro en backend.
+- **Test de Convivencia y Onboarding (v2.3):** Cuestionario interactivo de 5 preguntas situacionales con feedback pedagógico inmediato y emisión de Constancia Comunitaria Oficial.
+- **Soporte Multilingüe i18n (v2.4):** Selector de idioma en tiempo real (`🇪🇸 ES`, `🇺🇸 EN`, `🇧🇷 PT`) sin recarga de página y persistencia en `localStorage`.
+- **PWA Offline y Service Worker (v2.5):** Capacidad de funcionamiento 100% offline mediante `sw.js` con estrategia Stale-While-Revalidate e indicador visual de conectividad.
+- **Métricas Comunitarias y Privacidad (v3.0):** API agregada de eventos (`/api/events`, `/api/metrics/summary`) para conocer tendencias de consulta sin recopilar datos personales.
+
+---
+
+## [2.1.0] - 2026-08-26
+- Buscador interactivo Command Palette con lista dinámica de resultados dentro del modal y navegación por teclado (`↑`/`↓`/`Enter`).
+- Panel temático de categorías rediseñado con conteos reactivos en tiempo real.
