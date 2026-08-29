@@ -88,7 +88,10 @@ const VALID_RULES = {
   'M1': { title: 'Mediación Formativa y Desescalada de Conflictos', category: 'moderacion', maxPts: 0, defaultLev: 1 },
   'M2': { title: 'Imparcialidad y Cero Conflicto de Interés', category: 'moderacion', maxPts: 0, defaultLev: 1 },
   'M3': { title: 'Preservación de Evidencias y Auditoría de Sanciones', category: 'moderacion', maxPts: 0, defaultLev: 1 },
-  'M4': { title: 'Supervisión y Canal para Reportar Moderación', category: 'moderacion', maxPts: 0, defaultLev: 1 }
+  'M4': { title: 'Supervisión y Canal para Reportar Moderación', category: 'moderacion', maxPts: 0, defaultLev: 1 },
+  'D1': { title: 'Presunción de Buena Fe y Revisión Imparcial', category: 'comunidad', maxPts: 0, defaultLev: 1 },
+  'D2': { title: 'Privacidad Inviolable y No Intromisión', category: 'seguridad', maxPts: 0, defaultLev: 1 },
+  'D3': { title: 'Derecho a Petición y Sugerencias Comunitarias', category: 'comunidad', maxPts: 0, defaultLev: 1 }
 };
 
 // ── API: Health Check ──
