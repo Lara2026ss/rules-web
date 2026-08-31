@@ -2554,7 +2554,7 @@
     </h1>
     <div class="enter-sub">— Protocolo de Convivencia, Mediación Formativa, Matriz Sancional & Amparo Legal —</div>
     <div class="enter-btn-wrapper">
-      <button class="enter-btn" id="enter-btn" type="button">
+      <button class="enter-btn" id="enter-btn" type="button" onclick="if(window.EnterScreenModule) window.EnterScreenModule.handleEnter(); else { const s=document.getElementById('enter-screen'); if(s){s.style.display='none';} document.getElementById('main-nav')?.classList.add('nav-visible'); }">
         <span>Entrar al Reglamento</span> ➔
       </button>
     </div>
@@ -2737,27 +2737,34 @@
 
             <div class="rule-expandable-body" id="rule-body-01">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -2786,27 +2793,34 @@
 
             <div class="rule-expandable-body" id="rule-body-02">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -2835,27 +2849,34 @@
 
             <div class="rule-expandable-body" id="rule-body-03">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -2884,27 +2905,34 @@
 
             <div class="rule-expandable-body" id="rule-body-04">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -2933,27 +2961,34 @@
 
             <div class="rule-expandable-body" id="rule-body-05">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3011,27 +3046,34 @@
 
             <div class="rule-expandable-body" id="rule-body-06">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3060,27 +3102,34 @@
 
             <div class="rule-expandable-body" id="rule-body-07">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3109,27 +3158,34 @@
 
             <div class="rule-expandable-body" id="rule-body-08">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3158,27 +3214,34 @@
 
             <div class="rule-expandable-body" id="rule-body-09">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3207,27 +3270,34 @@
 
             <div class="rule-expandable-body" id="rule-body-10">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3280,27 +3350,34 @@
 
             <div class="rule-expandable-body" id="rule-body-11">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3329,27 +3406,34 @@
 
             <div class="rule-expandable-body" id="rule-body-12">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3378,27 +3462,34 @@
 
             <div class="rule-expandable-body" id="rule-body-13">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3427,27 +3518,34 @@
 
             <div class="rule-expandable-body" id="rule-body-14">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3476,27 +3574,34 @@
 
             <div class="rule-expandable-body" id="rule-body-15">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3554,27 +3659,34 @@
 
             <div class="rule-expandable-body" id="rule-body-M1">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3603,27 +3715,34 @@
 
             <div class="rule-expandable-body" id="rule-body-M2">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3652,27 +3771,34 @@
 
             <div class="rule-expandable-body" id="rule-body-M3">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -3701,27 +3827,34 @@
 
             <div class="rule-expandable-body" id="rule-body-M4">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -4053,27 +4186,34 @@
 
             <div class="rule-expandable-body" id="rule-body-D1">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -4102,27 +4242,34 @@
 
             <div class="rule-expandable-body" id="rule-body-D2">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -4151,27 +4298,34 @@
 
             <div class="rule-expandable-body" id="rule-body-D3">
               <div class="rule-section-block">
-                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-heading danger"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-heading good"></div>
                 <div class="rule-section-desc"></div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
+                <div class="rule-section-heading"></div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label">✅ CORRECTO</div>
+                    <div class="rule-example-label"></div>
                   </div>
                 </div>
+              </div>
+              <div class="rule-section-block">
+                <div class="rule-section-heading sanc"></div>
+                <div class="rule-section-desc"></div>
+              </div>
+            </div>
+          </div>
               </div>
               <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
@@ -5948,46 +6102,66 @@ const CardsEffectModule = {
 // ENTER SCREEN MODULE
 // ==========================================
 const EnterScreenModule = {
-  init() {
+  handleEnter() {
     const enterScreen = document.getElementById('enter-screen');
-    const enterBtn = document.getElementById('enter-btn');
     const mainNav = document.getElementById('main-nav');
     const heroOverlay = document.getElementById('hero-text-overlay');
     const bgAudio = document.getElementById('bg-audio');
 
-    const handleEnter = () => {
+    try {
       AudioEngine.resumeContext();
       AudioEngine.playCrystal([523.25, 659.25, 783.99, 1046.5]);
-      document.body.classList.remove('modal-open');
-      if (enterScreen) {
-        enterScreen.classList.add('dismissed');
-      }
-      if (mainNav) {
-        mainNav.classList.add('nav-visible');
-      }
+    } catch (e) {}
+
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+
+    if (enterScreen) {
+      enterScreen.style.pointerEvents = 'none';
+      enterScreen.classList.add('dismissed');
+      enterScreen.style.opacity = '0';
+    }
+
+    if (mainNav) {
+      mainNav.classList.add('nav-visible');
+    }
+
+    try {
       if (bgAudio && AudioEngine.enabled) {
         bgAudio.volume = 0.2;
         bgAudio.play().catch(() => {});
       }
-      setTimeout(() => {
-        if (heroOverlay) heroOverlay.classList.add('start-anim');
-      }, 500);
-      setTimeout(() => {
-        if (enterScreen) enterScreen.style.display = 'none';
-      }, 750);
-    };
+    } catch (e) {}
 
+    setTimeout(() => {
+      if (heroOverlay) heroOverlay.classList.add('start-anim');
+    }, 150);
+
+    setTimeout(() => {
+      if (enterScreen) {
+        enterScreen.style.display = 'none';
+        enterScreen.style.visibility = 'hidden';
+      }
+    }, 350);
+  },
+
+  init() {
+    const enterBtn = document.getElementById('enter-btn');
     if (enterBtn) {
-      enterBtn.addEventListener('click', handleEnter);
+      enterBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.handleEnter();
+      });
       enterBtn.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          handleEnter();
+          this.handleEnter();
         }
       });
     }
   }
 };
+window.EnterScreenModule = EnterScreenModule;
 
 const DiscordLinksModule = {
   init() {
