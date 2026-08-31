@@ -61,10 +61,10 @@
       --purple: #c084fc;
       --purple-lt: #e879f9;
       --emerald-lt: #f472b6;
-      --emerald-dark: #064e3b;
-      --mint: #6ee7b7;
-      --leaf: #22c55e;
-      --forest: #0b341f;
+      --emerald-dark: #3b0726;
+      --mint: #f472b6;
+      --leaf: #c084fc;
+      --forest: #2a071d;
 
       --gold: #f59e0b;
       --gold-lt: #fbbf24;
@@ -276,7 +276,7 @@
     }
 
     .enter-logo .logo-main span {
-      background: linear-gradient(135deg, #6ee7b7 0%, #f472b6 45%, #fbbf24 100%);
+      background: linear-gradient(135deg, #f472b6 0%, #f472b6 45%, #fbbf24 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -593,10 +593,19 @@
     }
 
     .hero-title .accent {
-      background: linear-gradient(135deg, #a7f3d0 0%, #f472b6 45%, #fbbf24 100%);
+      background: linear-gradient(135deg, #f472b6 0%, #c084fc 33%, #e879f9 66%, #f472b6 100%);
+      background-size: 200% auto;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       background-clip: text;
+      color: transparent;
+      animation: title-gradient-shine 6s linear infinite;
+      filter: drop-shadow(0 0 25px rgba(244, 114, 182, 0.5));
+    }
+
+    @keyframes title-gradient-shine {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .hero-desc {
@@ -1068,8 +1077,8 @@
       gap: 4px;
       letter-spacing: 0.04em;
     }
-    .r-severity-badge.lev-1 { color: #86efac; background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.25); }
-    .r-severity-badge.lev-2 { color: #6ee7b7; background: rgba(110, 231, 183, 0.12); border: 1px solid rgba(110, 231, 183, 0.25); }
+    .r-severity-badge.lev-1 { color: #fbcfe8; background: rgba(244, 114, 182, 0.12); border: 1px solid rgba(244, 114, 182, 0.25); }
+    .r-severity-badge.lev-2 { color: #f472b6; background: rgba(110, 231, 183, 0.12); border: 1px solid rgba(110, 231, 183, 0.25); }
     .r-severity-badge.lev-3 { color: #fde047; background: rgba(234, 179, 8, 0.12); border: 1px solid rgba(234, 179, 8, 0.25); }
     .r-severity-badge.lev-4 { color: #fdba74; background: rgba(249, 115, 22, 0.12); border: 1px solid rgba(249, 115, 22, 0.25); }
     .r-severity-badge.lev-5 { color: #fca5a5; background: rgba(239, 68, 68, 0.16); border: 1px solid rgba(239, 68, 68, 0.35); }
@@ -1187,7 +1196,7 @@
       gap: 6px;
     }
     .rule-section-heading.danger { color: var(--red-lt); }
-    .rule-section-heading.good { color: #86efac; }
+    .rule-section-heading.good { color: #fbcfe8; }
     .rule-section-heading.sanc { color: var(--gold-lt); }
 
     .rule-section-desc {
@@ -1215,8 +1224,8 @@
       color: #fecaca;
     }
     .rule-example-card.good {
-      background: rgba(34, 197, 94, 0.09);
-      border: 1px solid rgba(34, 197, 94, 0.25);
+      background: rgba(244, 114, 182, 0.09);
+      border: 1px solid rgba(244, 114, 182, 0.25);
       color: #dcfce7;
     }
 
@@ -1230,7 +1239,7 @@
       margin-bottom: 4px;
     }
     .rule-example-card.bad .rule-example-label { color: var(--red-lt); }
-    .rule-example-card.good .rule-example-label { color: #86efac; }
+    .rule-example-card.good .rule-example-label { color: #fbcfe8; }
 
     /* ─── Callouts ─── */
     .callout {
@@ -2266,7 +2275,7 @@
         color: #000000 !important;
       }
       .hero-title {
-        color: #064e3b !important;
+        color: #3b0726 !important;
         -webkit-text-fill-color: initial !important;
         font-size: 24pt !important;
       }
@@ -2290,7 +2299,7 @@
         padding: 8pt 0 0 !important;
         display: block !important;
       }
-      .rule-main-title, .card-title, .phase-title { color: #064e3b !important; }
+      .rule-main-title, .card-title, .phase-title { color: #3b0726 !important; }
       .rule-summary-text, .card-sub, .rule-section-desc { color: #374151 !important; }
       .r-tag, .phase-badge, .legal-badge-country {
         background: #e5e7eb !important;
@@ -2385,7 +2394,7 @@
       align-items: center;
       gap: 4px;
     }
-    .network-badge.online { color: #86efac; background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.3); }
+    .network-badge.online { color: #fbcfe8; background: rgba(244, 114, 182, 0.12); border: 1px solid rgba(244, 114, 182, 0.3); }
     .network-badge.offline { color: #fde047; background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.35); }
 
     /* ─── v3.0 Quiz Interactivo (Onboarding) ─── */
@@ -2441,9 +2450,9 @@
       transform: translateX(4px);
     }
     .quiz-option-btn.correct {
-      background: rgba(34, 197, 94, 0.2) !important;
-      border-color: #22c55e !important;
-      color: #86efac !important;
+      background: rgba(244, 114, 182, 0.2) !important;
+      border-color: #c084fc !important;
+      color: #fbcfe8 !important;
     }
     .quiz-option-btn.wrong {
       background: rgba(239, 68, 68, 0.2) !important;
@@ -2581,7 +2590,7 @@
   </a>
 
   <div class="nav-links-scroll" id="nav-links-scroll">
-    <a href="#convivencia">🌱 Convivencia</a>
+    <a href="#convivencia">🌸 Convivencia</a>
   </div>
 
   </nav>
@@ -2603,9 +2612,7 @@
       <span>8 Categorías Principales</span> · <span>20 Normas Claras</span> · <span>Mediación Pedagógica</span> · <span>Actualizado 2026</span>
     </div>
     <div class="hero-actions">
-      <a href="#convivencia" class="hero-cta-btn"><span>🌿 Explorar Normas</span> ▾</a>
-      <button class="hero-search-trigger" id="hero-search-trigger" type="button"><span>🔍 Buscar tema rápido</span> <kbd style="font-size:0.7rem; opacity:0.8;">Ctrl+K</kbd></button>
-      <button class="print-doc-btn" id="print-doc-btn" type="button" title="Imprimir o guardar PDF del reglamento"><span>🖨️ Imprimir / PDF</span></button>
+      <a href="#convivencia" class="hero-cta-btn"><span>🌸 Explorar Normas</span> ▾</a>
     </div>
     <div class="scroll-indicator">
       <span>Desliza para explorar</span>
@@ -2678,7 +2685,7 @@
       <!-- ========================================== -->
       <div class="section-gap" id="convivencia"></div>
       <div class="phase-header">
-        <span class="phase-badge">🌱 CONVIVENCIA</span>
+        <span class="phase-badge">🌸 CONVIVENCIA</span>
         <h2 class="phase-title">Convivencia y Trato Humano 🌿</h2>
         <div class="phase-line"></div>
       </div>
@@ -4256,7 +4263,7 @@ const BackgroundModule = {
           ctx.globalAlpha = this.opacity;
           const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius * 2.5);
           if (this.hue === 158) {
-            grad.addColorStop(0, '#6ee7b7');
+            grad.addColorStop(0, '#f472b6');
             grad.addColorStop(0.5, '#f472b6');
             grad.addColorStop(1, 'rgba(5, 150, 105, 0)');
           } else {
