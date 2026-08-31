@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#10b981" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Umas Rules" />
+  <meta name="apple-mobile-web-app-title" content="Sakura Paradise Rules" />
 
   <!-- OpenGraph / Discord Rich Embed Meta Tags -->
   <title>Reglamento Oficial & Convivencia Comunitaria · Sakura Paradise 🌿</title>
@@ -2549,7 +2549,7 @@
   <div class="enter-content">
     <div class="enter-badge">✦ SANTUARIO EN DISCORD · REGLAMENTO OFICIAL 3.0 🌿 ✦</div>
     <h1 class="enter-logo">
-      <span class="logo-main">Umas <span>Community</span></span>
+      <span class="logo-main">Sakura <span>Community</span></span>
       <span class="logo-leaf">🌿</span>
     </h1>
     <div class="enter-sub">— Protocolo de Convivencia, Mediación Formativa, Matriz Sancional & Amparo Legal —</div>
@@ -2575,7 +2575,7 @@
   <div class="nav-reading-progress" id="nav-reading-progress"></div>
   <a href="#" class="nav-brand">
     <div class="nav-logo-icon">🌿</div>
-    <div class="nav-title">Umas <span>Community</span></div>
+    <div class="nav-title">Sakura <span>Community</span></div>
   </a>
 
   <div class="nav-links-scroll" id="nav-links-scroll">
@@ -4413,7 +4413,7 @@
         <div class="card-head">
           <div class="card-icon">🧠</div>
           <div>
-            <div class="card-title">UMAS Community Knowledge Test</div>
+            <div class="card-title">Sakura Paradise Knowledge Test</div>
             <div class="card-sub"></div>
           </div>
         </div>
@@ -4644,7 +4644,7 @@
 // ==========================================
 const DATA_I18N = {
   es: {
-    navTitle: 'Umas <span>Community</span>',
+    navTitle: 'Sakura <span>Community</span>',
     searchBtn: 'Buscar',
     soundOn: 'ASMR: ON',
     soundOff: 'ASMR: OFF',
@@ -4669,7 +4669,7 @@ const DATA_I18N = {
     copiedText: '¡Copiado al portapapeles!'
   },
   en: {
-    navTitle: 'Umas <span>Community</span>',
+    navTitle: 'Sakura <span>Community</span>',
     searchBtn: 'Search',
     soundOn: 'ASMR: ON',
     soundOff: 'ASMR: OFF',
@@ -4694,7 +4694,7 @@ const DATA_I18N = {
     copiedText: 'Copied to clipboard!'
   },
   pt: {
-    navTitle: 'Umas <span>Community</span>',
+    navTitle: 'Sakura <span>Community</span>',
     searchBtn: 'Buscar',
     soundOn: 'ASMR: LIGADO',
     soundOff: 'ASMR: DESLIGADO',
@@ -4796,11 +4796,11 @@ const APP_CONFIG = {
     staffChannel: 'https://discord.com/channels/1493288927388369139/1504912669809836274'
   },
   storageKeys: {
-    sound: 'umas_rules_sound_v3',
-    country: 'umas_rules_country_v3',
-    category: 'umas_rules_category_v3',
-    lang: 'umas_rules_lang_v3',
-    quizSession: 'umas_rules_quiz_session_v3'
+    sound: 'sakura_rules_sound_v3',
+    country: 'sakura_rules_country_v3',
+    category: 'sakura_rules_category_v3',
+    lang: 'sakura_rules_lang_v3',
+    quizSession: 'sakura_rules_quiz_session_v3'
   },
   synonyms: {
     'acoso': ['hostigamiento', 'bullying', 'stalking', 'persecucion', 'insistencia', 'molestar', 'dms', 'privado', 'harassment', 'assédio'],
@@ -5526,7 +5526,7 @@ const QuizModule = {
     const container = document.getElementById('quiz-container');
     if (!container) return;
 
-    const sessionId = `UMAS-${Date.now().toString(36).toUpperCase()}-${Math.floor(Math.random()*1000)}`;
+    const sessionId = `SAKURA-${Date.now().toString(36).toUpperCase()}-${Math.floor(Math.random()*1000)}`;
     const dateStr = new Date().toLocaleDateString();
 
     container.innerHTML = `
@@ -5866,7 +5866,7 @@ const SimulatorModule = {
     if (copySummaryBtn) {
       copySummaryBtn.addEventListener('click', () => {
         const tier = this.tiers[this.currentScore] || this.tiers[0];
-        const summary = `📋 **INFORME DE MODERACIÓN · UMAS COMMUNITY**\n────────────────────\n> **Puntaje Evaluado:** ${this.currentScore}/100 PTS\n> **Calificación:** ${tier.title}\n> **Medida Disciplinaria:** ${tier.action}\n> **Justificación:** ${tier.why}\n> **Base Normativa:** ${tier.legal}\n────────────────────\n📜 *Verificación:* https://rules-web.onrender.com/#sanciones`;
+        const summary = `📋 **INFORME DE MODERACIÓN · SAKURA PARADISE**\n────────────────────\n> **Puntaje Evaluado:** ${this.currentScore}/100 PTS\n> **Calificación:** ${tier.title}\n> **Medida Disciplinaria:** ${tier.action}\n> **Justificación:** ${tier.why}\n> **Base Normativa:** ${tier.legal}\n────────────────────\n📜 *Verificación:* https://rules-web.onrender.com/#sanciones`;
         Utils.copyToClipboard(summary, () => {
           AudioEngine.playCrystal([784, 1046.5]);
           Utils.showToast('Informe copiado para Discord', '📋');

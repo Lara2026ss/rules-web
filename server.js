@@ -113,7 +113,7 @@ app.post('/api/moderation/report', async (req, res) => {
   }
 
   const staffKey = req.headers['x-staff-key'] || req.headers['authorization'];
-  const expectedKey = process.env.STAFF_API_KEY || 'umas-staff-2026';
+  const expectedKey = process.env.STAFF_API_KEY || 'sakura-staff-2026';
   
   if (!staffKey || staffKey.replace('Bearer ', '').trim() !== expectedKey) {
     return res.status(401).json({ error: 'No autorizado. Se requiere clave de Staff válida.' });
@@ -182,7 +182,7 @@ app.post('/api/moderation/report', async (req, res) => {
   if (webhookUrl && webhookUrl.startsWith('https://discord.com/api/webhooks/')) {
     try {
       const payload = JSON.stringify({
-        username: 'Umas Moderation System',
+        username: 'Sakura Moderation System',
         avatar_url: 'https://rules-web.onrender.com/favicon.svg',
         embeds: [{
           title: `🛡️ Informe Disciplinario Oficial · #${cleanRuleId}`,
@@ -193,7 +193,7 @@ app.post('/api/moderation/report', async (req, res) => {
             { name: '📊 Puntos / Severidad', value: `${numPts} PTS (Nivel ${numSev})`, inline: true },
             { name: '🧑⚖️ Moderador Responsable', value: modName, inline: true }
           ],
-          footer: { text: `ID: ${reportRecord.id} • Umas Rules Web 3.0` },
+          footer: { text: `ID: ${reportRecord.id} • Sakura Paradise Rules Web 3.0` },
           timestamp: new Date().toISOString()
         }]
       });
@@ -229,7 +229,7 @@ app.post('/api/moderation/report', async (req, res) => {
 // ── API: Moderation Audit Log (Staff Only) ──
 app.get('/api/moderation/audit', (req, res) => {
   const staffKey = req.headers['x-staff-key'] || req.headers['authorization'];
-  const expectedKey = process.env.STAFF_API_KEY || 'umas-staff-2026';
+  const expectedKey = process.env.STAFF_API_KEY || 'sakura-staff-2026';
   
   if (!staffKey || staffKey.replace('Bearer ', '').trim() !== expectedKey) {
     return res.status(401).json({ error: 'No autorizado.' });
@@ -286,5 +286,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🌿 Umas Community Rules Web 3.0 server running on port ${PORT}`);
+  console.log(`🌿 Sakura Paradise Rules Web 3.0 server running on port ${PORT}`);
 });
