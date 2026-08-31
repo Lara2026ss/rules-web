@@ -573,7 +573,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(2, 7, 4, 0.85);
+      background: rgba(24, 6, 19, 0.88);
       backdrop-filter: blur(10px);
       border: 1px solid var(--border-hi);
       color: var(--mint);
@@ -604,13 +604,19 @@
     }
 
     .hero-title .accent {
-      background: linear-gradient(180deg, #ffffff 0%, #ffffff 25%, #fde047 48%, #f472b6 72%, #c084fc 100%);
-      background-size: 100% 220%;
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 30%, #fbcfe8 55%, #e879f9 78%, #c084fc 100%);
+      background-size: 100% 200%;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      animation: title-gradient-shine 18s ease-in-out infinite alternate;
-      filter: drop-shadow(0 0 24px rgba(244, 114, 182, 0.5));
+      animation: title-gradient-shine 22s ease-in-out infinite alternate;
+      filter: drop-shadow(0 0 20px rgba(244, 114, 182, 0.4));
+    }
+
+    @keyframes title-gradient-shine {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 0% 100%; }
+      100% { background-position: 0% 0%; }
     }
 
     @keyframes title-gradient-shine {
@@ -1125,7 +1131,7 @@
     }
 
     .copy-rule-btn {
-      background: rgba(2, 7, 4, 0.65);
+      background: rgba(28, 7, 22, 0.85);
       border: 1px solid var(--border);
       color: var(--text-dim);
       border-radius: 6px;
@@ -1370,7 +1376,7 @@
       font-size: 0.55rem;
       font-weight: 800;
       color: var(--emerald-lt);
-      background: rgba(2, 7, 4, 0.85);
+      background: rgba(24, 6, 19, 0.88);
       padding: 2px 6px;
       border-radius: 4px;
       border: 1px solid var(--border-hi);
@@ -2576,6 +2582,8 @@
 
 
     /* Lock Body Scroll & Hide Background Content on Launch */
+    
+    /* Enter Screen Display & Scroll Isolation Engine */
     body.enter-locked {
       overflow: hidden !important;
       height: 100vh !important;
@@ -2584,10 +2592,24 @@
     }
     body.enter-locked .scroll-content,
     body.enter-locked .main-body,
-    body.enter-locked .footer {
+    body.enter-locked .footer,
+    body.enter-locked #main-nav {
+      display: none !important;
       visibility: hidden !important;
       opacity: 0 !important;
       pointer-events: none !important;
+    }
+    body:not(.enter-locked) .scroll-content,
+    body:not(.enter-locked) .main-body,
+    body:not(.enter-locked) .footer {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    body:not(.enter-locked) #main-nav {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
     }
     .scroll-content, .main-body, .footer {
       transition: opacity 0.6s ease, visibility 0.6s ease;
@@ -2694,7 +2716,7 @@
   <div class="hero-text-overlay" id="hero-text-overlay">
     <div class="hero-badge">✦ SANTUARIO DIGITAL · REGLAMENTO OFICIAL 3.1 🌸 ✦</div>
     <h1 class="hero-title">
-      Reglamento de <span class="accent">Convivencia</span><br>
+      Reglamento de Convivencia<br>
       <span class="accent">Sakura Paradise</span>
     </h1>
     <p class="hero-desc">
