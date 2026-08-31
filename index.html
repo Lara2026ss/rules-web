@@ -593,13 +593,13 @@
     }
 
     .hero-title .accent {
-      background: linear-gradient(180deg, #ffffff 0%, #fce7f3 45%, #f472b6 85%, #c084fc 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #fbcfe8 30%, #f472b6 65%, #c084fc 100%);
       background-size: 100% 200%;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       animation: title-gradient-shine 22s ease-in-out infinite alternate;
-      filter: drop-shadow(0 0 20px rgba(244, 114, 182, 0.35));
+      filter: drop-shadow(0 0 22px rgba(244, 114, 182, 0.45));
     }
 
     @keyframes title-gradient-shine {
@@ -2579,27 +2579,27 @@
   </div>
 
   <div class="enter-content">
-    <div class="enter-badge">✦ SANTUARIO EN DISCORD · REGLAMENTO OFICIAL 3.0 🌿 ✦</div>
+    <div class="enter-badge">✦ SANTUARIO DIGITAL · REGLAMENTO OFICIAL 3.1 🌸 ✦</div>
     <h1 class="enter-logo">
-      <span class="logo-main">Sakura <span>Community</span></span>
-      <svg class="animated-sakura-flower" viewBox="0 0 50 50" width="24" height="24" style="margin-left: 4px;">
-        <g>
-          <path fill="url(#sakura-svg-grad-sm)" d="M25 5 C28 14, 38 14, 38 22 C38 28, 30 32, 25 45 C20 32, 12 28, 12 22 C12 14, 22 14, 25 5 Z" />
-          <path fill="url(#sakura-svg-grad-sm)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(36 25 25)" />
-          <path fill="url(#sakura-svg-grad-sm)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(72 25 25)" />
-          <path fill="url(#sakura-svg-grad-sm)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(108 25 25)" />
-          <path fill="url(#sakura-svg-grad-sm)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(144 25 25)" />
-          <circle cx="25" cy="25" r="5" fill="#fde047" />
+        Sakura <span class="logo-pink">Rules</span>
+        <svg class="animated-sakura-flower" viewBox="0 0 50 50" width="58" height="58" style="margin-left: 10px; vertical-align: -10px; filter: drop-shadow(0 0 14px rgba(244, 114, 182, 0.8));">
+        <g transform="translate(25,25)">
+          <path fill="url(#hero-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" />
+          <path fill="url(#hero-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" transform="rotate(72)" />
+          <path fill="url(#hero-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" transform="rotate(144)" />
+          <path fill="url(#hero-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" transform="rotate(216)" />
+          <path fill="url(#hero-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" transform="rotate(288)" />
+          <circle cx="0" cy="0" r="4.5" fill="#fde047" />
         </g>
         <defs>
-          <linearGradient id="sakura-svg-grad-sm" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="hero-sakura-grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#f472b6" />
             <stop offset="50%" stop-color="#ec4899" />
-            <stop offset="100%" stop-color="#fde047" />
+            <stop offset="100%" stop-color="#c084fc" />
           </linearGradient>
         </defs>
       </svg>
-    </h1>
+      </h1>
     <div class="enter-sub">— Protocolo de Convivencia, Mediación Formativa, Matriz Sancional & Amparo Legal —</div>
     <div class="enter-btn-wrapper">
       <button class="enter-btn" id="enter-btn" type="button" onclick="if(window.EnterScreenModule) window.EnterScreenModule.handleEnter(); else { const s=document.getElementById('enter-screen'); if(s){s.style.display='none';} document.getElementById('main-nav')?.classList.add('nav-visible'); }">
@@ -2622,23 +2622,25 @@
 <nav class="nav" id="main-nav" role="navigation" aria-label="Navegación principal">
   <div class="nav-reading-progress" id="nav-reading-progress"></div>
   <a href="#" class="nav-brand">
-    <div class="nav-logo-icon"><svg class="animated-sakura-flower" viewBox="0 0 50 50" width="24" height="24" style="margin-left: 4px;">
-        <g>
-          <path fill="url(#sakura-svg-grad-sm)" d="M25 5 C28 14, 38 14, 38 22 C38 28, 30 32, 25 45 C20 32, 12 28, 12 22 C12 14, 22 14, 25 5 Z" />
-          <path fill="url(#sakura-svg-grad-sm)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(36 25 25)" />
-          <path fill="url(#sakura-svg-grad-sm)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(72 25 25)" />
-          <path fill="url(#sakura-svg-grad-sm)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(108 25 25)" />
-          <path fill="url(#sakura-svg-grad-sm)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(144 25 25)" />
-          <circle cx="25" cy="25" r="5" fill="#fde047" />
-        </g>
-        <defs>
-          <linearGradient id="sakura-svg-grad-sm" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#f472b6" />
-            <stop offset="50%" stop-color="#ec4899" />
-            <stop offset="100%" stop-color="#fde047" />
-          </linearGradient>
-        </defs>
-      </svg></div>
+    <div class="nav-logo-icon" style="display:inline-flex; align-items:center; justify-content:center;">
+        <svg viewBox="0 0 40 40" width="30" height="30" style="vertical-align: middle; filter: drop-shadow(0 0 8px rgba(244, 114, 182, 0.6));">
+          <rect width="40" height="40" rx="10" fill="rgba(244, 114, 182, 0.18)" stroke="rgba(244, 114, 182, 0.4)" stroke-width="1.5" />
+          <g transform="translate(20,20) scale(0.65)">
+            <path fill="url(#nav-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" />
+            <path fill="url(#nav-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" transform="rotate(72)" />
+            <path fill="url(#nav-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" transform="rotate(144)" />
+            <path fill="url(#nav-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" transform="rotate(216)" />
+            <path fill="url(#nav-sakura-grad)" d="M0 -22 C4 -12, 14 -12, 14 -4 C14 4, 6 8, 0 20 C-6 8, -14 4, -14 -4 C-14 -12, -4 -12, 0 -22 Z" transform="rotate(288)" />
+            <circle cx="0" cy="0" r="4" fill="#fde047" />
+          </g>
+          <defs>
+            <linearGradient id="nav-sakura-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f472b6" />
+              <stop offset="100%" stop-color="#db2777" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
     <div class="nav-title">Sakura <span>Community</span></div>
   </a>
 
@@ -2653,7 +2655,7 @@
 
   <!-- Hero Text -->
   <div class="hero-text-overlay" id="hero-text-overlay">
-    <div class="hero-badge">✦ SANTUARIO DIGITAL · REGLAMENTO DE CONVIVENCIA 2.0 🌿 ✦</div>
+    <div class="hero-badge">✦ SANTUARIO DIGITAL · REGLAMENTO OFICIAL 3.1 🌸 ✦</div>
     <h1 class="hero-title">
       Reglamento de Convivencia<br>
       <span class="accent">Sakura Paradise</span> <svg class="animated-sakura-flower" viewBox="0 0 50 50" width="64" height="64" style="margin-left: 10px; vertical-align: -10px;">
