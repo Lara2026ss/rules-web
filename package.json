@@ -1,10 +1,12 @@
 {
   "name": "rules-web",
-  "version": "1.0.0",
+  "version": "3.1.0",
   "description": "Reglamento Oficial & Convivencia Comunitaria - Umas Community",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo \"Build complete\"",
+    "serve": "npx -y serve . -l $PORT"
   },
   "dependencies": {
     "express": "^4.18.2"
