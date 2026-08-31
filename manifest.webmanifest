@@ -1,11 +1,11 @@
 {
-  "name": "Umas Community · Reglamento Oficial",
-  "short_name": "Umas Rules",
-  "description": "Manual y protocolo interactivo de convivencia, seguridad digital, sanciones y mediación para Umas Community.",
+  "name": "Sakura Paradise · Reglamento Oficial",
+  "short_name": "Sakura Rules",
+  "description": "Manual y protocolo interactivo de convivencia, seguridad digital, sanciones y mediación para Sakura Paradise.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#020704",
-  "theme_color": "#10b981",
+  "background_color": "#1a0510",
+  "theme_color": "#ec4899",
   "orientation": "portrait-primary",
   "icons": [
     {
