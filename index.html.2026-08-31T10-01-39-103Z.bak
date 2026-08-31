@@ -13,15 +13,15 @@
   <meta name="apple-mobile-web-app-title" content="Umas Rules" />
 
   <!-- OpenGraph / Discord Rich Embed Meta Tags -->
-  <title>Reglamento Oficial & Convivencia Comunitaria · Sakura Paradise 🌿</title>
+  <title>Reglamento Oficial & Convivencia Comunitaria · Umas Community 🌿</title>
   <meta name="description" content="Manual integral de convivencia, mediación pedagógica, seguridad digital, simulador determinista de sanciones y buscador semántico inteligente." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rules-web.onrender.com" />
-  <meta property="og:title" content="Reglamento Oficial · Sakura Paradise 🌿" />
+  <meta property="og:title" content="Reglamento Oficial · Umas Community 🌿" />
   <meta property="og:description" content="Una comunidad sana se construye entre todos. Manual interactivo de convivencia, seguridad y mediación formativa." />
   <meta property="og:image" content="https://rules-web.onrender.com/favicon.svg" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Reglamento Oficial · Sakura Paradise 🌿" />
+  <meta name="twitter:title" content="Reglamento Oficial · Umas Community 🌿" />
   <meta name="twitter:description" content="Protocolo de convivencia, matriz sancional y directrices comunitarias." />
 
   <!-- Google Fonts: Plus Jakarta Sans, Playfair Display, JetBrains Mono -->
@@ -2554,7 +2554,7 @@
     </h1>
     <div class="enter-sub">— Protocolo de Convivencia, Mediación Formativa, Matriz Sancional & Amparo Legal —</div>
     <div class="enter-btn-wrapper">
-      <button class="enter-btn" id="enter-btn" type="button" onclick="if(window.EnterScreenModule) window.EnterScreenModule.handleEnter(); else { const s=document.getElementById('enter-screen'); if(s){s.style.display='none';} document.getElementById('main-nav')?.classList.add('nav-visible'); }">
+      <button class="enter-btn" id="enter-btn" type="button">
         <span>Entrar al Reglamento</span> ➔
       </button>
     </div>
@@ -2579,14 +2579,14 @@
   </a>
 
   <div class="nav-links-scroll" id="nav-links-scroll">
-    <a href="#convivencia">🌱 Convivencia</a>
-    <a href="#canales-voz">🎙️ Canales & Voz</a>
-    <a href="#seguridad">🛡️ Seguridad</a>
-    <a href="#staff-mediacion">⚖️ Staff & Mediación</a>
-    <a href="#sanciones">📊 Sanciones</a>
-    <a href="#leyes-latam">📜 Leyes LATAM</a>
-    <a href="#apelaciones">💬 Apelaciones</a>
-    <a href="#faq">❓ FAQ</a>
+    <a href="#fase-1">🌱 Convivencia</a>
+    <a href="#fase-2">🎙️ Canales & Voz</a>
+    <a href="#fase-3">🛡️ Seguridad</a>
+    <a href="#fase-4">⚖️ Staff & Mediación</a>
+    <a href="#fase-5">📊 Sanciones</a>
+    <a href="#fase-6">📜 Leyes LATAM</a>
+    <a href="#fase-7">💬 Apelaciones</a>
+    <a href="#fase-8">❓ FAQ</a>
   </div>
 
   <div class="nav-controls">
@@ -2617,16 +2617,16 @@
     <div class="hero-badge">✦ SANTUARIO DIGITAL · REGLAMENTO DE CONVIVENCIA 2.0 🌿 ✦</div>
     <h1 class="hero-title">
       Reglamento de <span class="accent">Convivencia</span><br>
-      Sakura Paradise
+      Umas Community
     </h1>
     <p class="hero-desc">
       Una comunidad sana no se define por la cantidad de castigos que aplica, sino por la calidad del trato entre sus integrantes.
     </p>
     <div class="hero-stats-row">
-      <span>8 Categorías Principales</span> · <span>20 Normas Claras</span> · <span>Mediación Pedagógica</span> · <span>Actualizado 2026</span>
+      <span>7 Fases de Protocolo</span> · <span>20 Normas Claras</span> · <span>Mediación Pedagógica</span> · <span>Actualizado 2026</span>
     </div>
     <div class="hero-actions">
-      <a href="#convivencia" class="hero-cta-btn"><span>🌿 Explorar Normas</span> ▾</a>
+      <a href="#fase-1" class="hero-cta-btn"><span>🌿 Explorar Normas</span> ▾</a>
       <button class="hero-search-trigger" id="hero-search-trigger" type="button"><span>🔍 Buscar tema rápido</span> <kbd style="font-size:0.7rem; opacity:0.8;">Ctrl+K</kbd></button>
       <button class="print-doc-btn" id="print-doc-btn" type="button" title="Imprimir o guardar PDF del reglamento"><span>🖨️ Imprimir / PDF</span></button>
     </div>
@@ -2653,27 +2653,27 @@
         <div class="quick-rules-grid">
           <div class="quick-rule-item">
             <span class="quick-rule-check">✓</span>
-            <div></div>
+            <div><strong>Respeta a los demás:</strong> Puedes bromear y debatir con amigos, pero nunca humillar, insultar o discriminar.</div>
           </div>
           <div class="quick-rule-item">
             <span class="quick-rule-check">✓</span>
-            <div></div>
+            <div><strong>Cero Acoso:</strong> Si alguien te dice que pares una broma o dejes de insistir, detente al instante. El "no" es definitivo.</div>
           </div>
           <div class="quick-rule-item">
             <span class="quick-rule-check">✓</span>
-            <div></div>
+            <div><strong>Orden en los Canales:</strong> Usa cada sala para su temática y evita el spam, flood o menciones masivas innecesarias.</div>
           </div>
           <div class="quick-rule-item">
             <span class="quick-rule-check">✓</span>
-            <div></div>
+            <div><strong>Protege la Privacidad:</strong> Nunca compartas fotos, nombres reales o datos de otros sin permiso (Doxxing = baneo inmediato).</div>
           </div>
           <div class="quick-rule-item">
             <span class="quick-rule-check">✓</span>
-            <div></div>
+            <div><strong>Cero Multicuentas:</strong> Si recibes una sanción, usa el canal de apelaciones; no entres con cuentas secundarias.</div>
           </div>
           <div class="quick-rule-item">
             <span class="quick-rule-check">✓</span>
-            <div></div>
+            <div><strong>Staff a tu servicio:</strong> La moderación está para orientar y mediar. Si tienes dudas o problemas, pide ayuda mediante ticket.</div>
           </div>
         </div>
       </div>
@@ -2697,11 +2697,11 @@
       </div>
 
       <!-- ========================================== -->
-      <!-- SECCIÓN: CONVIVENCIA Y TRATO HUMANO 🌿 -->
+      <!-- FASE I: CONVIVENCIA Y TRATO HUMANO 🌿 -->
       <!-- ========================================== -->
-      <div class="section-gap" id="convivencia"></div>
+      <div class="section-gap" id="fase-1"></div>
       <div class="phase-header">
-        <span class="phase-badge">🌱 CONVIVENCIA</span>
+        <span class="phase-badge">FASE I</span>
         <h2 class="phase-title">Convivencia y Trato Humano 🌿</h2>
         <div class="phase-line"></div>
       </div>
@@ -2711,7 +2711,7 @@
           <div class="card-icon">🤝</div>
           <div>
             <div class="card-title">Código de Conducta y Armonía Social</div>
-            <div class="card-sub"></div>
+            <div class="card-sub">Bases para dialogar, debatir sanamente y convivir con personas de diversos gustos y opiniones.</div>
           </div>
         </div>
 
@@ -2732,43 +2732,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Dignidad, Trato Digno y Respeto Incondicional</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Puedes bromear y debatir apasionadamente sobre cualquier tema; lo que no puedes hacer es usar una diferencia de opinión para insultar, despreciar o discriminar a otra persona.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-01">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Protege la integridad emocional de los miembros, asegurando que las discrepancias y debates se enfoquen en los argumentos y no en ataques personales nacidos de la frustración.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Insultos directos o velados, descalificaciones por ideología, identidad o habilidades, y comentarios denigrantes, racistas, machistas, homófobos o discriminatorios.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Debates apasionados sobre tácticas, videojuegos o gustos, humor consensuado entre amistades y críticas respetuosas centradas en ideas.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Tu opinión es una basura, eres un pésimo jugador por elegir ese personaje."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Ataca de forma despectiva a la persona en lugar de debatir sobre el juego.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "No comparto tu elección de personaje porque sus estadísticas actuales son bajas, prefiero otra opción."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Expresa desacuerdo con base y mantiene el trato cordial.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">+20 a +30 PTS (Aviso disciplinario directo y retiro del mensaje; reincidencia escala a Time-Out temporal de 1h a 12h).</div>
               </div>
             </div>
           </div>
@@ -2788,43 +2785,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Prevención de Acoso, Hostigamiento y Asedio</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Los límites personales de cada persona son sagrados. Si un miembro te pide que pares una broma o que dejes de mencionarlo, debes detenerte de inmediato. El "no" es incondicional.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-02">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Garantiza un espacio libre de persecución y hostilidad, evitando que bromas pesadas o rencores deriven en asedio sistemático dentro de canales o mensajes directos.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Menciones repetidas tras una negativa explícita, invasión de DMs no deseada, burlas coordinadas, burlas sobre aspectos físicos y persecución entre canales.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Conversaciones fluidas y bromas mutuas donde ambas partes expresen comodidad y consentimiento claro.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Deja de ignorarme por DM, contesta ya @Usuario @Usuario @Usuario"
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Incurre en acoso por insistencia y menciones forzadas ignorando el límite del usuario.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Oye @Usuario, avísame cuando tengas un momento libre para revisar la partida."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Respeta los tiempos ajenos sin ejercer presión ni saturar.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">+30 a +40 PTS (Time-Out inmediato de 12h a 24h; casos severos o continuados conllevan expulsión o baneo).</div>
               </div>
             </div>
           </div>
@@ -2844,43 +2838,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Control de Spam, Flood y Ruido Visual</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">El chat debe ser cómodo y fácil de leer para todos. Evita enviar mensajes repetitivos, muros de texto absurdos o saturar con stickers y menciones masivas.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-03">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Mantiene la legibilidad y fluidez de los canales de texto frente a descuidos, automatizaciones o intentos de llamar la atención mediante saturación continua.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Copypastas kilométricos, ráfagas continuas de mensajes cortos, exceso de emojis/stickers, cadenas de texto ilegibles y menciones a roles sin justificación.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Mensajes completos y estructurados, uso puntual de stickers y reacciones pertinentes en la conversación.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "HOLA\nHOLA\nMIREN ESTO\n@here\n🔥\n🔥\n🔥"
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Fragmenta el texto en ráfaga e incluye mención innecesaria rompiendo el flujo del chat.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Hola a todos, acabo de subir este clip de la partida por si gustan verlo."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Comunica su mensaje en un solo envío claro y sin generar ruido.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">+10 a +20 PTS (Advertencia verbal con borrado de mensajes; reincidencia aplica Time-Out de 1 hora).</div>
               </div>
             </div>
           </div>
@@ -2900,43 +2891,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Publicidad, Autopromoción y Enlaces Externos</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Umas Community es un espacio de encuentro entre fans, no una vitrina para vender productos ni mandar invitaciones masivas a otros servidores sin permiso.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-04">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Protege a los miembros contra la captación comercial no solicitada y previene la fuga masiva o desorden causada por enlaces promocionales externos.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Enlaces de invitación a otros servidores de Discord no autorizados, venta de cuentas/ítems y envío de publicidad por DM a miembros de la comunidad.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Compartir creaciones artísticas, contenido o canales propios exclusivamente en el canal designado `#promoción-arte` o previa autorización del Staff.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Únanse a mi nuevo server de Discord discord.gg/ejemplo hay sorteos gratis todos los días."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Publica enlaces de invitación ajenos en un canal general sin autorización.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Compartí una ilustración que hice sobre el evento en `#arte` por si quieren verla."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Comparte su trabajo creativo en el canal temático correspondiente.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">+20 a +40 PTS (Eliminación inmediata del enlace y advertencia; el spam masivo por DM conlleva baneo permanente).</div>
               </div>
             </div>
           </div>
@@ -2956,43 +2944,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Igualdad Normativa y Cero Privilegios</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Las normas aplican exactamente igual para todos: miembros nuevos, veteranos, donadores, server boosters e incluso los propios moderadores. Nadie tiene inmunidad.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-05">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Garantiza un ecosistema justo donde ningún rol o rango otorga derecho a vulnerar la convivencia ni a eludir la responsabilidad comunitaria.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Exigir trato preferencial o impunidad por poseer roles VIP/Booster, o justificar infracciones alegando antigüedad o amistad con el Staff.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Disfrutar de las ventajas estéticas de roles especiales respetando las mismas normas que cualquier otro integrante.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "A mí no me pueden sancionar por insultar porque soy Server Booster nivel 3 y amigo del admin."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Pretende usar un rol cosmético o de apoyo para justificar faltas al reglamento.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Acepto la advertencia del Staff, me excedí con la broma y cuidaré mi lenguaje."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Reconoce el llamado de atención con madurez e igualdad ante la norma.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">0 a +10 PTS (Aclaración de límites y aplicación de la sanción correspondiente a la falta sin excepciones).</div>
               </div>
             </div>
           </div>
@@ -3001,16 +2986,16 @@
 
         <div class="callout green">
           <div class="callout-icon">🌿</div>
-          <div></div>
+          <div><strong>Filosofía Comunitaria:</strong> La diversidad de criterios enriquece la convivencia siempre que prevalezca el respeto recíproco. La divergencia de opiniones es bienvenida; la hostilidad personal, jamás.</div>
         </div>
       </div>
 
       <!-- ========================================== -->
-      <!-- SECCIÓN: CANALES, MULTIMEDIA Y VOZ 🎙️ -->
+      <!-- FASE II: CANALES, MULTIMEDIA Y VOZ 🎙️ -->
       <!-- ========================================== -->
-      <div class="section-gap" id="canales-voz"></div>
+      <div class="section-gap" id="fase-2"></div>
       <div class="phase-header">
-        <span class="phase-badge">🎙️ CANALES & VOZ</span>
+        <span class="phase-badge">FASE II</span>
         <h2 class="phase-title">Canales, Multimedia y Dinámicas de Voz 🎙️</h2>
         <div class="phase-line"></div>
       </div>
@@ -3020,7 +3005,7 @@
           <div class="card-icon">🎧</div>
           <div>
             <div class="card-title">Uso Adecuado de Salas Temáticas y Canales de Audio</div>
-            <div class="card-sub"></div>
+            <div class="card-sub">Organización del servidor, confort auditivo, respeto en llamadas y protección contra spoilers.</div>
           </div>
         </div>
 
@@ -3041,43 +3026,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Uso Coherente de Canales Temáticos</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Cada canal tiene un propósito específico (`#general`, `#arte`, `#memes`, `#gaming`). Mantener el orden hace que la comunidad sea agradable para todos.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-06">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Organiza la conversación colectiva para que los temas relevantes no se pierdan ni se distorsionen por mezclar contenidos en salas equivocadas.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Enviar memes o spam masivo en canales de debate serio, publicar discusiones técnicas en salas de ocio o ignorar recordatorios de canal.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Utilizar cada canal para su temática designada y redirigir cordialmente las conversaciones hacia el canal apropiado.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Mando este meme de 10 minutos en `#anuncios-oficiales` para que todos lo vean."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Ignora el propósito estricto del canal e interrumpe comunicados relevantes.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Chicos, sigamos el debate sobre la nueva actualización en `#gaming` para no desviar `#general`."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Canaliza proactivamente la temática a la sala adecuada.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">0 a +10 PTS (Orientación formativa y traslado del mensaje; reincidencia continuada genera aviso formal).</div>
               </div>
             </div>
           </div>
@@ -3097,43 +3079,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Confort Auditivo y Etiqueta en Canales de Voz</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Las salas de voz son para convivir y jugar. Respeta los turnos de habla y cuida la salud auditiva de los demás evitando ruidos estridentes o saturación.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-07">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Protege la comodidad y salud auditiva de los participantes en salas de voz, previniendo conductas disruptivas derivadas de micrófonos saturados o soundboards agresivos.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Gritos intencionados (ear-rape), abuso desmedido de soundboards o moduladores de voz, saturar el micrófono y reproducir audio sin consentimiento.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Uso de pulsar para hablar (Push-To-Talk) o supresión de ruido Krisp de Discord, compartir música en volumen moderado y respetar turnos de habla.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    [Usuario entra a la sala de voz y activa un sonido de alarma estridente al 100% de volumen mientras otros juegan]
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Atenta contra la audición ajena y perturba el desarrollo de la sala.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Hola chicos, activé Krisp para que no se escuche el ruido de fondo de mi teclado. ¿Me escuchan bien?"
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Verifica su calidad de audio y se asegura de no generar molestias.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">+20 a +40 PTS (Silencio temporal en canales de voz; desconexión inmediata o bloqueo de voz por reincidencia).</div>
               </div>
             </div>
           </div>
@@ -3153,43 +3132,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Consentimiento en Grabaciones y Transmisiones</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">La voz y la imagen de cada persona son privadas. No transmitas en vivo ni grabes llamadas o cámaras de otros usuarios sin su consentimiento expreso.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-08">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Salvaguarda el derecho a la propia imagen y privacidad de las conversaciones orales frente a difusiones no autorizadas en plataformas externas.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Grabar audios o capturas de video en salas de voz privadas para exponer a terceros, o transmitir en vivo en YouTube/Twitch sin avisar a los participantes.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Avisar previamente al grupo antes de iniciar una grabación o stream para que quien lo desee pueda silenciarse o apartarse.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Grabé en secreto toda la llamada de ayer y la subí a TikTok para reírnos de cómo hablaba @Usuario."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Vulnera la privacidad personal y expone la voz de un usuario sin su consentimiento.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Amigos, voy a iniciar directo en Twitch jugando juntos. ¿Todos están de acuerdo en salir en el stream?"
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Solicita consentimiento informado previo a la transmisión.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">+30 a +50 PTS (Retiro forzoso de permisos multimedia y Time-Out de 24h a 72h; expulsión en casos de difamación).</div>
               </div>
             </div>
           </div>
@@ -3209,43 +3185,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Canalización Correcta de Comandos de Bots</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Los bots de música, juegos y utilidades deben usarse en su canal designado (`#comandos`) para no tapar las conversaciones en los canales principales.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-09">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Evita que las respuestas automáticas e interfaces extensas de bots saturen las salas de charla general de la comunidad.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Ejecutar cadenas de comandos de economía, minijuegos o música en `#general` cuando existe un canal dedicado.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Utilizar comandos slash (`/`) e interacciones con bots en `#comandos-bot` o en hilos específicos habilitados.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    !work !crime !daily !slots 500 (enviados en `#general` interrumpiendo un debate)
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Llena de respuestas automáticas un canal destinado a la interacción entre personas.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    /play song: lo-fi chill (ejecutado en `#comandos-bot` o mediante la interfaz de voz)
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Usa el canal correcto y mantiene limpios los canales de texto generales.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">0 a +10 PTS (Limpieza de mensajes y redirección al canal de bots; reincidencia reiterada amerita bloqueo temporal de comandos).</div>
               </div>
             </div>
           </div>
@@ -3265,43 +3238,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Etiquetado Obligatorio y Protección de Spoilers</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">A todos nos entusiasman los estrenos de anime, mangas, juegos o series. Respeta a quienes aún no han visto la historia usando las barras de spoiler de Discord.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-10">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Preserva la experiencia de entretenimiento de la comunidad evitando la revelación impulsiva o malintencionada de giros argumentales recientes.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Revelar muertes, finales o secretos de obras recién estrenadas en texto claro o mediante imágenes y miniaturas sin advertencia.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Ocultar el texto utilizando el formateo oficial de Discord (`||texto con spoiler||`) e indicar brevemente de qué obra se trata.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "No puedo creer que el villano principal murió en el capítulo que salió hoy a las 3pm."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Arruina la sorpresa a otros miembros al publicar el evento sin etiquetas de censura.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Spoiler del capítulo de hoy de [Serie]: ||el desenlace del combate fue inesperado||"
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Oculta el contenido clave y permite que cada usuario decida si desea leerlo.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">0 a +10 PTS (Eliminación o edición del mensaje y aviso preventivo).</div>
               </div>
             </div>
           </div>
@@ -3310,11 +3280,11 @@
       </div>
 
       <!-- ========================================== -->
-      <!-- SECCIÓN: CERO TOLERANCIA Y SEGURIDAD 🛡️ -->
+      <!-- FASE III: CERO TOLERANCIA Y SEGURIDAD 🛡️ -->
       <!-- ========================================== -->
-      <div class="section-gap" id="seguridad"></div>
+      <div class="section-gap" id="fase-3"></div>
       <div class="phase-header">
-        <span class="phase-badge">🛡️ SEGURIDAD</span>
+        <span class="phase-badge">FASE III</span>
         <h2 class="phase-title">Cero Tolerancia y Seguridad Integral 🛡️</h2>
         <div class="phase-line"></div>
       </div>
@@ -3324,7 +3294,7 @@
           <div class="card-icon">🚨</div>
           <div>
             <div class="card-title">Infracciones Críticas y Expulsión Inmediata</div>
-            <div class="card-sub"></div>
+            <div class="card-sub">Conductas de máxima gravedad sancionadas con bloqueo permanente y denuncia formal.</div>
           </div>
         </div>
 
@@ -3345,43 +3315,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Doxxing y Filtración de Datos Privados (Tolerancia Cero)</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">La seguridad física, digital y familiar de cada usuario es sagrada. Exponer información personal, fotos privadas o documentos ajenos conlleva expulsión permanente inmediata.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-11">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Garantiza la seguridad física y digital de los miembros erradicando cualquier intento de divulgación de Información Personal Identificable (PII) sin consentimiento.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Publicar nombres reales, direcciones físicas, números de teléfono, documentos de identidad (DNI/CURP/RUT), IP, fotos familiares o datos bancarios ajenos.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Compartir anécdotas y contenido manteniendo la privacidad y respetando estrictamente el anonimato que cada usuario elija.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Miren, encontré la dirección real y el nombre completo de @Usuario, vive en la calle..."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Comete una violación crítica a la privacidad y seguridad física según la política anti-doxxing de Discord.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Por favor cuidemos nuestros datos personales, no compartan información de su vida privada en canales públicos."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Promueve la cultura de prevención y privacidad digital.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">100 PTS (Baneo permanente irrevocable inmediato y reporte formal ante Discord Trust & Safety).</div>
               </div>
             </div>
           </div>
@@ -3401,43 +3368,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Estafas, Phishing, Malware y Enlaces Engañosos</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Protección absoluta contra fraudes digitales, robo de cuentas de Discord o Steam, y distribución de archivos maliciosos en la comunidad.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-12">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Protege las cuentas, dispositivos y recursos económicos de los integrantes frente a tácticas de ingeniería social y software malicioso.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Difundir enlaces fraudulentos de Discord Nitro gratis, clonaciones de login de Steam/Epic, ejecutables infectados (.exe, .scr, .bat) y códigos maliciosos.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Compartir enlaces a plataformas oficiales, tiendas verificadas (Steam, Epic, itch.io) y advertir al Staff si se detectan cuentas comprometidas.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "¡Discord está regalando 3 meses de Nitro gratis a todos! Reclámalo aquí: disc0rd-nitro-gift.ru/claim"
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Difunde un enlace fraudulento (phishing) diseñado para el robo de credenciales y tokens.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Atención equipo: me llegó un mensaje sospechoso de un bot por DM, reporto el enlace para que nadie caiga."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Alerta de manera preventiva sin propagar el enlace malicioso.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">100 PTS (Baneo permanente automático, borrado de enlaces y purga de mensajes para contener la amenaza).</div>
               </div>
             </div>
           </div>
@@ -3457,43 +3421,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Protección de Menores y Contenido Ilícito</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Salvaguarda estricta de niños, niñas y adolescentes. Tolerancia cero frente a cualquier contenido o conducta que vulnere la integridad de menores de edad.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-13">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Asegura la protección absoluta de personas menores de edad conforme a la Política de Seguridad Infantil de Discord y normativas internacionales de protección del menor.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Cualquier forma de acoso, insinuación, grooming, solicitud de imágenes privadas a menores, o distribución de material de abuso infantil (CSAM/CSEM).</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Convivencia sana, respetuosa y apta para todo público en un entorno comunitario protegido y constructivo.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    [Cualquier solicitud de fotografías privadas, insinuaciones inapropiadas o preguntas sobre datos íntimos dirigidas a menores]
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Constituye un delito y una vulneración absoluta de la seguridad infantil.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Mantengamos el servidor seguro para todas las edades; reporten de inmediato cualquier conducta indebida al Staff."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Fomenta la corresponsabilidad en la protección del entorno comunitario.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">100 PTS (Baneo permanente inmediato, preservación de evidencia técnica y reporte mandatorio ante NCMEC y autoridades correspondientes).</div>
               </div>
             </div>
           </div>
@@ -3513,43 +3474,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Amenazas, Extorsión, Incursiones (Raids) y Sabotaje</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Cero tolerancia frente a amenazas de agresión física, extorsión de cualquier tipo, ataques coordinados contra el servidor (raids) o intentos de sabotaje técnico.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-14">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Defiende la estabilidad técnica de la comunidad y la integridad física y psicológica de todos sus miembros frente a ataques coordinados o intimidación.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Organizar o participar en ataques masivos (raids), coordinar swatting, amenazar con agresiones físicas o sabotear la configuración del servidor.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Participar constructivamente en eventos oficiales y colaborar con el Staff reportando intentos de ataque.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Vamos a entrar 50 personas a spamear el canal y tumbar el servidor a las 8:00 PM."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Organiza una incursión maliciosa (raid) orientada a la disrupción y sabotaje comunitario.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Staff, un grupo externo está planificando un raid contra el servidor; les paso las capturas para activar modo seguro."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Avisa con tiempo y permite al equipo proteger la infraestructura de la comunidad.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">100 PTS (Expulsión y baneo permanente de todas las cuentas involucradas, activación de bloqueo de servidor y reporte a Discord).</div>
               </div>
             </div>
           </div>
@@ -3569,43 +3527,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Evasión de Sanciones Mediante Cuentas Secundarias (Alts)</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Las sanciones disciplinarias aplican a la persona, no solo al usuario de Discord. Si tienes un Time-Out o sanción, no entres con otra cuenta para saltártelo.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-15">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Preserva la efectividad del sistema formativo y disciplinario, evitando que una medida preventiva sea burlada mediante el uso de multicuentas.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Ingresar con una cuenta alternativa para seguir chateando mientras la cuenta principal se encuentra silenciada, expulsada o baneada.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Cumplir los períodos de reflexión o utilizar los canales oficiales de apelación privada para dialogar sobre la sanción aplicada.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Me silenciaron en mi cuenta principal por tóxico, pero aquí estoy con mi cuenta secundaria para seguir hablando."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Incurre en evasión directa de sanciones violando las directrices de la plataforma.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Comprendo el Time-Out recibido; esperaré a que concluya el plazo para volver a participar de forma tranquila."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Acata el proceso formativo y respeta los tiempos establecidos.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">+50 a 100 PTS (Baneo permanente de las cuentas alternativas y extensión indefinida de la sanción sobre la cuenta principal).</div>
               </div>
             </div>
           </div>
@@ -3614,16 +3569,16 @@
 
         <div class="callout red">
           <div class="callout-icon">⚠️</div>
-          <div></div>
+          <div><strong>Aviso de Seguridad:</strong> Las faltas de la Fase III constituyen riesgos directos a la seguridad y conllevan 100 PTS inmediatos y expulsión definitiva sin gradualidad de advertencias.</div>
         </div>
       </div>
 
       <!-- ========================================== -->
-      <!-- SECCIÓN: ÉTICA DE MODERACIÓN Y STAFF ⚖️ -->
+      <!-- FASE IV: ÉTICA DE MODERACIÓN Y STAFF ⚖️ -->
       <!-- ========================================== -->
-      <div class="section-gap" id="staff-mediacion"></div>
+      <div class="section-gap" id="fase-4"></div>
       <div class="phase-header">
-        <span class="phase-badge">⚖️ STAFF & MEDIACIÓN</span>
+        <span class="phase-badge">FASE IV</span>
         <h2 class="phase-title">Ética de Moderación, Mediación y Código de Staff ⚖️</h2>
         <div class="phase-line"></div>
       </div>
@@ -3633,7 +3588,7 @@
           <div class="card-icon">🛡️</div>
           <div>
             <div class="card-title">Protocolo de Mediación y Transparencia del Equipo</div>
-            <div class="card-sub"></div>
+            <div class="card-sub">Criterio formativo, imparcialidad, desescalada de tensiones y deberes éticos del Staff.</div>
           </div>
         </div>
 
@@ -3654,43 +3609,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Mediación Formativa y Desescalada de Conflictos</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Los moderadores actúan como mediadores y guías, no como policías autoritarios. Toda intervención busca calmar el ambiente, explicar la norma y corregir la conducta sin humillar al usuario.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-M1">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Establece el rol educativo y conciliador del equipo de Staff, priorizando la resolución pacífica de discusiones antes de aplicar medidas punitivas.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Intervenir con prepotencia, insultar o ridiculizar a usuarios infractores, o sancionar impulsivamente sin advertencia previa en faltas menores.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Separar a las partes en conflicto, invitar a una pausa reflexiva y fundamentar de forma clara qué norma fue vulnerada.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Cállense todos ya o los baneo a los dos por hacerme perder el tiempo."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Emplea autoritarismo y amenazas en lugar de guiar la desescalada del conflicto.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Chicos, hagamos una pausa de 5 minutos en el debate; recordemos mantener el respeto mutuo que pide la regla #01."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Interviene con calma, recuerda la normativa y orienta hacia una convivencia sana.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">Amonestación interna al miembro del Staff y revisión obligatoria de protocolos de mediación formativa.</div>
               </div>
             </div>
           </div>
@@ -3710,43 +3662,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Imparcialidad y Cero Conflicto de Interés</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Ningún moderador puede sancionar motivado por simpatías, antipatías o rencores personales. Si un moderador está involucrado emocionalmente en una discusión, debe ceder el caso a otro colega.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-M2">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Asegura la neutralidad y transparencia del Staff, garantizando que ninguna decisión disciplinaria esté condicionada por favoritismos o rencores personales.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Moderar discusiones en las que el propio moderador sea parte activa del altercado o perdonar faltas graves a amigos personales.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Transferir el caso a otro moderador neutral cuando existan vínculos afectivos o disputas previas con las partes involucradas.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Como me caes mal en los juegos, te voy a silenciar 24 horas por una broma menor."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Utiliza las herramientas de moderación para tomar revancha personal.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Colegas de Staff, como estuve debatiendo con este usuario, prefiero que otro moderador evalúe objetivamente el reporte."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Demuestra ética profesional cediendo el caso para asegurar imparcialidad.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">Inhabilitación temporal de permisos de moderación e investigación por parte de la Administración del servidor.</div>
               </div>
             </div>
           </div>
@@ -3766,43 +3715,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Preservación de Evidencias y Auditoría de Sanciones</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Toda sanción de silencio temporal, expulsión o baneo debe contar con un registro interno con motivo y captura o ID de mensaje que respalde la decisión frente a futuras revisiones.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-M3">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Garantiza el debido proceso y la trazabilidad de cada acción disciplinaria, protegiendo tanto los derechos de los usuarios como el respaldo técnico del Staff.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Aplicar expulsiones o baneos sin dejar constancia en el canal de auditoría interno o eliminar evidencias que justifiquen la medida.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Registrar cada reporte con ID de usuario, norma infringida, captura de pantalla no manipulada y resumen fáctico de los hechos.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    [Moderador banea a un usuario sin registrar motivo en el bot ni guardar capturas del mensaje infractor]
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Impide verificar la legitimidad de la sanción en caso de apelación o auditoría.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Registro de Sanción: Usuario ID 12345 · Regla #02 (Acoso) · Captura adjunta en `#staff-logs` · Sanción: Time-Out 12h."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Documenta con precisión técnica la evidencia que sustenta la decisión.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">Invalidación de la sanción no documentada y llamado de atención en el expediente interno del moderador.</div>
               </div>
             </div>
           </div>
@@ -3822,43 +3768,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Supervisión y Canal para Reportar Moderación</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Cualquier usuario que considere que un miembro del Staff actuó con abuso de poder o injusticia tiene derecho a solicitar una revisión privada con la Administración del servidor.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-M4">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Establece un contrapeso democrático y seguro que previene abusos de autoridad y asegura que el equipo de moderación rinda cuentas a la comunidad.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Amenazar con castigos a usuarios que utilicen los canales formales de queja o censurar críticas respetuosas sobre el desempeño del Staff.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Abrir un ticket privado de atención directa con los Administradores para exponer irregularidades de moderación con pruebas.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Si vas con los administradores a quejarte de mi silencio te voy a banear de forma definitiva."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Ejerce coacción y obstruye el derecho de revisión de la comunidad.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Si consideras que la sanción no fue justa, puedes abrir un ticket en `#soporte-staff` para que la Administración revise el caso."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Informa con transparencia los canales formales de revisión y apelación.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">Remoción inmediata del cargo de moderación ante casos comprobados de abuso de poder o intimidación.</div>
               </div>
             </div>
           </div>
@@ -3867,11 +3810,11 @@
       </div>
 
       <!-- ========================================== -->
-      <!-- SECCIÓN: MATRIZ SANCIONAL Y SIMULADOR DETERMINISTA 📊 -->
+      <!-- FASE V: MATRIZ SANCIONAL Y SIMULADOR DETERMINISTA 📊 -->
       <!-- ========================================== -->
-      <div class="section-gap" id="sanciones"></div>
+      <div class="section-gap" id="fase-5"></div>
       <div class="phase-header">
-        <span class="phase-badge">📊 SANCIONES</span>
+        <span class="phase-badge">FASE V</span>
         <h2 class="phase-title">Matriz Sancional y Simulador Dinámico 📊</h2>
         <div class="phase-line"></div>
       </div>
@@ -3881,7 +3824,7 @@
           <div class="card-icon">📊</div>
           <div>
             <div class="card-title">Escala de Puntos y Graduación Razonable</div>
-            <div class="card-sub"></div>
+            <div class="card-sub">Sistema determinista que evalúa gravedad, intencionalidad, reincidencia y cooperación para calcular la medida disciplinaria recomendada.</div>
           </div>
         </div>
 
@@ -3923,7 +3866,7 @@
             <span class="inf-unit">Puntos</span>
             <div class="inf-title">Spam Leve / Desvío</div>
             <span class="inf-badge">Aviso inicial</span>
-            <div class="inf-desc"></div>
+            <div class="inf-desc">Mensajes repetitivos o enviar contenido en sala incorrecta.</div>
           </div>
 
           <div class="inf-card" data-pts="20">
@@ -3931,7 +3874,7 @@
             <span class="inf-unit">Puntos</span>
             <div class="inf-title">Falta de Respeto</div>
             <span class="inf-badge">Strike 1</span>
-            <div class="inf-desc"></div>
+            <div class="inf-desc">Insultos en discusión o provocaciones continuas.</div>
           </div>
 
           <div class="inf-card" data-pts="30">
@@ -3939,7 +3882,7 @@
             <span class="inf-unit">Puntos</span>
             <div class="inf-title">Desacato al Staff</div>
             <span class="inf-badge">Strike 2</span>
-            <div class="inf-desc"></div>
+            <div class="inf-desc">Ignorar peticiones reiteradas de calmar el ambiente.</div>
           </div>
 
           <div class="inf-card" data-pts="40">
@@ -3947,7 +3890,7 @@
             <span class="inf-unit">Puntos</span>
             <div class="inf-title">Hostigamiento / Mute Voz</div>
             <span class="inf-badge">Time-Out 1h</span>
-            <div class="inf-desc"></div>
+            <div class="inf-desc">Insistencias invasivas o ruidos ensordecedores en voz.</div>
           </div>
 
           <div class="inf-card" data-pts="60">
@@ -3955,7 +3898,7 @@
             <span class="inf-unit">Puntos</span>
             <div class="inf-title">Links Dudosos / Alts</div>
             <span class="inf-badge">Time-Out 24h</span>
-            <div class="inf-desc"></div>
+            <div class="inf-desc">Difusión de enlaces sospechosos o evasión leve.</div>
           </div>
 
           <div class="inf-card" data-pts="100">
@@ -3963,7 +3906,7 @@
             <span class="inf-unit">Puntos</span>
             <div class="inf-title">Doxxing / Malware</div>
             <span class="inf-badge">Ban Permanente</span>
-            <div class="inf-desc"></div>
+            <div class="inf-desc">Filtración de datos privados, amenazas graves o malware.</div>
           </div>
         </div>
 
@@ -4051,11 +3994,11 @@
       </div>
 
       <!-- ========================================== -->
-      <!-- SECCIÓN: MARCO JURÍDICO LATAM Y DISCORD 📜 -->
+      <!-- FASE VI: MARCO JURÍDICO LATAM Y DISCORD 📜 -->
       <!-- ========================================== -->
-      <div class="section-gap" id="leyes-latam"></div>
+      <div class="section-gap" id="fase-6"></div>
       <div class="phase-header">
-        <span class="phase-badge">📜 LEYES LATAM</span>
+        <span class="phase-badge">FASE VI</span>
         <h2 class="phase-title">Marco Jurídico Latinoamericano & Ciberseguridad 📜</h2>
         <div class="phase-line"></div>
       </div>
@@ -4065,7 +4008,7 @@
           <div class="card-icon">🏛️</div>
           <div>
             <div class="card-title">Legislación Vigente sobre Delitos Digitales y Privacidad</div>
-            <div class="card-sub"></div>
+            <div class="card-sub">Homologación de las directrices comunitarias con los códigos penales y leyes de ciberseguridad en Iberoamérica.</div>
           </div>
         </div>
 
@@ -4091,7 +4034,7 @@
               <span class="legal-badge-country" style="color:#34d399; border-color:rgba(52,211,153,0.3)">MÉXICO</span>
             </div>
             <div class="legal-law-ref"><a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Código Penal Federal · Art. 199 Octies (Ley Olimpia)</a> / <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Art. 211 Bis (Acceso Ilícito)</a></div>
-            <p></p>
+            <p>Sanciona de 3 a 6 años de prisión la divulgación, almacenamiento o comercialización no consentida de imágenes, audios o videos íntimos, así como la vulneración de sistemas informáticos y acoso cibernético.</p>
           </div>
 
           <!-- COLOMBIA -->
@@ -4101,7 +4044,7 @@
               <span class="legal-badge-country" style="color:#fbbf24; border-color:rgba(251,191,36,0.3)">COLOMBIA</span>
             </div>
             <div class="legal-law-ref"><a href="https://www.secretariasenado.gov.co/senado/basedoc/ley_1273_2009.html" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 1273 de 2009 (Delitos Informáticos)</a> / <a href="https://www.secretariasenado.gov.co/senado/basedoc/ley_1581_2012.html" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 1581 de 2012 (Habeas Data)</a></div>
-            <p></p>
+            <p>Tipifica como delito la violación de datos personales, obstaculización ilegítima de sistemas informáticos, interceptación de comunicaciones y extorsión por medios telemáticos.</p>
           </div>
 
           <!-- CHILE -->
@@ -4111,7 +4054,7 @@
               <span class="legal-badge-country" style="color:#f87171; border-color:rgba(248,113,113,0.3)">CHILE</span>
             </div>
             <div class="legal-law-ref"><a href="https://www.bcn.cl/leychile/navegar?idNorma=1177651" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 21.459 (Convenio de Budapest)</a> / <a href="https://www.bcn.cl/leychile/navegar?idNorma=141597" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 19.628 (Vida Privada)</a></div>
-            <p></p>
+            <p>Regula los delitos de acceso ilícito, interceptación indebida, ataque a la integridad de datos, falsificación informática, receptación y suplantación de identidad en plataformas digitales.</p>
           </div>
 
           <!-- ARGENTINA -->
@@ -4121,7 +4064,7 @@
               <span class="legal-badge-country" style="color:#38bdf8; border-color:rgba(56,189,248,0.3)">ARGENTINA</span>
             </div>
             <div class="legal-law-ref"><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/140000-144999/141790/norma.htm" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 26.388 de Delitos Informáticos</a> / <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/norma.htm" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Ley 25.326 de Protección de Datos</a></div>
-            <p></p>
+            <p>Incorpora figuras penales para la pornografía infantil digital, violación de correo electrónico privado, daño a sistemas informáticos, phishing y tratamiento ilícito de información personal.</p>
           </div>
 
           <!-- ESPAÑA -->
@@ -4131,7 +4074,7 @@
               <span class="legal-badge-country" style="color:#fbbf24; border-color:rgba(251,191,36,0.3)">ESPAÑA</span>
             </div>
             <div class="legal-law-ref"><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Código Penal Español · Arts. 197 al 197 quinquies</a> / <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2018-16673" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">LOPDGDD 3/2018</a></div>
-            <p></p>
+            <p>Castiga con penas de prisión de hasta 5 años la interceptación de comunicaciones, acceso no autorizado a sistemas informáticos y la difusión inconsentida de imágenes o datos personales obtenidos sin autorización previa.</p>
           </div>
 
           <!-- GLOBAL / DISCORD -->
@@ -4141,17 +4084,17 @@
               <span class="legal-badge-country" style="color:#c084fc; border-color:rgba(192,132,252,0.3)">GLOBAL</span>
             </div>
             <div class="legal-law-ref"><a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Discord Terms</a> / <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:underline;">Community Guidelines</a></div>
-            <p></p>
+            <p>Exige un mínimo de edad de 13 años (o mayor según la legislación nacional) y prohíbe terminantemente el doxxing, el acoso, los discursos de odio, el malware y el contenido de abuso infantil, facultando la eliminación global de cuentas infractoras.</p>
           </div>
         </div>
       </div>
 
       <!-- ========================================== -->
-      <!-- SECCIÓN: GARANTÍAS, APELACIONES Y REPORTES 📜 -->
+      <!-- FASE VII: GARANTÍAS, APELACIONES Y REPORTES 📜 -->
       <!-- ========================================== -->
-      <div class="section-gap" id="apelaciones"></div>
+      <div class="section-gap" id="fase-7"></div>
       <div class="phase-header">
-        <span class="phase-badge">💬 APELACIONES</span>
+        <span class="phase-badge">FASE VII</span>
         <h2 class="phase-title">Garantías del Usuario, Apelaciones y Reportes 📜</h2>
         <div class="phase-line"></div>
       </div>
@@ -4161,7 +4104,7 @@
           <div class="card-icon">⚖️</div>
           <div>
             <div class="card-title">Carta de Derechos Fundamentales y Debido Proceso</div>
-            <div class="card-sub"></div>
+            <div class="card-sub">Garantías procesales para todos los miembros frente a sanciones o malentendidos.</div>
           </div>
         </div>
 
@@ -4181,43 +4124,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Presunción de Buena Fe y Revisión Imparcial</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Cualquier integrante sancionado por un malentendido tiene derecho a ser escuchado de buena fe y a que su caso sea revisado por moderadores que no hayan participado en la discusión.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-D1">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Protege a los integrantes contra interpretaciones precipitadas, asumiendo una intención constructiva en faltas ambiguas hasta que se demuestre lo contrario.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Juzgar intenciones malévolas ante simples equivocaciones involuntarias o denegar la palabra al usuario durante una aclaración.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Exponer la versión de los hechos con serenidad y solicitar que un moderador no involucrado revise el contexto del mensaje.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Tu error tipográfico en el enlace fue un intento deliberado de tumbar el servidor, no te daremos oportunidad de explicarte."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Asume culpabilidad extrema ignorando la posibilidad de un error humano comprensible.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Entiendo que compartiste el enlace por error pensando que era otro video; te orientamos sobre cómo verificar links antes de enviar."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Aplica la presunción de buena fe y aprovecha el incidente para educar constructivamente.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">Garantía procesal: derecho inalienable a ser escuchado en caso de sanciones ambiguas o dudosas.</div>
               </div>
             </div>
           </div>
@@ -4237,43 +4177,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Privacidad Inviolable y No Intromisión</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Ningún moderador puede exigir a los usuarios revelar su identidad real, encender cámaras web ni entregar mensajes privados externos para permanecer en el servidor.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-D2">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Garantiza la soberanía digital de los integrantes, protegiendo su derecho a mantener su vida privada y DMs personales al margen de la comunidad.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Condicionar roles, accesos o permanencia a cambio de fotografías personales, números de teléfono o capturas de chats privados ajenos al servidor.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Conservar el seudónimo elegido y compartir únicamente la información personal que cada usuario decida de forma voluntaria y consciente.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Para darte el rol de miembro verificado debes pasarme tu Instagram personal y prender cámara en llamada."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Coacciona al usuario solicitando información íntima no requerida por el reglamento.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "Puedes verificar tu cuenta completando el cuestionario interactivo de normas en la web sin compartir datos privados."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Respeta la privacidad y valida la pertenencia mediante procesos públicos e impersonales.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">Garantía procesal: nulidad absoluta de cualquier exigencia no estipulada en el reglamento oficial.</div>
               </div>
             </div>
           </div>
@@ -4293,43 +4230,40 @@
                 </div>
               </div>
               <div class="rule-main-title">Derecho a Petición y Sugerencias Comunitarias</div>
-              <div class="rule-summary-text"></div>
+              <div class="rule-summary-text">Todos los integrantes tienen plena libertad para proponer dinámicas, eventos, canales y mejoras organizativas en el canal de sugerencias.</div>
             </div>
 
             <div class="rule-expandable-body" id="rule-body-D3">
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading">🌿 ¿Qué significa?</div>
+                <div class="rule-section-desc">Fomenta la participación comunitaria activa, reconociendo que el crecimiento y dinamismo del servidor se enriquecen con las ideas de sus miembros.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading danger"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading danger">❌ Lo que está prohibido</div>
+                <div class="rule-section-desc">Censurar o sancionar sugerencias constructivas presentadas con respeto o ignorar sistemáticamente las votaciones de la comunidad.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading good"></div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-heading good">✅ Lo que sí está permitido</div>
+                <div class="rule-section-desc">Plantear propuestas creativas de torneos, dinámicas o ajustes de canales mediante el canal formal `#sugerencias`.</div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading"></div>
+                <div class="rule-section-heading">💬 Ejemplo en Discord</div>
                 <div class="rule-examples-deck">
                   <div class="rule-example-card bad">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">❌ INCORRECTO</div>
+                    "Queda prohibido sugerir cambios para el servidor porque la administración ya decidió todo."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Coarta la iniciativa colectiva y bloquea el feedback de los miembros.</em></div>
                   </div>
                   <div class="rule-example-card good">
-                    <div class="rule-example-label"></div>
+                    <div class="rule-example-label">✅ CORRECTO</div>
+                    "¡Excelente propuesta para el torneo de fin de semana! La abriremos a votación de la comunidad en `#sugerencias`."
+                    <div style="font-size:0.72rem; color:var(--text-dim); margin-top:4px;"><em>¿Por qué? Valora la iniciativa y abre espacios democráticos de participación.</em></div>
                   </div>
                 </div>
               </div>
               <div class="rule-section-block">
-                <div class="rule-section-heading sanc"></div>
-                <div class="rule-section-desc"></div>
-              </div>
-            </div>
-          </div>
-              </div>
-              <div class="rule-section-block">
                 <div class="rule-section-heading sanc">⚖️ Sanción</div>
-                <div class="rule-section-desc"></div>
+                <div class="rule-section-desc">Garantía procesal: derecho de respuesta fundamentada para las propuestas con mayor respaldo comunitario.</div>
               </div>
             </div>
           </div>
@@ -4371,7 +4305,7 @@
           <div class="report-box">
             <div>
               <div class="report-box-head"><span>🚨</span> Reportar Conducta</div>
-              <p></p>
+              <p>Si alguien está acosando, enviando spam masivo o violando las reglas del servidor.</p>
             </div>
             <a href="#" class="report-action-btn" id="report-conduct-btn" target="_blank" rel="noopener noreferrer">Abrir Ticket de Reporte ➔</a>
           </div>
@@ -4379,7 +4313,7 @@
           <div class="report-box">
             <div>
               <div class="report-box-head"><span>⚖️</span> Apelar Sanción</div>
-              <p></p>
+              <p>Si recibiste un Time-Out o advertencia y deseas que sea revisada por la moderación.</p>
             </div>
             <a href="#" class="report-action-btn" id="report-appeal-btn" target="_blank" rel="noopener noreferrer">Solicitar Apelación ➔</a>
           </div>
@@ -4387,7 +4321,7 @@
           <div class="report-box">
             <div>
               <div class="report-box-head"><span>🏛️</span> Quejas sobre Moderación</div>
-              <p></p>
+              <p>Si experimentaste una situación de abuso de poder o trato indebido por parte de un moderador.</p>
             </div>
             <a href="#" class="report-action-btn" id="report-staff-btn" target="_blank" rel="noopener noreferrer">Reportar al Staff ➔</a>
           </div>
@@ -4396,15 +4330,15 @@
       </div>
 
       <!-- ========================================== -->
-      <!-- SECCIÓN: PREGUNTAS FRECUENTES (FAQ) ❓ -->
+      <!-- FASE VIII: PREGUNTAS FRECUENTES (FAQ) ❓ -->
       <!-- ========================================== -->
       
       <!-- ========================================== -->
       <!-- TEST DE CONVIVENCIA Y ONBOARDING (v3.0) 🏆 -->
       <!-- ========================================== -->
-      <div class="section-gap" id="quiz"></div>
+      <div class="section-gap" id="fase-quiz"></div>
       <div class="phase-header">
-        <span class="phase-badge">🏆 QUIZ COMUNITARIO</span>
+        <span class="phase-badge">TEST COMUNITARIO</span>
         <h2 class="phase-title">Test de Convivencia & Comprensión 🏆</h2>
         <div class="phase-line"></div>
       </div>
@@ -4414,7 +4348,7 @@
           <div class="card-icon">🧠</div>
           <div>
             <div class="card-title">UMAS Community Knowledge Test</div>
-            <div class="card-sub"></div>
+            <div class="card-sub">Pon a prueba tu conocimiento de las normas con 5 casos prácticos y obtén tu Constancia Comunitaria Oficial.</div>
           </div>
         </div>
 
@@ -4442,9 +4376,9 @@
         </div>
       </div>
 
-<div class="section-gap" id="faq"></div>
+<div class="section-gap" id="fase-8"></div>
       <div class="phase-header">
-        <span class="phase-badge">❓ FAQ</span>
+        <span class="phase-badge">FASE VIII</span>
         <h2 class="phase-title">Preguntas Frecuentes (FAQ) ❓</h2>
         <div class="phase-line"></div>
       </div>
@@ -4454,7 +4388,7 @@
           <div class="card-icon">❓</div>
           <div>
             <div class="card-title">Dudas Habituales sobre la Comunidad y las Sanciones</div>
-            <div class="card-sub"></div>
+            <div class="card-sub">Respuestas claras y transparentes a las situaciones más comunes en Discord.</div>
           </div>
         </div>
 
@@ -4464,7 +4398,9 @@
               <span>¿Qué ocurre si rompo una regla accidentalmente por ser nuevo?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
-            <div class="faq-answer-body"></div>
+            <div class="faq-answer-body">
+              No te preocupes. Privilegiamos la presunción de buena fe. Si cometes un error leve (como enviar un meme en `#general` o poner un link sin spoiler), el Staff simplemente te avisará amablemente para orientarte. No aplicamos silencios ni sanciones restrictivas por equivocaciones inocentes.
+            </div>
           </div>
 
           <div class="faq-item">
@@ -4472,7 +4408,9 @@
               <span>¿Los puntos de advertencia expiran con el tiempo?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
-            <div class="faq-answer-body"></div>
+            <div class="faq-answer-body">
+              Sí. Los avisos y puntos por faltas leves y moderadas caducan automáticamente tras 30 días continuos de conducta limpia y respetuosa en el servidor.
+            </div>
           </div>
 
           <div class="faq-item">
@@ -4480,7 +4418,9 @@
               <span>¿Qué debo hacer si alguien me envía mensajes privados molestos o sospechosos?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
-            <div class="faq-answer-body"></div>
+            <div class="faq-answer-body">
+              Toma capturas de pantalla de la conversación donde se aprecie el nombre de usuario y el ID de Discord, bloquea a la persona y abre un ticket con el Staff. El acoso por DMs entre miembros del servidor está estrictamente sancionado.
+            </div>
           </div>
 
           <div class="faq-item">
@@ -4488,7 +4428,9 @@
               <span>¿Puedo usar una cuenta secundaria (alt) en el servidor?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
-            <div class="faq-answer-body"></div>
+            <div class="faq-answer-body">
+              Tener una cuenta secundaria para pruebas o por privacidad está permitido, siempre que no se utilice para evadir silencios (Time-Outs), multiplicar votos en eventos o realizar actividades fraudulentas. Si tu cuenta principal es sancionada, tu cuenta secundaria debe respetar la sanción.
+            </div>
           </div>
 
           <div class="faq-item">
@@ -4496,7 +4438,9 @@
               <span>¿Dónde puedo pedir ayuda si tengo dudas sobre el servidor?</span>
               <span class="faq-icon-arrow">▼</span>
             </button>
-            <div class="faq-answer-body"></div>
+            <div class="faq-answer-body">
+              Puedes preguntar con confianza en el canal `#ayuda` o abrir un ticket privado con el equipo de Staff desde el canal de tickets.
+            </div>
           </div>
         </div>
       </div>
@@ -4505,10 +4449,14 @@
 
     <!-- Footer -->
     <footer>
-      <div class="footer-logo">✦ Sakura Paradise · Servidor Comunitario en Discord (Fanmade) ✦</div>
-      <p></p>
+      <div class="footer-logo">✦ Umas Community · Servidor Comunitario en Discord (Fanmade) ✦</div>
+      <p>
+        <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">Términos de Discord</a> ·
+        <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer">Directrices de la Comunidad</a> ·
+        <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">Políticas de Privacidad</a>
+      </p>
       <p style="margin-top: 6px;">
-        © 2026 Sakura Paradise · Reglamento de Convivencia 2.0 · Todos los derechos reservados.
+        © 2026 Umas Community · Reglamento de Convivencia 2.0 · Todos los derechos reservados.
       </p>
       <p style="margin-top: 4px; font-size: 0.74rem; color: rgba(220,252,231,0.35);">
         Servidor comunitario independiente sin fines de lucro bajo Uso Legítimo (Fair Use). No afiliado ni respaldado por Cygames Inc. ni Discord Inc.
@@ -4635,7 +4583,7 @@
 
 <script>
 /**
- * Sakura Paradise Rules Web 3.0 Engine
+ * Umas Community Rules Web 3.0 Engine
  * Unified Dataset, i18n (ES/EN/PT), Interactive Quiz, Staff Moderation API & PWA
  */
 
@@ -4650,7 +4598,7 @@ const DATA_I18N = {
     soundOff: 'ASMR: OFF',
     staffBtn: 'Staff',
     heroBadge: '✦ SANTUARIO DIGITAL · REGLAMENTO DE CONVIVENCIA 3.0 🌿 ✦',
-    heroTitle: 'Reglamento de <span class="accent">Convivencia</span><br>Sakura Paradise',
+    heroTitle: 'Reglamento de <span class="accent">Convivencia</span><br>Umas Community',
     heroDesc: 'Una comunidad sana no se define por la cantidad de castigos que aplica, sino por la calidad del trato entre sus integrantes.',
     heroCta: '🌿 Explorar Normas',
     heroSearch: '🔍 Buscar tema rápido',
@@ -4675,7 +4623,7 @@ const DATA_I18N = {
     soundOff: 'ASMR: OFF',
     staffBtn: 'Staff',
     heroBadge: '✦ DIGITAL SANCTUARY · OFFICIAL COMMUNITY GUIDELINES 3.0 🌿 ✦',
-    heroTitle: 'Community <span class="accent">Guidelines</span><br>Sakura Paradise',
+    heroTitle: 'Community <span class="accent">Guidelines</span><br>Umas Community',
     heroDesc: 'A healthy community is defined by mutual respect and dialogue, not by the amount of punishments.',
     heroCta: '🌿 Explore Rules',
     heroSearch: '🔍 Quick search',
@@ -4700,7 +4648,7 @@ const DATA_I18N = {
     soundOff: 'ASMR: DESLIGADO',
     staffBtn: 'Staff',
     heroBadge: '✦ SANTUÁRIO DIGITAL · REGULAMENTO OFICIAL 3.0 🌿 ✦',
-    heroTitle: 'Regras de <span class="accent">Convivência</span><br>Sakura Paradise',
+    heroTitle: 'Regras de <span class="accent">Convivência</span><br>Umas Community',
     heroDesc: 'Uma comunidade saudável é construída com diálogo, empatia e respeito mútuo.',
     heroCta: '🌿 Explorar Regras',
     heroSearch: '🔍 Busca rápida',
@@ -4775,7 +4723,7 @@ const DATA_QUIZ = [
   {
     id: 5,
     ruleId: 'M1',
-    question: '¿Cuál es el rol prioritario del equipo de moderadores (Staff) de Sakura Paradise ante una discusión acalorada?',
+    question: '¿Cuál es el rol prioritario del equipo de moderadores (Staff) de Umas Community ante una discusión acalorada?',
     options: [
       { text: 'A) Banear a todos los involucrados de inmediato sin mediar palabra.', isCorrect: false },
       { text: 'B) Imponer su opinión personal en el debate.', isCorrect: false },
@@ -5161,7 +5109,7 @@ const SearchEngine = {
     const isPointsQuery = ['puntos', 'pts', 'simulador', 'matriz', 'sanciones', 'evaluacion', 'calculadora'].some(t => cleanQ.includes(t) || t.includes(cleanQ));
     if (isPointsQuery) {
       scored.push({
-        box: document.getElementById('simulador-box') || document.getElementById('sanciones'),
+        box: document.getElementById('simulador-box') || document.getElementById('fase-5'),
         ruleId: 'SIMULADOR',
         title: '🎮 Simulador de Estado Sancional & Matriz de Puntos',
         summary: 'Calculadora determinista de 0 a 100 PTS con escala gradual, factores de intencionalidad y exportación para Discord.',
@@ -5171,7 +5119,7 @@ const SearchEngine = {
         ptsBadge: '0 a 100 PTS',
         score: 110,
         isSpecialShortcut: true,
-        targetId: 'sanciones'
+        targetId: 'fase-5'
       });
     }
 
@@ -5539,7 +5487,7 @@ const QuizModule = {
           Puntaje Obtenido: ${this.score} / ${DATA_QUIZ.length} Aciertos (${Math.round((this.score/DATA_QUIZ.length)*100)}%)
         </p>
         <p style="font-size:0.86rem; color:var(--text-muted); max-width:540px; margin:0 auto 20px; line-height:1.6;">
-          Se certifica que el usuario ha revisado y comprendido satisfactoriamente las directrices de convivencia, seguridad digital y respeto mutuo de Sakura Paradise.
+          Se certifica que el usuario ha revisado y comprendido satisfactoriamente las directrices de convivencia, seguridad digital y respeto mutuo de Umas Community.
         </p>
         <div style="font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--text-dim); border-top:1px solid var(--border); padding-top:14px; margin-top:14px;">
           ID de Sesión: <strong>${sessionId}</strong> • Fecha: ${dateStr}<br>
@@ -5765,7 +5713,7 @@ const RulesModule = {
           const tag = box.querySelector('.r-tag')?.textContent?.trim() || '';
           const title = box.querySelector('.rule-main-title')?.textContent?.trim() || '';
           const summary = box.querySelector('.rule-summary-text')?.textContent?.trim() || '';
-          const textToCopy = `🌿 **Sakura Paradise · ${tag} ${title}**\n> ${summary}\n📜 *Reglamento:* https://rules-web.onrender.com`;
+          const textToCopy = `🌿 **Umas Community · ${tag} ${title}**\n> ${summary}\n📜 *Reglamento:* https://rules-web.onrender.com`;
 
           Utils.copyToClipboard(
             textToCopy,
@@ -5866,7 +5814,7 @@ const SimulatorModule = {
     if (copySummaryBtn) {
       copySummaryBtn.addEventListener('click', () => {
         const tier = this.tiers[this.currentScore] || this.tiers[0];
-        const summary = `📋 **INFORME DE MODERACIÓN · UMAS COMMUNITY**\n────────────────────\n> **Puntaje Evaluado:** ${this.currentScore}/100 PTS\n> **Calificación:** ${tier.title}\n> **Medida Disciplinaria:** ${tier.action}\n> **Justificación:** ${tier.why}\n> **Base Normativa:** ${tier.legal}\n────────────────────\n📜 *Verificación:* https://rules-web.onrender.com/#sanciones`;
+        const summary = `📋 **INFORME DE MODERACIÓN · UMAS COMMUNITY**\n────────────────────\n> **Puntaje Evaluado:** ${this.currentScore}/100 PTS\n> **Calificación:** ${tier.title}\n> **Medida Disciplinaria:** ${tier.action}\n> **Justificación:** ${tier.why}\n> **Base Normativa:** ${tier.legal}\n────────────────────\n📜 *Verificación:* https://rules-web.onrender.com/#fase-5`;
         Utils.copyToClipboard(summary, () => {
           AudioEngine.playCrystal([784, 1046.5]);
           Utils.showToast('Informe copiado para Discord', '📋');
@@ -6097,72 +6045,6 @@ const CardsEffectModule = {
   }
 };
 
-
-// ==========================================
-// ENTER SCREEN MODULE
-// ==========================================
-const EnterScreenModule = {
-  handleEnter() {
-    const enterScreen = document.getElementById('enter-screen');
-    const mainNav = document.getElementById('main-nav');
-    const heroOverlay = document.getElementById('hero-text-overlay');
-    const bgAudio = document.getElementById('bg-audio');
-
-    try {
-      AudioEngine.resumeContext();
-      AudioEngine.playCrystal([523.25, 659.25, 783.99, 1046.5]);
-    } catch (e) {}
-
-    document.body.classList.remove('modal-open');
-    document.body.style.overflow = '';
-
-    if (enterScreen) {
-      enterScreen.style.pointerEvents = 'none';
-      enterScreen.classList.add('dismissed');
-      enterScreen.style.opacity = '0';
-    }
-
-    if (mainNav) {
-      mainNav.classList.add('nav-visible');
-    }
-
-    try {
-      if (bgAudio && AudioEngine.enabled) {
-        bgAudio.volume = 0.2;
-        bgAudio.play().catch(() => {});
-      }
-    } catch (e) {}
-
-    setTimeout(() => {
-      if (heroOverlay) heroOverlay.classList.add('start-anim');
-    }, 150);
-
-    setTimeout(() => {
-      if (enterScreen) {
-        enterScreen.style.display = 'none';
-        enterScreen.style.visibility = 'hidden';
-      }
-    }, 350);
-  },
-
-  init() {
-    const enterBtn = document.getElementById('enter-btn');
-    if (enterBtn) {
-      enterBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.handleEnter();
-      });
-      enterBtn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          this.handleEnter();
-        }
-      });
-    }
-  }
-};
-window.EnterScreenModule = EnterScreenModule;
-
 const DiscordLinksModule = {
   init() {
     const enterScreen = document.getElementById('enter-screen');
@@ -6207,7 +6089,6 @@ const DiscordLinksModule = {
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
   AudioEngine.init();
-  EnterScreenModule.init();
   I18nModule.init();
   PwaModule.init();
   SearchEngine.init();
@@ -6220,7 +6101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   FAQModule.init();
   BackgroundModule.init();
   DiscordLinksModule.init();
-  console.log('🌿 Sakura Paradise Rules Web 3.0 Engine online (i18n, Quiz, Staff, PWA).');
+  console.log('🌿 Umas Community Rules Web 3.0 Engine online (i18n, Quiz, Staff, PWA).');
 });
 </script>
 

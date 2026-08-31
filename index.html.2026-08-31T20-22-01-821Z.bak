@@ -13,15 +13,15 @@
   <meta name="apple-mobile-web-app-title" content="Umas Rules" />
 
   <!-- OpenGraph / Discord Rich Embed Meta Tags -->
-  <title>Reglamento Oficial & Convivencia Comunitaria · Sakura Paradise 🌿</title>
+  <title>Reglamento Oficial & Convivencia Comunitaria · Umas Community 🌿</title>
   <meta name="description" content="Manual integral de convivencia, mediación pedagógica, seguridad digital, simulador determinista de sanciones y buscador semántico inteligente." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rules-web.onrender.com" />
-  <meta property="og:title" content="Reglamento Oficial · Sakura Paradise 🌿" />
+  <meta property="og:title" content="Reglamento Oficial · Umas Community 🌿" />
   <meta property="og:description" content="Una comunidad sana se construye entre todos. Manual interactivo de convivencia, seguridad y mediación formativa." />
   <meta property="og:image" content="https://rules-web.onrender.com/favicon.svg" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Reglamento Oficial · Sakura Paradise 🌿" />
+  <meta name="twitter:title" content="Reglamento Oficial · Umas Community 🌿" />
   <meta name="twitter:description" content="Protocolo de convivencia, matriz sancional y directrices comunitarias." />
 
   <!-- Google Fonts: Plus Jakarta Sans, Playfair Display, JetBrains Mono -->
@@ -2617,7 +2617,7 @@
     <div class="hero-badge">✦ SANTUARIO DIGITAL · REGLAMENTO DE CONVIVENCIA 2.0 🌿 ✦</div>
     <h1 class="hero-title">
       Reglamento de <span class="accent">Convivencia</span><br>
-      Sakura Paradise
+      Umas Community
     </h1>
     <p class="hero-desc">
       Una comunidad sana no se define por la cantidad de castigos que aplica, sino por la calidad del trato entre sus integrantes.
@@ -4505,10 +4505,10 @@
 
     <!-- Footer -->
     <footer>
-      <div class="footer-logo">✦ Sakura Paradise · Servidor Comunitario en Discord (Fanmade) ✦</div>
+      <div class="footer-logo">✦ Umas Community · Servidor Comunitario en Discord (Fanmade) ✦</div>
       <p></p>
       <p style="margin-top: 6px;">
-        © 2026 Sakura Paradise · Reglamento de Convivencia 2.0 · Todos los derechos reservados.
+        © 2026 Umas Community · Reglamento de Convivencia 2.0 · Todos los derechos reservados.
       </p>
       <p style="margin-top: 4px; font-size: 0.74rem; color: rgba(220,252,231,0.35);">
         Servidor comunitario independiente sin fines de lucro bajo Uso Legítimo (Fair Use). No afiliado ni respaldado por Cygames Inc. ni Discord Inc.
@@ -4635,7 +4635,7 @@
 
 <script>
 /**
- * Sakura Paradise Rules Web 3.0 Engine
+ * Umas Community Rules Web 3.0 Engine
  * Unified Dataset, i18n (ES/EN/PT), Interactive Quiz, Staff Moderation API & PWA
  */
 
@@ -4650,7 +4650,7 @@ const DATA_I18N = {
     soundOff: 'ASMR: OFF',
     staffBtn: 'Staff',
     heroBadge: '✦ SANTUARIO DIGITAL · REGLAMENTO DE CONVIVENCIA 3.0 🌿 ✦',
-    heroTitle: 'Reglamento de <span class="accent">Convivencia</span><br>Sakura Paradise',
+    heroTitle: 'Reglamento de <span class="accent">Convivencia</span><br>Umas Community',
     heroDesc: 'Una comunidad sana no se define por la cantidad de castigos que aplica, sino por la calidad del trato entre sus integrantes.',
     heroCta: '🌿 Explorar Normas',
     heroSearch: '🔍 Buscar tema rápido',
@@ -4675,7 +4675,7 @@ const DATA_I18N = {
     soundOff: 'ASMR: OFF',
     staffBtn: 'Staff',
     heroBadge: '✦ DIGITAL SANCTUARY · OFFICIAL COMMUNITY GUIDELINES 3.0 🌿 ✦',
-    heroTitle: 'Community <span class="accent">Guidelines</span><br>Sakura Paradise',
+    heroTitle: 'Community <span class="accent">Guidelines</span><br>Umas Community',
     heroDesc: 'A healthy community is defined by mutual respect and dialogue, not by the amount of punishments.',
     heroCta: '🌿 Explore Rules',
     heroSearch: '🔍 Quick search',
@@ -4700,7 +4700,7 @@ const DATA_I18N = {
     soundOff: 'ASMR: DESLIGADO',
     staffBtn: 'Staff',
     heroBadge: '✦ SANTUÁRIO DIGITAL · REGULAMENTO OFICIAL 3.0 🌿 ✦',
-    heroTitle: 'Regras de <span class="accent">Convivência</span><br>Sakura Paradise',
+    heroTitle: 'Regras de <span class="accent">Convivência</span><br>Umas Community',
     heroDesc: 'Uma comunidade saudável é construída com diálogo, empatia e respeito mútuo.',
     heroCta: '🌿 Explorar Regras',
     heroSearch: '🔍 Busca rápida',
@@ -4775,7 +4775,7 @@ const DATA_QUIZ = [
   {
     id: 5,
     ruleId: 'M1',
-    question: '¿Cuál es el rol prioritario del equipo de moderadores (Staff) de Sakura Paradise ante una discusión acalorada?',
+    question: '¿Cuál es el rol prioritario del equipo de moderadores (Staff) de Umas Community ante una discusión acalorada?',
     options: [
       { text: 'A) Banear a todos los involucrados de inmediato sin mediar palabra.', isCorrect: false },
       { text: 'B) Imponer su opinión personal en el debate.', isCorrect: false },
@@ -5539,7 +5539,7 @@ const QuizModule = {
           Puntaje Obtenido: ${this.score} / ${DATA_QUIZ.length} Aciertos (${Math.round((this.score/DATA_QUIZ.length)*100)}%)
         </p>
         <p style="font-size:0.86rem; color:var(--text-muted); max-width:540px; margin:0 auto 20px; line-height:1.6;">
-          Se certifica que el usuario ha revisado y comprendido satisfactoriamente las directrices de convivencia, seguridad digital y respeto mutuo de Sakura Paradise.
+          Se certifica que el usuario ha revisado y comprendido satisfactoriamente las directrices de convivencia, seguridad digital y respeto mutuo de Umas Community.
         </p>
         <div style="font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--text-dim); border-top:1px solid var(--border); padding-top:14px; margin-top:14px;">
           ID de Sesión: <strong>${sessionId}</strong> • Fecha: ${dateStr}<br>
@@ -5765,7 +5765,7 @@ const RulesModule = {
           const tag = box.querySelector('.r-tag')?.textContent?.trim() || '';
           const title = box.querySelector('.rule-main-title')?.textContent?.trim() || '';
           const summary = box.querySelector('.rule-summary-text')?.textContent?.trim() || '';
-          const textToCopy = `🌿 **Sakura Paradise · ${tag} ${title}**\n> ${summary}\n📜 *Reglamento:* https://rules-web.onrender.com`;
+          const textToCopy = `🌿 **Umas Community · ${tag} ${title}**\n> ${summary}\n📜 *Reglamento:* https://rules-web.onrender.com`;
 
           Utils.copyToClipboard(
             textToCopy,
@@ -6220,7 +6220,7 @@ document.addEventListener('DOMContentLoaded', () => {
   FAQModule.init();
   BackgroundModule.init();
   DiscordLinksModule.init();
-  console.log('🌿 Sakura Paradise Rules Web 3.0 Engine online (i18n, Quiz, Staff, PWA).');
+  console.log('🌿 Umas Community Rules Web 3.0 Engine online (i18n, Quiz, Staff, PWA).');
 });
 </script>
 
