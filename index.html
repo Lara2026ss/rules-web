@@ -67,7 +67,7 @@
       --forest: #2a071d;
 
       --gold: #f59e0b;
-      --gold-lt: #fbbf24;
+      --gold-lt: #fde047;
       --red: #ef4444;
       --red-lt: #f87171;
       --orange: #f97316;
@@ -276,7 +276,7 @@
     }
 
     .enter-logo .logo-main span {
-      background: linear-gradient(135deg, #f472b6 0%, #f472b6 45%, #fbbf24 100%);
+      background: linear-gradient(135deg, #f472b6 0%, #f472b6 45%, #fde047 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -375,7 +375,7 @@
       left: 0;
       height: 2.5px;
       width: 0%;
-      background: linear-gradient(90deg, #f472b6 0%, #f472b6 50%, #fbbf24 100%);
+      background: linear-gradient(90deg, #f472b6 0%, #f472b6 50%, #fde047 100%);
       box-shadow: 0 0 10px rgba(244, 114, 182, 0.7);
       transition: width 0.08s linear;
       pointer-events: none;
@@ -593,13 +593,19 @@
     }
 
     .hero-title .accent {
-      background: linear-gradient(135deg, #f472b6 0%, #ec4899 40%, #fbbf24 75%, #f472b6 100%);
-      background-size: 200% auto;
+      background: linear-gradient(180deg, #ffffff 0%, #fce7f3 45%, #f472b6 85%, #c084fc 100%);
+      background-size: 100% 200%;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      animation: title-gradient-shine 6s linear infinite;
-      filter: drop-shadow(0 0 25px rgba(244, 114, 182, 0.5));
+      animation: title-gradient-shine 22s ease-in-out infinite alternate;
+      filter: drop-shadow(0 0 20px rgba(244, 114, 182, 0.35));
+    }
+
+    @keyframes title-gradient-shine {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 0% 100%; }
+      100% { background-position: 0% 0%; }
     }
 
     @keyframes title-gradient-shine {
@@ -2589,7 +2595,7 @@
           <linearGradient id="sakura-svg-grad-sm" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#f472b6" />
             <stop offset="50%" stop-color="#ec4899" />
-            <stop offset="100%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#fde047" />
           </linearGradient>
         </defs>
       </svg>
@@ -2629,7 +2635,7 @@
           <linearGradient id="sakura-svg-grad-sm" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#f472b6" />
             <stop offset="50%" stop-color="#ec4899" />
-            <stop offset="100%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#fde047" />
           </linearGradient>
         </defs>
       </svg></div>
@@ -2650,7 +2656,7 @@
     <div class="hero-badge">✦ SANTUARIO DIGITAL · REGLAMENTO DE CONVIVENCIA 2.0 🌿 ✦</div>
     <h1 class="hero-title">
       Reglamento de Convivencia<br>
-      <span class="accent">Sakura Paradise</span> <svg class="animated-sakura-flower" viewBox="0 0 50 50" width="42" height="42" style="margin-left: 6px;">
+      <span class="accent">Sakura Paradise</span> <svg class="animated-sakura-flower" viewBox="0 0 50 50" width="64" height="64" style="margin-left: 10px; vertical-align: -10px;">
         <g>
           <path fill="url(#sakura-svg-grad)" d="M25 5 C28 14, 38 14, 38 22 C38 28, 30 32, 25 45 C20 32, 12 28, 12 22 C12 14, 22 14, 25 5 Z" />
           <path fill="url(#sakura-svg-grad)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(36 25 25)" />
@@ -2663,7 +2669,7 @@
           <linearGradient id="sakura-svg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#f472b6" />
             <stop offset="50%" stop-color="#ec4899" />
-            <stop offset="100%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#fde047" />
           </linearGradient>
         </defs>
       </svg>
@@ -2762,7 +2768,7 @@
           <linearGradient id="sakura-svg-grad-sm" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#f472b6" />
             <stop offset="50%" stop-color="#ec4899" />
-            <stop offset="100%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#fde047" />
           </linearGradient>
         </defs>
       </svg></h2>
