@@ -2574,9 +2574,28 @@
       100% { transform: rotate(360deg) scale(1); }
     }
 
+
+    /* Lock Body Scroll & Hide Background Content on Launch */
+    body.enter-locked {
+      overflow: hidden !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+      touch-action: none !important;
+    }
+    body.enter-locked .scroll-content,
+    body.enter-locked .main-body,
+    body.enter-locked .footer {
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    .scroll-content, .main-body, .footer {
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
 </style>
 </head>
-<body>
+<body class="enter-locked">
 
 <!-- ── Fixed Ambient Multi-Layer Background ── -->
 <div class="hero-wrapper">
