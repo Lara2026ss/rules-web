@@ -146,7 +146,7 @@
       inset: 0;
       background:
         radial-gradient(ellipse at 50% 15%, rgba(244, 114, 182, 0.12) 0%, transparent 65%),
-        radial-gradient(ellipse at 50% 85%, rgba(6, 78, 59, 0.18) 0%, rgba(2, 7, 4, 0.45) 50%, rgba(1, 4, 2, 0.75) 100%);
+        radial-gradient(ellipse at 50% 85%, rgba(190, 24, 93, 0.18) 0%, rgba(10, 3, 7, 0.45) 50%, rgba(6, 1, 4, 0.75) 100%);
     }
 
     #particles-canvas {
@@ -348,7 +348,7 @@
     .enter-footer {
       margin-top: 28px;
       font-size: clamp(0.68rem, 1.8vw, 0.76rem);
-      color: rgba(220, 252, 231, 0.45);
+      color: rgba(252, 231, 243, 0.45);
       line-height: 1.6;
     }
 
@@ -647,18 +647,14 @@
     }
 
     .hero-stats-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px 16px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: clamp(0.72rem, 1.5vw, 0.8rem);
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(0.85rem, 1.7vw, 1rem);
       color: var(--mint);
-      background: rgba(6, 24, 15, 0.6);
-      border: 1px solid var(--border);
-      padding: 6px 18px;
-      border-radius: 100px;
-      margin-bottom: 24px;
+      max-width: 560px;
+      margin: 0 auto 24px;
+      line-height: 1.55;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.85);
     }
 
     .hero-actions {
@@ -753,7 +749,7 @@
 
     /* ─── Panel Temático de Categorías Rediseñado ─── */
     .theme-categories-panel {
-      background: linear-gradient(135deg, rgba(6, 26, 17, 0.75) 0%, rgba(3, 14, 9, 0.85) 100%);
+      background: linear-gradient(135deg, rgba(45, 12, 33, 0.75) 0%, rgba(20, 5, 15, 0.85) 100%);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border-hi);
@@ -825,7 +821,7 @@
 
     /* ─── Banner Resumen Rápido ("Antes de Entrar") ─── */
     .quick-rules-banner {
-      background: linear-gradient(135deg, rgba(6, 28, 18, 0.70) 0%, rgba(2, 12, 7, 0.85) 100%);
+      background: linear-gradient(135deg, rgba(45, 12, 33, 0.70) 0%, rgba(20, 5, 15, 0.85) 100%);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border-hi);
@@ -945,7 +941,7 @@
     }
 
     .card:hover {
-      background: rgba(10, 34, 22, 0.54);
+      background: rgba(60, 16, 44, 0.54);
       border-color: var(--border-hi);
       box-shadow: 0 14px 40px 0 rgba(0, 0, 0, 0.55), var(--shadow-glow);
     }
@@ -1199,7 +1195,7 @@
       overflow: hidden;
       transition: max-height 0.45s var(--ease-spring), opacity 0.35s ease, padding 0.35s ease;
       padding: 0 clamp(16px, 3vw, 22px);
-      background: rgba(4, 18, 11, 0.45);
+      background: rgba(38, 10, 28, 0.45);
       border-top: 1px solid transparent;
     }
 
@@ -1425,7 +1421,7 @@
 
     /* Simulador Box */
     .simulator-box {
-      background: rgba(6, 24, 15, 0.55);
+      background: rgba(45, 12, 33, 0.55);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(244, 114, 182, 0.25);
@@ -1827,7 +1823,7 @@
       overflow: hidden;
       transition: max-height 0.4s var(--ease-spring), opacity 0.3s ease, padding 0.3s ease;
       padding: 0 20px;
-      background: rgba(2, 10, 6, 0.3);
+      background: rgba(15, 4, 11, 0.3);
       color: var(--text-muted);
       font-size: 0.84rem;
       line-height: 1.65;
@@ -1896,7 +1892,7 @@
     }
 
     .appeal-card {
-      background: linear-gradient(135deg, rgba(244, 114, 182, 0.16) 0%, rgba(6, 78, 59, 0.32) 100%);
+      background: linear-gradient(135deg, rgba(244, 114, 182, 0.16) 0%, rgba(192, 132, 252, 0.32) 100%);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(192, 132, 252, 0.42);
       border-radius: var(--radius-xl);
@@ -1931,7 +1927,7 @@
     }
 
     .appeal-step-item {
-      background: rgba(2, 10, 6, 0.55);
+      background: rgba(15, 4, 11, 0.55);
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
       padding: 12px 14px;
@@ -1997,7 +1993,7 @@
     .search-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(1, 6, 3, 0.86);
+      background: rgba(6, 1, 4, 0.86);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       z-index: 2000;
@@ -2023,7 +2019,7 @@
       max-height: 85vh;
       display: flex;
       flex-direction: column;
-      background: rgba(6, 24, 15, 0.95);
+      background: rgba(45, 12, 33, 0.95);
       border: 1px solid var(--border-hi);
       border-radius: var(--radius-xl);
       padding: clamp(16px, 3vw, 24px);
@@ -2221,7 +2217,7 @@
       bottom: 28px;
       left: 50%;
       transform: translateX(-50%) translateY(100px);
-      background: rgba(6, 24, 15, 0.94);
+      background: rgba(45, 12, 33, 0.94);
       backdrop-filter: blur(20px);
       border: 1px solid var(--emerald-lt);
       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
@@ -2251,7 +2247,7 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(6, 24, 15, 0.85);
+      background: rgba(45, 12, 33, 0.85);
       backdrop-filter: blur(14px);
       border: 1px solid var(--border-hi);
       color: var(--mint);
@@ -2428,7 +2424,7 @@
 
     /* ─── v3.0 Quiz Interactivo (Onboarding) ─── */
     .quiz-container {
-      background: linear-gradient(135deg, rgba(6, 28, 18, 0.75) 0%, rgba(2, 12, 7, 0.9) 100%);
+      background: linear-gradient(135deg, rgba(45, 12, 33, 0.75) 0%, rgba(20, 5, 15, 0.9) 100%);
       border: 1px solid var(--border-hi);
       border-radius: var(--radius-xl);
       padding: clamp(20px, 4vw, 32px);
@@ -2511,7 +2507,7 @@
     .staff-modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(1, 6, 3, 0.88);
+      background: rgba(6, 1, 4, 0.88);
       backdrop-filter: blur(18px);
       z-index: 2100;
       display: flex;
@@ -2531,7 +2527,7 @@
     .staff-modal-box {
       width: 100%;
       max-width: 580px;
-      background: rgba(8, 24, 16, 0.96);
+      background: rgba(50, 13, 36, 0.96);
       border: 1px solid rgba(192, 132, 252, 0.45);
       border-radius: var(--radius-xl);
       padding: clamp(20px, 4vw, 30px);
@@ -2732,9 +2728,9 @@
     <p class="hero-desc">
       Una comunidad sana y unida se construye con el respeto de todos. Guía oficial de convivencia, empatía e igualdad para los integrantes de Sakura Paradise 🌸.
     </p>
-    <div class="hero-stats-row">
-      <span>8 Categorías Principales</span> · <span>20 Normas Claras</span> · <span>Mediación Pedagógica</span> · <span>Actualizado 2026</span>
-    </div>
+    <p class="hero-stats-row">
+      Aquí cada norma existe para cuidarte, no para limitarte — hecha con cariño, revisada con calma y pensada para que Sakura Paradise se sienta como un hogar seguro para todos.
+    </p>
     <div class="hero-actions">
       <a href="#convivencia" class="hero-cta-btn"><span>🌸 Explorar Normas</span> ▾</a>
     </div>
@@ -2747,62 +2743,6 @@
   <!-- Contenedor Principal de Fases -->
   <main class="main-body" id="main-content">
     <div class="container">
-
-      <!-- ========================================== -->
-      <!-- RESUMEN RÁPIDO: ANTES DE ENTRAR ⚡ -->
-      <!-- ========================================== -->
-      <div class="quick-rules-banner" id="resumen-rapido">
-        <div class="quick-rules-head">
-          <div class="quick-rules-title">
-            <span>⚡</span> Antes de empezar a chatear (Resumen en 30 segundos)
-          </div>
-          <div class="quick-rules-badge">6 PRINCIPIOS ESENCIALES</div>
-        </div>
-        <div class="quick-rules-grid">
-          <div class="quick-rule-item">
-            <span class="quick-rule-check">✓</span>
-            <div></div>
-          </div>
-          <div class="quick-rule-item">
-            <span class="quick-rule-check">✓</span>
-            <div></div>
-          </div>
-          <div class="quick-rule-item">
-            <span class="quick-rule-check">✓</span>
-            <div></div>
-          </div>
-          <div class="quick-rule-item">
-            <span class="quick-rule-check">✓</span>
-            <div></div>
-          </div>
-          <div class="quick-rule-item">
-            <span class="quick-rule-check">✓</span>
-            <div></div>
-          </div>
-          <div class="quick-rule-item">
-            <span class="quick-rule-check">✓</span>
-            <div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ========================================== -->
-      <!-- PANEL TEMÁTICO DE CATEGORÍAS REDISEÑADO 🏷️ -->
-      <!-- ========================================== -->
-      <div class="theme-categories-panel" id="categories-panel">
-        <div class="categories-panel-head">
-          <span>🏷️ Explorar por Categoría</span>
-          <span class="category-counter-badge" id="category-counter-badge">Mostrando 20 de 20 normas</span>
-        </div>
-        <div class="category-pills-deck" id="category-pills-deck">
-          <button class="cat-pill active" data-cat="all" type="button">🌎 Todas (<span class="cat-num" data-cat-num="all">20</span>)</button>
-          <button class="cat-pill" data-cat="conducta" type="button">🛡️ Conducta & Respeto (<span class="cat-num" data-cat-num="conducta">2</span>)</button>
-          <button class="cat-pill" data-cat="comunicacion" type="button">💬 Comunicación & Canales (<span class="cat-num" data-cat-num="comunicacion">5</span>)</button>
-          <button class="cat-pill" data-cat="seguridad" type="button">🔐 Cero Tolerancia & Ciberseguridad (<span class="cat-num" data-cat-num="seguridad">5</span>)</button>
-          <button class="cat-pill" data-cat="comunidad" type="button">🎮 Comunidad & Dinámicas (<span class="cat-num" data-cat-num="comunidad">2</span>)</button>
-          <button class="cat-pill" data-cat="moderacion" type="button">🧑⚖️ Ética & Código Staff (<span class="cat-num" data-cat-num="moderacion">4</span>)</button>
-        </div>
-      </div>
 
       <!-- ========================================== -->
       <!-- SECCIÓN: CONVIVENCIA Y TRATO HUMANO 🌿 -->
@@ -2988,7 +2928,7 @@
       <p style="margin-top: 6px;">
         © 2026 Sakura Paradise · Reglamento de Convivencia 2.0 · Todos los derechos reservados.
       </p>
-      <p style="margin-top: 4px; font-size: 0.74rem; color: rgba(220,252,231,0.35);">
+      <p style="margin-top: 4px; font-size: 0.74rem; color: rgba(252,231,243,0.35);">
         Servidor comunitario independiente sin fines de lucro bajo Uso Legítimo (Fair Use). No afiliado ni respaldado por Cygames Inc. ni Discord Inc.
       </p>
     </footer>
