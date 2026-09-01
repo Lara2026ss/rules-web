@@ -2671,7 +2671,7 @@
       </h1>
     <div class="enter-sub">— Protocolo de Convivencia, Respeto y Trato Digno en Sakura Paradise 🌸 —</div>
     <div class="enter-btn-wrapper">
-      <button class="enter-btn" id="enter-btn" type="button" onclick="if(window.EnterScreenModule) window.EnterScreenModule.handleEnter(); else { const s=document.getElementById('enter-screen'); if(s){s.style.display='none';} document.getElementById('main-nav')?.classList.add('nav-visible'); }">
+      <button class="enter-btn" id="enter-btn" type="button" onclick="if(window.EnterScreenModule) window.EnterScreenModule.handleEnter(); else { document.body.classList.remove('enter-locked'); const s=document.getElementById('enter-screen'); if(s){s.style.display='none';} document.getElementById('main-nav')?.classList.add('nav-visible'); }">
         <span>Entrar al Reglamento</span> ➔
       </button>
     </div>
@@ -4479,6 +4479,7 @@ const EnterScreenModule = {
     } catch (e) {}
 
     document.body.classList.remove('modal-open');
+    document.body.classList.remove('enter-locked');
     document.body.style.overflow = '';
 
     if (enterScreen) {
@@ -4540,6 +4541,7 @@ const DiscordLinksModule = {
       enterBtn.addEventListener('click', () => {
         AudioEngine.resumeContext();
         AudioEngine.playCrystal([523.25, 659.25, 783.99, 1046.5]);
+        document.body.classList.remove('enter-locked');
         enterScreen.classList.add('dismissed');
         if (mainNav) mainNav.classList.add('nav-visible');
         if (bgAudio && AudioEngine.enabled) {
