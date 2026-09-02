@@ -34,7 +34,10 @@ const VALID_RULES = {
   '02': { title: 'Prevención de Acoso, Hostigamiento y Asedio', category: 'conducta', maxPts: 40, defaultLev: 4 },
   '03': { title: 'Control de Spam, Flood y Ruido Visual', category: 'comunicacion', maxPts: 20, defaultLev: 2 },
   '04': { title: 'Publicidad, Autopromoción y Enlaces Externos', category: 'comunicacion', maxPts: 40, defaultLev: 3 },
-  '05': { title: 'Igualdad Normativa y Cero Privilegios', category: 'comunidad', maxPts: 10, defaultLev: 1 }
+  '05': { title: 'Igualdad Normativa y Cero Privilegios', category: 'comunidad', maxPts: 10, defaultLev: 1 },
+  '06': { title: 'Amenazas, Violencia y Contenido Gore/NSFW', category: 'seguridad', maxPts: 100, defaultLev: 5 },
+  '07': { title: 'Protección de Privacidad, Anti-Doxxing y Anti-Phishing', category: 'seguridad', maxPts: 100, defaultLev: 5 },
+  '08': { title: 'Protección de Menores y Anti-Grooming', category: 'conducta', maxPts: 100, defaultLev: 5 }
 };
 
 app.get('/api/health', (req, res) => {

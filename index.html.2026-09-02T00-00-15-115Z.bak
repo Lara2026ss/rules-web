@@ -2710,11 +2710,7 @@
   </a>
 
   <div class="nav-links-scroll" id="nav-links-scroll">
-    <a href="#convivencia">🌸 Reglas Generales</a>
-    <a href="#reglas-servidor">🛡️ Reglas del Servidor</a>
-    <a href="#recursos-regionales">⚖️ Recursos Regionales</a>
-    <a href="#tus-derechos">💗 Tus Derechos</a>
-    <a href="#asistencia">🎫 Asistencia</a>
+    <a href="#convivencia">🌸 Convivencia</a>
   </div>
 
   </nav>
@@ -2753,8 +2749,8 @@
       <!-- ========================================== -->
       <div class="section-gap" id="convivencia"></div>
       <div class="phase-header">
-        <span class="phase-badge">🌸 PILAR I</span>
-        <h2 class="phase-title">Reglas Generales <svg class="animated-sakura-flower" viewBox="0 0 50 50" width="24" height="24" style="margin-left: 4px;">
+        <span class="phase-badge">🌸 CONVIVENCIA</span>
+        <h2 class="phase-title">Convivencia y Trato Humano <svg class="animated-sakura-flower" viewBox="0 0 50 50" width="24" height="24" style="margin-left: 4px;">
         <g>
           <path fill="url(#sakura-svg-grad-sm)" d="M25 5 C28 14, 38 14, 38 22 C38 28, 30 32, 25 45 C20 32, 12 28, 12 22 C12 14, 22 14, 25 5 Z" />
           <path fill="url(#sakura-svg-grad-sm)" d="M5 25 C14 28, 14 38, 22 38 C28 38, 32 30, 45 25 C32 20, 28 12, 22 12 C14 12, 14 22, 5 25 Z" transform="rotate(36 25 25)" />
@@ -2784,7 +2780,6 @@
         </div>
 
         <div class="rules-grid">
-
       <!-- #01 -->
       <div class="rule-box" data-rule="01" data-cat="conducta">
         <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-01" tabindex="0">
@@ -2803,35 +2798,11 @@
           <div class="rule-summary-text"></div>
         </div>
         <div class="rule-expandable-body" id="rule-body-01">
-          <div class="rule-section-block">
-            <div class="rule-section-heading">📖 ¿Qué significa?</div>
-            <div class="rule-section-desc">Toda persona en Sakura Paradise tiene derecho a ser tratada con respeto básico y dignidad, independientemente de sus gustos, nivel en juegos, opiniones o identidad.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading danger">🚫 Estrictamente Prohibido</div>
-            <div class="rule-section-desc">Insultos directos, menosprecio, discriminación (racismo, homofobia, machismo, etc.), burlas sobre el nivel de juego, y uso de lenguaje de odio.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading good">✅ Permitido (Contraste)</div>
-            <div class="rule-section-desc">Debates sanos, diferencias de opinión expresadas con respeto, y bromas consensuadas entre amigos (siempre que no incomoden al resto).</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading">🔍 Ejemplos Claros</div>
-            <div class="rule-examples-deck">
-              <div class="rule-example-card bad">
-                <div class="rule-example-label">Comportamiento Inaceptable</div>
-                Insultar a alguien porque "jugó mal" o usar un término despectivo como broma.
-              </div>
-              <div class="rule-example-card good">
-                <div class="rule-example-label">Comportamiento Aceptable</div>
-                Dar una crítica constructiva o pedir amablemente que dejen de usar cierto lenguaje.
-              </div>
-            </div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading sanc">⚖️ Acción de Moderación (Sanción)</div>
-            <div class="rule-section-desc">Aviso (Warn) y asignación de puntos. Si es lenguaje de odio, sanción grave inmediata.</div>
-          </div>
+          <div class="rule-section-block"><div class="rule-section-heading"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading danger"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading good"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading"></div><div class="rule-examples-deck"><div class="rule-example-card bad"><div class="rule-example-label"></div></div><div class="rule-example-card good"><div class="rule-example-label"></div></div></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading sanc"></div><div class="rule-section-desc"></div></div>
         </div>
       </div>
 
@@ -2853,35 +2824,11 @@
           <div class="rule-summary-text"></div>
         </div>
         <div class="rule-expandable-body" id="rule-body-02">
-          <div class="rule-section-block">
-            <div class="rule-section-heading">📖 ¿Qué significa?</div>
-            <div class="rule-section-desc">El acoso se define como cualquier comportamiento repetido y no deseado que hace que otra persona se sienta incómoda, intimidada o insegura.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading danger">🚫 Estrictamente Prohibido</div>
-            <div class="rule-section-desc">Insistir en pedir fotos, información personal, contacto por voz si la persona ya dijo que no, crear rumores, y hostigar a un usuario a través de múltiples canales o mensajes directos.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading good">✅ Permitido (Contraste)</div>
-            <div class="rule-section-desc">Mandar solicitud de amistad o DM para charlar, siempre y cuando se acepte un "no" por respuesta de inmediato.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading">🔍 Ejemplos Claros</div>
-            <div class="rule-examples-deck">
-              <div class="rule-example-card bad">
-                <div class="rule-example-label">Comportamiento Inaceptable</div>
-                Seguir mencionando a un usuario o mandándole DMs pidiéndole jugar después de que te ignoró o dijo que no.
-              </div>
-              <div class="rule-example-card good">
-                <div class="rule-example-label">Comportamiento Aceptable</div>
-                Preguntar si alguien quiere jugar, y si dicen que no o no responden, buscar a otra persona.
-              </div>
-            </div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading sanc">⚖️ Acción de Moderación (Sanción)</div>
-            <div class="rule-section-desc">Puntos de infracción automáticos empezando con mute/warn, escalando a aislamiento o ban prolongado.</div>
-          </div>
+          <div class="rule-section-block"><div class="rule-section-heading"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading danger"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading good"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading"></div><div class="rule-examples-deck"><div class="rule-example-card bad"><div class="rule-example-label"></div></div><div class="rule-example-card good"><div class="rule-example-label"></div></div></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading sanc"></div><div class="rule-section-desc"></div></div>
         </div>
       </div>
 
@@ -2903,35 +2850,11 @@
           <div class="rule-summary-text"></div>
         </div>
         <div class="rule-expandable-body" id="rule-body-03">
-          <div class="rule-section-block">
-            <div class="rule-section-heading">📖 ¿Qué significa?</div>
-            <div class="rule-section-desc">Para mantener el chat legible, se debe evitar el envío masivo o repetitivo de mensajes, emojis, o paredes de texto irrelevantes.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading danger">🚫 Estrictamente Prohibido</div>
-            <div class="rule-section-desc">Mandar más de 5 mensajes seguidos (flood) con pocas palabras, saturar con emojis, hacer "raid" de mensajes, y abusar de mayúsculas (ruido visual).</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading good">✅ Permitido (Contraste)</div>
-            <div class="rule-section-desc">Enviar múltiples imágenes en un solo mensaje o usar hilos para conversaciones muy largas.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading">🔍 Ejemplos Claros</div>
-            <div class="rule-examples-deck">
-              <div class="rule-example-card bad">
-                <div class="rule-example-label">Comportamiento Inaceptable</div>
-                Mandar "hola" "que" "hacen" "todos" "aqui" en 5 mensajes separados en menos de 2 segundos.
-              </div>
-              <div class="rule-example-card good">
-                <div class="rule-example-label">Comportamiento Aceptable</div>
-                Mandar "Hola, ¿qué hacen todos aquí?" en un solo mensaje.
-              </div>
-            </div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading sanc">⚖️ Acción de Moderación (Sanción)</div>
-            <div class="rule-section-desc">Muteos temporales, warns y puntos de infracción.</div>
-          </div>
+          <div class="rule-section-block"><div class="rule-section-heading"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading danger"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading good"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading"></div><div class="rule-examples-deck"><div class="rule-example-card bad"><div class="rule-example-label"></div></div><div class="rule-example-card good"><div class="rule-example-label"></div></div></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading sanc"></div><div class="rule-section-desc"></div></div>
         </div>
       </div>
 
@@ -2953,210 +2876,14 @@
           <div class="rule-summary-text"></div>
         </div>
         <div class="rule-expandable-body" id="rule-body-04">
-          <div class="rule-section-block">
-            <div class="rule-section-heading">📖 ¿Qué significa?</div>
-            <div class="rule-section-desc">El servidor es un lugar para charlar, no un tablón de anuncios. Los enlaces externos y la publicidad deben estar estrictamente controlados.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading danger">🚫 Estrictamente Prohibido</div>
-            <div class="rule-section-desc">Enviar invitaciones a otros servidores de Discord por canal o MD, promocionar canales de Twitch/YouTube sin permiso, y vender servicios.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading good">✅ Permitido (Contraste)</div>
-            <div class="rule-section-desc">Compartir fanart de Twitter/Pixiv, noticias de anime/juegos, o enlazar a tu stream SOLO si hay un canal designado para ello o tienes rol de Creador.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading">🔍 Ejemplos Claros</div>
-            <div class="rule-examples-deck">
-              <div class="rule-example-card bad">
-                <div class="rule-example-label">Comportamiento Inaceptable</div>
-                "Únanse a mi nuevo server de Minecraft: discord.gg/..."
-              </div>
-              <div class="rule-example-card good">
-                <div class="rule-example-label">Comportamiento Aceptable</div>
-                "Miren este fanart que encontré en Twitter (enlace)".
-              </div>
-            </div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading sanc">⚖️ Acción de Moderación (Sanción)</div>
-            <div class="rule-section-desc">Aviso, eliminación del mensaje y asignación de puntos.</div>
-          </div>
+          <div class="rule-section-block"><div class="rule-section-heading"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading danger"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading good"></div><div class="rule-section-desc"></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading"></div><div class="rule-examples-deck"><div class="rule-example-card bad"><div class="rule-example-label"></div></div><div class="rule-example-card good"><div class="rule-example-label"></div></div></div></div>
+          <div class="rule-section-block"><div class="rule-section-heading sanc"></div><div class="rule-section-desc"></div></div>
         </div>
       </div>
 
-      <!-- #06 -->
-      <div class="rule-box" data-rule="06" data-cat="seguridad">
-        <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-06" tabindex="0">
-          <div class="rule-meta-top">
-            <div class="rule-meta-left">
-              <span class="r-tag">#06</span>
-              <span class="r-cat-badge">🔐 Seguridad</span>
-              <span class="r-severity-badge lev-5">🔴 Nivel 5 · Crítico</span>
-              <span class="r-points-badge">Ban Inmediato</span>
-            </div>
-            <div class="rule-actions-right">
-              <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #06"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
-            </div>
-          </div>
-          <div class="rule-main-title">Amenazas, Violencia y Contenido Gore/NSFW</div>
-          <div class="rule-summary-text"></div>
-        </div>
-        <div class="rule-expandable-body" id="rule-body-06">
-          <div class="rule-section-block">
-            <div class="rule-section-heading">📖 ¿Qué significa?</div>
-            <div class="rule-section-desc">Está estrictamente prohibido cualquier contenido que amenace la integridad física de alguien o que contenga material gráfico inapropiado.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading danger">🚫 Estrictamente Prohibido</div>
-            <div class="rule-section-desc">Amenazas de muerte (incluso "en broma"), imágenes/videos gore, pornografía, desnudez, y violencia explícita.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading good">✅ Permitido (Contraste)</div>
-            <div class="rule-section-desc">Hablar de videojuegos violentos o animes de acción, siempre y cuando no se comparta material gore hiperrealista.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading">🔍 Ejemplos Claros</div>
-            <div class="rule-examples-deck">
-              <div class="rule-example-card bad">
-                <div class="rule-example-label">Comportamiento Inaceptable</div>
-                Enviar una imagen de violencia real o amenazar a alguien con agredirle en la vida real.
-              </div>
-              <div class="rule-example-card good">
-                <div class="rule-example-label">Comportamiento Aceptable</div>
-                Discutir sobre el nivel de violencia de una película o juego de forma analítica y respetuosa.
-              </div>
-            </div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading sanc">⚖️ Acción de Moderación (Sanción)</div>
-            <div class="rule-section-desc">Eliminación inmediata y falta grave (Ban permanente si es extremo).</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- #07 -->
-      <div class="rule-box" data-rule="07" data-cat="seguridad">
-        <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-07" tabindex="0">
-          <div class="rule-meta-top">
-            <div class="rule-meta-left">
-              <span class="r-tag">#07</span>
-              <span class="r-cat-badge">🔐 Seguridad</span>
-              <span class="r-severity-badge lev-5">🔴 Nivel 5 · Crítico</span>
-              <span class="r-points-badge">Ban Inmediato</span>
-            </div>
-            <div class="rule-actions-right">
-              <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #07"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
-            </div>
-          </div>
-          <div class="rule-main-title">Protección de Privacidad, Anti-Doxxing y Anti-Phishing</div>
-          <div class="rule-summary-text"></div>
-        </div>
-        <div class="rule-expandable-body" id="rule-body-07">
-          <div class="rule-section-block">
-            <div class="rule-section-heading">📖 ¿Qué significa?</div>
-            <div class="rule-section-desc">Tu información personal es tuya. Exponer datos de otros (Doxxing) o intentar robarlos (Phishing/Estafas) es un delito y una falta imperdonable.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading danger">🚫 Estrictamente Prohibido</div>
-            <div class="rule-section-desc">Compartir fotos reales, nombres completos, direcciones, números de teléfono de otros sin su permiso expreso. Enviar enlaces engañosos para robar cuentas (Ej. "Nitro gratis").</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading good">✅ Permitido (Contraste)</div>
-            <div class="rule-section-desc">Compartir tu propio nombre de pila si te sientes cómodo (aunque recomendamos precaución).</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading">🔍 Ejemplos Claros</div>
-            <div class="rule-examples-deck">
-              <div class="rule-example-card bad">
-                <div class="rule-example-label">Comportamiento Inaceptable</div>
-                "Miren cómo se ve X en la vida real, encontré su Facebook". / "Entra a este link para ganar Nitro".
-              </div>
-              <div class="rule-example-card good">
-                <div class="rule-example-label">Comportamiento Aceptable</div>
-                Reportar silenciosamente al Staff si alguien envía un enlace sospechoso.
-              </div>
-            </div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading sanc">⚖️ Acción de Moderación (Sanción)</div>
-            <div class="rule-section-desc">Ban Permanente Inmediato. Sin segundas oportunidades.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- #08 -->
-      <div class="rule-box" data-rule="08" data-cat="conducta">
-        <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-08" tabindex="0">
-          <div class="rule-meta-top">
-            <div class="rule-meta-left">
-              <span class="r-tag">#08</span>
-              <span class="r-cat-badge">🛡️ Conducta</span>
-              <span class="r-severity-badge lev-5">🔴 Nivel 5 · Crítico</span>
-              <span class="r-points-badge">Ban</span>
-            </div>
-            <div class="rule-actions-right">
-              <button class="rule-toggle-btn" type="button" aria-label="Desplegar detalles de la regla #08"><span>Detalles</span> <span class="rule-toggle-arrow">▾</span></button>
-            </div>
-          </div>
-          <div class="rule-main-title">Protección de Menores y Anti-Grooming</div>
-          <div class="rule-summary-text"></div>
-        </div>
-        <div class="rule-expandable-body" id="rule-body-08">
-          <div class="rule-section-block">
-            <div class="rule-section-heading">📖 ¿Qué significa?</div>
-            <div class="rule-section-desc">Sakura Paradise se apega a las Políticas de Seguridad de Discord (Safety Library). Proteger a los menores es obligación absoluta.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading danger">🚫 Estrictamente Prohibido</div>
-            <div class="rule-section-desc">Solicitar material íntimo a menores, sexualizar a menores (grooming), o crear un ambiente hostil/inapropiado si se sabe que hay menores en el canal.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading good">✅ Permitido (Contraste)</div>
-            <div class="rule-section-desc">Convivir sanamente respetando los límites de edad y madurez.</div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading">🔍 Ejemplos Claros</div>
-            <div class="rule-examples-deck">
-              <div class="rule-example-card bad">
-                <div class="rule-example-label">Comportamiento Inaceptable</div>
-                Pedir información personal, escolar o fotos a un miembro menor de edad.
-              </div>
-              <div class="rule-example-card good">
-                <div class="rule-example-label">Comportamiento Aceptable</div>
-                Cambiar de tema inmediatamente si la conversación se vuelve inapropiada.
-              </div>
-            </div>
-          </div>
-          <div class="rule-section-block">
-            <div class="rule-section-heading sanc">⚖️ Acción de Moderación (Sanción)</div>
-            <div class="rule-section-desc">Ban Permanente Inmediato y posible reporte a Trust & Safety de Discord.</div>
-          </div>
-        </div>
-      </div>
-        </div>
-    </div>
-
-      <!-- ========================================== -->
-      <!-- PILAR II — REGLAS DEL SERVIDOR 🛡️ -->
-      <!-- ========================================== -->
-      <div class="section-gap" id="reglas-servidor"></div>
-      <div class="phase-header">
-        <span class="phase-badge">🛡️ PILAR II</span>
-        <h2 class="phase-title">Reglas del Servidor</h2>
-        <div class="phase-line"></div>
-      </div>
-
-      <div class="card">
-        <div class="card-head">
-          <div class="card-icon">⚖️</div>
-          <div>
-            <div class="card-title">Moderación y Uso Responsable del Poder</div>
-            <div class="card-sub">Cómo funciona Sakura Paradise por dentro: jerarquía real del staff, límites de su autoridad y estándares que debe cumplir.</div>
-          </div>
-        </div>
-
-        <div class="rules-grid">
       <!-- #05 -->
       <div class="rule-box" data-rule="05" data-cat="moderacion">
         <div class="rule-header-bar" role="button" aria-expanded="false" aria-controls="rule-body-05" tabindex="0">
@@ -3182,58 +2909,8 @@
           <div class="rule-section-block"><div class="rule-section-heading sanc"></div><div class="rule-section-desc"></div></div>
         </div>
       </div>
-        </div>
-      </div>
-
-      <!-- ========================================== -->
-      <!-- PILAR III — RECURSOS REGIONALES ⚖️ (PENDIENTE Fase F) -->
-      <!-- ========================================== -->
-      <div class="section-gap" id="recursos-regionales"></div>
-      <div class="phase-header">
-        <span class="phase-badge">⚖️ PILAR III</span>
-        <h2 class="phase-title">Recursos Regionales</h2>
-        <div class="phase-line"></div>
-      </div>
-      <div class="card">
-        <div class="card-head">
-          <div class="card-icon">🌎</div>
-          <div>
-            <div class="card-title">Contenido en preparación</div>
-            <div class="card-sub">Esta sección explicará la diferencia entre un problema interno de Sakura, una infracción de Discord y una situación legal real, con enlaces únicamente a fuentes oficiales verificadas. En construcción.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ========================================== -->
-      <!-- PILAR IV — TUS DERECHOS 💗 (PENDIENTE Fase E) -->
-      <!-- ========================================== -->
-      <div class="section-gap" id="tus-derechos"></div>
-      <div class="phase-header">
-        <span class="phase-badge">💗 PILAR IV</span>
-        <h2 class="phase-title">Tus Derechos en Sakura</h2>
-        <div class="phase-line"></div>
-      </div>
-      <div class="card">
-        <div class="card-head">
-          <div class="card-icon">🌸</div>
-          <div>
-            <div class="card-title">Contenido en preparación</div>
-            <div class="card-sub">Aquí se listarán los derechos reales de cada miembro (trato digno, conocer las reglas, reportar, apelar, privacidad) verificados contra lo que Sakura puede garantizar realmente. En construcción.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ========================================== -->
-      <!-- CTA DE ASISTENCIA 🎫 -->
-      <!-- ========================================== -->
-      <div class="section-gap" id="asistencia"></div>
-      <div class="card" style="text-align:center; border-color: rgba(244,114,182,0.4);">
-        <div style="font-size:2.2rem; margin-bottom:8px;">🎫</div>
-        <div class="card-title" style="justify-content:center; font-size:1.4rem;">¿Necesitas ayuda?</div>
-        <p style="color:var(--text-muted); max-width:480px; margin:10px auto 20px;">¿Tienes un problema, necesitas orientación o no sabes dónde reportar algo? El equipo de Sakura Paradise te escucha con calma, empatía y total confidencialidad.</p>
-        <a href="https://discord.com/channels/1493288927388369139/1543912375189639238" target="_blank" rel="noopener noreferrer" class="hero-cta-btn" style="display:inline-flex;"><span>🎫 Solicitar Asistencia</span></a>
-      </div>
-
+    </div>
+    </div>
     </div>
   </main>
 
