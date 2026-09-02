@@ -165,7 +165,7 @@
       width: 100vw;
       height: 100vh;
       height: 100dvh;
-      background: radial-gradient(circle at 50% 35%, rgba(244, 114, 182, 0.28) 0%, rgba(192, 132, 252, 0.2) 30%, rgba(42, 7, 29, 0.95) 65%, #060104 100%);
+      background: radial-gradient(circle at 50% 35%, #24081c 0%, #180513 35%, #0d020a 70%, #050104 100%);
       z-index: 9999;
       display: flex;
       flex-direction: column;
@@ -2582,7 +2582,7 @@
     /* Lock Body Scroll & Hide Background Content on Launch */
     
     /* Enter Screen Display & Scroll Isolation Engine */
-    /* ── Enter Screen Scroll & Display Isolation ── */
+    /* ── Enter Screen Scroll & Display Isolation (100% Opaque & Isolated) ── */
     body.enter-locked {
       overflow: hidden !important;
       height: 100vh !important;
@@ -2592,11 +2592,28 @@
     body.enter-locked .scroll-content,
     body.enter-locked .main-body,
     body.enter-locked .footer,
-    body.enter-locked #main-nav {
+    body.enter-locked #main-nav,
+    body.enter-locked .card,
+    body.enter-locked .hero-section {
       display: none !important;
       visibility: hidden !important;
       opacity: 0 !important;
       pointer-events: none !important;
+    }
+    body:not(.enter-locked) .scroll-content,
+    body:not(.enter-locked) .main-body,
+    body:not(.enter-locked) .footer,
+    body:not(.enter-locked) .hero-section {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+    body:not(.enter-locked) #main-nav {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
     }
     body:not(.enter-locked) .scroll-content,
     body:not(.enter-locked) .main-body,
@@ -2715,7 +2732,7 @@
   </nav>
 
 <!-- ── Main Scrolling Content ── -->
-<div class="scroll-content">
+<div class="scroll-content" id="main-scroll-content" style="display: none !important;">
 
   <!-- Hero Text -->
   <div class="hero-text-overlay" id="hero-text-overlay">
@@ -4296,8 +4313,8 @@ const EnterScreenModule = {
   handleEnter() {
     const enterScreen = document.getElementById('enter-screen');
     const mainNav = document.getElementById('main-nav');
-    const heroOverlay = document.getElementById('hero-text-overlay');
-    const bgAudio = document.getElementById('bg-audio');
+    const scrollContent = document.getElementById('main-scroll-content') || document.querySelector('.scroll-content');
+    const footer = document.querySelector('.footer');
 
     try {
       AudioEngine.resumeContext();
@@ -4307,49 +4324,32 @@ const EnterScreenModule = {
     document.body.classList.remove('modal-open');
     document.body.classList.remove('enter-locked');
     document.body.style.overflow = '';
+    document.body.style.height = '';
 
     if (enterScreen) {
       enterScreen.style.pointerEvents = 'none';
       enterScreen.classList.add('dismissed');
       enterScreen.style.opacity = '0';
+      setTimeout(() => {
+        enterScreen.style.display = 'none';
+      }, 850);
     }
 
+    if (scrollContent) {
+      scrollContent.style.setProperty('display', 'block', 'important');
+      scrollContent.style.setProperty('opacity', '1', 'important');
+      scrollContent.style.setProperty('visibility', 'visible', 'important');
+    }
     if (mainNav) {
+      mainNav.style.setProperty('display', 'flex', 'important');
+      mainNav.style.setProperty('opacity', '1', 'important');
+      mainNav.style.setProperty('visibility', 'visible', 'important');
       mainNav.classList.add('nav-visible');
     }
-
-    try {
-      if (bgAudio && AudioEngine.enabled) {
-        bgAudio.volume = 0.2;
-        bgAudio.play().catch(() => {});
-      }
-    } catch (e) {}
-
-    setTimeout(() => {
-      if (heroOverlay) heroOverlay.classList.add('start-anim');
-    }, 150);
-
-    setTimeout(() => {
-      if (enterScreen) {
-        enterScreen.style.display = 'none';
-        enterScreen.style.visibility = 'hidden';
-      }
-    }, 350);
-  },
-
-  init() {
-    const enterBtn = document.getElementById('enter-btn');
-    if (enterBtn) {
-      enterBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.handleEnter();
-      });
-      enterBtn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          this.handleEnter();
-        }
-      });
+    if (footer) {
+      footer.style.setProperty('display', 'block', 'important');
+      footer.style.setProperty('opacity', '1', 'important');
+      footer.style.setProperty('visibility', 'visible', 'important');
     }
   }
 };
